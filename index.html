@@ -1,0 +1,948 @@
+<!--
+  ══════════════════════════════════════════════════════════════
+  DOLINHANH BRIDAL — BẢN 2 (nhịp trình bày kiểu Vélia, tone trắng · ghi · đen)
+  Bản 1 (kiểu Vogue) vẫn giữ nguyên ở thư mục cha.
+  Ảnh dùng chung thư mục anh/
+  ══════════════════════════════════════════════════════════════
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dolinhanh Bridal — nhánh váy cưới của Nupakachi. May đo, cho thuê váy cưới và chụp hình tại Hà Nội và TP.HCM.">
+<title>Dolinhanh Bridal</title>
+<script>document.documentElement.classList.add("js");</script>
+
+<style>
+  :root{
+    /* trắng · ghi · đen */
+    --paper:#FFFFFF;
+    --mist:#F2F1EF;
+    --grey:#DDDAD5;
+    --ink:#111110;
+    --ink-soft:#8A8783;
+    --line:#E3E0DC;
+    --accent:#111110;
+
+    --didone:"Bodoni 72","Bodoni MT",Didot,"Didot LT STD","Playfair Display",Georgia,"Times New Roman",serif;
+    --serif:Baskerville,"Baskerville Old Face",Cochin,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,"Segoe UI",system-ui,sans-serif;
+
+    --meta:.66rem;
+    --gutter:clamp(20px,5vw,72px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--serif);font-size:1.02rem;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  :focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+  .wrap{max-width:1500px;margin:0 auto;padding-inline:var(--gutter)}
+
+  .kicker{
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.28em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .rule-link{
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.24em;
+    text-transform:uppercase;text-decoration:none;
+    padding-bottom:7px;border-bottom:1px solid currentColor;
+    transition:opacity .25s;
+  }
+  .rule-link:hover{opacity:.55}
+
+  /* ─────────── header ─────────── */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    color:#fff;transition:background .45s ease,color .45s ease,box-shadow .45s ease;
+  }
+  header.solid{background:var(--paper);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+  .bar{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+    gap:20px;padding-block:20px;
+  }
+  .bar nav{display:flex;gap:clamp(11px,1.5vw,22px);flex-wrap:nowrap}
+  .bar nav a{
+    font-family:var(--sans);font-size:.6rem;letter-spacing:.15em;
+    text-transform:uppercase;text-decoration:none;white-space:nowrap;
+    padding-bottom:4px;border-bottom:1px solid transparent;transition:border-color .3s;
+  }
+  .bar nav a:hover,.bar nav a.here{border-bottom-color:currentColor}
+  .bar .right{justify-self:end;display:flex;align-items:center;gap:clamp(14px,2vw,26px)}
+  .mark{
+    font-family:var(--didone);font-size:clamp(1.05rem,2.1vw,1.5rem);
+    letter-spacing:.22em;text-transform:uppercase;text-decoration:none;white-space:nowrap;
+    opacity:0;transition:opacity .45s ease;
+  }
+  header.solid .mark{opacity:1}
+  .lang{display:flex;gap:7px;font-family:var(--sans);font-size:var(--meta);letter-spacing:.2em}
+  .lang button{opacity:.55;padding-bottom:2px;border-bottom:1px solid transparent}
+  .lang button[aria-pressed="true"]{opacity:1;border-bottom-color:currentColor}
+  .burger{display:none;width:24px;height:14px;position:relative}
+  .burger span{position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s,opacity .2s}
+  .burger span:nth-child(1){top:0}
+  .burger span:nth-child(2){top:6.5px}
+  .burger span:nth-child(3){top:13px}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+  /* ─────────── dãy chấm điều hướng ─────────── */
+  .dots{
+    position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:50;
+    display:flex;flex-direction:column;gap:15px;
+  }
+  .dots button{
+    width:7px;height:7px;border-radius:50%;background:var(--ink);opacity:.25;
+    transition:opacity .3s,transform .3s;
+  }
+  .dots button[aria-current="true"]{opacity:1;transform:scale(1.5)}
+  .dots.on-dark button{background:#fff}
+
+  /* ─────────── nền chung của section ─────────── */
+  section{position:relative}
+  .full{min-height:100svh;display:flex;align-items:center}
+  .pad{padding-block:clamp(64px,10vh,130px)}
+  h2.big{
+    font-family:var(--didone);font-weight:400;
+    font-size:clamp(2rem,5.6vw,4.6rem);line-height:1.02;letter-spacing:.005em;
+    margin:0;text-wrap:balance;
+  }
+  h2.big em{font-family:var(--serif);font-style:italic;letter-spacing:0}
+  h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.15rem,1.9vw,1.5rem);line-height:1.25;margin:0}
+  p{margin:0 0 .8em;max-width:62ch}
+  p:last-child{margin-bottom:0}
+
+  /* ─────────── 01 · hero ─────────── */
+  .hero{color:#fff;overflow:hidden}
+  .hero .bg{
+    position:absolute;inset:0;
+    background-color:#2A2724;
+    background-image:var(--img);background-size:cover;background-position:center;
+  }
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,16,.5),rgba(17,17,16,.18) 42%,rgba(17,17,16,.6))}
+  .hero .inner{position:relative;width:100%;text-align:center;padding-block:120px}
+  .hero h1{
+    font-family:var(--didone);font-weight:400;
+    font-size:clamp(2.4rem,7.4vw,6.4rem);line-height:1.02;margin:0;
+  }
+  .hero h1 em{font-family:var(--serif);font-style:italic}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,54px);justify-content:center;margin-top:clamp(28px,5vh,52px)}
+  .scroll-hint{
+    position:absolute;left:50%;bottom:30px;transform:translateX(-50%);
+    width:20px;height:32px;border:1px solid rgba(255,255,255,.55);border-radius:12px;
+  }
+  .scroll-hint::after{
+    content:"";position:absolute;left:50%;top:7px;width:2px;height:6px;
+    background:rgba(255,255,255,.8);border-radius:1px;transform:translateX(-50%);
+    animation:drip 1.9s ease-in-out infinite;
+  }
+  @keyframes drip{0%,100%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}70%{opacity:0;transform:translate(-50%,9px)}}
+
+  /* ─────────── 02 · tuyên ngôn ─────────── */
+  .manifesto{background:var(--paper);text-align:center}
+  .manifesto .inner{width:100%}
+  .manifesto p{
+    max-width:30ch;margin:26px auto 0;
+    font-family:var(--serif);font-size:clamp(1.15rem,2.3vw,1.85rem);line-height:1.42;
+  }
+
+  /* ─────────── 03 · dải bộ sưu tập cuộn ngang ─────────── */
+  .strip-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:26px}
+  .strip{display:flex;gap:2px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:2px}
+  .strip::-webkit-scrollbar{display:none}
+  .card{flex:0 0 clamp(240px,26vw,360px);scroll-snap-align:start;position:relative}
+  .card .shot{
+    aspect-ratio:3/4.2;background-color:var(--mist);
+    background-image:var(--img);background-size:cover;background-position:center top;
+    transition:filter .5s ease;
+  }
+  .card:hover .shot{filter:brightness(.9)}
+  .card .tag{
+    position:absolute;top:14px;left:14px;
+    background:var(--paper);padding:5px 11px;
+    font-family:var(--sans);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  }
+  .card .meta{background:var(--mist);padding:16px 16px 20px}
+  .card .cat{font-family:var(--sans);font-size:var(--meta);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .card .name{font-family:var(--serif);font-size:1.05rem;margin:5px 0 9px}
+  .card .call{font-family:var(--sans);font-size:var(--meta);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--grey);padding-bottom:2px}
+  .swipe{font-family:var(--sans);font-size:var(--meta);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:16px}
+
+  /* ─────────── 04 · dịch vụ ─────────── */
+  .services{background:var(--mist)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px);margin-top:clamp(26px,4vw,52px)}
+  .svc-grid article{display:flex;flex-direction:column;gap:12px}
+  .svc-grid .shot{aspect-ratio:4/5;background-color:var(--grey);background-image:var(--img);background-size:cover;background-position:center}
+  .svc-grid p{font-size:.97rem;color:#3A3835}
+  .svc-grid .rule-link{align-self:start;margin-top:6px}
+
+  /* ─────────── 05 · làm tay ─────────── */
+  .hand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:0}
+  .hand .shot{aspect-ratio:1/1;background-color:var(--mist);background-image:var(--img);background-size:cover;background-position:center}
+  .hand .txt{padding:clamp(28px,5vw,72px)}
+
+  /* ─────────── 06 · thử phom váy ─────────── */
+  .finder-wrap{background:var(--ink);color:#fff}
+  .finder-wrap .kicker{color:rgba(255,255,255,.55)}
+  .finder-wrap .inner{width:100%;text-align:center}
+  .finder-wrap h2{color:#fff}
+  .finder-wrap p{margin:20px auto 0;color:rgba(255,255,255,.8);max-width:50ch}
+  .btn-light{
+    display:inline-block;margin-top:30px;
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.24em;text-transform:uppercase;
+    background:#fff;color:var(--ink);padding:16px 34px;text-decoration:none;
+    transition:opacity .25s;
+  }
+  .btn-light:hover{opacity:.82}
+  .finder{background:var(--paper);color:var(--ink);text-align:left;margin-top:clamp(28px,4vw,48px);padding:clamp(24px,4vw,52px)}
+  .finder[hidden]{display:none}
+  .fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px clamp(16px,2.4vw,32px);margin-bottom:26px}
+  .field{display:grid;gap:7px}
+  label{font-family:var(--sans);font-size:var(--meta);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  input,select{
+    font-family:var(--serif);font-size:1rem;color:var(--ink);
+    background:transparent;border:0;border-bottom:1px solid var(--ink);padding:8px 0;border-radius:0;
+  }
+  select{font-family:var(--sans);font-size:.9rem}
+  input::placeholder{color:#B5B1AC}
+  input:focus,select:focus{outline:none;border-bottom-width:2px}
+  .btn-dark{
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.24em;text-transform:uppercase;
+    background:var(--ink);color:#fff;padding:15px 32px;text-decoration:none;display:inline-block;
+    transition:opacity .25s;
+  }
+  .btn-dark:hover{opacity:.82}
+  .result{border-top:1px solid var(--ink);margin-top:28px;padding-top:22px}
+  .result[hidden]{display:none}
+  .result h3{margin-bottom:14px}
+  .rlist{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:9px;max-width:72ch}
+  .rlist li{font-size:.98rem;padding-left:16px;position:relative}
+  .rlist li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--ink)}
+  .rlooks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .rlooks figure{margin:0;display:flex;flex-direction:column;gap:8px}
+  .rlooks .shot{aspect-ratio:4/5;background-color:var(--mist);background-image:var(--img);background-size:cover;background-position:center}
+  .rlooks figcaption{font-family:var(--serif);font-size:.93rem}
+
+  /* ─────────── 07 · lộ trình ─────────── */
+  .rail{display:flex;position:relative;overflow-x:auto;scrollbar-width:none;margin-top:clamp(24px,4vw,44px)}
+  .rail::-webkit-scrollbar{display:none}
+  .rail::before{content:"";position:absolute;left:0;right:0;top:36px;height:1px;background:var(--line)}
+  .stop{flex:1 1 0;min-width:0;display:grid;grid-template-rows:24px 20px auto auto;justify-items:center;gap:4px;padding:0 6px 4px;text-align:center}
+  .rwhen{font-family:var(--sans);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);align-self:start}
+  .rdot{width:9px;height:9px;border-radius:50%;background:var(--paper);border:1px solid var(--ink-soft);align-self:center;transition:all .28s}
+  .rnum{font-family:var(--didone);font-size:.95rem;color:var(--ink-soft);line-height:1}
+  .rname{font-family:var(--serif);font-size:.9rem;line-height:1.22;color:var(--ink-soft)}
+  .stop:hover .rdot{border-color:var(--ink);transform:scale(1.2)}
+  .stop[aria-selected="true"] .rdot{background:var(--ink);border-color:var(--ink);transform:scale(1.5)}
+  .stop[aria-selected="true"] .rnum,.stop[aria-selected="true"] .rname,.stop[aria-selected="true"] .rwhen{color:var(--ink)}
+  .sp{margin-top:26px;border-top:1px solid var(--ink);padding-top:20px;display:grid;gap:12px}
+  .sp-head{display:flex;gap:16px;align-items:baseline}
+  .sp-num{font-family:var(--didone);font-size:2rem;line-height:1}
+  .sp-when{font-family:var(--sans);font-size:var(--meta);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:5px}
+  #spList{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-width:74ch}
+  #spList li{font-size:.98rem;padding-left:16px;position:relative}
+  #spList li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--ink)}
+
+  /* ─────────── 08 · báo giá + form ─────────── */
+  .price{background:var(--mist)}
+  .tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-top:clamp(24px,4vw,44px)}
+  .tier{padding:24px clamp(16px,2vw,30px) 28px;border-right:1px solid var(--line)}
+  .tier:last-child{border-right:0}
+  .tier .k{font-family:var(--sans);font-size:var(--meta);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .tier h3{margin:9px 0 13px}
+  .tier ul{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+  .tier li{font-size:.94rem;color:#3A3835;padding-left:15px;position:relative}
+  .tier li::before{content:"";position:absolute;left:0;top:.66em;width:7px;height:1px;background:var(--ink)}
+  .fill{
+    display:inline-block;font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink);border:1px dashed var(--ink-soft);
+    background:var(--paper);padding:2px 8px;max-width:100%;
+  }
+  .lead{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:start;margin-top:clamp(28px,4vw,52px)}
+  form.lead-form{display:grid;gap:18px}
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .consent{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);line-height:1.5;max-width:46ch}
+  .thanks{display:none;border-top:1px solid var(--ink);padding-top:18px}
+  .thanks h3{margin-bottom:8px}
+  form.sent{display:none}
+  .thanks.sent{display:block}
+  .picked{display:none;font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;color:var(--ink)}
+  .picked.on{display:block}
+
+  /* ─────────── 09 · điều khoản ─────────── */
+  .acc{border-bottom:1px solid var(--line)}
+  .acc summary{display:flex;align-items:baseline;gap:18px;padding:15px 0;cursor:pointer;list-style:none}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary::after{content:"+";margin-left:auto;font-family:var(--sans);color:var(--ink-soft)}
+  .acc[open] summary::after{content:"–"}
+  .anum{font-family:var(--didone);font-size:1rem;color:var(--ink-soft)}
+  .atxt{font-family:var(--serif);font-size:clamp(1.02rem,1.8vw,1.2rem)}
+  .acc ul{list-style:none;margin:0;padding:0 0 18px 42px;display:grid;gap:7px;max-width:72ch}
+  .acc li{font-size:.96rem;color:#3A3835;padding-left:15px;position:relative}
+  .acc li::before{content:"";position:absolute;left:0;top:.66em;width:8px;height:1px;background:var(--ink)}
+  .terms-top{border-top:1px solid var(--ink);margin-top:clamp(24px,4vw,44px)}
+
+  /* ─────────── footer ─────────── */
+  footer{background:var(--ink);color:#fff;padding-block:clamp(48px,7vw,86px)}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(24px,4vw,54px)}
+  footer .kicker{color:rgba(255,255,255,.5);margin-bottom:14px;display:block}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+  footer a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem}
+  footer a:hover{color:#fff}
+  footer p{color:rgba(255,255,255,.85);font-size:.95rem}
+  .foot-mark{font-family:var(--didone);font-size:1.35rem;letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:14px}
+  .colophon{
+    margin-top:clamp(30px,4vw,52px);padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(255,255,255,.5);display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
+  }
+
+  /* ─────────── menu điện thoại ─────────── */
+  .menu{
+    position:fixed;inset:0;z-index:55;background:var(--paper);color:var(--ink);
+    padding:100px var(--gutter) 40px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;overflow-y:auto;
+    animation:mIn .3s ease both;
+  }
+  .menu[hidden]{display:none}
+  @keyframes mIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .menu ul{list-style:none;margin:0;padding:0}
+  .menu li{border-bottom:1px solid var(--line)}
+  .menu li a{display:flex;gap:16px;align-items:baseline;padding:15px 2px;text-decoration:none}
+  .mnum{font-family:var(--sans);font-size:var(--meta);letter-spacing:.16em;color:var(--ink-soft)}
+  .mtxt{font-family:var(--serif);font-size:clamp(1.2rem,5vw,1.6rem)}
+  .menu-foot{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+
+  .rise{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+  .js .rise.in{opacity:1;transform:none}
+  html:not(.js) .rise{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .rise{opacity:1!important;transform:none!important}
+  }
+
+  @media (max-width:1240px){
+    .bar nav{display:none}
+    .burger{display:block}
+    .mark{opacity:1}
+    .dots{display:none}
+  }
+  @media (max-width:1000px){
+    .bar nav{display:none}
+    .burger{display:block}
+    .mark{opacity:1}
+    .dots{display:none}
+    .svc-grid,.fgrid,.rlooks,.tiers{grid-template-columns:1fr}
+    .tier{border-right:0;border-top:1px solid var(--line)}
+    .hand{grid-template-columns:1fr}
+    .lead{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr 1fr}
+    .stop{flex:0 0 clamp(104px,26vw,140px)}
+  }
+  @media (min-width:1241px){ .menu{display:none!important} }
+  @media (max-width:640px){
+    .row{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr}
+    .rwhen{display:none}
+    .stop{grid-template-rows:20px auto auto}
+    .rail::before{top:10px}
+  }
+</style>
+
+<header id="hd">
+  <div class="wrap">
+    <div class="bar">
+      <nav aria-label="Mục chính">
+        <a href="#gioithieu" data-en="About">Giới thiệu</a>
+        <a href="#bosuutap" data-en="Fabric &amp; colour">Chất liệu &amp; màu</a>
+        <a href="#dichvu" data-en="Services">Dịch vụ</a>
+        <a href="#thuphom" data-en="Find your dress">Thử phom váy</a>
+      </nav>
+      <a class="mark" href="#top">Dolinhanh Bridal</a>
+      <div class="right">
+        <nav aria-label="Mục phụ" style="display:flex;gap:clamp(11px,1.5vw,22px);flex-wrap:nowrap">
+          <a href="#camnang" data-en="Guide">Cẩm nang</a>
+          <a href="#baogia" data-en="Pricing">Báo giá</a>
+          <a href="#dieukhoan" data-en="Terms">Điều khoản</a>
+          <a href="#kenh" data-en="Channels">Kênh</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Ngôn ngữ / Language">
+          <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Mở menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu điện thoại">
+    <ul>
+      <li><a href="#gioithieu"><span class="mnum">01</span><span class="mtxt" data-en="About">Giới thiệu</span></a></li>
+      <li><a href="#bosuutap"><span class="mnum">02</span><span class="mtxt" data-en="Fabric &amp; colour">Chất liệu &amp; màu</span></a></li>
+      <li><a href="#dichvu"><span class="mnum">03</span><span class="mtxt" data-en="Services">Dịch vụ</span></a></li>
+      <li><a href="#lamtay"><span class="mnum">04</span><span class="mtxt" data-en="Handwork">Làm tay</span></a></li>
+      <li><a href="#thuphom"><span class="mnum">05</span><span class="mtxt" data-en="Find your dress">Thử phom váy</span></a></li>
+      <li><a href="#camnang"><span class="mnum">06</span><span class="mtxt" data-en="The road to the wedding">Cẩm nang cưới</span></a></li>
+      <li><a href="#baogia"><span class="mnum">07</span><span class="mtxt" data-en="Pricing &amp; offers">Báo giá &amp; ưu đãi</span></a></li>
+      <li><a href="#dieukhoan"><span class="mnum">08</span><span class="mtxt" data-en="Rental terms">Điều khoản thuê</span></a></li>
+      <li><a href="#kenh"><span class="mnum">09</span><span class="mtxt" data-en="Channels">Kênh của nhà</span></a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn-dark" href="#baogia" data-en="Book a fitting">Đặt lịch fitting</a>
+    <a href="tel:+84359950588" style="font-family:var(--serif);font-size:1.05rem;text-decoration:none;border-bottom:1px solid var(--line)">035 995 0588</a>
+  </div>
+</div>
+
+<div class="dots" id="dots" aria-label="Điều hướng nhanh"></div>
+
+<main id="top">
+
+  <!-- 01 · HERO -->
+  <section class="hero full" id="hero" data-dot="Trang chủ" data-dot-en="Home" data-dark="1">
+    <div class="bg" style="--img:url('anh/bia.jpg')"></div>
+    <div class="veil"></div>
+    <div class="wrap inner">
+      <h1>Quiet Minimal <em>Luxury</em></h1>
+      <div class="cta">
+        <a class="rule-link" href="#bosuutap" data-en="Discover the collection">Xem bộ sưu tập</a>
+        <a class="rule-link" href="#baogia" data-en="Book an appointment">Đặt lịch fitting</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"></div>
+  </section>
+
+  <!-- 02 · TUYÊN NGÔN / GIỚI THIỆU -->
+  <section class="manifesto full" id="gioithieu" data-dot="Giới thiệu" data-dot-en="About">
+    <div class="wrap inner rise">
+      <span class="kicker" data-en="Manifesto">Tuyên ngôn</span>
+      <p data-en="Dolinhanh Bridal is the bridal house of Nupakachi — made-to-measure gowns, rentals and photography for brides who would rather have meaning than a trend, and craft than noise.">Dolinhanh Bridal là nhánh váy cưới của Nupakachi — may đo, cho thuê và chụp hình, cho những cô dâu chọn ý nghĩa thay vì mốt, chọn nghề thay vì ồn ào.</p>
+      <div style="margin-top:34px"><a class="rule-link" href="#lamtay" data-en="Read our story">Đọc câu chuyện của nhà</a></div>
+    </div>
+  </section>
+
+  <!-- 03 · BỘ SƯU TẬP -->
+  <section class="pad" id="bosuutap" data-dot="Bộ sưu tập" data-dot-en="Collection">
+    <div class="wrap">
+      <div class="strip-head rise">
+        <div>
+          <span class="kicker" data-en="Fabric &amp; colour">Chất liệu &amp; màu</span>
+          <h2 class="big" style="margin-top:12px;max-width:16ch" data-en="Three fabrics, four shades of white.">Ba chất liệu, bốn sắc trắng.</h2>
+        </div>
+        <a class="rule-link" href="#thuphom" data-en="Find your dress">Thử phom váy</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="strip rise" id="strip"></div>
+      <div class="swipe" data-en="Swipe to see more">Vuốt ngang để xem tiếp</div>
+    </div>
+  </section>
+
+  <!-- 04 · DỊCH VỤ -->
+  <section class="services pad" id="dichvu" data-dot="Dịch vụ" data-dot-en="Services">
+    <div class="wrap">
+      <div class="rise">
+        <span class="kicker" data-en="Our services">Dịch vụ của nhà</span>
+        <h2 class="big" style="margin-top:12px;max-width:20ch" data-en="Rented for a day, or made for a lifetime.">Thuê cho một ngày, hay may để giữ cả đời.</h2>
+      </div>
+      <div class="svc-grid rise">
+        <article>
+          <div class="shot" style="--img:url('anh/dv-mayo.jpg')"></div>
+          <h3 data-en="Bespoke">May đo riêng</h3>
+          <p data-en="Built from your own measurements, with a toile fitted before the real gown is cut. Altered until it fits.">Váy dựng từ số đo riêng, may mộc thử dáng rồi mới lên váy thật. Sửa đến khi vừa in.</p>
+          <a class="rule-link" href="#thuphom" data-en="Discover more">Tìm hiểu thêm</a>
+        </article>
+        <article>
+          <div class="shot" style="--img:url('anh/dv-thue.jpg')"></div>
+          <h3 data-en="Rental">Cho thuê váy cưới</h3>
+          <p data-en="Every gown is available to rent, taken in to fit, dry-cleaned and checked stone by stone.">Mọi mẫu trong showroom đều cho thuê, chỉnh theo dáng người, giặt hấp và kiểm từng viên đá.</p>
+          <a class="rule-link" href="#dieukhoan" data-en="Discover more">Tìm hiểu thêm</a>
+        </article>
+        <article>
+          <div class="shot" style="--img:url('anh/dv-chup.jpg')"></div>
+          <h3 data-en="Photography">Chụp hình</h3>
+          <p data-en="Photography and film with Nupakachi: pre-wedding, studio portraits in your own gown, and the wedding day.">Chụp và quay cùng Nupakachi: pre-wedding, studio với chính chiếc váy của mình, phóng sự ngày cưới.</p>
+          <a class="rule-link" href="#kenh" data-en="Discover more">Tìm hiểu thêm</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · LÀM TAY / CÂU CHUYỆN -->
+  <section id="lamtay" data-dot="Làm tay" data-dot-en="Handwork">
+    <div class="hand">
+      <div class="shot" style="--img:url('anh/cl-dinhket.jpg')"></div>
+      <div class="txt rise">
+        <span class="kicker" data-en="Handmade in Vietnam">Làm tay tại Việt Nam</span>
+        <h2 class="big" style="margin:14px 0 18px;font-size:clamp(1.8rem,3.6vw,3rem)" data-en="Set by hand, stone by stone.">Đính tay, từng viên một.</h2>
+        <p data-en="Dolinhanh Bridal began in 2017, out of a love of beauty and of the image of a happy bride. Through the pandemic, a change of name and a change of hands, the spirit held: sincere, understated, full of feeling.">Dolinhanh Bridal ra đời năm 2017, từ sự say mê cái đẹp và tình yêu với hình ảnh cô dâu hạnh phúc. Qua mùa dịch, qua đổi tên và chuyển nhượng, tinh thần vẫn vậy: chân thành, tinh tế, đầy cảm xúc.</p>
+        <p data-en="Dolinhanh is now part of Nupakachi, the wedding photography house of Đỗ Xuân Cường, fifteen years old. One aim: the bride’s real beauty.">Nay Dolinhanh thuộc Nupakachi — nhà ảnh cưới hơn 15 năm của nhiếp ảnh gia Đỗ Xuân Cường. Cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu.</p>
+        <div style="margin-top:24px"><a class="rule-link" href="#camnang" data-en="The road to the wedding">Lộ trình cưới</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · THỬ PHOM VÁY -->
+  <section class="finder-wrap pad" id="thuphom" data-dot="Thử phom" data-dot-en="Find" data-dark="1">
+    <div class="wrap inner">
+      <span class="kicker" data-en="Find your dress">Thử phom váy</span>
+      <h2 class="big" style="margin-top:14px" data-en="Tell us about the day.">Kể cho nhà nghe về ngày của bạn.</h2>
+      <p data-en="Nine questions about your measurements, taste, date and venue. The suggestion is built from your answers, not from a bestseller list.">Chín câu hỏi về số đo, gu, ngày tiệc và địa điểm. Gợi ý dựng từ câu trả lời của bạn, không phải danh sách mẫu bán chạy.</p>
+      <button class="btn-light" type="button" id="finderOpen" data-en="Start — 9 questions">Bắt đầu — 9 câu hỏi</button>
+
+      <div class="finder" id="finder" hidden>
+        <form id="finderForm" novalidate>
+          <div class="fgrid">
+            <div class="field"><label for="q_cao" data-en="Height (cm)">Chiều cao (cm)</label><input id="q_cao" type="number" placeholder="160"></div>
+            <div class="field"><label for="q_nang" data-en="Weight (kg)">Cân nặng (kg)</label><input id="q_nang" type="number" placeholder="48"></div>
+            <div class="field"><label for="q_so" data-en="Bust / waist / hip">Vòng 1 / 2 / 3</label><input id="q_so" type="text" placeholder="84 / 62 / 90"></div>
+            <div class="field"><label for="q_dang" data-en="What to show off">Muốn khoe nhất</label>
+              <select id="q_dang"><option data-en="Waist">Vòng eo</option><option data-en="Shoulders">Vai và quai xanh</option><option data-en="Back">Lưng</option><option data-en="Height">Chiều cao</option><option data-en="Prefer to cover">Muốn che hơn khoe</option></select></div>
+            <div class="field"><label for="q_chat" data-en="Fabric">Chất liệu</label>
+              <select id="q_chat"><option data-en="Plain">Trơn</option><option data-en="Lace">Ren</option><option data-en="Beaded">Đính kết</option><option data-en="Not sure">Chưa biết</option></select></div>
+            <div class="field"><label for="q_phom" data-en="Silhouette">Phom váy</label>
+              <select id="q_phom"><option data-en="Ballgown">Xoè bồng</option><option data-en="A-line">Chữ A</option><option data-en="Mermaid">Đuôi cá</option><option data-en="Sheath">Suông ôm</option><option data-en="Not sure">Chưa biết</option></select></div>
+            <div class="field"><label for="q_mau" data-en="Shade">Màu váy</label>
+              <select id="q_mau"><option data-en="Pure white">Trắng</option><option data-en="Nude">Nude</option><option data-en="Blush">Hồng</option><option data-en="Grey">Ghi</option><option data-en="Not sure">Chưa biết</option></select></div>
+            <div class="field"><label for="q_ngay" data-en="Date">Ngày tiệc</label><input id="q_ngay" type="date"></div>
+            <div class="field"><label for="q_diadiem" data-en="Venue">Địa điểm</label>
+              <select id="q_diadiem"><option data-en="Indoor hall">Trung tâm trong nhà</option><option data-en="Outdoor">Ngoài trời, sân vườn</option><option data-en="Restaurant / hotel">Nhà hàng, khách sạn</option><option data-en="At home">Tại gia, ở quê</option></select></div>
+            <div class="field"><label for="q_sovay" data-en="How many dresses">Số váy định mặc</label>
+              <select id="q_sovay"><option data-en="One">1 váy</option><option data-en="Two">2 váy</option><option data-en="Three or more">3 váy trở lên</option></select></div>
+          </div>
+          <button class="btn-dark" type="submit" data-en="See my suggestions">Xem gợi ý</button>
+        </form>
+        <div class="result" id="finderResult" hidden>
+          <span class="kicker" data-en="Suggested for you">Gợi ý riêng cho bạn</span>
+          <h3 id="rTitle" style="margin-top:10px"></h3>
+          <ul class="rlist" id="rList"></ul>
+          <div class="rlooks" id="rLooks"></div>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:26px">
+            <a class="btn-dark" href="#baogia" id="rSend" data-en="Send to a stylist">Gửi cho stylist</a>
+            <button class="rule-link" type="button" id="rRedo" data-en="Answer again">Điền lại</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · CẨM NANG -->
+  <section class="pad" id="camnang" data-dot="Cẩm nang" data-dot-en="Guide">
+    <div class="wrap">
+      <div class="rise">
+        <span class="kicker" data-en="The road to the wedding">Cẩm nang cưới</span>
+        <h2 class="big" style="margin-top:12px;max-width:18ch" data-en="The whole road, in nine stages.">Toàn bộ lộ trình, chín chặng.</h2>
+        <p style="margin-top:14px" data-en="Tap a milestone to see what to do.">Bấm vào từng mốc để xem việc cần làm.</p>
+      </div>
+      <div class="rise">
+        <div class="rail" id="rail" role="tablist" aria-label="Sơ đồ lộ trình cưới"></div>
+        <div class="sp" role="tabpanel">
+          <div class="sp-head"><span class="sp-num" id="spNum">01</span><div><h3 id="spTitle"></h3><div class="sp-when" id="spWhen"></div></div></div>
+          <ul id="spList"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · BÁO GIÁ -->
+  <section class="price pad" id="baogia" data-dot="Báo giá" data-dot-en="Pricing">
+    <div class="wrap">
+      <div class="rise">
+        <span class="kicker" data-en="Pricing &amp; offers">Báo giá &amp; ưu đãi</span>
+        <h2 class="big" style="margin-top:12px;max-width:20ch" data-en="Leave a number, get pricing within 24 hours.">Để lại số, nhận báo giá trong 24 giờ.</h2>
+      </div>
+      <div class="tiers rise">
+        <div class="tier">
+          <div class="k" data-en="Package A">Gói A</div>
+          <h3 data-en="Rental">Thuê váy cưới</h3>
+          <ul>
+            <li data-en="A gown from the showroom collection">Váy trong bộ sưu tập showroom</li>
+            <li data-en="Taken in at waist, bust and hem">Chỉnh sườn – ngực – gấu</li>
+            <li data-en="Veil and accessories included">Kèm voan và phụ kiện</li>
+          </ul>
+          <span class="fill" data-en="add price from …">điền giá từ …</span>
+        </div>
+        <div class="tier">
+          <div class="k" data-en="Package B">Gói B</div>
+          <h3 data-en="Bespoke">May đo riêng</h3>
+          <ul>
+            <li data-en="Designed to your measurements">Thiết kế theo số đo riêng</li>
+            <li data-en="A toile fitted first">May mộc thử dáng trước</li>
+            <li data-en="The dress is yours after the day">Váy thuộc về cô dâu sau ngày cưới</li>
+          </ul>
+          <span class="fill" data-en="add price from …">điền giá từ …</span>
+        </div>
+        <div class="tier">
+          <div class="k" data-en="Package C">Gói C</div>
+          <h3 data-en="Full bridal package">Trọn gói cô dâu</h3>
+          <ul>
+            <li data-en="Wedding gown + reception dress">Váy cưới + váy tiệc</li>
+            <li data-en="Dresses for both mothers">Váy cho mẹ hai bên</li>
+            <li data-en="Photography by Nupakachi">Kèm ảnh – phim Nupakachi</li>
+          </ul>
+          <span class="fill" data-en="add price from …">điền giá từ …</span>
+        </div>
+      </div>
+
+      <div class="lead rise">
+        <div>
+          <h3 data-en="A stylist calls back within 24 hours.">Stylist gọi lại trong 24 giờ.</h3>
+          <p style="margin-top:12px" data-en="We send full pricing for your date. No calls out of hours, and your number stays with us.">Nhà gửi bảng giá theo đúng ngày cưới của bạn. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
+          <p style="margin-top:12px"><span class="fill" data-en="add this month’s offer">điền ưu đãi tháng này</span></p>
+        </div>
+        <div>
+          <form class="lead-form" id="leadForm" novalidate>
+            <div class="row">
+              <div class="field"><label for="ten" data-en="Full name">Họ và tên</label><input id="ten" name="ten" type="text" placeholder="Nguyễn Thị A" data-en-ph="Jane Nguyen" required></div>
+              <div class="field"><label for="sdt" data-en="Phone number">Số điện thoại</label><input id="sdt" name="sdt" type="tel" inputmode="numeric" placeholder="09xx xxx xxx" data-en-ph="09xx xxx xxx" required></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="ngay" data-en="Wedding date">Ngày cưới dự kiến</label><input id="ngay" name="ngay" type="date"></div>
+              <div class="field"><label for="coso" data-en="Showroom">Cơ sở</label>
+                <select id="coso" name="coso"><option data-en="Hanoi">Hà Nội</option><option data-en="Ho Chi Minh City">TP. Hồ Chí Minh</option><option data-en="Not decided">Chưa quyết định</option></select></div>
+            </div>
+            <input type="hidden" id="phom" name="phom" value="">
+            <div class="picked" id="picked"></div>
+            <button class="btn-dark" type="submit" style="justify-self:start" data-en="Send">Gửi thông tin</button>
+            <p class="consent" data-en="By sending this you agree to be contacted by Dolinhanh Bridal.">Bằng việc gửi thông tin, bạn đồng ý để Dolinhanh Bridal liên hệ tư vấn.</p>
+          </form>
+          <div class="thanks" id="thanks" role="status">
+            <h3 data-en="We’ve got your details.">Đã nhận được thông tin của bạn.</h3>
+            <p data-en="A stylist will call within 24 hours.">Stylist sẽ gọi lại trong 24 giờ tới.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · ĐIỀU KHOẢN -->
+  <section class="pad" id="dieukhoan" data-dot="Điều khoản" data-dot-en="Terms">
+    <div class="wrap">
+      <div class="rise">
+        <span class="kicker" data-en="Rental terms">Điều khoản thuê váy</span>
+        <h2 class="big" style="margin-top:12px;max-width:20ch" data-en="No hidden line.">Không có dòng nào giấu.</h2>
+      </div>
+      <div class="terms-top rise" id="terms"></div>
+    </div>
+  </section>
+
+  <!-- 10 · KÊNH -->
+  <section class="pad" id="kenh" data-dot="Kênh" data-dot-en="Channels">
+    <div class="wrap">
+      <div class="rise">
+        <span class="kicker" data-en="Channels">Kênh của nhà</span>
+        <h2 class="big" style="margin-top:12px;max-width:20ch" data-en="Where brides see the dresses every day.">Nơi cô dâu xem váy mỗi ngày.</h2>
+      </div>
+      <div class="svc-grid rise" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+        <article>
+          <h3>Instagram</h3>
+          <p data-en="Editorial feed, real brides, new collections.">Feed editorial, cô dâu thật, bộ sưu tập mới.</p>
+          <a class="rule-link" href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener">@dolinhanh.bridal</a>
+        </article>
+        <article>
+          <h3>TikTok</h3>
+          <p data-en="Lookbooks, fittings behind the scenes, and advice for brides.">Lookbook, hậu trường fitting và cẩm nang cho cô dâu.</p>
+          <a class="rule-link" href="https://www.tiktok.com/@fitting.vay.cuoi" target="_blank" rel="noopener">@fitting.vay.cuoi</a>
+        </article>
+        <article>
+          <h3>Facebook</h3>
+          <p data-en="Full albums by collection, and messages answered daily.">Album đầy đủ theo bộ sưu tập, tin nhắn trả lời mỗi ngày.</p>
+          <a class="rule-link" href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener">Dolinhanh Bridal HCM</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="foot-mark" href="#top">Dolinhanh Bridal</a>
+        <p data-en="The bridal house of Nupakachi. Bespoke gowns, rentals and photography in Hanoi and Ho Chi Minh City.">Nhánh váy cưới của Nupakachi. May đo, cho thuê và chụp hình tại Hà Nội và TP. Hồ Chí Minh.</p>
+      </div>
+      <div>
+        <span class="kicker" data-en="Contact">Liên hệ</span>
+        <ul>
+          <li><a href="tel:+84359950588">035 995 0588</a></li>
+          <li><a href="mailto:dolinhanh.bridal.hochiminh@gmail.com">dolinhanh.bridal.hochiminh@gmail.com</a></li>
+          <li><a href="#baogia" data-en="Book a fitting">Đặt lịch fitting</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="kicker" data-en="Showrooms">Showroom</span>
+        <ul>
+          <li>91 Nguyễn Hy Quang, Ô Chợ Dừa, Đống Đa, Hà Nội</li>
+          <li>2 Tân Canh, Phường 1, Tân Bình, TP.HCM</li>
+          <li data-en="9:00 – 19:00, by appointment">9:00 – 19:00, đặt hẹn trước</li>
+        </ul>
+      </div>
+      <div>
+        <span class="kicker" data-en="Follow">Theo dõi</span>
+        <ul>
+          <li><a href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@fitting.vay.cuoi" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/nupakachiweddingfilm/" target="_blank" rel="noopener">Nupakachi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Dolinhanh Bridal — a Nupakachi atelier</span>
+      <span>Quiet Minimal Luxury</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ═══ NỐI FORM: dán link Google Form dạng .../formResponse vào đây ═══ */
+const FORM_ENDPOINT = "";
+const FORM_FIELDS = { ten:"", sdt:"", ngay:"", coso:"", phom:"" };
+
+let LANG = "vi";
+const $ = id => document.getElementById(id);
+const vn = (v,e) => LANG === "en" ? e : v;
+
+/* ═══ dải bộ sưu tập ═══ */
+const CARDS = [
+  {cat:"Trơn",catEn:"Plain",   name:"Satin trơn, trễ vai bản to", en:"Plain satin, wide off-shoulder", img:"anh/cl-tron.jpg", tag:"Mới", tagEn:"New"},
+  {cat:"Ren",catEn:"Lace",     name:"Ren Chantilly, tùng xoè",    en:"Chantilly lace, full skirt",     img:"anh/cl-ren.jpg"},
+  {cat:"Đính kết",catEn:"Beaded",name:"Corset đính kết tay",      en:"Hand-beaded corset",             img:"anh/cl-dinhket.jpg", tag:"Nổi bật", tagEn:"Featured"},
+  {cat:"Xoè bồng",catEn:"Ballgown",name:"Ren đính kết, trễ vai",  en:"Beaded lace, off-shoulder",      img:"anh/look-01.jpg"},
+  {cat:"Kim sa",catEn:"Sequin",  name:"Cúp ngực, tùng xoè",       en:"Strapless, full skirt",          img:"anh/look-02.jpg"},
+  {cat:"Chữ A",catEn:"A-line",   name:"Ren, voan dài",            en:"Lace with a long veil",          img:"anh/look-03.jpg"},
+  {cat:"Suông ôm",catEn:"Sheath",name:"Trễ vai, tùng vén",        en:"Off-shoulder, draped skirt",     img:"anh/look-04.jpg"},
+  {cat:"Đuôi cá",catEn:"Mermaid",name:"Nơ eo, chân váy xẻ",       en:"Bow at the waist, front slit",   img:"anh/look-05.jpg"}
+];
+$("strip").innerHTML = CARDS.map(c=>`
+  <article class="card">
+    <div class="shot" style="--img:url('${c.img}')"></div>
+    ${c.tag ? `<span class="tag" data-en="${c.tagEn}">${c.tag}</span>` : ""}
+    <div class="meta">
+      <div class="cat" data-en="${c.catEn}">${c.cat}</div>
+      <div class="name" data-en="${c.en}">${c.name}</div>
+      <a class="call" href="#baogia" data-en="Contact us">Liên hệ</a>
+    </div>
+  </article>`).join("");
+
+/* ═══ lộ trình 9 chặng ═══ */
+const CHANG = [
+  {vi:"Quyết định cưới",en:"Decide to marry",whenVi:"Trước 12 tháng",whenEn:"12+ months",
+   lsVi:["Thống nhất ngân sách và ai chi phần nào, trước khi báo hai bên.","Chốt mùa cưới; tránh mùa mưa nếu định làm ngoài trời.","Mở một khoản riêng cho đám cưới."],
+   lsEn:["Agree the budget and who pays what, before telling the families.","Pick a season; avoid the rains if you want an outdoor party.","Open a separate wedding account."]},
+  {vi:"Hai nhà gặp nhau",en:"The families meet",whenVi:"9–12 tháng",whenEn:"9–12 months",
+   lsVi:["Dạm ngõ, chốt ngày ăn hỏi và ngày cưới.","Ước lượng số mâm — con số quyết định mọi khoản còn lại.","Đặt cọc địa điểm, chỗ đẹp kín trước cả năm."],
+   lsEn:["The first visit; set the engagement and wedding dates.","Estimate the tables — that number drives every other cost.","Book the venue; good ones go a year ahead."]},
+  {vi:"Chọn ekip",en:"Choose the team",whenVi:"6–9 tháng",whenEn:"6–9 months",
+   lsVi:["Chốt ekip ảnh và phim trước, lịch họ kín sớm nhất.","Thử váy lần đầu để biết hợp phom nào, chưa cần chốt.","Muốn may đo thì đây là hạn cuối để bắt đầu."],
+   lsEn:["Book photography and film first.","A first fitting, just to learn your silhouette.","Made-to-measure has to start now at the latest."]},
+  {vi:"Chốt váy và ảnh cưới",en:"Dress and photos",whenVi:"4–6 tháng",whenEn:"4–6 months",
+   lsVi:["Ký hợp đồng váy, giữ ảnh chụp hợp đồng trong máy.","Chụp pre-wedding bằng váy khác váy cưới.","Chốt thiệp và danh sách khách."],
+   lsEn:["Sign for the dress; keep a photo of the contract.","Shoot pre-wedding in a different dress.","Settle invitations and the guest list."]},
+  {vi:"Gửi thiệp",en:"Send invitations",whenVi:"2–3 tháng",whenEn:"2–3 months",
+   lsVi:["Thiệp giấy cho họ hàng, thiệp online cho bạn bè.","Thử váy lần hai khi cân nặng đã ổn — buổi chỉnh chính.","Chốt trang điểm, hoa cầm tay, xe."],
+   lsEn:["Paper for relatives, online for friends.","Second fitting once your weight settles.","Confirm make-up, bouquet and cars."]},
+  {vi:"Chạy nước rút",en:"The last month",whenVi:"1 tháng",whenEn:"1 month",
+   lsVi:["Thử váy lần cuối cùng đôi giày sẽ đi thật.","Gọi lại từng đầu mối xác nhận giờ.","Chốt danh sách khách và sơ đồ bàn."],
+   lsEn:["Final fitting in the actual shoes.","Call every supplier to confirm times.","Lock the guest list and seating."]},
+  {vi:"Tuần cuối",en:"The final week",whenVi:"1 tuần",whenEn:"1 week",
+   lsVi:["Nhận váy trước 1–2 ngày, treo nơi khô, không gấp.","Túi cấp cứu: kim chỉ, băng cá nhân, kim băng, giày dự phòng.","Ngủ đủ và uống nước."],
+   lsEn:["Collect the dress; hang it, never fold it.","Emergency kit: thread, plasters, pins, spare shoes.","Sleep, and drink water."]},
+  {vi:"Ngày của bạn",en:"Your day",whenVi:"Ngày cưới",whenEn:"The day",
+   lsVi:["Ăn sáng, dù không thấy đói.","Giao điện thoại cho một người thân giữ.","Sự cố váy thì gọi nhà, có hướng dẫn xử lý tại chỗ."],
+   lsEn:["Eat breakfast even without appetite.","Hand your phone to someone you trust.","Any trouble with the dress — call us."]},
+  {vi:"Trả váy và giữ kỷ niệm",en:"Return and keep",whenVi:"Sau cưới",whenEn:"After",
+   lsVi:["Trả váy trong 3 ngày để hoàn cọc đầy đủ.","Nhận ảnh, chọn ảnh in album khi còn nhớ rõ.","Gửi lời cảm ơn tới khách."],
+   lsEn:["Return within three days for the full deposit.","Collect the photos and choose the album.","Thank the people who came."]}
+];
+$("rail").innerHTML = CHANG.map((d,i)=>`
+  <button class="stop" type="button" role="tab" aria-selected="${i===0}" data-i="${i}">
+    <span class="rwhen" data-en="${d.whenEn}">${d.whenVi}</span>
+    <span class="rdot"></span>
+    <span class="rnum">${String(i+1).padStart(2,"0")}</span>
+    <span class="rname" data-en="${d.en}">${d.vi}</span>
+  </button>`).join("");
+let chang = 0;
+function veChang(){
+  const d = CHANG[chang], en = LANG === "en";
+  $("spNum").textContent = String(chang+1).padStart(2,"0");
+  $("spTitle").textContent = en ? d.en : d.vi;
+  $("spWhen").textContent = en ? d.whenEn : d.whenVi;
+  $("spList").innerHTML = (en ? d.lsEn : d.lsVi).map(x=>`<li>${x}</li>`).join("");
+  [...document.querySelectorAll(".stop")].forEach((b,i)=>b.setAttribute("aria-selected", i===chang));
+}
+document.querySelectorAll(".stop").forEach((b,i)=>b.addEventListener("click",()=>{
+  chang = i; veChang(); b.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
+}));
+veChang();
+
+/* ═══ điều khoản ═══ */
+const TERMS = [
+  {vi:"Thời gian thuê",en:"Rental period",lsVi:["Thuê chuẩn 3 ngày, từ ngày nhận đến ngày trả.","Trả trễ: 1.000.000đ mỗi ngày."],lsEn:["Three days, pick-up to return.","Late return: 1,000,000 VND per day."]},
+  {vi:"Cọc và thanh toán",en:"Deposit & payment",lsVi:["Cọc thế chân và thanh toán đủ trước khi nhận váy.","Hoàn cọc khi trả đúng hạn, đúng hiện trạng."],lsEn:["Deposit, and full payment before pick-up.","Refunded if returned on time and intact."]},
+  {vi:"Tình trạng nhận váy",en:"On pick-up",lsVi:["Váy giao đã làm sạch và là ủi.","Kiểm tra kỹ khi nhận, có lỗi báo ngay."],lsEn:["Cleaned and pressed.","Check it there; report anything wrong."]},
+  {vi:"Tình trạng trả váy",en:"On return",lsVi:["Rách, thiếu phụ kiện hoặc bẩn không sạch được 90%: phụ thu 100% chi phí may."],lsEn:["Torn, missing pieces, or stains under 90% clean: 100% of production cost."]},
+  {vi:"Sử dụng và bảo quản",en:"Wearing & care",lsVi:["Không đi mưa, không hoá chất (tẩy, keo, rượu vang).","Không kéo rê trên nền nhám; tránh lửa, nến, pháo bông."],lsEn:["No rain, no chemicals — bleach, glue, wine.","No dragging on rough floors; keep away from flame."]},
+  {vi:"Bản quyền thiết kế",en:"Design copyright",lsVi:["Mẫu váy thuộc bản quyền riêng của nhà.","Không sao chép hoặc gửi hình cho bên khác may lại."],lsEn:["Every gown is our own design.","Do not copy or send photos for reproduction."]}
+];
+$("terms").innerHTML = TERMS.map((t,i)=>`
+  <details class="acc">
+    <summary><span class="anum">${String(i+1).padStart(2,"0")}</span><span class="atxt" data-en="${t.en}">${t.vi}</span></summary>
+    <ul>${t.lsVi.map((v,j)=>`<li data-en="${t.lsEn[j]}">${v}</li>`).join("")}</ul>
+  </details>`).join("");
+
+/* ═══ thử phom váy ═══ */
+const MAU = {
+  "Xoè bồng":{img:"anh/look-01.jpg",vi:"Xoè bồng ren đính kết",en:"Beaded lace ballgown"},
+  "Chữ A":{img:"anh/look-03.jpg",vi:"Chữ A ren, voan dài",en:"A-line lace, long veil"},
+  "Đuôi cá":{img:"anh/look-05.jpg",vi:"Đuôi cá, nơ eo, xẻ tà",en:"Mermaid, bow, front slit"},
+  "Suông ôm":{img:"anh/look-04.jpg",vi:"Suông ôm, tùng vén",en:"Sheath, draped skirt"},
+  "Kim sa":{img:"anh/look-02.jpg",vi:"Cúp ngực kim sa",en:"Sequinned bodice"},
+  "Nhún":{img:"anh/look-06.jpg",vi:"Corset nhún, tùng vén",en:"Ruched corset"}
+};
+function goiY(a){
+  const bmi = (a.cao && a.nang) ? a.nang/Math.pow(a.cao/100,2) : null;
+  const y=[]; let phom=a.phom, chat=a.chat, mau=a.mau;
+  if(phom==="Chưa biết"){
+    phom = a.dang==="Chiều cao" ? "Suông ôm" : a.dang==="Vòng eo" ? "Đuôi cá" : a.dang==="Muốn che" ? "Chữ A" : (a.cao && a.cao<158 ? "Chữ A" : "Xoè bồng");
+    y.push(vn("Chưa chọn phom, nhà gợi ý theo dáng người: phom "+phom.toLowerCase()+".","No silhouette chosen, so this comes from your proportions: a "+phom.toLowerCase()+" shape."));
+  }
+  if(a.cao && a.cao<158 && phom==="Xoè bồng")
+    y.push(vn("Dưới 1m58 mà mặc xoè bồng thì cạp phải cao và tùng nhẹ, nhà chỉnh khi thử.","Under 1m58 in a ballgown, the waist sits high and the skirt stays light."));
+  if(bmi && bmi<18.5 && (phom==="Đuôi cá"||phom==="Suông ôm"))
+    y.push(vn("Dáng mảnh, phom ôm đẹp nhưng nên có lớp tạo phom ở eo và hông.","Slim frame: a fitted shape works, with shaping at waist and hip."));
+  if(bmi && bmi>=25)
+    y.push(vn("Nhà ưu tiên chất liệu dày, đứng phom và corset dựng khung.","We lean to a heavier, structured fabric with a boned corset."));
+  if(chat==="Chưa biết"){ chat = a.diadiem==="Ngoài trời" ? "Ren" : "Đính kết";
+    y.push(vn("Chất liệu nhà nghiêng về: "+chat.toLowerCase()+".","Fabric we would start with: "+chat.toLowerCase()+".")); }
+  if(chat==="Đính kết" && a.diadiem==="Ngoài trời")
+    y.push(vn("Ngoài trời ban ngày, đính kết dễ chói — nên vừa phải, tập trung thân trên.","Outdoors, heavy beading glares; keep it on the bodice."));
+  if(mau==="Chưa biết"){ mau = a.diadiem==="Ngoài trời" ? "Hồng" : "Nude";
+    y.push(vn("Sắc trắng gợi ý: "+mau.toLowerCase()+".","Shade we suggest: "+mau.toLowerCase()+".")); }
+  if(mau==="Trắng" && a.diadiem==="Ngoài trời")
+    y.push(vn("Trắng tinh dưới nắng dễ cháy sáng trong ảnh.","Pure white blows out in bright sun."));
+  if(a.ngay){
+    const days = Math.round((new Date(a.ngay)-new Date())/86400000);
+    if(days>0 && days<56) y.push(vn("Còn "+days+" ngày — không đủ cho may đo, nhà tập trung vào váy có sẵn.",days+" days — not enough for made-to-measure; we work from stock."));
+    else if(days>=56) y.push(vn("Còn "+days+" ngày — đủ thời gian may đo riêng.",days+" days — enough time for a made-to-measure gown."));
+  }
+  if(a.sovay==="2 váy") y.push(vn("Hai váy nên khác hẳn phom: một xoè cho lễ, một ôm gọn cho tiệc.","Two dresses: one full for the ceremony, one narrow for the party."));
+  if(a.sovay==="3 váy trở lên") y.push(vn("Ba váy trở lên thì gói trọn gói rẻ hơn thuê lẻ.","Three or more: the package costs less than renting separately."));
+  const chinh = MAU[phom];
+  const phu = chat==="Đính kết" ? MAU["Kim sa"] : chat==="Trơn" ? MAU["Nhún"] : MAU["Chữ A"];
+  const ba = phom==="Xoè bồng" ? MAU["Suông ôm"] : MAU["Xoè bồng"];
+  return {tieuDe: vn("Phom "+phom.toLowerCase()+", chất liệu "+chat.toLowerCase()+", sắc "+mau.toLowerCase()+".",
+                     "A "+phom.toLowerCase()+" shape, in "+chat.toLowerCase()+", "+mau.toLowerCase()+"."),
+          tomTat: phom+" · "+chat+" · "+mau,
+          y, looks:[chinh,phu,ba].filter((v,i,arr)=>arr.indexOf(v)===i)};
+}
+$("finderOpen").addEventListener("click",()=>{ $("finder").hidden=false; $("finder").scrollIntoView({behavior:"smooth",block:"start"}); });
+$("finderForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const sel = id => $(id).selectedIndex, val = id => $(id).value.trim();
+  const a = {
+    cao:parseFloat(val("q_cao"))||null, nang:parseFloat(val("q_nang"))||null, sodo:val("q_so"),
+    dang:["Vòng eo","Vai","Lưng","Chiều cao","Muốn che"][sel("q_dang")],
+    chat:["Trơn","Ren","Đính kết","Chưa biết"][sel("q_chat")],
+    phom:["Xoè bồng","Chữ A","Đuôi cá","Suông ôm","Chưa biết"][sel("q_phom")],
+    mau:["Trắng","Nude","Hồng","Ghi","Chưa biết"][sel("q_mau")],
+    ngay:val("q_ngay"),
+    diadiem:["Trung tâm","Ngoài trời","Nhà hàng","Tại gia"][sel("q_diadiem")],
+    sovay:["1 váy","2 váy","3 váy trở lên"][sel("q_sovay")]
+  };
+  const r = goiY(a);
+  $("rTitle").textContent = r.tieuDe;
+  $("rList").innerHTML = r.y.map(x=>`<li>${x}</li>`).join("");
+  $("rLooks").innerHTML = r.looks.map(l=>`<figure><div class="shot" style="--img:url('${l.img}')"></div><figcaption>${LANG==="en"?l.en:l.vi}</figcaption></figure>`).join("");
+  $("finderResult").hidden = false;
+  $("finderResult").scrollIntoView({behavior:"smooth",block:"start"});
+  window.__phom = r.tomTat + (a.sodo ? " · "+a.sodo : "") + " · " + a.diadiem + " · " + a.sovay;
+});
+$("rRedo").addEventListener("click",()=>{ $("finderResult").hidden=true; $("finderForm").scrollIntoView({behavior:"smooth",block:"start"}); });
+$("rSend").addEventListener("click",()=>{
+  $("phom").value = window.__phom || "";
+  const p = $("picked");
+  p.textContent = vn("Từ phần thử phom: ","From the finder: ") + $("phom").value;
+  p.classList.add("on");
+});
+
+/* ═══ form nhận số điện thoại ═══ */
+$("leadForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const form = e.target, sdt = form.sdt.value.replace(/\D/g,"");
+  if(!form.ten.value.trim() || sdt.length < 9){
+    form.sdt.focus(); form.sdt.placeholder = vn("Cần số điện thoại hợp lệ","A valid phone number, please"); return;
+  }
+  if(FORM_ENDPOINT){
+    const fd = new FormData();
+    for(const k in FORM_FIELDS) if(FORM_FIELDS[k]) fd.append(FORM_FIELDS[k], form[k] ? form[k].value : "");
+    try{ await fetch(FORM_ENDPOINT,{method:"POST",mode:"no-cors",body:fd}); }catch(_){}
+  }
+  form.classList.add("sent");
+  $("thanks").classList.add("sent");
+});
+
+/* ═══ dãy chấm + header đổi nền ═══ */
+const secs = [...document.querySelectorAll("section[data-dot]")];
+const dots = $("dots");
+dots.innerHTML = secs.map((s,i)=>`<button type="button" data-i="${i}" aria-current="${i===0}" title="${s.dataset.dot}" aria-label="${s.dataset.dot}"></button>`).join("");
+[...dots.children].forEach((b,i)=>b.addEventListener("click",()=>secs[i].scrollIntoView({behavior:"smooth"})));
+
+const hd = $("hd");
+function onScroll(){
+  const line = scrollY + innerHeight*0.4;
+  let cur = 0;
+  secs.forEach((s,i)=>{ if(s.offsetTop <= line) cur = i; });
+  [...dots.children].forEach((b,i)=>b.setAttribute("aria-current", i===cur));
+  const dark = secs[cur].dataset.dark === "1";
+  dots.classList.toggle("on-dark", dark);
+  hd.classList.toggle("solid", scrollY > innerHeight*0.75);
+  document.querySelectorAll(".bar nav a").forEach(a=>{
+    a.classList.toggle("here", a.getAttribute("href") === "#" + secs[cur].id);
+  });
+}
+addEventListener("scroll", onScroll, {passive:true});
+addEventListener("resize", onScroll);
+onScroll();
+
+/* ═══ menu điện thoại ═══ */
+const burger = $("burger"), menu = $("menu");
+function setMenu(open){
+  menu.hidden = !open;
+  burger.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
+  if(open) menu.querySelector("a").focus();
+}
+burger.addEventListener("click",()=>setMenu(menu.hidden));
+menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+addEventListener("keydown",e=>{ if(e.key==="Escape" && !menu.hidden){ setMenu(false); burger.focus(); }});
+addEventListener("resize",()=>{ if(innerWidth>1240 && !menu.hidden) setMenu(false); });
+
+/* ═══ hiện dần khi cuộn ═══ */
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }});
+},{threshold:.12});
+document.querySelectorAll(".rise").forEach(el=>io.observe(el));
+
+/* ═══ chuyển VI / EN ═══ */
+document.querySelectorAll("[data-en]").forEach(e=>{ e.dataset.vi = e.innerHTML; });
+document.querySelectorAll("[data-en-ph]").forEach(e=>{ e.dataset.viPh = e.placeholder; });
+function setLang(l){
+  LANG = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l==="en" ? e.dataset.en : e.dataset.vi; });
+  document.querySelectorAll("[data-en-ph]").forEach(e=>{ e.placeholder = l==="en" ? e.dataset.enPh : e.dataset.viPh; });
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang===l));
+  veChang();
+  try{ localStorage.setItem("dla-lang", l); }catch(_){}
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+let saved = "vi";
+try{ saved = localStorage.getItem("dla-lang") || "vi"; }catch(_){}
+setLang(saved);
+</script>
