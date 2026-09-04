@@ -10,8 +10,8 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dolinhanh Bridal — may đo váy cưới riêng. Chiếc váy bắt đầu từ bạn.">
-<title>Dolinhanh Bridal — May đo riêng</title>
+<meta name="description" content="Cô dâu của Dolinhanh Bridal trong ngày cưới.">
+<title>Cô dâu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -237,37 +237,9 @@
   .idx .nm{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);flex:1;line-height:1.35}
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
 
-
-  /* ── khối ảnh + chữ kiểu halfpennylondon.com/bespoke ── */
-  .h-cap{
-    font-family:var(--sans);font-weight:400;
-    font-size:clamp(1.05rem,1.7vw,1.42rem);line-height:1.45;
-    letter-spacing:.16em;text-transform:uppercase;margin:0;
-  }
-  .hp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-    gap:clamp(30px,5vw,88px);align-items:start}
-  .hp .im{width:100%;aspect-ratio:1/1;background:var(--sand) var(--img) center 30%/cover no-repeat}
-  .hp .tx{display:grid;gap:20px;padding-top:6px}
-  .hp .tx p{max-width:48ch}
-  .hp.flip .im{order:2}
-
-  .quote-mid{max-width:56ch;margin-inline:auto;text-align:center}
-  .quote-mid p{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.28rem);
-    line-height:1.65;color:var(--ink);max-width:none;margin:0}
-  .quote-mid cite{display:block;margin-top:18px;font-style:normal;
-    font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-deep)}
-
-  .cta-mid{max-width:56ch;margin-inline:auto;text-align:center}
-  .cta-mid p{margin-inline:auto;margin-top:20px}
-  .cta-mid .link{margin-top:30px}
-
-  @media (max-width:1000px){
-    .hp{grid-template-columns:1fr;gap:26px}
-    .hp.flip .im{order:0}
-  }
 </style>
 
-<header id="hd">
+<header id="hd" class="solid">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
@@ -275,7 +247,7 @@
         <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The experience">Hành trình</a>
         <a href="chi-tiet.html" data-en="The details">Chi tiết</a>
-        <a href="co-dau.html" data-en="The bride">Cô dâu</a>
+        <a href="co-dau.html" class="cur" data-en="The bride">Cô dâu</a>
         <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
@@ -287,88 +259,50 @@
 
 <main id="top">
 
-  <!-- ══ 01 · ẢNH ══ -->
-  <section class="hero" id="hero" data-dark="1">
-    <div class="bg" id="heroBg" style="--img:url('anh/hn-hero.jpg')"></div>
-    <div class="veil"></div>
-    <div class="wrap inner">
-      <span class="eyebrow">Dolinhanh &nbsp;&nbsp; Bridal Experience &nbsp;&nbsp; 2026</span>
-      <h1 class="h-xl" style="margin-top:26px">Quiet minimal luxury,<br><em>Crafted with Mother Love.</em></h1>
-      <p style="margin-top:24px;color:rgba(255,255,255,.9);max-width:42ch" data-en="A dress is chosen not only because it is beautiful — but because it belongs to the one wearing it.">Một chiếc váy được chọn không chỉ vì nó đẹp — mà vì nó hợp với người mặc.</p>
+  <section class="wrap sub">
+    <div class="sub-head rise">
+      <span class="eyebrow" data-en="The bride">Cô dâu</span>
+      <h1 class="h-lg" data-en="A dress is only finished when someone wears it.">Chiếc váy chỉ hoàn thiện khi có người mặc.</h1>
+      <p data-en="Our brides, on their day.">Cô dâu của nhà, trong ngày của họ.</p>
     </div>
   </section>
-  <!-- ══ 02 · STATEMENT ══ -->
-  <section class="air">
+  <!-- ══ 06 · THE BRIDE ══ -->
+  <section id="codau">
     <div class="wrap">
-      <p class="say rise" data-en="Don’t begin with a dress. Begin with the woman who will wear it.">Đừng bắt đầu bằng một chiếc váy. Hãy bắt đầu bằng người mặc nó.</p>
-      <p class="stmt-note rise" data-en="We do not look for the most beautiful gown in the room. We look for the one that is right for you — your proportions, your day, the way you want to feel walking in.">Nhà không đi tìm chiếc váy đẹp nhất trong phòng. Nhà đi tìm chiếc váy đúng với bạn nhất — đúng tỉ lệ của bạn, đúng ngày của bạn, đúng cảm giác bạn muốn mang khi bước vào.</p>
-    </div>
-  </section>
+      <div class="rise" style="margin-bottom:clamp(30px,4vw,56px)">
+      </div>
 
-  <!-- ══ TRẢI NGHIỆM (bố cục theo halfpennylondon.com/bespoke) ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="hp rise">
-        <div class="im" style="--img:url('anh/cl-dinhket.jpg')"></div>
-        <div class="tx">
-          <h2 class="h-cap" data-en="Your experience">Trải nghiệm của bạn</h2>
-          <p data-en="You are welcomed into our showroom for a private appointment — an hour that belongs to you alone, to shape the look you want for your day.">Bạn được đón vào showroom cho một buổi hẹn riêng — một giờ chỉ thuộc về bạn, để cùng nhà hình dung ra dáng váy cho ngày cưới.</p>
-          <p data-en="Making a dress this way is a shared process, and we guide you through every step: we ask about the day, the place, the people, and the way you want to feel walking in.">Dựng một chiếc váy theo cách này là việc của hai bên, và nhà đi cùng bạn từng bước: hỏi về ngày cưới, về nơi tổ chức, về những người sẽ có mặt, và về cảm giác bạn muốn mang khi bước vào.</p>
-          <p data-en="Because it is personal work, you will visit us more than once. This is the time to try things — silhouettes against your proportions, fabric laid across the shoulder, necklines, shades of white.">Vì là việc riêng của từng người, bạn sẽ tới showroom nhiều hơn một lần. Đây là lúc để thử: từng phom trên tỉ lệ của bạn, từng loại vải đặt lên vai, cổ váy, các sắc trắng.</p>
-          <p data-en="Your dress is first brought to life as a sketch. Only then do our artisans begin cutting, boning the corset, laying the lace and setting each stone by hand.">Chiếc váy của bạn được dựng trên bản phác trước. Chỉ sau đó thợ nhà mới bắt đầu cắt, dựng khung corset, đặt ren và đính từng viên đá bằng tay.</p>
+      <div class="bride rise">
+        <div class="im" style="--img:url('../../anh/nu-tryon.jpg')"></div>
+        <div class="meta">
+          <span data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span>
+          <span data-en="A-line · French lace · Cathedral veil">Phom chữ A · Ren Pháp · Voan dài</span>
+        </div>
+      </div>
+
+      <div class="bride rise">
+        <div class="im portrait" style="--img:url('../../anh/cl-23.jpg')"></div>
+        <div class="meta">
+          <span data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span>
+          <span data-en="Mermaid · Silk · Front slit">Phom đuôi cá · Lụa · Xẻ tà trước</span>
+        </div>
+      </div>
+
+      <div class="bride rise">
+        <div class="im" style="--img:url('../../anh/hn-gal2.jpg')"></div>
+        <div class="meta">
+          <span data-en="Dolinhanh bride · Rental, altered to her">Cô dâu Dolinhanh · Thuê, chỉnh theo người</span>
+          <span data-en="Ballgown · Beaded bodice">Phom xoè bồng · Thân đính kết</span>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ══ trích dẫn ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="quote-mid rise">
-        <p data-en="“Dolinhanh believes a bride’s beauty does not need to be created — it is already there. The dress only helps her see it more clearly.”">“Dolinhanh tin rằng vẻ đẹp của cô dâu không cần được tạo ra từ đầu — nó đã ở đó. Chiếc váy chỉ giúp nàng nhìn thấy nó rõ hơn.”</p>
-        <cite data-en="— The founder, Dolinhanh Bridal">— Người sáng lập, Dolinhanh Bridal</cite>
-      </div>
+  <div class="wrap">
+    <div class="next">
+      <span class="lb" data-en="Next">Tiếp theo</span>
+      <a class="tt" href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
     </div>
-  </section>
-
-  <!-- ══ TỪ BẢN PHÁC TỚI CHIẾC VÁY ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="hp flip rise">
-        <div class="im" style="--img:url('anh/cl-30.jpg')"></div>
-        <div class="tx">
-          <h2 class="h-cap" data-en="From sketch to dress">Từ bản phác tới chiếc váy</h2>
-          <p data-en="A calico toile is cut and fitted first. Only when the line is right does the real cloth get touched.">Váy mộc được cắt và thử dáng trước. Chỉ khi đường nét đã đúng, vải thật mới được chạm tới.</p>
-          <p data-en="Then come three or four fittings, each one closer. The waist moves a finger’s width; the hem is measured in the shoes you will really wear — until the dress stops being a garment and starts being yours.">Rồi tới ba đến bốn buổi chỉnh, mỗi lần một gần hơn. Điểm eo dịch đi một đốt ngón tay, gấu váy đo theo đúng đôi giày bạn sẽ đi thật — tới khi chiếc váy thôi là một bộ đồ, và bắt đầu là của bạn.</p>
-          <a class="link" href="hanh-trinh.html" data-en="See the five steps">Xem đủ năm bước</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ CTA ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="cta-mid rise">
-        <h2 class="h-cap" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</h2>
-        <p data-en="Tell us about your day and we will keep a private fitting for you. A stylist replies within a day.">Kể cho nhà nghe về ngày cưới của bạn, nhà giữ chỗ cho một buổi thử riêng. Stylist trả lời trong vòng một ngày.</p>
-        <a class="link" href="gui-yeu-cau.html" data-en="Make an enquiry">Gửi yêu cầu</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <span class="eyebrow rise" data-en="Contents">Mục lục</span>
-      <div class="idx rise" style="margin-top:26px">
-      <a href="gioi-thieu.html"><span class="no">01</span><span class="nm" data-en="About">Giới thiệu</span><span class="de" data-en="Who we are">Nhà là ai</span></a>
-      <a href="hanh-trinh.html"><span class="no">02</span><span class="nm" data-en="The experience">Hành trình</span><span class="de" data-en="Five steps, made to measure">Năm bước may đo</span></a>
-      <a href="chi-tiet.html"><span class="no">03</span><span class="nm" data-en="The details">Chi tiết</span><span class="de" data-en="Handwork, up close">Chi tiết làm tay</span></a>
-      <a href="co-dau.html"><span class="no">04</span><span class="nm" data-en="The bride">Cô dâu</span><span class="de" data-en="Our brides">Cô dâu của nhà</span></a>
-      <a href="gui-yeu-cau.html"><span class="no">05</span><span class="nm" data-en="Enquire">Gửi yêu cầu</span><span class="de" data-en="Book a fitting">Đặt lịch thử váy</span></a>
-      </div>
-    </div>
-  </section>
+  </div>
 
 </main>
 
