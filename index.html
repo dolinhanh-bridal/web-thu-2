@@ -359,6 +359,21 @@
     .bar nav a{font-size:11px}
     .idx .nm{font-size:1.15rem}
   }
+
+  /* ── ép lại bố cục trên máy nhỏ (đặt cuối để không bị ghi đè) ── */
+  @media (max-width:1000px){
+    .hp{grid-template-columns:1fr;gap:24px;max-width:none}
+    .hp .im{margin-top:0;aspect-ratio:4/5}
+    .hp.flip .im{order:0}
+    .coll{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .brides{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .details{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .ba{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .wide2{grid-template-columns:1fr}
+    .coll{gap:10px}
+  }
 </style>
 
 <header id="hd">
@@ -406,8 +421,41 @@
         <h2 class="h-cap giua" data-en="Dolinhanh Bridal">Dolinhanh Bridal</h2>
         <p style="margin-top:26px" data-en="A bridal house for brides looking for a dress that is truly right for them — from ready designs to rent or to buy, through to dresses personalised to your body and your own story.">Dolinhanh Bridal dành cho những cô dâu đang tìm một chiếc váy đúng với mình — từ những thiết kế có sẵn để thuê hoặc mua, đến những chiếc váy được cá nhân hoá theo cơ thể và câu chuyện riêng.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="ba rise">
+  <!-- ══ TINH THẦN & LỊCH SỬ ══ -->
+  <section class="air" style="padding-top:0" id="tinhthan">
+    <div class="wrap">
+      <div class="hp rise">
+        <div class="im" style="--img:url('anh/nc-24.jpg')"></div>
+        <div class="tx">
+          <h2 class="h-cap" data-en="The spirit of Dolinhanh">Tinh thần Dolinhanh</h2>
+          <p data-en="Born in 2017, Dolinhanh Bridal is a brand marked by a personal signature — made from a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Ra đời từ năm 2017, Dolinhanh Bridal là một thương hiệu mang đậm dấu ấn cá nhân, được tạo nên từ sự say mê với cái đẹp, sự chỉn chu trong từng chi tiết và tình yêu với hình ảnh cô dâu hạnh phúc.</p>
+          <p data-en="Through many ups and downs — from the pandemic to a change of name and a change of hands — Dolinhanh has kept the spirit it began with: sincere, understated, full of feeling.">Trải qua nhiều thăng trầm — từ biến cố mùa dịch đến việc đổi tên, chuyển nhượng thương hiệu — Dolinhanh vẫn giữ nguyên tinh thần ban đầu: chân thành, tinh tế và đầy cảm xúc.</p>
+          <p data-en="Dolinhanh is now part of Nupakachi — a wedding photography brand of more than fifteen years, founded by photographer Đỗ Xuân Cường, with more than three branches and a footprint across many countries. Nupakachi is not only a name, but a creative spirit of international scale.">Dolinhanh hiện là một bộ phận trực thuộc <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi</a> — thương hiệu ảnh cưới có tuổi đời hơn 15 năm, được sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường, với hơn 3 chi nhánh trên toàn thế giới, và dấu chân đã in qua nhiều quốc gia. Nupakachi không chỉ là một cái tên, mà còn là một tinh thần sáng tạo mang tầm quốc tế.</p>
+          <p data-en="From the quality of the photographs to the design of the gowns, Dolinhanh — together with Nupakachi — pursues one thing: the bride’s true beauty, said through what is simplest and deepest.">Từ chất lượng hình ảnh đến thiết kế váy cưới, Dolinhanh — cùng với <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi</a> — luôn theo đuổi một mục tiêu chung: tôn vinh vẻ đẹp thật của cô dâu qua những điều giản dị nhưng sâu sắc nhất.</p>
+          <a class="link" href="gioi-thieu.html" data-en="More about the house">Đọc thêm về Dolinhanh</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ lời người sáng lập ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="quote-mid rise">
+        <p data-en="“Dolinhanh is the fierce drive that lets me weave the dream of a wedding dress. I hope this brand lives on alongside the growing up of the little girl I am raising — truly, this is the happy ambition I want to bring to young women.”">“Dolinhanh là nguồn động lực mãnh liệt để mình dệt nên ước mơ “váy cưới”. Mình mong thương hiệu này sẽ tồn tại mãi theo sự trưởng thành của cô gái nhỏ mình đang nuôi dạy. Để thực sự, đây sẽ là hoài bão hạnh phúc mình mang tới cho các cô gái trẻ.”</p>
+        <cite data-en="Dolinhanh Bridal — a wedding dress of happiness, woven from a parent’s love">Dolinhanh Bridal — váy cưới hạnh phúc dệt từ tình yêu của mẹ cha</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BA LỰA CHỌN ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+<div class="ba rise">
         <div class="o">
           <span class="n">01</span>
           <h3 data-en="Rent">Thuê</h3>
@@ -448,34 +496,6 @@
     </div>
   </section>
 
-
-  <!-- ══ TINH THẦN & LỊCH SỬ ══ -->
-  <section class="air" style="padding-top:0" id="tinhthan">
-    <div class="wrap">
-      <div class="hp rise">
-        <div class="im" style="--img:url('anh/nc-24.jpg')"></div>
-        <div class="tx">
-          <h2 class="h-cap" data-en="The spirit of Dolinhanh">Tinh thần Dolinhanh</h2>
-          <p data-en="Born in 2017, Dolinhanh Bridal is a brand marked by a personal signature — made from a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Ra đời từ năm 2017, Dolinhanh Bridal là một thương hiệu mang đậm dấu ấn cá nhân, được tạo nên từ sự say mê với cái đẹp, sự chỉn chu trong từng chi tiết và tình yêu với hình ảnh cô dâu hạnh phúc.</p>
-          <p data-en="Through many ups and downs — from the pandemic to a change of name and a change of hands — Dolinhanh has kept the spirit it began with: sincere, understated, full of feeling.">Trải qua nhiều thăng trầm — từ biến cố mùa dịch đến việc đổi tên, chuyển nhượng thương hiệu — Dolinhanh vẫn giữ nguyên tinh thần ban đầu: chân thành, tinh tế và đầy cảm xúc.</p>
-          <p data-en="Dolinhanh is now part of Nupakachi — a wedding photography brand of more than fifteen years, founded by photographer Đỗ Xuân Cường, with more than three branches and a footprint across many countries. Nupakachi is not only a name, but a creative spirit of international scale.">Dolinhanh hiện là một bộ phận trực thuộc <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi</a> — thương hiệu ảnh cưới có tuổi đời hơn 15 năm, được sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường, với hơn 3 chi nhánh trên toàn thế giới, và dấu chân đã in qua nhiều quốc gia. Nupakachi không chỉ là một cái tên, mà còn là một tinh thần sáng tạo mang tầm quốc tế.</p>
-          <p data-en="From the quality of the photographs to the design of the gowns, Dolinhanh — together with Nupakachi — pursues one thing: the bride’s true beauty, said through what is simplest and deepest.">Từ chất lượng hình ảnh đến thiết kế váy cưới, Dolinhanh — cùng với <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi</a> — luôn theo đuổi một mục tiêu chung: tôn vinh vẻ đẹp thật của cô dâu qua những điều giản dị nhưng sâu sắc nhất.</p>
-          <a class="link" href="gioi-thieu.html" data-en="More about the house">Đọc thêm về Dolinhanh</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══ lời người sáng lập ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="quote-mid rise">
-        <p data-en="“Dolinhanh is the fierce drive that lets me weave the dream of a wedding dress. I hope this brand lives on alongside the growing up of the little girl I am raising — truly, this is the happy ambition I want to bring to young women.”">“Dolinhanh là nguồn động lực mãnh liệt để mình dệt nên ước mơ “váy cưới”. Mình mong thương hiệu này sẽ tồn tại mãi theo sự trưởng thành của cô gái nhỏ mình đang nuôi dạy. Để thực sự, đây sẽ là hoài bão hạnh phúc mình mang tới cho các cô gái trẻ.”</p>
-        <cite data-en="Dolinhanh Bridal — a wedding dress of happiness, woven from a parent’s love">Dolinhanh Bridal — váy cưới hạnh phúc dệt từ tình yêu của mẹ cha</cite>
-      </div>
-    </div>
-  </section>
 
   <!-- ══ 04 · TRIẾT LÝ ══ -->
   <section class="air" style="padding-top:0">
