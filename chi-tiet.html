@@ -440,6 +440,21 @@
     .ft-mxh{text-align:left}
     .ft-icon{justify-content:flex-start}
   }
+
+  /* ── chữ nằm TRONG ảnh (kiểu Vélia) ── */
+  .vl figure{position:relative;overflow:hidden}
+  .vl .im{position:relative}
+  .vl .im::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(180deg,rgba(20,18,16,0) 0%,rgba(20,18,16,.46) 100%);
+    pointer-events:none}
+  .vl figcaption{position:absolute;left:16px;right:16px;bottom:14px;padding:0;
+    color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+  .vl figcaption .kind{display:block;font-family:var(--sans);font-size:9.5px;
+    letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-bottom:5px}
+  .vl .nm{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:#fff}
+  .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
 </style>
 
 <header id="hd" class="solid">

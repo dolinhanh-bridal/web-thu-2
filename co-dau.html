@@ -440,6 +440,21 @@
     .ft-mxh{text-align:left}
     .ft-icon{justify-content:flex-start}
   }
+
+  /* ── chữ nằm TRONG ảnh (kiểu Vélia) ── */
+  .vl figure{position:relative;overflow:hidden}
+  .vl .im{position:relative}
+  .vl .im::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(180deg,rgba(20,18,16,0) 0%,rgba(20,18,16,.46) 100%);
+    pointer-events:none}
+  .vl figcaption{position:absolute;left:16px;right:16px;bottom:14px;padding:0;
+    color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+  .vl figcaption .kind{display:block;font-family:var(--sans);font-size:9.5px;
+    letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-bottom:5px}
+  .vl .nm{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:#fff}
+  .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
 </style>
 
 <script>document.addEventListener("DOMContentLoaded",()=>document.body.classList.add("bst"));</script>
@@ -476,14 +491,14 @@
   <section id="codau">
     <div class="wrap">
       <div class="vl rise">
-        <figure><div class="im" style="--img:url('anh/nu-tryon.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm" data-en="A-line · French lace · Cathedral veil">Chữ A · Ren Pháp · Voan dài</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/cl-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm" data-en="Mermaid · Silk · Front slit">Đuôi cá · Lụa · Xẻ tà trước</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/hn-gal2.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented, altered to her">Cô dâu Dolinhanh · Thuê, chỉnh theo người</span><span class="nm" data-en="Ball gown · Beaded bodice">Ballgown · Thân đính kết</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/hn-gal1.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented by her">Cô dâu Dolinhanh · Thuê váy này</span><span class="nm" data-en="Fitted silk · Long lace gloves">Dáng ôm lụa · Găng ren dài</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/hn-gal3.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Bought by her">Cô dâu Dolinhanh · Mua váy này</span><span class="nm" data-en="Full skirt · Pleated bodice">Dáng xoè · Thân xếp ly</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/hn-gal5.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented by her">Cô dâu Dolinhanh · Thuê váy này</span><span class="nm" data-en="Ball gown · Raised lace all over">Ballgown · Ren nổi toàn thân</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/nu-hoa-vay-sau-le.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm" data-en="Fabric flowers set by hand at the back">Hoa vải đính tay ở lưng váy</span></figcaption></figure>
-        <figure><div class="im" style="--img:url('anh/cl-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Bought by her">Cô dâu Dolinhanh · Mua váy này</span><span class="nm" data-en="Organza A-line · Fabric flower">Chữ A organza · Hoa vải</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/nu-tryon.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm">CD 01</span><span class="de" data-en="A-line · French lace · Cathedral veil">Chữ A · Ren Pháp · Voan dài</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/cl-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm">CD 02</span><span class="de" data-en="Mermaid · Silk · Front slit">Đuôi cá · Lụa · Xẻ tà trước</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/hn-gal2.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented, altered to her">Cô dâu Dolinhanh · Thuê, chỉnh theo người</span><span class="nm">CD 03</span><span class="de" data-en="Ball gown · Beaded bodice">Ballgown · Thân đính kết</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/hn-gal1.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented by her">Cô dâu Dolinhanh · Thuê váy này</span><span class="nm">CD 04</span><span class="de" data-en="Fitted silk · Long lace gloves">Dáng ôm lụa · Găng ren dài</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/hn-gal3.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Bought by her">Cô dâu Dolinhanh · Mua váy này</span><span class="nm">CD 05</span><span class="de" data-en="Full skirt · Pleated bodice">Dáng xoè · Thân xếp ly</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/hn-gal5.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Rented by her">Cô dâu Dolinhanh · Thuê váy này</span><span class="nm">CD 06</span><span class="de" data-en="Ball gown · Raised lace all over">Ballgown · Ren nổi toàn thân</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/nu-hoa-vay-sau-le.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Made to measure">Cô dâu Dolinhanh · May đo riêng</span><span class="nm">CD 07</span><span class="de" data-en="Fabric flowers set by hand at the back">Hoa vải đính tay ở lưng váy</span></figcaption></figure>
+        <figure><div class="im" style="--img:url('anh/cl-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh bride · Bought by her">Cô dâu Dolinhanh · Mua váy này</span><span class="nm">CD 08</span><span class="de" data-en="Organza A-line · Fabric flower">Chữ A organza · Hoa vải</span></figcaption></figure>
       </div>
       <div class="mid-blk rise" style="margin-top:clamp(26px,3vw,44px)">
         <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>

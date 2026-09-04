@@ -440,6 +440,21 @@
     .ft-mxh{text-align:left}
     .ft-icon{justify-content:flex-start}
   }
+
+  /* ── chữ nằm TRONG ảnh (kiểu Vélia) ── */
+  .vl figure{position:relative;overflow:hidden}
+  .vl .im{position:relative}
+  .vl .im::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(180deg,rgba(20,18,16,0) 0%,rgba(20,18,16,.46) 100%);
+    pointer-events:none}
+  .vl figcaption{position:absolute;left:16px;right:16px;bottom:14px;padding:0;
+    color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+  .vl figcaption .kind{display:block;font-family:var(--sans);font-size:9.5px;
+    letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.88);margin-bottom:5px}
+  .vl .nm{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:#fff}
+  .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
 </style>
 
 <script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
@@ -492,19 +507,19 @@
         </div>
       </div>
       <div class="vl" id="vlGrid">
-        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-23.jpg')"></div><figcaption><span class="nm">Dolinhanh 23</span><span class="de" data-en="Fitted silk with a slit, long lace gloves">Dáng ôm lụa, xẻ tà, găng ren dài</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-24.jpg')"></div><figcaption><span class="nm">Dolinhanh 24</span><span class="de" data-en="Raised lace bodice, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption></figure>
-        <figure data-dang="chu-a" data-chat="ren"><div class="im" style="--img:url('anh/nc-25.jpg')"></div><figcaption><span class="nm">Dolinhanh 25</span><span class="de" data-en="Large floral lace, full skirt">Ren hoa lớn, tùng xoè</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-26.jpg')"></div><figcaption><span class="nm">Dolinhanh 26</span><span class="de" data-en="Satin ball gown, sweetheart neckline">Ballgown satin, cổ tim</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-27.jpg')"></div><figcaption><span class="nm">Dolinhanh 27</span><span class="de" data-en="Beaded all over, grand skirt">Đính kết toàn thân, tùng lớn</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-28.jpg')"></div><figcaption><span class="nm">Dolinhanh 28</span><span class="de" data-en="Mermaid in soft tulle, corset bodice">Đuôi cá voan mờ, thân corset</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="ren"><div class="im" style="--img:url('anh/nc-29.jpg')"></div><figcaption><span class="nm">Dolinhanh 29</span><span class="de" data-en="Raised lace all over, off-shoulder">Ren nổi toàn thân, trễ vai</span></figcaption></figure>
-        <figure data-dang="chu-a" data-chat="phi"><div class="im" style="--img:url('anh/nc-31.jpg')"></div><figcaption><span class="nm">Dolinhanh 31</span><span class="de" data-en="Organza A-line, fabric flower set by hand">Chữ A organza, hoa vải đính tay</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-32.jpg')"></div><figcaption><span class="nm">Dolinhanh 32</span><span class="de" data-en="Draped satin with a slit, lace gloves">Satin xếp nếp, xẻ tà, găng ren</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-34.jpg')"></div><figcaption><span class="nm">Dolinhanh 34</span><span class="de" data-en="Fine beading, full bouffant skirt">Đính kết li ti, tùng bồng</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-35.jpg')"></div><figcaption><span class="nm">Dolinhanh 35</span><span class="de" data-en="Raised lace, fitted bodice, grand skirt">Ren nổi, thân ôm, tùng lớn</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-36.jpg')"></div><figcaption><span class="nm">Dolinhanh 36</span><span class="de" data-en="Plain satin, draped bodice, sweetheart">Satin trơn, thân dún, cổ tim</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-37.jpg')"></div><figcaption><span class="nm">Dolinhanh 37</span><span class="de" data-en="Plain satin, classic full skirt">Satin trơn, tùng xoè cổ điển</span></figcaption></figure>
+        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 23</span><span class="de" data-en="Fitted silk with a slit, long lace gloves">Dáng ôm lụa, xẻ tà, găng ren dài</span></figcaption></figure>
+        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-24.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 24</span><span class="de" data-en="Raised lace bodice, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption></figure>
+        <figure data-dang="chu-a" data-chat="ren"><div class="im" style="--img:url('anh/nc-25.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 25</span><span class="de" data-en="Large floral lace, full skirt">Ren hoa lớn, tùng xoè</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-26.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 26</span><span class="de" data-en="Satin ball gown, sweetheart neckline">Ballgown satin, cổ tim</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-27.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 27</span><span class="de" data-en="Beaded all over, grand skirt">Đính kết toàn thân, tùng lớn</span></figcaption></figure>
+        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-28.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 28</span><span class="de" data-en="Mermaid in soft tulle, corset bodice">Đuôi cá voan mờ, thân corset</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="ren"><div class="im" style="--img:url('anh/nc-29.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 29</span><span class="de" data-en="Raised lace all over, off-shoulder">Ren nổi toàn thân, trễ vai</span></figcaption></figure>
+        <figure data-dang="chu-a" data-chat="phi"><div class="im" style="--img:url('anh/nc-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 31</span><span class="de" data-en="Organza A-line, fabric flower set by hand">Chữ A organza, hoa vải đính tay</span></figcaption></figure>
+        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-32.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 32</span><span class="de" data-en="Draped satin with a slit, lace gloves">Satin xếp nếp, xẻ tà, găng ren</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-34.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 34</span><span class="de" data-en="Fine beading, full bouffant skirt">Đính kết li ti, tùng bồng</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-35.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 35</span><span class="de" data-en="Raised lace, fitted bodice, grand skirt">Ren nổi, thân ôm, tùng lớn</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-36.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 36</span><span class="de" data-en="Plain satin, draped bodice, sweetheart">Satin trơn, thân dún, cổ tim</span></figcaption></figure>
+        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-37.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 37</span><span class="de" data-en="Plain satin, classic full skirt">Satin trơn, tùng xoè cổ điển</span></figcaption></figure>
       </div>
       <p class="vl-trong" id="vlTrong" hidden data-en="These dresses are being updated. Tell us what you are looking for and we will show you what is in the showroom.">Mẫu thuộc nhóm này đang được cập nhật. Bạn nhắn cho Dolinhanh biết mình đang tìm gì, Dolinhanh sẽ đưa bạn xem các mẫu đang có tại showroom.</p>
       <div class="vl-page" id="vlPage"></div>
