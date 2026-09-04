@@ -374,6 +374,72 @@
     .wide2{grid-template-columns:1fr}
     .coll{gap:10px}
   }
+
+  /* ── lưới bộ sưu tập kiểu veliabridal.com/collections ── */
+  body.bst{background:var(--ivory)}
+  .vl-head{padding-top:clamp(96px,12vh,150px);padding-bottom:clamp(26px,3.4vw,44px)}
+  .vl-head .eyebrow{margin-bottom:14px}
+  .vl-head h1{font-family:var(--sans);font-weight:400;
+    font-size:clamp(1.6rem,3.3vw,3rem);letter-spacing:.16em;text-transform:uppercase;
+    line-height:1.2;margin:0}
+  .vl-head p{margin-top:18px;max-width:52ch}
+  .vl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;
+    margin-top:clamp(20px,2.6vw,34px)}
+  .vl figure{margin:0}
+  .vl .im{width:100%;aspect-ratio:2/3;background:var(--sand) var(--img) center 12%/cover no-repeat}
+  .vl figcaption{padding:14px 0 26px 16px}
+  .vl .nm{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink)}
+  .vl .de{display:block;margin-top:7px;font-family:var(--sans);font-size:11px;
+    letter-spacing:.06em;color:var(--taupe-deep)}
+  .vl-page{display:flex;justify-content:center;gap:6px;margin-top:clamp(18px,2.4vw,30px)}
+  .vl-page button{width:34px;height:34px;font-family:var(--sans);font-size:12px;
+    color:var(--taupe-deep);border:1px solid transparent;border-radius:50%}
+  .vl-page button[aria-current="true"]{color:var(--ink);border-color:var(--line);background:#fff}
+  @media (max-width:1000px){ .vl{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+  .vl-loc{display:grid;gap:12px;padding-bottom:clamp(14px,2vw,22px);
+    border-bottom:1px solid var(--line)}
+  .vl-nhom{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+  .vl-nhom .lb{font-family:var(--sans);font-size:10.5px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--taupe-deep);min-width:9ch}
+  .vl-nhom button{font-family:var(--sans);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--taupe-deep);padding:7px 15px;
+    border:1px solid var(--line);border-radius:100px;background:transparent;
+    transition:color .4s ease,border-color .4s ease,background .4s ease}
+  .vl-nhom button:hover{color:var(--ink)}
+  .vl-nhom button[aria-current="true"]{color:var(--ink);border-color:var(--ink);background:#fff}
+  .vl-trong{max-width:56ch;margin:clamp(30px,4vw,52px) auto;text-align:center;color:var(--taupe-deep)}
+  .vl-trong[hidden]{display:none}
+  .vl figcaption .kind{display:block;font-family:var(--sans);font-size:9.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);margin-bottom:6px}
+
+  /* ── chân trang nhiều cột ── */
+  footer{border-top:1px solid var(--line);padding-block:clamp(46px,6vw,80px);text-align:left;background:var(--paper)}
+  .ft-cot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,70px)}
+  .ft-h{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--ink);margin-bottom:18px}
+  .ft-d{margin:0 0 12px;font-size:14px;line-height:1.7;color:var(--taupe-deep);max-width:34ch}
+  .ft-d a{text-decoration:none}
+  .ft-d a:hover{color:var(--ink)}
+  .ft-duoi{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;
+    flex-wrap:wrap;margin-top:clamp(38px,5vw,70px)}
+  .ft-logo img{width:clamp(180px,22vw,300px);height:auto;display:block}
+  .ft-mxh{text-align:right}
+  .ft-mxh .ft-h{margin-bottom:12px}
+  .ft-icon{display:flex;gap:16px;justify-content:flex-end;color:var(--ink)}
+  .ft-icon a{display:inline-flex;opacity:.85}
+  .ft-icon a:hover{opacity:1}
+  .foot-say{margin:clamp(34px,4vw,56px) auto 0;max-width:none;text-align:center;font-family:var(--serif);
+    font-style:italic;font-size:1.05rem;color:var(--taupe-deep)}
+  .ft-cr{margin:16px auto 0;max-width:none;text-align:center;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-deep)}
+  @media (max-width:800px){
+    .ft-cot{grid-template-columns:1fr;gap:30px}
+    .ft-duoi{flex-direction:column;align-items:flex-start}
+    .ft-mxh{text-align:left}
+    .ft-icon{justify-content:flex-start}
+  }
 </style>
 
 <header id="hd">
@@ -620,15 +686,44 @@
 
 <footer>
   <div class="wrap">
-    <a class="mark" href="index.html">Dolinhanh Bridal</a>
-    <div class="foot-links">
-      <span>Hà Nội &nbsp;·&nbsp; TP.HCM</span>
-      <a href="tel:+84359950588">035 995 0588</a>
-      <a href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener">The Bride’s Dress Guide</a>
+    <div class="ft-cot">
+      <div class="ft-c">
+        <span class="ft-h" data-en="Contact">Liên hệ</span>
+        <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
+        <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
+        <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
+        <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
+      </div>
+      <div class="ft-c">
+        <span class="ft-h" data-en="Support">Hỗ trợ</span>
+        <p class="ft-d"><a href="gui-yeu-cau.html" data-en="Book a fitting">Đặt lịch thử váy</a></p>
+        <p class="ft-d"><a href="hanh-trinh.html" data-en="The journey">Hành trình</a></p>
+        <p class="ft-d"><a href="cam-nang.html" data-en="The handbook">Cẩm nang</a></p>
+        <p class="ft-d"><a href="gioi-thieu.html" data-en="About">Giới thiệu</a></p>
+      </div>
+      <div class="ft-c">
+        <span class="ft-h" data-en="Explore">Khám phá</span>
+        <p class="ft-d"><a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a></p>
+        <p class="ft-d"><a href="co-dau.html" data-en="Our brides">Cô dâu</a></p>
+        <p class="ft-d"><a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi Photography</a></p>
+        <p class="ft-d"><a href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener">The Bride’s Dress Guide</a></p>
+      </div>
     </div>
+
+    <div class="ft-duoi">
+      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <div class="ft-mxh">
+        <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
+        <div class="ft-icon">
+          <a href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+          <a href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@fitting.vay.cuoi" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.4 3.5 3.6v2.6c-1.3.1-2.5-.2-3.6-.9v5.6c0 3.4-2.6 5.6-5.6 5.1-2.4-.4-4.2-2.4-4.3-4.8-.1-2.9 2.2-5.3 5.1-5.3.3 0 .5 0 .8.1v2.7c-.3-.1-.5-.1-.8-.1-1.4 0-2.5 1.2-2.4 2.6.1 1.2 1.1 2.2 2.3 2.3 1.4.1 2.6-1 2.6-2.4V3h2.4Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
     <p class="foot-say" data-en="Quiet minimal luxury, crafted with Mother Love.">Quiet minimal luxury, crafted with Mother Love.</p>
+    <p class="ft-cr" data-en="© 2026 Dolinhanh Bridal. All rights reserved.">© 2026 Dolinhanh Bridal. Đã đăng ký bản quyền.</p>
   </div>
 </footer>
 
