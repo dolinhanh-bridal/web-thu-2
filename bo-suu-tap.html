@@ -537,6 +537,10 @@
     background:rgba(255,255,255,.45);transition:background .3s ease,transform .3s ease}
   .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
+
+  .bst-thue{margin-top:22px;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--ink)}
+  .vl-head h1 br{display:block}
 </style>
 
 <script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
@@ -562,9 +566,11 @@
 <main id="top">
   <section class="wrap vl-head">
     <div class="rise">
-      <span class="eyebrow" data-en="All collections">Bộ sưu tập</span>
-      <h1 data-en="Dolinhanh Bridal">Dolinhanh Bridal</h1>
-      <p data-en="Every dress here can be rented or bought. Most can also be adjusted for you — a neckline, a sleeve, a silhouette.">Mọi chiếc váy ở đây đều có thể thuê hoặc mua. Phần lớn còn có thể chỉnh theo bạn — cổ váy, tay áo, dáng váy.</p>
+      <span class="eyebrow" data-en="The collection">Bộ sưu tập</span>
+      <h1 data-en="Designs chosen to be beautiful today, and still beautiful years from now.">Những thiết kế được chọn để đẹp hôm nay,<br>và vẫn đẹp nhiều năm sau.</h1>
+      <p data-en="Dolinhanh selects shapes, fabrics and lines that follow a timeless kind of beauty — so the dress is not only right on the wedding day, but still right when you look back years later.">Dolinhanh tuyển chọn những phom dáng, chất liệu và đường nét theo đuổi vẻ đẹp Timeless — để chiếc váy không chỉ đẹp trong ngày cưới, mà còn đẹp khi bạn nhìn lại nhiều năm sau.</p>
+      <p class="bst-thue" data-en="Rent · Buy">Thuê &nbsp;·&nbsp; Mua</p>
+      <p style="margin-top:10px" data-en="Some designs can be adjusted to your proportions and to what you have in mind.">Một số thiết kế có thể được điều chỉnh vừa vặn theo vóc dáng và mong muốn của bạn.</p>
     </div>
   </section>
 
@@ -572,44 +578,51 @@
     <div class="wrap">
       <div class="vl-loc rise">
         <div class="vl-nhom">
-          <span class="lb" data-en="Silhouette">Dáng váy</span>
+          <span class="lb" data-en="Silhouette">Silhouette</span>
           <button type="button" data-loai="dang" data-v="" aria-current="true" data-en="All">Tất cả</button>
-          <button type="button" data-loai="dang" data-v="duoi-ca" data-en="Mermaid">Đuôi cá</button>
-          <button type="button" data-loai="dang" data-v="chu-a" data-en="A-line">Chữ A</button>
-          <button type="button" data-loai="dang" data-v="bong-xoe" data-en="Ball gown">Bồng xoè</button>
-          <button type="button" data-loai="dang" data-v="mini" data-en="Mini dress">Mini dress</button>
+          <button type="button" data-loai="dang" data-v="a-line" data-en="A-line">A-line</button>
+          <button type="button" data-loai="dang" data-v="mermaid" data-en="Mermaid">Mermaid</button>
+          <button type="button" data-loai="dang" data-v="ballgown" data-en="Ballgown">Ballgown</button>
+          <button type="button" data-loai="dang" data-v="mini" data-en="Mini">Mini</button>
         </div>
         <div class="vl-nhom">
-          <span class="lb" data-en="Fabric">Chất liệu</span>
-          <button type="button" data-loai="chat" data-v="" aria-current="true" data-en="All">Tất cả</button>
-          <button type="button" data-loai="chat" data-v="phi" data-en="Plain satin">Phi trơn</button>
-          <button type="button" data-loai="chat" data-v="ren" data-en="Lace">Ren</button>
-          <button type="button" data-loai="chat" data-v="da" data-en="Beaded">Đính đá</button>
+          <span class="lb" data-en="Mood">Mood</span>
+          <button type="button" data-loai="mood" data-v="" aria-current="true" data-en="All">Tất cả</button>
+          <button type="button" data-loai="mood" data-v="minimal" data-en="Minimal">Minimal</button>
+          <button type="button" data-loai="mood" data-v="romantic" data-en="Romantic">Romantic</button>
+          <button type="button" data-loai="mood" data-v="editorial" data-en="Editorial">Editorial</button>
+          <button type="button" data-loai="mood" data-v="timeless" data-en="Timeless">Timeless</button>
         </div>
       </div>
       <div class="vl" id="vlGrid">
-        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 23</span><span class="de" data-en="Fitted silk with a slit, long lace gloves">Dáng ôm lụa, xẻ tà, găng ren dài</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-24.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 24</span><span class="de" data-en="Raised lace bodice, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption></figure>
-        <figure data-dang="chu-a" data-chat="ren"><div class="im" style="--img:url('anh/nc-24-hero.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 25</span><span class="de" data-en="Large floral lace, full skirt">Ren hoa lớn, tùng xoè</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-26.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 26</span><span class="de" data-en="Satin ball gown, sweetheart neckline">Ballgown satin, cổ tim</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-27.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 27</span><span class="de" data-en="Beaded all over, grand skirt">Đính kết toàn thân, tùng lớn</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="ren"><div class="im" style="--img:url('anh/nc-28.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 28</span><span class="de" data-en="Mermaid in soft tulle, corset bodice">Đuôi cá voan mờ, thân corset</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="ren"><div class="im" style="--img:url('anh/nc-29.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 29</span><span class="de" data-en="Raised lace all over, off-shoulder">Ren nổi toàn thân, trễ vai</span></figcaption></figure>
-        <figure data-dang="chu-a" data-chat="phi"><div class="im" style="--img:url('anh/nc-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 31</span><span class="de" data-en="Organza A-line, fabric flower set by hand">Chữ A organza, hoa vải đính tay</span></figcaption></figure>
-        <figure data-dang="duoi-ca" data-chat="phi"><div class="im" style="--img:url('anh/nc-32.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 32</span><span class="de" data-en="Draped satin with a slit, lace gloves">Satin xếp nếp, xẻ tà, găng ren</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-34.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 34</span><span class="de" data-en="Fine beading, full bouffant skirt">Đính kết li ti, tùng bồng</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="da"><div class="im" style="--img:url('anh/nc-35.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 35</span><span class="de" data-en="Raised lace, fitted bodice, grand skirt">Ren nổi, thân ôm, tùng lớn</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-36.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 36</span><span class="de" data-en="Plain satin, draped bodice, sweetheart">Satin trơn, thân dún, cổ tim</span></figcaption></figure>
-        <figure data-dang="bong-xoe" data-chat="phi"><div class="im" style="--img:url('anh/nc-37.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 37</span><span class="de" data-en="Plain satin, classic full skirt">Satin trơn, tùng xoè cổ điển</span></figcaption></figure>
+        <figure data-dang="mermaid" data-mood="minimal"><div class="im" style="--img:url('anh/nc-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 23</span><span class="de" data-en="Fitted silk, front slit">Dáng ôm lụa, xẻ tà</span></figcaption></figure>
+        <figure data-dang="mermaid" data-mood="romantic"><div class="im" style="--img:url('anh/nc-24.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 24</span><span class="de" data-en="Raised lace, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption></figure>
+        <figure data-dang="a-line" data-mood="romantic"><div class="im" style="--img:url('anh/nc-25.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 25</span><span class="de" data-en="Large floral lace, full skirt">Ren hoa lớn, tùng xoè</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="timeless"><div class="im" style="--img:url('anh/nc-26.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 26</span><span class="de" data-en="Satin, sweetheart neckline">Satin cổ tim</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-27.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 27</span><span class="de" data-en="Beaded all over">Đính kết toàn thân</span></figcaption></figure>
+        <figure data-dang="mermaid" data-mood="romantic"><div class="im" style="--img:url('anh/nc-28.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 28</span><span class="de" data-en="Mermaid in soft tulle">Đuôi cá voan mờ</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="romantic"><div class="im" style="--img:url('anh/nc-29.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 29</span><span class="de" data-en="Raised lace, off-shoulder">Ren nổi, trễ vai</span></figcaption></figure>
+        <figure data-dang="a-line" data-mood="romantic"><div class="im" style="--img:url('anh/nc-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 31</span><span class="de" data-en="Organza, fabric flowers by hand">Organza, hoa vải đính tay</span></figcaption></figure>
+        <figure data-dang="mermaid" data-mood="minimal"><div class="im" style="--img:url('anh/nc-32.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 32</span><span class="de" data-en="Draped satin, front slit">Satin xếp nếp, xẻ tà</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-34.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 34</span><span class="de" data-en="Fine beading, bouffant skirt">Đính kết li ti, tùng bồng</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-35.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 35</span><span class="de" data-en="Raised lace, fitted bodice">Ren nổi, thân ôm</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="minimal"><div class="im" style="--img:url('anh/nc-36.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 36</span><span class="de" data-en="Plain satin, draped bodice">Satin trơn, thân dún</span></figcaption></figure>
+        <figure data-dang="ballgown" data-mood="timeless"><div class="im" style="--img:url('anh/nc-37.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 37</span><span class="de" data-en="Plain satin, classic skirt">Satin trơn, tùng cổ điển</span></figcaption></figure>
       </div>
       <p class="vl-trong" id="vlTrong" hidden data-en="These dresses are being updated. Tell us what you are looking for and we will show you what is in the showroom.">Mẫu thuộc nhóm này đang được cập nhật. Bạn nhắn cho Dolinhanh biết mình đang tìm gì, Dolinhanh sẽ đưa bạn xem các mẫu đang có tại showroom.</p>
       <div class="vl-page" id="vlPage"></div>
-      <div class="mid-blk rise" style="margin-top:clamp(26px,3vw,44px)">
-        <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
-      </div>
     </div>
   </section>
 
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <h2 class="h-cap giua" data-en="Found the one?">Đã tìm thấy chiếc váy của mình?</h2>
+        <p style="margin-top:20px" data-en="You do not have to decide from a photograph. Come and feel it on.">Không cần quyết định chỉ bằng một bức ảnh. Hãy đến thử và cảm nhận.</p>
+        <a class="btn" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
+      </div>
+    </div>
+  </section>
 
   <div class="wrap">
     <div class="next">
@@ -658,7 +671,7 @@
       </div>
     </div>
 
-    <p class="foot-say" data-en="Quiet minimal luxury, crafted with Mother Love.">Quiet minimal luxury, crafted with Mother Love.</p>
+    <p class="foot-say" data-en="Made for your day. Designed to last.">Made for your day. Designed to last.</p>
     <p class="ft-cr" data-en="© 2026 Dolinhanh Bridal. All rights reserved.">© 2026 Dolinhanh Bridal. Đã đăng ký bản quyền.</p>
   </div>
 </footer>
@@ -723,9 +736,9 @@ setLang(saved);
   const G=document.getElementById('vlGrid'), P=document.getElementById('vlPage'), T=document.getElementById('vlTrong');
   if(!G||!P) return;
   const F=[...G.children], PER=8;
-  let loc={dang:"",chat:""}, trang=0;
+  let loc={dang:"",mood:""}, trang=0;
   function hop(f){
-    return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.chat || f.dataset.chat===loc.chat);
+    return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood);
   }
   function ve(){
     const ds=F.filter(hop);
