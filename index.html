@@ -71,7 +71,7 @@
     font-size:clamp(1.18rem,1.6vw,1.45rem);line-height:1.35;letter-spacing:.01em;margin:0;
   }
   .h-xl em,.h-lg em,.h-md em{font-style:italic}
-  p{margin:0;font-size:15.5px;line-height:1.8;color:#2B2825;max-width:44ch}
+  p{margin:0;font-size:15.5px;line-height:1.7;color:#2B2825;max-width:44ch}
   .say{
     font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.72rem);
     line-height:1.45;letter-spacing:.008em;color:var(--ink);max-width:28ch;margin:0;
@@ -266,7 +266,8 @@
   }
 
   /* ── V5: bám sát halfpennylondon.com/bespoke (đo trên khung 1440px) ── */
-  .mid-blk{max-width:880px;margin-inline:auto;text-align:center}
+  .mid-blk{max-width:760px;margin-inline:auto;text-align:center}
+  .mid-blk p{line-height:1.62}
   .mid-blk p{margin-inline:auto;max-width:none}
   .h-cap.giua{text-align:center}
 
@@ -352,8 +353,8 @@
 
   /* ── khổ chữ trên điện thoại ── */
   @media (max-width:700px){
-    body{font-size:16px;line-height:1.75}
-    p{font-size:16px;line-height:1.75}
+    body{font-size:16px;line-height:1.68}
+    p{font-size:16px;line-height:1.68}
     .buoc .b p,.ba .o p,.hp .tx p{font-size:15.5px}
     .note{font-size:13px}
     .bar nav a{font-size:11px}
@@ -465,7 +466,7 @@
     line-height:1.75;color:var(--ink)}
 
   /* ── thẻ dịch vụ (chữ trong ảnh) ── */
-  .dv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);
+  .dv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);
     margin-top:clamp(32px,4vw,56px)}
   .dv figure{position:relative;margin:0;overflow:hidden}
   .dv .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 12%/cover no-repeat}
@@ -475,9 +476,29 @@
     color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.5)}
   .dv .ten{display:block;font-family:var(--serif);font-style:italic;
     font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.25;margin-bottom:10px}
-  .dv .mo{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.65;
+  .dv .mo{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.6;
     color:rgba(255,255,255,.92)}
-  @media (max-width:1000px){ .dv{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:1000px){ .dv{grid-template-columns:1fr} }
+
+  /* ── khối tinh thần kiểu editorial ── */
+  .tt{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+    gap:clamp(28px,5vw,90px);align-items:start}
+  .tt-lon{margin-top:22px;font-family:var(--serif);font-size:clamp(1.35rem,2.3vw,2rem);
+    line-height:1.45;color:var(--ink);max-width:none;letter-spacing:.005em}
+  .tt-phai p{max-width:46ch;margin-bottom:20px}
+  .tt-phai p:last-of-type{margin-bottom:0}
+  .tt-phai em{font-family:var(--serif);font-style:italic;font-size:1.08em;letter-spacing:.01em}
+  .tt-phai a{text-decoration:underline;text-underline-offset:3px}
+  .tt-so{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,34px);
+    margin-top:clamp(30px,4vw,50px);border-top:1px solid var(--line);padding-top:24px}
+  .tt-so .k{display:block;font-family:var(--serif);font-size:clamp(1.2rem,1.8vw,1.55rem);line-height:1.2}
+  .tt-so .v{display:block;margin-top:8px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.7}
+  .quote-mid.hep{max-width:42ch}
+  @media (max-width:1000px){
+    .tt{grid-template-columns:1fr;gap:26px}
+    .tt-so{grid-template-columns:1fr;gap:16px}
+  }
 </style>
 
 <header id="hd">
@@ -520,16 +541,21 @@
   <!-- ══ 02 · TINH THẦN DOLINHANH ══ -->
   <section class="air" id="tinhthan">
     <div class="wrap">
-      <div class="mid-blk rise">
-        <h2 class="h-cap giua" data-en="Dolinhanh Bridal">Dolinhanh Bridal</h2>
-        <p style="margin-top:26px" data-en="<strong>Founded in 2017</strong>, Dolinhanh Bridal is the bridal label within the Nupakachi wedding ecosystem — sharing more than fifteen years of making the day memorable for brides.">
-          <strong>Ra đời từ năm 2017</strong>, Dolinhanh Bridal là thương hiệu váy cưới thuộc hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px"><strong>Nupakachi</strong></a> — cùng chia sẻ hơn 15 năm kinh nghiệm trong việc tạo nên những trải nghiệm đáng nhớ cho cô dâu.</p>
-        <p style="margin-top:20px" data-en="To Dolinhanh, a beautiful dress is not only about the design. It is <strong>the feeling of being listened to, understood and cared for</strong> throughout the search for the dress that belongs to you.">
-          Với Dolinhanh, một chiếc váy đẹp không chỉ nằm ở thiết kế. Đó là <strong>cảm giác được lắng nghe, được thấu hiểu và được chăm sóc</strong> trong suốt hành trình tìm chiếc váy dành cho mình.</p>
-        <p style="margin-top:20px" data-en="Dolinhanh pursues a <strong>timeless</strong> kind of beauty — designs that do not chase a passing trend, and still look right years later.">
-          Dolinhanh theo đuổi vẻ đẹp <strong>Timeless</strong> — những thiết kế không chạy theo xu hướng nhất thời, mà vẫn đẹp khi được nhìn lại sau nhiều năm.</p>
-        <p class="cham" style="margin-top:30px" data-en="A dress for the wedding day.<br>An experience to remember.<br>A beauty that stays through time.">
-          Một chiếc váy cho ngày cưới.<br>Một trải nghiệm để nhớ.<br>Một vẻ đẹp ở lại theo thời gian.</p>
+      <div class="tt rise">
+        <div class="tt-trai">
+          <span class="eyebrow" data-en="The house">Tinh thần</span>
+          <p class="tt-lon" data-en="A dress for the wedding day.<br>An experience to remember.<br>A beauty that stays<br>through time.">Một chiếc váy cho ngày cưới.<br>Một trải nghiệm để nhớ.<br>Một vẻ đẹp ở lại<br>theo thời gian.</p>
+        </div>
+        <div class="tt-phai">
+          <p data-en="Founded in 2017, Dolinhanh Bridal is the bridal label within the Nupakachi wedding ecosystem — more than fifteen years of making the day memorable for brides.">Ra đời năm 2017, Dolinhanh Bridal là thương hiệu váy cưới thuộc hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi</a> — hơn mười lăm năm tạo nên những trải nghiệm đáng nhớ cho cô dâu.</p>
+          <p data-en="A beautiful dress is not only about the design. It is the feeling of being listened to, understood and cared for, through the whole search for your dress.">Với Dolinhanh, một chiếc váy đẹp không chỉ nằm ở thiết kế. Đó là cảm giác được lắng nghe, được thấu hiểu và được chăm sóc, suốt hành trình tìm chiếc váy của mình.</p>
+          <p data-en="We pursue a <em>timeless</em> kind of beauty — designs that do not chase a passing trend, and still look right years later.">Dolinhanh theo đuổi vẻ đẹp <em>Timeless</em> — không chạy theo xu hướng nhất thời, vẫn đẹp khi được nhìn lại sau nhiều năm.</p>
+          <div class="tt-so">
+            <div><span class="k">2017</span><span class="v" data-en="The year Dolinhanh began">Năm Dolinhanh ra đời</span></div>
+            <div><span class="k">15+</span><span class="v" data-en="Years of weddings, with Nupakachi">Năm làm cưới, cùng Nupakachi</span></div>
+            <div><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -537,7 +563,7 @@
   <!-- ══ lời người sáng lập ══ -->
   <section class="air" style="padding-top:0">
     <div class="wrap">
-      <div class="quote-mid rise">
+      <div class="quote-mid hep rise">
         <p data-en="“Dolinhanh is the fierce drive that lets me weave the dream of a wedding dress. I hope this brand lives on alongside the growing up of the little girl I am raising — truly, this is the happy ambition I want to bring to young women.”">“Dolinhanh là nguồn động lực mãnh liệt để mình dệt nên ước mơ “váy cưới”. Mình mong thương hiệu này sẽ tồn tại mãi theo sự trưởng thành của cô gái nhỏ mình đang nuôi dạy. Để thực sự, đây sẽ là hoài bão hạnh phúc mình mang tới cho các cô gái trẻ.”</p>
         <cite data-en="Dolinhanh Bridal — a wedding dress of happiness, woven from a parent’s love">Dolinhanh Bridal — váy cưới hạnh phúc dệt từ tình yêu của mẹ cha</cite>
       </div>
@@ -556,72 +582,28 @@
         <figure>
           <div class="im" style="--img:url('anh/nc-26.jpg')"></div>
           <figcaption>
-            <span class="ten" data-en="Rental">Thuê váy</span>
-            <span class="mo" data-en="The service most brides choose. A collection ready to wear for your day, fitted and adjusted to you before the wedding.">Dịch vụ phần lớn cô dâu chọn. Bộ sưu tập có sẵn cho ngày của bạn, được chỉnh vừa người trước lễ cưới.</span>
-          </figcaption>
-        </figure>
-        <figure>
-          <div class="im" style="--img:url('anh/nc-29.jpg')"></div>
-          <figcaption>
-            <span class="ten" data-en="Purchase">Mua váy</span>
-            <span class="mo" data-en="For the bride who wants the dress to stay hers — kept, worn again, or passed on.">Dành cho cô dâu muốn chiếc váy ở lại với mình — để giữ, để mặc lại, hoặc để trao đi.</span>
+            <span class="ten" data-en="Wedding dresses">Váy cưới</span>
+            <span class="mo" data-en="A collection ready for your day — to rent, or to buy and keep. Fitted and adjusted to you before the wedding.">Bộ sưu tập sẵn sàng cho ngày của bạn — để thuê, hoặc mua hẳn giữ lại. Chỉnh vừa người trước lễ cưới.</span>
           </figcaption>
         </figure>
         <figure>
           <div class="im" style="--img:url('anh/nc-30.jpg')"></div>
           <figcaption>
-            <span class="ten" data-en="Made to measure">May đo riêng</span>
-            <span class="mo" data-en="Cut to your own measurements. A neckline, a sleeve, a silhouette changed — or a design drawn from nothing, only for you.">Cắt theo đúng số đo của bạn. Đổi cổ váy, tay áo, dáng váy — hoặc dựng mới hoàn toàn một thiết kế chỉ dành cho bạn.</span>
+            <span class="ten" data-en="Made-to-measure">May đo riêng</span>
+            <span class="mo" data-en="Cut to your own measurements. A neckline, a sleeve, a silhouette changed — or a design drawn only for you.">Cắt theo đúng số đo của bạn. Đổi cổ váy, tay áo, dáng váy — hoặc dựng riêng một thiết kế chỉ của bạn.</span>
           </figcaption>
         </figure>
         <figure>
           <div class="im" style="--img:url('anh/nu-tryon.jpg')"></div>
           <figcaption>
             <span class="ten" data-en="Photography &amp; film">Chụp hình &amp; quay phim</span>
-            <span class="mo" data-en="Pre-wedding and wedding-day coverage with Nupakachi Photography, more than fifteen years behind the lens.">Chụp pre-wedding và phóng sự ngày cưới cùng Nupakachi Photography, hơn mười lăm năm đứng sau ống kính.</span>
+            <span class="mo" data-en="Pre-wedding and wedding-day coverage with Nupakachi Photography, more than fifteen years behind the lens.">Chụp pre-wedding và phóng sự ngày cưới cùng Nupakachi Photography, hơn mười lăm năm sau ống kính.</span>
           </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-
-  <!-- ══ 05 · HÀNH TRÌNH TÌM RA CHIẾC VÁY ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="hp rise">
-        <div class="im" style="--img:url('anh/nc-34.jpg')"></div>
-        <div class="tx">
-          <h2 class="h-cap" data-en="Your experience at Dolinhanh">Trải nghiệm tại Dolinhanh</h2>
-          <p style="margin-top:-4px" data-en="Drawn from The Bride’s Dress Guide — the free handbook Dolinhanh wrote for brides.">Rút từ cẩm nang “The Bride’s Dress Guide” mà Dolinhanh viết tặng cô dâu.</p>
-          <div class="buoc">
-            <div class="b">
-              <span class="n">01</span>
-              <h3 data-en="Read yourself first">Đọc vị bản thân</h3>
-              <p data-en="Gather five to ten dresses you like and notice what repeats. Stand in front of the mirror and compare three points: shoulder — waist — hip. Then name what you want to show, and what you would rather balance.">Gom năm đến mười tấm ảnh váy bạn thích rồi để ý điểm lặp lại. Đứng trước gương so ba chỗ: vai — eo — hông. Rồi gọi tên điều bạn muốn khoe, và điều muốn cân bằng lại.</p>
-            </div>
-            <div class="b">
-              <span class="n">02</span>
-              <h3 data-en="Prepare for the fitting">Chuẩn bị buổi thử</h3>
-              <p data-en="Nude underwear, no straps. Bring shoes at the height you will really wear. Hair pinned up, light make-up. Come with one or two people who truly know your taste — a proper fitting takes about an hour and a half, and should be private.">Đồ lót màu nude, không quai. Mang theo giày đúng độ cao bạn sẽ đi thật. Tóc búi gọn, trang điểm nhẹ. Đi cùng một hoặc hai người thật sự hiểu gu bạn — một buổi thử chuẩn kéo dài khoảng một tiếng rưỡi và nên là buổi riêng.</p>
-            </div>
-            <div class="b">
-              <span class="n">03</span>
-              <h3 data-en="Try the right way">Thử đúng cách</h3>
-              <p data-en="Try all four basic shapes — A-line, ball gown, mermaid, column. Five is the right number of dresses. In each one, sit down, raise your arms, walk a few steps. Ask for photos and a short video of the front and the back.">Thử đủ bốn dáng cơ bản: chữ A, ballgown, đuôi cá, dáng suông. Năm mẫu là con số đẹp. Trong mỗi mẫu, hãy ngồi xuống, giơ tay, đi vài bước. Xin ảnh và một đoạn video mặt trước lẫn mặt sau.</p>
-            </div>
-            <div class="b">
-              <span class="n">04</span>
-              <h3 data-en="Make your choice">Chọn cách của bạn</h3>
-              <p data-en="Keep three dresses, try them once more, ask everything you need to ask before you leave a deposit — and do not decide on a passing feeling.">Giữ lại đúng ba mẫu rồi thử lần hai, hỏi đủ những điều cần hỏi trước khi đặt cọc — và đừng quyết bằng cảm xúc nhất thời.</p>
-              <p class="chon" data-en="Rent &nbsp;·&nbsp; Buy &nbsp;·&nbsp; Made to measure">Thuê &nbsp;·&nbsp; Mua &nbsp;·&nbsp; May đo riêng</p>
-            </div>
-          </div>
-          <a class="link" href="hanh-trinh.html" data-en="See the full journey">Xem đủ hành trình</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ══ 04 · TRIẾT LÝ ══ -->
   <section class="air" style="padding-top:0">
@@ -673,31 +655,6 @@
         <p style="margin-top:22px" data-en="Beyond renting and buying, a dress can be personalised — or drawn from nothing, entirely for you.">Ngoài thuê và mua, một chiếc váy tại Dolinhanh có thể được cá nhân hoá — hoặc dựng mới hoàn toàn, chỉ dành cho bạn.</p>
         <div class="mayo-list" data-en="Neckline &nbsp;·&nbsp; Sleeves &nbsp;·&nbsp; Silhouette &nbsp;·&nbsp; Fabric &nbsp;·&nbsp; Proportions &nbsp;·&nbsp; A design of your own">Cổ váy &nbsp;·&nbsp; Tay áo &nbsp;·&nbsp; Dáng váy &nbsp;·&nbsp; Chất liệu &nbsp;·&nbsp; Tỉ lệ &nbsp;·&nbsp; Một thiết kế riêng</div>
         <a class="btn" href="hanh-trinh.html" data-en="Explore made to measure">Tìm hiểu may đo riêng</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 07 · CÔ DÂU CỦA DOLINHANH ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <h2 class="h-cap giua rise" data-en="Our brides">Cô dâu của Dolinhanh</h2>
-      <div class="brides rise">
-        <figure>
-          <a href="co-dau.html"><div class="im" style="--img:url('anh/nc-28.jpg')"></div></a>
-          <figcaption data-en="Rented by her · Mermaid in soft tulle">Cô dâu thuê váy này · Đuôi cá voan mờ</figcaption>
-        </figure>
-        <figure>
-          <a href="co-dau.html"><div class="im" style="--img:url('anh/nc-31.jpg')"></div></a>
-          <figcaption data-en="Bought by her · Organza A-line, fabric flower">Cô dâu mua váy này · Chữ A organza, hoa vải</figcaption>
-        </figure>
-        <figure>
-          <a href="co-dau.html"><div class="im" style="--img:url('anh/nc-36.jpg')"></div></a>
-          <figcaption data-en="Rented by her · Satin ball gown, draped bodice">Cô dâu thuê váy này · Ballgown satin, thân dún</figcaption>
-        </figure>
-        <figure>
-          <a href="co-dau.html"><div class="im" style="--img:url('anh/nc-37.jpg')"></div></a>
-          <figcaption data-en="Custom made for her · Plain satin, sweetheart neckline">May đo riêng cho cô dâu · Satin trơn, cổ tim</figcaption>
-        </figure>
       </div>
     </div>
   </section>
