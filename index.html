@@ -9,9 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Dolinhanh Bridal — bridal atelier của Nupakachi. May đo, cho thuê váy cưới và chụp hình tại Hà Nội và TP.HCM.">
 <title>Dolinhanh Bridal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <script>document.documentElement.classList.add("js");</script>
 
 <style>
@@ -25,13 +22,9 @@
     --charcoal:#211F1C;
     --line:#DFD6C9;
 
-    /* bộ chữ chốt theo trang báo giá đang chạy (18/08, vá dấu tiếng Việt 02/09):
-       --didone Bodoni CHỈ dùng cho SỐ và GIÁ (không dấu nên không lỗi);
-       chữ có dấu tiếng Việt dùng Playfair Display + Lora để không bị méo dấu. */
     --didone:"Bodoni 72","Bodoni MT",Didot,"Didot LT STD","Playfair Display",Georgia,"Times New Roman",serif;
-    --serif:"Playfair Display",Georgia,"Times New Roman",serif;
-    --body:"Lora",Georgia,"Times New Roman",serif;
-    --sans:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:Baskerville,"Baskerville Old Face",Cochin,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,"Segoe UI",system-ui,sans-serif;
 
     --meta:.64rem;
     --gutter:clamp(22px,6vw,96px);
@@ -40,9 +33,9 @@
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    margin:0;background:var(--ivory);color:#37342F;
-    font-family:var(--body);font-size:1rem;line-height:1.5;
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    margin:0;background:var(--ivory);color:var(--charcoal);
+    font-family:var(--sans);font-size:.97rem;line-height:1.62;
+    -webkit-font-smoothing:antialiased;letter-spacing:.005em;
   }
   a{color:inherit}
   button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -52,36 +45,34 @@
 
   /* ── nhãn nhỏ ── */
   .label{
-    font-family:var(--sans);font-size:11px;letter-spacing:.14em;
-    text-transform:uppercase;color:#6F6C69;display:block;
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.34em;
+    text-transform:uppercase;color:var(--taupe-deep);display:block;
   }
   /* ── liên kết dạng chữ, không nút ── */
   .link{
-    display:inline-flex;align-items:center;gap:12px;
-    font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.24em;
-    text-transform:uppercase;text-decoration:none;
-    padding-bottom:6px;border-bottom:1px solid currentColor;
-    transition:gap .3s ease,opacity .3s ease;
+    font-family:var(--sans);font-size:var(--meta);letter-spacing:.28em;
+    text-transform:uppercase;text-decoration:none;display:inline-block;
+    padding-bottom:8px;border-bottom:1px solid currentColor;
+    transition:opacity .4s ease;
   }
-  .link::after{content:"\2192";font-size:.9em;letter-spacing:0}
-  .link:hover{gap:18px;opacity:.62}
+  .link:hover{opacity:.5}
 
   /* ── chữ ── */
   .display{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(2.2rem,5.2vw,4.6rem);line-height:1.1;letter-spacing:.01em;
+    font-family:var(--didone);font-weight:400;
+    font-size:clamp(2.2rem,6.2vw,5.6rem);line-height:1.03;letter-spacing:.004em;
     margin:0;text-wrap:balance;
   }
-  .display em{font-style:italic}
+  .display em{font-family:var(--serif);font-style:italic}
   h2.head{
     font-family:var(--serif);font-weight:400;
-    font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.1;letter-spacing:.01em;
+    font-size:clamp(1.7rem,3.9vw,3.2rem);line-height:1.12;letter-spacing:-.008em;
     margin:0;text-wrap:balance;
   }
-  h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.1;letter-spacing:.01em;margin:0}
+  h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.3;margin:0}
   p{margin:0 0 .85em;max-width:58ch;color:#3D3934}
   p:last-child{margin-bottom:0}
-  .lede{font-family:var(--body);font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.5;color:var(--charcoal)}
+  .lede{font-family:var(--serif);font-size:clamp(1.05rem,1.6vw,1.28rem);line-height:1.55;color:var(--charcoal)}
 
   /* ═══ header ═══ */
   header{
