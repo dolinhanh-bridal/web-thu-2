@@ -105,7 +105,7 @@
 
   /* ── 01 hero ── */
   .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;text-shadow:0 1px 26px rgba(0,0,0,.32)}
-  .hero .bg{position:absolute;inset:0;background:#2B2724 var(--img) center 6%/cover no-repeat;transform:scale(1.04)}
+  .hero .bg{position:absolute;inset:0;background:#2B2724 var(--img) center center/cover no-repeat;transform:scale(1.04)}
   .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.46) 0%,rgba(18,16,14,.12) 34%,rgba(18,16,14,.68) 100%)}
   .hero .inner{position:relative;width:100%;padding-block:clamp(44px,8vh,92px)}
   .hero .h-xl{max-width:26ch}
@@ -311,7 +311,7 @@
   .hero .nut{display:flex;gap:clamp(16px,2vw,28px);flex-wrap:wrap;align-items:center}
   .hero .nut .link{margin-top:34px;border-bottom-color:rgba(255,255,255,.6)}
 
-  .ba{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.4vw,54px);
+  .ba{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(22px,3.4vw,54px);
     margin-top:clamp(40px,5vw,72px)}
   .ba .o{border-top:1px solid var(--ink);padding-top:20px}
   .ba .o .n{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep);display:block}
@@ -368,7 +368,7 @@
     .coll{grid-template-columns:repeat(2,minmax(0,1fr))}
     .brides{grid-template-columns:repeat(2,minmax(0,1fr))}
     .details{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .ba{grid-template-columns:1fr}
+    .ba{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
   @media (max-width:560px){
     .wide2{grid-template-columns:1fr}
@@ -651,7 +651,7 @@ if(leadForm) leadForm.addEventListener("submit", async e=>{
 const hd = $("hd"), hero = $("hero");
 function onScroll(){
   if(!hero){ hd.classList.add("solid"); return; }
-  hd.classList.toggle("solid", scrollY > hero.offsetHeight - 90);
+  hd.classList.toggle("solid", scrollY > 60);
   const bg = $("heroBg");
   if(bg && scrollY < innerHeight) bg.style.transform = "scale(1.04) translateY(" + (scrollY * 0.06) + "px)";
 }
