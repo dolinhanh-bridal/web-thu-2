@@ -9,11 +9,11 @@
   ══════════════════════════════════════════════════════════════
 -->
 <meta charset="utf-8">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dolinhanh Bridal — váy cưới Hà Nội và TP.HCM: thuê, mua hoặc may đo riêng.">
-<title>Giới thiệu — Dolinhanh Bridal</title>
+<meta name="description" content="The Bride’s Dress Guide — cẩm nang tặng cô dâu của Dolinhanh Bridal.">
+<title>Cẩm nang — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -538,6 +538,18 @@
   .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 
+  /* ── cẩm nang hỏi đáp ── */
+  .hoi-nhom{max-width:820px;margin-inline:auto}
+  .hoi-ds{margin-top:18px;border-top:1px solid var(--line)}
+  .hoi{border-bottom:1px solid var(--line)}
+  .hoi summary{list-style:none;cursor:pointer;padding:20px 34px 20px 0;position:relative;
+    font-family:var(--serif);font-size:clamp(1.02rem,1.4vw,1.18rem);line-height:1.45;color:var(--ink)}
+  .hoi summary::-webkit-details-marker{display:none}
+  .hoi summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);
+    font-family:var(--sans);font-size:16px;color:var(--taupe-deep);transition:transform .3s ease}
+  .hoi[open] summary::after{content:"–"}
+  .hoi p{margin:0 0 22px;max-width:64ch;color:#3A3733;font-size:14.5px;line-height:1.75}
+
   /* ── popup đặt lịch & báo giá ── */
   .pop-nen{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
     padding:20px;background:rgba(20,18,16,.55);overflow-y:auto}
@@ -558,10 +570,10 @@
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
         <a href="index.html" data-en="Home">Trang chủ</a>
-        <a href="gioi-thieu.html" class="cur" data-en="About">Giới thiệu</a>
+        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
         <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
-        <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
+        <a href="cam-nang.html" class="cur" data-en="Handbook">Cẩm nang</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
@@ -572,87 +584,185 @@
 </header>
 
 <main id="top">
-  <!-- ══ 01 · HERO ══ -->
   <section class="wrap sub">
     <div class="sub-head rise">
-      <span class="eyebrow" data-en="About Dolinhanh">Giới thiệu</span>
-      <h1 class="h-lg" data-en="Dolinhanh begins with the woman, not with the dress.">Dolinhanh bắt đầu từ người mặc, không từ chiếc váy.</h1>
-      <p data-en="Before we talk about silhouettes and fabric, we want to know who will be wearing the dress — and what she wants to feel on her day.">Trước khi nói về phom dáng hay chất liệu, Dolinhanh muốn biết người sẽ mặc chiếc váy là ai — và nàng muốn cảm thấy thế nào trong ngày của mình.</p>
+      <span class="eyebrow" data-en="The Bride’s Dress Guide">The Bride’s Dress Guide</span>
+      <h1 class="h-lg" data-en="The questions brides ask before choosing a dress.">Những câu hỏi cô dâu thường hỏi trước khi chọn váy.</h1>
+      <p data-en="Not every bride knows where to start. Here Dolinhanh answers the most practical questions — from shape and fabric to fittings, renting or buying, and what to check before booking a dress.">Không phải cô dâu nào cũng biết mình nên bắt đầu từ đâu. Ở đây, Dolinhanh trả lời những câu hỏi thực tế nhất — từ chọn phom, chọn chất liệu, thử váy, thuê hay mua, đến những điều cần kiểm tra trước khi đặt váy.</p>
     </div>
   </section>
 
-  <!-- ══ 02 · THE EXPERIENCE ══ -->
   <section class="air" style="padding-top:0">
     <div class="wrap">
-      <div class="hp rise">
-        <div class="im" style="--img:url('anh/nc-30.jpg')"></div>
-        <div class="tx">
-          <span class="eyebrow" data-en="The experience">Trải nghiệm</span>
-          <h2 class="h-cap" data-en="Listened to. Understood. Guided.">Được lắng nghe. Được thấu hiểu. Được tư vấn.</h2>
-          <p data-en="Dolinhanh does not simply hand you dresses to try on. We help you understand yourself, your proportions and what truly suits you — so you find the dress that makes you feel like yourself.">Dolinhanh không chỉ đưa nàng thử váy. Dolinhanh giúp nàng hiểu mình, hiểu vóc dáng, hiểu điều gì thực sự phù hợp — để tìm ra chiếc váy khiến nàng cảm thấy là chính mình.</p>
-          <a class="link" href="hanh-trinh.html" data-en="See the journey">Xem hành trình</a>
+      <div class="hoi-nhom rise">
+        <span class="eyebrow" data-en="Choosing the dress">Câu hỏi về chọn váy</span>
+        <div class="hoi-ds">
+        <details class="hoi">
+          <summary data-en="What suits my body?">Dáng người này nên mặc váy gì?</summary>
+          <p>A-line hợp người hông đầy hoặc bụng chưa phẳng vì xoè đều từ eo. Ballgown hợp dáng chữ nhật hoặc vai rộng vì tùng bồng tạo eo. Đuôi cá hợp đồng hồ cát. Empire giấu eo tự nhiên. Dáng suông soi rõ mọi đường nét nên hợp người cân đối.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Body or taste first?">Váy cưới nên chọn theo dáng người hay theo gu?</summary>
+          <p>Bắt đầu từ dáng người để không mất buổi thử vào những phom chắc chắn không hợp, rồi mới lọc theo gu. Chuyên viên sẽ tìm điểm giao giữa hai thứ — chiếc váy đúng thường nằm ở đó.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Can a petite bride wear a full skirt?">Mình thấp có mặc được váy tùng lớn không?</summary>
+          <p>Được, nhưng nên chọn eo cao và tùng vừa phải thay vì nhiều tầng bèo, kèm giày 5–7 phân. Điểm chiết eo đẩy lên sẽ kéo dài chân về thị giác.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="What should I avoid?">Vai rộng, bắp tay to hay bụng dưới thì nên tránh chi tiết nào?</summary>
+          <p>Vai rộng: tránh tay bồng to bản, nên cổ chữ V sâu hoặc trễ vai buông. Bắp tay đầy: tay voan mỏng, tay bồng nhẹ, trễ vai chữ V. Bụng dưới: chữ A xoè từ eo, tránh satin cứng ôm sát.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="White or champagne?">Da vàng nên mặc váy trắng hay champagne?</summary>
+          <p>Nền da vàng thường hợp các sắc ngà, champagne, off-white hơn là trắng tinh — trắng tinh dễ làm da trông sạm hơn. Buổi thử sẽ đặt vải lên da để bạn thấy khác biệt ngay.</p>
+        </details>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ 03 · TIMELESS ══ -->
   <section class="air" style="padding-top:0">
     <div class="wrap">
-      <div class="hp flip rise">
-        <div class="im" style="--img:url('anh/nc-33.jpg')"></div>
-        <div class="tx">
-          <span class="eyebrow" data-en="Timeless">Timeless</span>
-          <h2 class="h-cap" data-en="Beauty that lasts.">Beauty that lasts.</h2>
-          <p data-en="We do not chase passing trends. We look for shapes, fabrics and lines that outlive a season — so the dress still looks right when you come back to the photographs years later.">Không chạy theo những xu hướng nhất thời. Dolinhanh tìm kiếm những phom dáng, chất liệu và đường nét có thể vượt qua mùa mốt — để chiếc váy vẫn đẹp khi nàng nhìn lại những bức ảnh cưới nhiều năm sau.</p>
+      <div class="hoi-nhom rise">
+        <span class="eyebrow" data-en="Fabric">Câu hỏi về chất liệu</span>
+        <div class="hoi-ds">
+        <details class="hoi">
+          <summary data-en="How do satin, mikado and taffeta differ?">Satin, mikado, taffeta khác nhau thế nào?</summary>
+          <p>Satin mềm, bóng nhẹ, rũ theo dáng người. Mikado dày và giữ phom, hợp váy tối giản có đường cắt rõ. Taffeta giòn hơn, tạo tiếng sột soạt và giữ nếp gấp — hợp tùng váy có khối.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Why do some lace dresses look dated?">Vì sao cùng là váy ren nhưng có chiếc nhìn sang, có chiếc lại bị sến?</summary>
+          <p>Khác nhau ở cách đặt ren. Ren được cắt rời rồi đặt theo đường cơ thể, thưa dần về gấu, sẽ sang. Ren phủ kín đều tay và dày đặc hoa văn nhỏ thì dễ rối mắt.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Is more beading always better?">Váy nhiều đá có phải lúc nào cũng sang hơn?</summary>
+          <p>Không. Đá dày đặc lên ảnh dễ loá và làm mất đường cắt. Một chiếc satin trơn cắt chuẩn thường sang hơn một chiếc đính kín đá.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Which fabric photographs best?">Chất liệu nào lên hình đẹp nhất?</summary>
+          <p>Ren nổi và tulle nhiều lớp bắt sáng mềm nên đẹp ở tiệc trong nhà. Satin và mikado lên hình sạch, tôn dáng, hợp ảnh chân dung. Tiệc ngoài trời nắng gắt thì chất trơn ít bóng an toàn hơn.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Outdoor, ballroom or restaurant?">Váy nào hợp cưới ngoài trời, ballroom hay nhà hàng?</summary>
+          <p>Ngoài trời: chất nhẹ, tùng vừa, tránh đuôi quá dài. Ballroom sân khấu lớn: ballgown, đính kết, voan dài. Nhà hàng nhỏ, đi lại nhiều: dáng chữ A hoặc suông, đuôi ngắn.</p>
+        </details>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ 04 · ABOUT / TRUST ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="hoi-nhom rise">
+        <span class="eyebrow" data-en="The fitting">Câu hỏi về buổi thử váy</span>
+        <div class="hoi-ds">
+        <details class="hoi">
+          <summary data-en="How early should I try dresses?">Nên thử váy cưới trước bao lâu?</summary>
+          <p>Nên đi thử khi đã chốt được ngày cưới, thường trước 3–6 tháng. Lúc đó việc giữ váy và canh lịch chỉnh mới chính xác.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="How many dresses in one session?">Một buổi nên thử bao nhiêu chiếc?</summary>
+          <p>Năm mẫu là con số đẹp. Quá mười mẫu là bắt đầu loạn và không nhớ nổi mẫu đầu tiên. Thử đủ bốn dáng cơ bản rồi giữ lại ba mẫu để thử lần hai.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Should I bring the whole family?">Có nên mang cả gia đình đi thử váy không?</summary>
+          <p>Nên đi cùng một hoặc hai người thật sự hiểu gu bạn. Đi đông thường khiến bạn phân vân hơn, vì mỗi người thích một kiểu.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="What should I wear underneath?">Đi thử váy cần mặc gì bên trong?</summary>
+          <p>Đồ lót màu nude, không quai, không gọng to, quần lót cạp cao không viền ren. Phần lớn váy đã có corset nâng và mút đệm sẵn bên trong.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="What if I still cannot choose?">Nếu thử 10 chiếc mà vẫn không biết chọn thì sao?</summary>
+          <p>Đó là dấu hiệu nên dừng lại, xem lại ảnh chụp từng mẫu vào buổi tối, rồi quay lại thử lần hai với ba mẫu. Chiếc váy đúng thường là chiếc bạn thôi phân vân khi nhìn lại.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Should I bring reference photos?">Có nên mang ảnh Pinterest đến không?</summary>
+          <p>Rất nên. Gom năm đến mười tấm ảnh bạn thích rồi gửi trước — chuyên viên sẽ nhìn ra điểm chung và treo sẵn váy trước khi bạn tới.</p>
+        </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="hoi-nhom rise">
+        <span class="eyebrow" data-en="Rent or buy">Câu hỏi về thuê hay mua</span>
+        <div class="hoi-ds">
+        <details class="hoi">
+          <summary data-en="Rent or buy?">Nên thuê hay mua váy cưới?</summary>
+          <p>Phần lớn cô dâu chọn thuê, vì chiếc váy chỉ mặc một ngày và tiền dành cho phom váy đẹp hơn. Mua hợp với người muốn giữ lại chiếc váy, muốn mặc lại, hoặc cần một thiết kế riêng.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="When does buying make more sense?">Khi nào mua sẽ hợp lý hơn thuê?</summary>
+          <p>Khi bạn muốn chiếc váy ở lại với mình, khi cần chỉnh sâu thiết kế, hoặc khi ngày cưới có nhiều buổi và bạn muốn chủ động hoàn toàn về thời gian.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Can a rented dress be altered?">Thuê váy có được chỉnh sửa theo người không?</summary>
+          <p>Có. Váy thuê được chỉnh vừa vặn theo bạn trước ngày cưới — điểm eo, chiều dài, độ ôm. Những thay đổi làm đổi hẳn thiết kế thì thuộc phần may đo riêng.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Can a bought dress be altered later?">Mua váy rồi có thể chỉnh lại sau không?</summary>
+          <p>Có. Váy đã mua vẫn chỉnh lại được cho các dịp sau, hoặc sửa thành phom khác theo mong muốn của bạn.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="How do rental and purchase prices differ?">Giá thuê và giá mua khác nhau như thế nào?</summary>
+          <p>Giá tuỳ từng mẫu và tuỳ cách bạn muốn chỉnh. Bạn để lại thông tin, Dolinhanh gửi bảng giá đầy đủ của cơ sở bạn chọn.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="How far ahead should I book the dress?">Đặt váy trước bao lâu là an toàn?</summary>
+          <p>Với váy có sẵn, nên giữ chỗ trước 2–3 tháng. Với váy may đo riêng, nên bắt đầu trước 3–6 tháng để đủ thời gian dựng váy và ba đến bốn buổi chỉnh.</p>
+        </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="hoi-nhom rise">
+        <span class="eyebrow" data-en="The questions brides hesitate to ask">Những câu cô dâu thường ngại hỏi</span>
+        <div class="hoi-ds">
+        <details class="hoi">
+          <summary data-en="What if it does not look like the photo?">Nếu mặc váy không đẹp như ảnh thì sao?</summary>
+          <p>Chuyện rất bình thường — ảnh là một người khác, một ánh sáng khác. Vì vậy Dolinhanh luôn chụp lại từng mẫu bạn mặc, để bạn nhìn chính mình chứ không nhìn người mẫu.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="What if my mother and I disagree?">Nếu mẹ thích một chiếc nhưng mình không thích thì sao?</summary>
+          <p>Cứ thử cả hai và chụp lại. Rất nhiều lần chiếc thứ ba mới là chiếc cả hai cùng thấy đúng. Người mặc váy suốt ngày cưới là bạn, nên quyết định cuối cùng nên thuộc về bạn.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Whose opinion should I follow?">Nếu bạn bè đi cùng mỗi người thích một kiểu thì nghe ai?</summary>
+          <p>Nghe cảm giác của chính bạn lúc soi gương lần đầu. Đó là lý do Dolinhanh khuyên chỉ nên đi cùng một hoặc hai người.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Is it fine to leave without a deposit?">Thử váy xong chưa muốn đặt cọc có sao không?</summary>
+          <p>Không sao cả. Buổi thử là để bạn hiểu mình hợp gì, không phải để chốt ngay. Bạn cứ về xem lại ảnh rồi quay lại khi đã chắc.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="What if I change my mind after booking?">Nếu đã đặt váy rồi nhưng đổi ý thì sao?</summary>
+          <p>Bạn nhắn cho Dolinhanh sớm nhất có thể. Tuỳ thời điểm và tình trạng váy, Dolinhanh sẽ cùng bạn tìm phương án — đổi mẫu khác hoặc dời lịch.</p>
+        </details>
+        <details class="hoi">
+          <summary data-en="Must I take the first dress I like?">Có nhất thiết phải chọn chiếc váy đầu tiên mình thích không?</summary>
+          <p>Không. Nhưng hãy thử ít nhất một mẫu bạn nghĩ chắc không hợp — đó là mẫu hay gây bất ngờ nhất.</p>
+        </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="air" style="padding-top:0">
     <div class="wrap">
       <div class="mid-blk rise">
-        <h2 class="h-cap giua" data-en="Founded in 2017">Ra đời từ năm 2017</h2>
-        <p style="margin-top:22px" data-en="Dolinhanh Bridal opened in 2017, out of one very personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mở cửa năm 2017, khởi đi từ một niềm tin rất riêng: say mê cái đẹp, chỉn chu trong từng chi tiết, và gắn bó với hình ảnh một cô dâu hạnh phúc.</p>
-        <p style="margin-top:18px" data-en="Through the pandemic, through a change of name and a change of hands, the spirit stayed the same: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn không đổi: chân thành, tinh tế và đầy cảm xúc.</p>
-        <p style="margin-top:18px" data-en="Today Dolinhanh Bridal is part of the wedding ecosystem of Nupakachi Photography — a house founded by photographer Đỗ Xuân Cường, with more than fifteen years walking beside couples through photography, film and wedding services, and a footprint across many countries.">Nay Dolinhanh Bridal là một phần của hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — thương hiệu do nhiếp ảnh gia Đỗ Xuân Cường sáng lập, hơn 15 năm đồng hành cùng các cặp đôi qua nhiếp ảnh, phim cưới và dịch vụ cưới, với dấu chân đã in qua nhiều quốc gia.</p>
-        <p style="margin-top:18px" data-en="From the photographs to the design of the gowns, both pursue the same thing: the bride’s real beauty, said through what is simplest and deepest. That is why a bride can leave everything for her day in one place — the dress, the photographs, the film — and be looked after by people who already know her story.">Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị nhưng sâu sắc nhất. Cũng vì vậy, một cô dâu có thể gửi trọn ngày cưới của mình ở cùng một nơi — chiếc váy, những bức ảnh, thước phim — và được chăm sóc bởi những người đã hiểu câu chuyện của nàng.</p>
-        <div class="tt-so" style="max-width:640px;margin-inline:auto">
-          <div><span class="k">2017</span><span class="v" data-en="The year Dolinhanh began">Năm Dolinhanh ra đời</span></div>
-          <div><span class="k">15+</span><span class="v" data-en="Years of weddings, with Nupakachi">Năm làm cưới, cùng Nupakachi</span></div>
-          <div><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
+        <h2 class="h-cap giua" data-en="Still have a question?">Vẫn còn câu hỏi?</h2>
+        <p style="margin-top:20px" data-en="If you have not found your answer here, bring the question to your fitting. Sometimes the answer only appears once the dress is actually on you.">Nếu bạn vẫn chưa tìm được câu trả lời, hãy mang câu hỏi của mình đến buổi thử váy. Đôi khi câu trả lời chỉ xuất hiện khi bạn thực sự mặc chiếc váy lên người.</p>
+        <div class="nut-hang" style="justify-content:center;margin-top:30px">
+          <a class="btn" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Ask Dolinhanh">Hỏi Dolinhanh</a>
+          <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a fitting">Đặt lịch thử váy</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 05 · BRAND STATEMENT ══ -->
-  <section>
-    <div class="bleed rise">
-      <div class="wide2">
-        <div class="im" style="--img:url('anh/nc-30-wide.jpg')"></div>
-        <div class="im" style="--img:url('anh/nc-33-wide.jpg')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="air">
-    <div class="wrap">
-      <div class="rise">
-        <p class="triet" data-en="A dress for the wedding day.<br>An experience to remember.<br>A beauty that stays through time.">Một chiếc váy cho ngày cưới.<br>Một trải nghiệm để nhớ.<br>Một vẻ đẹp ở lại theo thời gian.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 06 · CTA ══ -->
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <div class="mid-blk rise">
-        <h2 class="h-cap giua" data-en="Find your dress">Tìm chiếc váy của bạn</h2>
-        <p style="margin-top:20px" data-en="Tell us about your wedding day and we will keep a private fitting for you.">Kể cho Dolinhanh nghe về ngày cưới của bạn, Dolinhanh giữ chỗ cho một buổi thử riêng.</p>
-        <a class="btn" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
       </div>
     </div>
   </section>
@@ -686,7 +796,7 @@
     </div>
 
     <div class="ft-duoi">
-      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <a class="ft-logo" href="index.html"><img src="../../logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
         <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
