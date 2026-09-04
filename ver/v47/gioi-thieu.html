@@ -9,11 +9,11 @@
   ══════════════════════════════════════════════════════════════
 -->
 <meta charset="utf-8">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bộ sưu tập váy cưới Dolinhanh Bridal — thuê, mua hoặc may đo riêng.">
-<title>Bộ sưu tập — Dolinhanh Bridal</title>
+<meta name="description" content="Dolinhanh Bridal — váy cưới Hà Nội và TP.HCM: thuê, mua hoặc may đo riêng.">
+<title>Giới thiệu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -538,10 +538,6 @@
   .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 
-  .bst-thue{margin-top:22px;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
-    text-transform:uppercase;color:var(--ink)}
-  .vl-head h1 br{display:block}
-
   /* ── popup đặt lịch & báo giá ── */
   .pop-nen{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
     padding:20px;background:rgba(20,18,16,.55);overflow-y:auto}
@@ -556,16 +552,15 @@
   .pop .btn[hidden]{display:none}
 </style>
 
-<script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
 <header id="hd" class="solid">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
         <a href="index.html" data-en="Home">Trang chủ</a>
-        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
+        <a href="gioi-thieu.html" class="cur" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
-        <a href="bo-suu-tap.html" class="cur" data-en="Collection">Bộ sưu tập</a>
+        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
         <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
       </nav>
@@ -577,80 +572,90 @@
 </header>
 
 <main id="top">
-  <section class="wrap vl-head">
-    <div class="rise">
-      <span class="eyebrow" data-en="The collection">Bộ sưu tập</span>
-      <h1 data-en="Designs chosen to be beautiful today, and still beautiful years from now.">Những thiết kế được chọn để đẹp hôm nay,<br>và vẫn đẹp nhiều năm sau.</h1>
-      <p data-en="Dolinhanh selects shapes, fabrics and lines that follow a timeless kind of beauty — so the dress is not only right on the wedding day, but still right when you look back years later.">Dolinhanh tuyển chọn những phom dáng, chất liệu và đường nét theo đuổi vẻ đẹp Timeless — để chiếc váy không chỉ đẹp trong ngày cưới, mà còn đẹp khi bạn nhìn lại nhiều năm sau.</p>
-      <p class="bst-thue" data-en="Rent · Buy">Thuê &nbsp;·&nbsp; Mua</p>
-      <p style="margin-top:10px" data-en="Some designs can be adjusted to your proportions and to what you have in mind.">Một số thiết kế có thể được điều chỉnh vừa vặn theo vóc dáng và mong muốn của bạn.</p>
+  <!-- ══ 01 · HERO ══ -->
+  <section class="wrap sub">
+    <div class="sub-head rise">
+      <span class="eyebrow" data-en="About Dolinhanh">Giới thiệu</span>
+      <h1 class="h-lg" data-en="Dolinhanh begins with the woman, not with the dress.">Dolinhanh bắt đầu từ người mặc, không từ chiếc váy.</h1>
+      <p data-en="Before we talk about silhouettes and fabric, we want to know who will be wearing the dress — and what she wants to feel on her day.">Trước khi nói về phom dáng hay chất liệu, Dolinhanh muốn biết người sẽ mặc chiếc váy là ai — và nàng muốn cảm thấy thế nào trong ngày của mình.</p>
     </div>
   </section>
 
-  <section id="bosuutap">
+  <!-- ══ 02 · THE EXPERIENCE ══ -->
+  <section class="air" style="padding-top:0">
     <div class="wrap">
-      <div class="vl-loc rise">
-        <div class="vl-nhom">
-          <span class="lb" data-en="Silhouette">Silhouette</span>
-          <button type="button" data-loai="dang" data-v="" aria-current="true" data-en="All">Tất cả</button>
-          <button type="button" data-loai="dang" data-v="a-line" data-en="A-line">A-line</button>
-          <button type="button" data-loai="dang" data-v="mermaid" data-en="Mermaid">Mermaid</button>
-          <button type="button" data-loai="dang" data-v="ballgown" data-en="Ballgown">Ballgown</button>
-          <button type="button" data-loai="dang" data-v="mini" data-en="Mini">Mini</button>
-        </div>
-        <div class="vl-nhom">
-          <span class="lb" data-en="Mood">Mood</span>
-          <button type="button" data-loai="mood" data-v="" aria-current="true" data-en="All">Tất cả</button>
-          <button type="button" data-loai="mood" data-v="minimal" data-en="Minimal">Minimal</button>
-          <button type="button" data-loai="mood" data-v="romantic" data-en="Romantic">Romantic</button>
-          <button type="button" data-loai="mood" data-v="editorial" data-en="Editorial">Editorial</button>
-          <button type="button" data-loai="mood" data-v="timeless" data-en="Timeless">Timeless</button>
+      <div class="hp rise">
+        <div class="im" style="--img:url('../../anh/nc-30.jpg')"></div>
+        <div class="tx">
+          <span class="eyebrow" data-en="The experience">Trải nghiệm</span>
+          <h2 class="h-cap" data-en="Listened to. Understood. Guided.">Được lắng nghe. Được thấu hiểu. Được tư vấn.</h2>
+          <p data-en="Dolinhanh does not simply hand you dresses to try on. We help you understand yourself, your proportions and what truly suits you — so you find the dress that makes you feel like yourself.">Dolinhanh không chỉ đưa nàng thử váy. Dolinhanh giúp nàng hiểu mình, hiểu vóc dáng, hiểu điều gì thực sự phù hợp — để tìm ra chiếc váy khiến nàng cảm thấy là chính mình.</p>
+          <a class="link" href="hanh-trinh.html" data-en="See the journey">Xem hành trình</a>
         </div>
       </div>
-      <div class="vl" id="vlGrid">
-        <figure data-dang="mermaid" data-mood="minimal"><div class="im" style="--img:url('anh/nc-23.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 23</span><span class="de" data-en="Fitted silk, front slit">Dáng ôm lụa, xẻ tà</span></figcaption></figure>
-        <figure data-dang="mermaid" data-mood="romantic"><div class="im" style="--img:url('anh/nc-24.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 24</span><span class="de" data-en="Raised lace, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption></figure>
-        <figure data-dang="a-line" data-mood="romantic"><div class="im" style="--img:url('anh/nc-25.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 25</span><span class="de" data-en="Large floral lace, full skirt">Ren hoa lớn, tùng xoè</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="timeless"><div class="im" style="--img:url('anh/nc-26.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 26</span><span class="de" data-en="Satin, sweetheart neckline">Satin cổ tim</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-27.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 27</span><span class="de" data-en="Beaded all over">Đính kết toàn thân</span></figcaption></figure>
-        <figure data-dang="mermaid" data-mood="romantic"><div class="im" style="--img:url('anh/nc-28.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 28</span><span class="de" data-en="Mermaid in soft tulle">Đuôi cá voan mờ</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="romantic"><div class="im" style="--img:url('anh/nc-29.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 29</span><span class="de" data-en="Raised lace, off-shoulder">Ren nổi, trễ vai</span></figcaption></figure>
-        <figure data-dang="a-line" data-mood="romantic"><div class="im" style="--img:url('anh/nc-31.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 31</span><span class="de" data-en="Organza, fabric flowers by hand">Organza, hoa vải đính tay</span></figcaption></figure>
-        <figure data-dang="mermaid" data-mood="minimal"><div class="im" style="--img:url('anh/nc-32.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 32</span><span class="de" data-en="Draped satin, front slit">Satin xếp nếp, xẻ tà</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-34.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 34</span><span class="de" data-en="Fine beading, bouffant skirt">Đính kết li ti, tùng bồng</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/nc-35.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 35</span><span class="de" data-en="Raised lace, fitted bodice">Ren nổi, thân ôm</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="minimal"><div class="im" style="--img:url('anh/nc-36.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 36</span><span class="de" data-en="Plain satin, draped bodice">Satin trơn, thân dún</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="timeless"><div class="im" style="--img:url('anh/nc-37.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 37</span><span class="de" data-en="Plain satin, classic skirt">Satin trơn, tùng cổ điển</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/bst/ty01.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 48</span><span class="de" data-en="Sparkling beading, off-shoulder">Đính kết lấp lánh, trễ vai</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="timeless"><div class="im" style="--img:url('anh/bst/ty02.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 49</span><span class="de" data-en="Plain satin, off-shoulder">Satin trơn, trễ vai</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="minimal"><div class="im" style="--img:url('anh/bst/ty03.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 50</span><span class="de" data-en="Satin with draped hip">Satin dún hông</span></figcaption></figure>
-        <figure data-dang="a-line" data-mood="minimal"><div class="im" style="--img:url('anh/bst/ty04.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 51</span><span class="de" data-en="Satin, bow at the waist">Satin cúp ngực, nơ eo</span></figcaption></figure>
-        <figure data-dang="a-line" data-mood="minimal"><div class="im" style="--img:url('anh/bst/ty05.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 52</span><span class="de" data-en="Draped satin, short veil">Satin dún hông, voan ngắn</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="romantic"><div class="im" style="--img:url('anh/bst/ty06.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 53</span><span class="de" data-en="Soft raised lace, long veil">Ren nổi nhẹ, voan dài</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="editorial"><div class="im" style="--img:url('anh/bst/ty07.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 54</span><span class="de" data-en="Sparkling beading, grand skirt">Đính kết lấp lánh, tùng lớn</span></figcaption></figure>
-        <figure data-dang="ballgown" data-mood="romantic"><div class="im" style="--img:url('anh/bst/ty08.jpg')"></div><figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 55</span><span class="de" data-en="Floral lace, full skirt">Ren hoa, tùng xoè</span></figcaption></figure>
-      </div>
-      <p class="vl-trong" id="vlTrong" hidden data-en="These dresses are being updated. Tell us what you are looking for and we will show you what is in the showroom.">Mẫu thuộc nhóm này đang được cập nhật. Bạn nhắn cho Dolinhanh biết mình đang tìm gì, Dolinhanh sẽ đưa bạn xem các mẫu đang có tại showroom.</p>
-      <div class="vl-page" id="vlPage"></div>
     </div>
   </section>
 
+  <!-- ══ 03 · TIMELESS ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="hp flip rise">
+        <div class="im" style="--img:url('../../anh/nc-33.jpg')"></div>
+        <div class="tx">
+          <span class="eyebrow" data-en="Timeless">Timeless</span>
+          <h2 class="h-cap" data-en="Beauty that lasts.">Beauty that lasts.</h2>
+          <p data-en="We do not chase passing trends. We look for shapes, fabrics and lines that outlive a season — so the dress still looks right when you come back to the photographs years later.">Không chạy theo những xu hướng nhất thời. Dolinhanh tìm kiếm những phom dáng, chất liệu và đường nét có thể vượt qua mùa mốt — để chiếc váy vẫn đẹp khi nàng nhìn lại những bức ảnh cưới nhiều năm sau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 04 · ABOUT / TRUST ══ -->
   <section class="air" style="padding-top:0">
     <div class="wrap">
       <div class="mid-blk rise">
-        <h2 class="h-cap giua" data-en="Found the one?">Đã tìm thấy chiếc váy của mình?</h2>
-        <p style="margin-top:20px" data-en="You do not have to decide from a photograph. Come and feel it on.">Không cần quyết định chỉ bằng một bức ảnh. Hãy đến thử và cảm nhận.</p>
+        <h2 class="h-cap giua" data-en="Founded in 2017">Ra đời từ năm 2017</h2>
+        <p style="margin-top:22px" data-en="Dolinhanh Bridal opened in 2017, out of one very personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mở cửa năm 2017, khởi đi từ một niềm tin rất riêng: say mê cái đẹp, chỉn chu trong từng chi tiết, và gắn bó với hình ảnh một cô dâu hạnh phúc.</p>
+        <p style="margin-top:18px" data-en="Through the pandemic, through a change of name and a change of hands, the spirit stayed the same: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn không đổi: chân thành, tinh tế và đầy cảm xúc.</p>
+        <p style="margin-top:18px" data-en="Today Dolinhanh Bridal is part of the wedding ecosystem of Nupakachi Photography — a house founded by photographer Đỗ Xuân Cường, with more than fifteen years walking beside couples through photography, film and wedding services, and a footprint across many countries.">Nay Dolinhanh Bridal là một phần của hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — thương hiệu do nhiếp ảnh gia Đỗ Xuân Cường sáng lập, hơn 15 năm đồng hành cùng các cặp đôi qua nhiếp ảnh, phim cưới và dịch vụ cưới, với dấu chân đã in qua nhiều quốc gia.</p>
+        <p style="margin-top:18px" data-en="From the photographs to the design of the gowns, both pursue the same thing: the bride’s real beauty, said through what is simplest and deepest. That is why a bride can leave everything for her day in one place — the dress, the photographs, the film — and be looked after by people who already know her story.">Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị nhưng sâu sắc nhất. Cũng vì vậy, một cô dâu có thể gửi trọn ngày cưới của mình ở cùng một nơi — chiếc váy, những bức ảnh, thước phim — và được chăm sóc bởi những người đã hiểu câu chuyện của nàng.</p>
+        <div class="tt-so" style="max-width:640px;margin-inline:auto">
+          <div><span class="k">2017</span><span class="v" data-en="The year Dolinhanh began">Năm Dolinhanh ra đời</span></div>
+          <div><span class="k">15+</span><span class="v" data-en="Years of weddings, with Nupakachi">Năm làm cưới, cùng Nupakachi</span></div>
+          <div><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 05 · BRAND STATEMENT ══ -->
+  <section>
+    <div class="bleed rise">
+      <div class="wide2">
+        <div class="im" style="--img:url('../../anh/nc-30-wide.jpg')"></div>
+        <div class="im" style="--img:url('../../anh/nc-33-wide.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="air">
+    <div class="wrap">
+      <div class="rise">
+        <p class="triet" data-en="A dress for the wedding day.<br>An experience to remember.<br>A beauty that stays through time.">Một chiếc váy cho ngày cưới.<br>Một trải nghiệm để nhớ.<br>Một vẻ đẹp ở lại theo thời gian.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 06 · CTA ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <h2 class="h-cap giua" data-en="Find your dress">Tìm chiếc váy của bạn</h2>
+        <p style="margin-top:20px" data-en="Tell us about your wedding day and we will keep a private fitting for you.">Kể cho Dolinhanh nghe về ngày cưới của bạn, Dolinhanh giữ chỗ cho một buổi thử riêng.</p>
         <a class="btn" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
       </div>
     </div>
   </section>
-
-  <div class="wrap">
-    <div class="next">
-      <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="cam-nang.html" data-en="The handbook">Cẩm nang</a>
-    </div>
-  </div>
 
 </main>
 
@@ -681,7 +686,7 @@
     </div>
 
     <div class="ft-duoi">
-      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <a class="ft-logo" href="index.html"><img src="../../logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
         <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
@@ -750,43 +755,6 @@ document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",
 let saved = "vi";
 try{ saved = localStorage.getItem("dla-lang") || "vi"; }catch(_){}
 setLang(saved);
-</script>
-
-<script>
-(function(){
-  const G=document.getElementById('vlGrid'), P=document.getElementById('vlPage'), T=document.getElementById('vlTrong');
-  if(!G||!P) return;
-  const F=[...G.children], PER=8;
-  let loc={dang:"",mood:""}, trang=0;
-  function hop(f){
-    return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood);
-  }
-  function ve(){
-    const ds=F.filter(hop);
-    F.forEach(f=>f.style.display="none");
-    const N=Math.ceil(ds.length/PER);
-    if(trang>=N) trang=0;
-    ds.slice(trang*PER,(trang+1)*PER).forEach(f=>f.style.display="");
-    T.hidden = ds.length>0;
-    P.innerHTML="";
-    if(N>1) for(let i=0;i<N;i++){
-      const b=document.createElement('button'); b.type='button'; b.textContent=i+1;
-      b.setAttribute('aria-current', i===trang);
-      b.onclick=()=>{ trang=i; ve(); G.scrollIntoView({block:'start'}); };
-      P.appendChild(b);
-    }
-  }
-  document.querySelectorAll('.vl-nhom button').forEach(b=>{
-    b.addEventListener('click',()=>{
-      const loai=b.dataset.loai;
-      loc[loai]=b.dataset.v; trang=0;
-      document.querySelectorAll('.vl-nhom button[data-loai="'+loai+'"]')
-        .forEach(x=>x.setAttribute('aria-current', x===b));
-      ve();
-    });
-  });
-  ve();
-})();
 </script>
 
 <!-- ══ POPUP ĐẶT LỊCH & NHẬN BÁO GIÁ ══ -->
