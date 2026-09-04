@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dolinhanh Bridal — nhà may đo váy cưới riêng tại Hà Nội và TP.HCM.">
+<meta name="description" content="Dolinhanh Bridal — váy cưới Hà Nội và TP.HCM: thuê, mua hoặc may đo riêng.">
 <title>Giới thiệu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     --champagne:#F5EFE7;
     --sand:#EDE8E1;
     --taupe:#B9AFA3;
-    --taupe-deep:#847C73;
+    --taupe-deep:#6E665C;
     --ink:#1B1917;
     --line:#E7E3DD;
 
@@ -34,15 +34,15 @@
     --sans:"Montserrat","Be Vietnam Pro","Avenir Next",Helvetica,Arial,sans-serif;
 
     --gutter:clamp(20px,5vw,80px);
-    --air:clamp(90px,16vh,220px);      /* khoảng trắng giữa các mục */
+    --air:clamp(62px,9vh,138px);      /* khoảng trắng giữa các mục */
     --max:1500px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;background:var(--paper);color:var(--ink);
-    font-family:var(--sans);font-weight:300;
-    font-size:15.5px;line-height:1.85;letter-spacing:.005em;
+    font-family:var(--sans);font-weight:400;
+    font-size:15.5px;line-height:1.8;letter-spacing:.004em;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit}
@@ -71,7 +71,7 @@
     font-size:clamp(1.18rem,1.6vw,1.45rem);line-height:1.35;letter-spacing:.01em;margin:0;
   }
   .h-xl em,.h-lg em,.h-md em{font-style:italic}
-  p{margin:0;font-size:15.5px;line-height:1.85;color:#3A3733;max-width:44ch}
+  p{margin:0;font-size:15.5px;line-height:1.8;color:#2B2825;max-width:44ch}
   .say{
     font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.72rem);
     line-height:1.45;letter-spacing:.008em;color:var(--ink);max-width:28ch;margin:0;
@@ -97,38 +97,38 @@
   .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:24px}
   .mark{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.22rem);letter-spacing:.26em;text-transform:uppercase;text-decoration:none}
   .bar nav{display:flex;gap:clamp(16px,2.6vw,38px)}
-  .bar nav a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;opacity:.85}
+  .bar nav a{font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;opacity:.95}
   .bar nav a:hover{opacity:1}
   .lang{display:flex;gap:7px;font-size:11px;letter-spacing:.22em}
   .lang button{opacity:.45}
   .lang button[aria-pressed="true"]{opacity:1}
 
   /* ── 01 hero ── */
-  .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+  .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;text-shadow:0 1px 26px rgba(0,0,0,.32)}
   .hero .bg{position:absolute;inset:0;background:#2B2724 var(--img) center 22%/cover no-repeat;transform:scale(1.04)}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.34) 0%,rgba(20,18,16,0) 38%,rgba(20,18,16,.52) 100%)}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.46) 0%,rgba(18,16,14,.12) 34%,rgba(18,16,14,.68) 100%)}
   .hero .inner{position:relative;width:100%;padding-block:clamp(44px,8vh,92px)}
   .hero .h-xl{max-width:26ch}
   .hero .h-xl em{display:inline-block;margin-top:.12em}
-  .hero .eyebrow{color:rgba(255,255,255,.75)}
+  .hero .eyebrow{color:rgba(255,255,255,.94)}
 
   /* ── 02 statement ── */
   .stmt{max-width:26ch}
   .stmt-note{margin-top:34px;max-width:42ch}
 
   /* ── giới thiệu ── */
-  .about{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,6vw,110px);align-items:center}
+  .about{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(26px,4.4vw,76px);align-items:center}
   .about .pic{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
   .about .txt{max-width:44ch;display:grid;gap:18px}
-  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,46px);margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);padding-top:26px}
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,46px);margin-top:clamp(30px,4vw,54px);border-top:1px solid var(--line);padding-top:24px}
   .facts .f .k{font-family:var(--serif);font-size:clamp(1.25rem,1.9vw,1.6rem);line-height:1.2;display:block}
   .facts .f .v{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-deep);display:block;margin-top:12px;line-height:1.7}
-  .pull-quote{max-width:44ch;margin-top:clamp(40px,6vw,80px);border-left:1px solid var(--taupe);padding-left:clamp(20px,3vw,34px)}
+  .pull-quote{max-width:44ch;margin-top:clamp(30px,4vw,56px);border-left:1px solid var(--taupe);padding-left:clamp(20px,3vw,34px)}
   .pull-quote p{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.28rem);line-height:1.6;color:var(--ink);max-width:none}
   .pull-quote cite{display:block;margin-top:16px;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe-deep)}
 
   /* ── khối ảnh + chữ xen kẽ ── */
-  .duo{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(28px,6vw,110px);align-items:center}
+  .duo{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(26px,4.4vw,76px);align-items:center}
   .duo.flip{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
   .duo.flip .pic{order:2}
   .duo .pic{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
@@ -152,8 +152,8 @@
   /* ── the details ── */
   .details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,90px)}
   .details figure{margin:0}
-  .details figure:nth-child(2){margin-top:clamp(30px,7vw,120px)}
-  .details figure:nth-child(4){margin-top:clamp(30px,7vw,120px)}
+  .details figure:nth-child(2){margin-top:clamp(20px,4vw,64px)}
+  .details figure:nth-child(4){margin-top:clamp(20px,4vw,64px)}
   .details .im{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
   .details figcaption{padding-top:18px}
   .details .t{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--taupe-deep);display:block;margin-bottom:8px}
@@ -240,9 +240,128 @@
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
 
 
-  .hero-ba{margin-top:26px;font-family:var(--sans);font-size:11px;letter-spacing:.28em;
-    text-transform:uppercase;color:rgba(255,255,255,.85)}
+  /* ── khối ảnh + chữ kiểu halfpennylondon.com/bespoke ── */
+  .h-cap{
+    font-family:var(--sans);font-weight:500;
+    font-size:clamp(1.05rem,1.7vw,1.42rem);line-height:1.45;
+    letter-spacing:.16em;text-transform:uppercase;margin:0;
+  }
+  .hp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(30px,5vw,88px);align-items:start}
+  .hp .im{width:100%;aspect-ratio:1/1;background:var(--sand) var(--img) center 30%/cover no-repeat}
+  .hp .tx{display:grid;gap:20px;padding-top:6px}
+  .hp .tx p{max-width:48ch}
+  .hp.flip .im{order:2}
+
+  .quote-mid{max-width:56ch;margin-inline:auto;text-align:center}
+  .quote-mid p{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.28rem);
+    line-height:1.65;color:var(--ink);max-width:none;margin:0}
+  .quote-mid cite{display:block;margin-top:18px;font-style:normal;
+    font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-deep)}
+
+  .cta-mid{max-width:56ch;margin-inline:auto;text-align:center}
+  .cta-mid p{margin-inline:auto;margin-top:20px}
+  .cta-mid .link{margin-top:30px}
+
+  @media (max-width:1000px){
+    .hp{grid-template-columns:1fr;gap:26px}
+    .hp.flip .im{order:0}
+  }
+
+  /* ── V5: bám sát halfpennylondon.com/bespoke (đo trên khung 1440px) ── */
+  .mid-blk{max-width:880px;margin-inline:auto;text-align:center}
+  .mid-blk p{margin-inline:auto;max-width:none}
+  .h-cap.giua{text-align:center}
+
+  /* nút kiểu MAKE A BESPOKE ENQUIRY */
+  .btn{display:inline-block;margin-top:34px;border:1px solid var(--ink);
+    padding:15px 34px;font-family:var(--sans);font-weight:400;font-size:11px;
+    letter-spacing:.24em;text-transform:uppercase;text-decoration:none;
+    transition:background .55s ease,color .55s ease}
+  .btn:hover{background:var(--ink);color:#fff}
+
+  /* khối 2 cột: ảnh DỌC 3:4 trái, chữ phải cùng bề rộng, ảnh tụt xuống */
+  .hp{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,2.6vw,38px);
+    max-width:990px;margin-inline:auto}
+  .hp .im{aspect-ratio:3/4;margin-top:clamp(0px,5vw,84px)}
+  .hp .tx{gap:24px;padding-top:0}
+  .hp .tx p{max-width:none}
+
+  /* 2 ảnh ngang tràn mép, sát nhau */
+  .bleed{width:100vw;margin-left:calc(50% - 50vw)}
+  .wide2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .wide2 .im{width:100%;aspect-ratio:1.31/1;background:var(--sand) var(--img) center/cover no-repeat}
+
+  /* lưới cô dâu 4 ảnh + chú thích in hoa */
+  .brides{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;
+    margin-top:clamp(34px,4vw,60px)}
+  .brides figure{margin:0}
+  .brides .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 15%/cover no-repeat}
+  .brides figcaption{margin-top:14px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.75}
+
+  @media (max-width:1000px){
+    .hp .im{margin-top:0}
+    .brides{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:560px){
+    .wide2{grid-template-columns:1fr}
+  }
+
+  /* ── V6: định vị Thuê · Mua · May đo ── */
+  .btn.sang{border-color:rgba(255,255,255,.75);color:#fff}
+  .btn.sang:hover{background:#fff;color:var(--ink)}
+  .hero .nut{display:flex;gap:clamp(16px,2vw,28px);flex-wrap:wrap;align-items:center}
+  .hero .nut .link{margin-top:34px;border-bottom-color:rgba(255,255,255,.6)}
+
+  .ba{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.4vw,54px);
+    margin-top:clamp(40px,5vw,72px)}
+  .ba .o{border-top:1px solid var(--ink);padding-top:20px}
+  .ba .o .n{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep);display:block}
+  .ba .o h3{margin:14px 0 0;font-family:var(--sans);font-weight:400;font-size:clamp(.95rem,1.3vw,1.12rem);
+    letter-spacing:.18em;text-transform:uppercase}
+  .ba .o p{margin-top:12px;font-size:14.5px;max-width:34ch}
+
+  .coll{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(11px,1.5vw,20px);
+    margin-top:clamp(34px,4vw,58px)}
+  .coll figure{margin:0}
+  .coll .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 12%/cover no-repeat}
+  .coll figcaption{margin-top:12px;font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--taupe-deep)}
+
+  .buoc{display:grid;gap:clamp(22px,2.6vw,34px)}
+  .buoc .b{border-top:1px solid var(--line);padding-top:18px}
+  .buoc .b .n{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep)}
+  .buoc .b h3{margin:10px 0 0;font-family:var(--sans);font-weight:400;
+    font-size:clamp(.92rem,1.2vw,1.05rem);letter-spacing:.18em;text-transform:uppercase}
+  .buoc .b p{margin-top:10px;font-size:14.5px;max-width:46ch}
+  .buoc .b .chon{margin-top:10px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ink)}
+
+  .triet{max-width:24ch;margin-inline:auto;text-align:center;font-family:var(--serif);
+    font-size:clamp(1.25rem,2vw,1.7rem);line-height:1.5}
+  .triet .b3{margin-top:26px;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--taupe-deep)}
+
+  .mayo-list{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin-top:24px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-deep)}
+
+  @media (max-width:1000px){ .coll{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:700px){ .ba{grid-template-columns:1fr} }
+
+  .hero-ba{margin-top:26px;font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;
+    text-transform:uppercase;color:rgba(255,255,255,.96)}
   .foot-say{font-style:italic}
+
+  /* ── khổ chữ trên điện thoại ── */
+  @media (max-width:700px){
+    body{font-size:16px;line-height:1.75}
+    p{font-size:16px;line-height:1.75}
+    .buoc .b p,.ba .o p,.hp .tx p{font-size:15.5px}
+    .note{font-size:13px}
+    .bar nav a{font-size:11px}
+    .idx .nm{font-size:1.15rem}
+  }
 </style>
 
 <header id="hd" class="solid">
@@ -252,8 +371,9 @@
       <nav aria-label="Mục chính">
         <a href="index.html" data-en="Home">Trang chủ</a>
         <a href="gioi-thieu.html" class="cur" data-en="About">Giới thiệu</a>
-        <a href="hanh-trinh.html" data-en="The experience">Hành trình</a>
-        <a href="chi-tiet.html" data-en="The details">Chi tiết</a>
+        <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
+        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
+        <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
         <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
@@ -269,8 +389,8 @@
   <section class="wrap sub">
     <div class="sub-head rise">
       <span class="eyebrow" data-en="About">Giới thiệu</span>
-      <h1 class="h-lg" data-en="We begin with the woman, not the dress.">Nhà bắt đầu từ người mặc, không từ chiếc váy.</h1>
-      <p data-en="Dolinhanh Bridal &amp; Nupakachi Photography — two houses, Hanoi and Ho Chi Minh City.">Dolinhanh Bridal &amp; Nupakachi Photography — hai cơ sở Hà Nội và TP.HCM.</p>
+      <h1 class="h-lg" data-en="We begin with the woman, not the dress.">Dolinhanh bắt đầu từ người mặc, không từ chiếc váy.</h1>
+      <p data-en="Dolinhanh Bridal &amp; <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — two houses, Hanoi and Ho Chi Minh City.">Dolinhanh Bridal &amp; <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — hai cơ sở Hà Nội và TP.HCM.</p>
     </div>
   </section>
   <!-- ══ GIỚI THIỆU ══ -->
@@ -279,10 +399,10 @@
       <div class="about rise">
         <div class="pic" style="--img:url('anh/cl-27.jpg')"></div>
         <div class="txt">
-          <h2 class="h-lg" data-en="A house that began in 2017, out of one mother’s love.">Một nhà váy ra đời năm 2017, từ tình yêu của một người mẹ.</h2>
+          <h2 class="h-lg" data-en="A house that began in 2017, out of one mother’s love.">Dolinhanh ra đời năm 2017, từ tình yêu của một người mẹ.</h2>
           <p data-en="Dolinhanh Bridal was built on a personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mang đậm dấu ấn cá nhân — được tạo nên từ sự say mê với cái đẹp, sự chỉn chu trong từng chi tiết và tình yêu với hình ảnh cô dâu hạnh phúc.</p>
           <p data-en="Through the pandemic, a change of name and a change of hands, the spirit held: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn vậy: chân thành, tinh tế và đầy cảm xúc.</p>
-          <p data-en="Today Dolinhanh is part of Nupakachi Photography — a wedding house of more than fifteen years, founded by photographer Đỗ Xuân Cường. From the photographs to the gowns, both pursue the same thing: the bride’s real beauty, said simply.">Nay Dolinhanh là một phần của Nupakachi Photography — nhà ảnh cưới hơn mười lăm năm, sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường. Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị.</p>
+          <p data-en="Today Dolinhanh is part of <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — a wedding house of more than fifteen years, founded by photographer Đỗ Xuân Cường. From the photographs to the gowns, both pursue the same thing: the bride’s real beauty, said simply.">Nay Dolinhanh là một phần của <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — thương hiệu ảnh cưới hơn mười lăm năm, sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường. Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị.</p>
         </div>
       </div>
 
@@ -292,7 +412,7 @@
       </div>
 
       <div class="facts rise">
-        <div class="f"><span class="k">2017</span><span class="v" data-en="The year the house began">Năm nhà ra đời</span></div>
+        <div class="f"><span class="k">2017</span><span class="v" data-en="The year the house began">Năm Dolinhanh ra đời</span></div>
         <div class="f"><span class="k">15+</span><span class="v" data-en="Years of weddings behind the lens, with Nupakachi">Năm đứng sau ống kính cưới, cùng Nupakachi</span></div>
         <div class="f"><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
       </div>

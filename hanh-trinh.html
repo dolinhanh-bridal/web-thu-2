@@ -26,7 +26,7 @@
     --champagne:#F5EFE7;
     --sand:#EDE8E1;
     --taupe:#B9AFA3;
-    --taupe-deep:#847C73;
+    --taupe-deep:#6E665C;
     --ink:#1B1917;
     --line:#E7E3DD;
 
@@ -34,15 +34,15 @@
     --sans:"Montserrat","Be Vietnam Pro","Avenir Next",Helvetica,Arial,sans-serif;
 
     --gutter:clamp(20px,5vw,80px);
-    --air:clamp(90px,16vh,220px);      /* khoảng trắng giữa các mục */
+    --air:clamp(62px,9vh,138px);      /* khoảng trắng giữa các mục */
     --max:1500px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;background:var(--paper);color:var(--ink);
-    font-family:var(--sans);font-weight:300;
-    font-size:15.5px;line-height:1.85;letter-spacing:.005em;
+    font-family:var(--sans);font-weight:400;
+    font-size:15.5px;line-height:1.8;letter-spacing:.004em;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit}
@@ -71,7 +71,7 @@
     font-size:clamp(1.18rem,1.6vw,1.45rem);line-height:1.35;letter-spacing:.01em;margin:0;
   }
   .h-xl em,.h-lg em,.h-md em{font-style:italic}
-  p{margin:0;font-size:15.5px;line-height:1.85;color:#3A3733;max-width:44ch}
+  p{margin:0;font-size:15.5px;line-height:1.8;color:#2B2825;max-width:44ch}
   .say{
     font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.72rem);
     line-height:1.45;letter-spacing:.008em;color:var(--ink);max-width:28ch;margin:0;
@@ -97,38 +97,38 @@
   .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:24px}
   .mark{font-family:var(--serif);font-size:clamp(1rem,1.5vw,1.22rem);letter-spacing:.26em;text-transform:uppercase;text-decoration:none}
   .bar nav{display:flex;gap:clamp(16px,2.6vw,38px)}
-  .bar nav a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;opacity:.85}
+  .bar nav a{font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;opacity:.95}
   .bar nav a:hover{opacity:1}
   .lang{display:flex;gap:7px;font-size:11px;letter-spacing:.22em}
   .lang button{opacity:.45}
   .lang button[aria-pressed="true"]{opacity:1}
 
   /* ── 01 hero ── */
-  .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+  .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;text-shadow:0 1px 26px rgba(0,0,0,.32)}
   .hero .bg{position:absolute;inset:0;background:#2B2724 var(--img) center 22%/cover no-repeat;transform:scale(1.04)}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.34) 0%,rgba(20,18,16,0) 38%,rgba(20,18,16,.52) 100%)}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.46) 0%,rgba(18,16,14,.12) 34%,rgba(18,16,14,.68) 100%)}
   .hero .inner{position:relative;width:100%;padding-block:clamp(44px,8vh,92px)}
   .hero .h-xl{max-width:26ch}
   .hero .h-xl em{display:inline-block;margin-top:.12em}
-  .hero .eyebrow{color:rgba(255,255,255,.75)}
+  .hero .eyebrow{color:rgba(255,255,255,.94)}
 
   /* ── 02 statement ── */
   .stmt{max-width:26ch}
   .stmt-note{margin-top:34px;max-width:42ch}
 
   /* ── giới thiệu ── */
-  .about{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,6vw,110px);align-items:center}
+  .about{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(26px,4.4vw,76px);align-items:center}
   .about .pic{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
   .about .txt{max-width:44ch;display:grid;gap:18px}
-  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,46px);margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);padding-top:26px}
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,46px);margin-top:clamp(30px,4vw,54px);border-top:1px solid var(--line);padding-top:24px}
   .facts .f .k{font-family:var(--serif);font-size:clamp(1.25rem,1.9vw,1.6rem);line-height:1.2;display:block}
   .facts .f .v{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-deep);display:block;margin-top:12px;line-height:1.7}
-  .pull-quote{max-width:44ch;margin-top:clamp(40px,6vw,80px);border-left:1px solid var(--taupe);padding-left:clamp(20px,3vw,34px)}
+  .pull-quote{max-width:44ch;margin-top:clamp(30px,4vw,56px);border-left:1px solid var(--taupe);padding-left:clamp(20px,3vw,34px)}
   .pull-quote p{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.28rem);line-height:1.6;color:var(--ink);max-width:none}
   .pull-quote cite{display:block;margin-top:16px;font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe-deep)}
 
   /* ── khối ảnh + chữ xen kẽ ── */
-  .duo{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(28px,6vw,110px);align-items:center}
+  .duo{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(26px,4.4vw,76px);align-items:center}
   .duo.flip{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
   .duo.flip .pic{order:2}
   .duo .pic{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
@@ -152,8 +152,8 @@
   /* ── the details ── */
   .details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,90px)}
   .details figure{margin:0}
-  .details figure:nth-child(2){margin-top:clamp(30px,7vw,120px)}
-  .details figure:nth-child(4){margin-top:clamp(30px,7vw,120px)}
+  .details figure:nth-child(2){margin-top:clamp(20px,4vw,64px)}
+  .details figure:nth-child(4){margin-top:clamp(20px,4vw,64px)}
   .details .im{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center/cover no-repeat}
   .details figcaption{padding-top:18px}
   .details .t{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--taupe-deep);display:block;margin-bottom:8px}
@@ -240,9 +240,128 @@
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
 
 
-  .hero-ba{margin-top:26px;font-family:var(--sans);font-size:11px;letter-spacing:.28em;
-    text-transform:uppercase;color:rgba(255,255,255,.85)}
+  /* ── khối ảnh + chữ kiểu halfpennylondon.com/bespoke ── */
+  .h-cap{
+    font-family:var(--sans);font-weight:500;
+    font-size:clamp(1.05rem,1.7vw,1.42rem);line-height:1.45;
+    letter-spacing:.16em;text-transform:uppercase;margin:0;
+  }
+  .hp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(30px,5vw,88px);align-items:start}
+  .hp .im{width:100%;aspect-ratio:1/1;background:var(--sand) var(--img) center 30%/cover no-repeat}
+  .hp .tx{display:grid;gap:20px;padding-top:6px}
+  .hp .tx p{max-width:48ch}
+  .hp.flip .im{order:2}
+
+  .quote-mid{max-width:56ch;margin-inline:auto;text-align:center}
+  .quote-mid p{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.28rem);
+    line-height:1.65;color:var(--ink);max-width:none;margin:0}
+  .quote-mid cite{display:block;margin-top:18px;font-style:normal;
+    font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-deep)}
+
+  .cta-mid{max-width:56ch;margin-inline:auto;text-align:center}
+  .cta-mid p{margin-inline:auto;margin-top:20px}
+  .cta-mid .link{margin-top:30px}
+
+  @media (max-width:1000px){
+    .hp{grid-template-columns:1fr;gap:26px}
+    .hp.flip .im{order:0}
+  }
+
+  /* ── V5: bám sát halfpennylondon.com/bespoke (đo trên khung 1440px) ── */
+  .mid-blk{max-width:880px;margin-inline:auto;text-align:center}
+  .mid-blk p{margin-inline:auto;max-width:none}
+  .h-cap.giua{text-align:center}
+
+  /* nút kiểu MAKE A BESPOKE ENQUIRY */
+  .btn{display:inline-block;margin-top:34px;border:1px solid var(--ink);
+    padding:15px 34px;font-family:var(--sans);font-weight:400;font-size:11px;
+    letter-spacing:.24em;text-transform:uppercase;text-decoration:none;
+    transition:background .55s ease,color .55s ease}
+  .btn:hover{background:var(--ink);color:#fff}
+
+  /* khối 2 cột: ảnh DỌC 3:4 trái, chữ phải cùng bề rộng, ảnh tụt xuống */
+  .hp{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,2.6vw,38px);
+    max-width:990px;margin-inline:auto}
+  .hp .im{aspect-ratio:3/4;margin-top:clamp(0px,5vw,84px)}
+  .hp .tx{gap:24px;padding-top:0}
+  .hp .tx p{max-width:none}
+
+  /* 2 ảnh ngang tràn mép, sát nhau */
+  .bleed{width:100vw;margin-left:calc(50% - 50vw)}
+  .wide2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .wide2 .im{width:100%;aspect-ratio:1.31/1;background:var(--sand) var(--img) center/cover no-repeat}
+
+  /* lưới cô dâu 4 ảnh + chú thích in hoa */
+  .brides{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;
+    margin-top:clamp(34px,4vw,60px)}
+  .brides figure{margin:0}
+  .brides .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 15%/cover no-repeat}
+  .brides figcaption{margin-top:14px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.75}
+
+  @media (max-width:1000px){
+    .hp .im{margin-top:0}
+    .brides{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:560px){
+    .wide2{grid-template-columns:1fr}
+  }
+
+  /* ── V6: định vị Thuê · Mua · May đo ── */
+  .btn.sang{border-color:rgba(255,255,255,.75);color:#fff}
+  .btn.sang:hover{background:#fff;color:var(--ink)}
+  .hero .nut{display:flex;gap:clamp(16px,2vw,28px);flex-wrap:wrap;align-items:center}
+  .hero .nut .link{margin-top:34px;border-bottom-color:rgba(255,255,255,.6)}
+
+  .ba{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.4vw,54px);
+    margin-top:clamp(40px,5vw,72px)}
+  .ba .o{border-top:1px solid var(--ink);padding-top:20px}
+  .ba .o .n{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep);display:block}
+  .ba .o h3{margin:14px 0 0;font-family:var(--sans);font-weight:400;font-size:clamp(.95rem,1.3vw,1.12rem);
+    letter-spacing:.18em;text-transform:uppercase}
+  .ba .o p{margin-top:12px;font-size:14.5px;max-width:34ch}
+
+  .coll{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(11px,1.5vw,20px);
+    margin-top:clamp(34px,4vw,58px)}
+  .coll figure{margin:0}
+  .coll .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 12%/cover no-repeat}
+  .coll figcaption{margin-top:12px;font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--taupe-deep)}
+
+  .buoc{display:grid;gap:clamp(22px,2.6vw,34px)}
+  .buoc .b{border-top:1px solid var(--line);padding-top:18px}
+  .buoc .b .n{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep)}
+  .buoc .b h3{margin:10px 0 0;font-family:var(--sans);font-weight:400;
+    font-size:clamp(.92rem,1.2vw,1.05rem);letter-spacing:.18em;text-transform:uppercase}
+  .buoc .b p{margin-top:10px;font-size:14.5px;max-width:46ch}
+  .buoc .b .chon{margin-top:10px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ink)}
+
+  .triet{max-width:24ch;margin-inline:auto;text-align:center;font-family:var(--serif);
+    font-size:clamp(1.25rem,2vw,1.7rem);line-height:1.5}
+  .triet .b3{margin-top:26px;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--taupe-deep)}
+
+  .mayo-list{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin-top:24px;
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-deep)}
+
+  @media (max-width:1000px){ .coll{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (max-width:700px){ .ba{grid-template-columns:1fr} }
+
+  .hero-ba{margin-top:26px;font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;
+    text-transform:uppercase;color:rgba(255,255,255,.96)}
   .foot-say{font-style:italic}
+
+  /* ── khổ chữ trên điện thoại ── */
+  @media (max-width:700px){
+    body{font-size:16px;line-height:1.75}
+    p{font-size:16px;line-height:1.75}
+    .buoc .b p,.ba .o p,.hp .tx p{font-size:15.5px}
+    .note{font-size:13px}
+    .bar nav a{font-size:11px}
+    .idx .nm{font-size:1.15rem}
+  }
 </style>
 
 <header id="hd" class="solid">
@@ -252,8 +371,9 @@
       <nav aria-label="Mục chính">
         <a href="index.html" data-en="Home">Trang chủ</a>
         <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
-        <a href="hanh-trinh.html" class="cur" data-en="The experience">Hành trình</a>
-        <a href="chi-tiet.html" data-en="The details">Chi tiết</a>
+        <a href="hanh-trinh.html" class="cur" data-en="The journey">Hành trình</a>
+        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
+        <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
         <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
@@ -270,7 +390,7 @@
     <div class="sub-head rise">
       <span class="eyebrow" data-en="The experience">Hành trình</span>
       <h1 class="h-lg" data-en="Finding the dress that is right for you.">Hành trình tìm ra chiếc váy đúng với bạn.</h1>
-      <p data-en="The same journey whether you rent, buy or have a dress made to measure. You are present at every step — nothing is decided for you.">Hành trình này giống nhau dù bạn thuê, mua hay may đo riêng. Mỗi bước đều có mặt bạn — nhà không quyết thay.</p>
+      <p data-en="Drawn from The Bride’s Dress Guide, the free handbook Dolinhanh wrote for brides. The journey is the same whether you rent, buy or have a dress made to measure.">Rút từ cẩm nang “The Bride’s Dress Guide” Dolinhanh viết tặng cô dâu. Hành trình này giống nhau dù bạn thuê, mua hay may đo riêng.</p>
     </div>
   </section>
   <!-- ══ 03 · HÀNH TRÌNH ══ -->
@@ -280,9 +400,9 @@
         <div class="pic" style="--img:url('anh/hn-vay1.jpg')"></div>
         <div class="txt">
           <span class="step-no">01</span>
-          <h2 class="h-lg" data-en="Meeting the house">Gặp nhà</h2>
-          <p class="step-sub" data-en="A private appointment.">Một buổi hẹn riêng.</p>
-          <p data-en="An hour that belongs to you alone. We ask about the day, the place, the people — and what you want the dress to say about you.">Một giờ chỉ thuộc về bạn. Nhà hỏi về ngày cưới, về nơi tổ chức, về những người sẽ có mặt — và về điều bạn muốn chiếc váy nói thay mình.</p>
+          <h2 class="h-lg" data-en="Read yourself first">Đọc vị bản thân</h2>
+          <p class="step-sub" data-en="Taste. Proportion. What you want to show.">Gu. Tỉ lệ. Điều bạn muốn khoe.</p>
+          <p data-en="Before the dress comes the woman. Gather five to ten dresses you like and notice what repeats — all full skirts, all lace, all off-shoulder? Then stand in front of the mirror and compare three points: shoulder — waist — hip. Last, name what you want to show and what you would rather balance. That is the question a stylist will certainly ask you.">Trước chiếc váy là người mặc. Gom năm đến mười tấm ảnh váy bạn thích rồi để ý điểm lặp lại — cùng xoè to, cùng có ren, hay cùng trễ vai? Rồi đứng trước gương so ba chỗ: vai — eo — hông. Cuối cùng, gọi tên điều bạn muốn khoe và điều muốn cân bằng lại — đó chính là câu chuyên viên chắc chắn sẽ hỏi bạn.</p>
         </div>
       </div>
     </div>
@@ -291,9 +411,9 @@
       <div class="duo flip rise">
         <div class="txt">
           <span class="step-no">02</span>
-          <h2 class="h-lg" data-en="Finding your dress">Tìm ra chiếc váy của bạn</h2>
-          <p class="step-sub" data-en="Shape. Fabric. Feeling.">Phom. Chất liệu. Cảm giác.</p>
-          <p data-en="We try silhouettes against your proportions, lay fabrics across the shoulder, test necklines and shades of white until one of them stops feeling like a choice and starts feeling like yours.">Nhà thử từng phom trên tỉ lệ của bạn, đặt từng loại vải lên vai, thử cổ váy và các sắc trắng — cho tới khi một trong số đó thôi giống một lựa chọn, mà bắt đầu giống của bạn.</p>
+          <h2 class="h-lg" data-en="Prepare for the fitting">Chuẩn bị buổi thử</h2>
+          <p class="step-sub" data-en="Nude underwear. The right shoes. One or two people.">Đồ lót nude. Đúng đôi giày. Một hai người.</p>
+          <p data-en="Nude underwear with no straps and no wide underwire. Bring shoes at the height you will really wear — the hem is measured to you in shoes. Hair pinned up, light make-up, jewellery off. Come with one or two people who truly know your taste; a crowd only makes you hesitate. A proper fitting takes about an hour and a half and should be private.">Đồ lót màu nude, không quai, không gọng to. Mang theo giày đúng độ cao bạn sẽ đi thật — gấu váy được canh theo bạn khi đã đi giày. Tóc búi gọn, trang điểm nhẹ, tháo bớt trang sức. Đi cùng một hoặc hai người thật sự hiểu gu bạn; đi đông thường khiến bạn phân vân hơn. Một buổi thử chuẩn kéo dài khoảng một tiếng rưỡi và nên là buổi riêng.</p>
         </div>
         <div class="pic" style="--img:url('anh/cl-33.jpg')"></div>
       </div>
@@ -338,9 +458,9 @@
         <div class="pic" style="--img:url('anh/cl-25.jpg')"></div>
         <div class="txt">
           <span class="step-no">03</span>
-          <h2 class="h-lg" data-en="Making your choice">Chọn cách của bạn</h2>
-          <p class="step-sub" data-en="Rent · Buy · Made to measure">Thuê &nbsp;·&nbsp; Mua &nbsp;·&nbsp; May đo riêng</p>
-          <p data-en="Most brides rent the dress for their day. Some buy it, so it stays theirs. And if you want the design changed deeply — or drawn from nothing — we make it to measure. The dress is the same dress; only the way it comes to you changes.">Phần lớn cô dâu thuê váy cho ngày cưới của mình. Một số mua hẳn, để chiếc váy ở lại với mình. Và nếu bạn muốn chỉnh sâu thiết kế — hoặc dựng mới từ đầu — nhà may đo riêng cho bạn. Vẫn là chiếc váy ấy, chỉ khác cách nó đến với bạn.</p>
+          <h2 class="h-lg" data-en="Try the right way">Thử đúng cách</h2>
+          <p class="step-sub" data-en="Four shapes. Five dresses. Three kept.">Bốn dáng. Năm mẫu. Giữ lại ba.</p>
+          <p data-en="Try all four basic shapes before you settle on a direction: A-line, ball gown, mermaid, column. Five dresses is the right number; past ten you stop remembering. Try at least one you are sure will not suit you — that is the one that surprises brides most. In each dress, sit down, raise your arms, walk a few steps. Ask for photos and a short video of the front and the back, then keep three and try them once more.">Thử đủ bốn dáng cơ bản trước khi chốt hướng: chữ A, ballgown, đuôi cá, dáng suông. Năm mẫu là con số đẹp; quá mười mẫu là bắt đầu loạn. Thử ít nhất một mẫu bạn nghĩ chắc không hợp — đây là mẫu hay gây bất ngờ nhất. Trong mỗi mẫu, hãy ngồi xuống, giơ tay, đi vài bước. Xin ảnh và một đoạn video mặt trước lẫn mặt sau, rồi giữ lại đúng ba mẫu để thử lần hai.</p>
         </div>
       </div>
     </div>
@@ -351,9 +471,9 @@
       <div class="duo flip rise">
         <div class="txt">
           <span class="step-no">04</span>
-          <h2 class="h-lg" data-en="Making it yours">Làm nó thành của bạn</h2>
-          <p class="step-sub" data-en="Made around you.">Dựng quanh chính bạn.</p>
-          <p data-en="Three or four fittings, each one closer. The waist moves a finger’s width, the hem is measured in the shoes you will really wear, until the dress stops being a garment and starts being yours.">Ba đến bốn buổi thử, mỗi lần một gần hơn. Điểm eo dịch đi một đốt ngón tay, gấu váy đo theo đúng đôi giày bạn sẽ đi thật — tới khi chiếc váy thôi là một bộ đồ, và bắt đầu là của bạn.</p>
+          <h2 class="h-lg" data-en="Make your choice">Chọn cách của bạn</h2>
+          <p class="step-sub" data-en="Rent · Buy · Made to measure">Thuê &nbsp;·&nbsp; Mua &nbsp;·&nbsp; May đo riêng</p>
+          <p data-en="Most brides rent the dress for their day. Some buy it, so it stays theirs. And if you want the design changed deeply — or drawn from nothing — Dolinhanh makes it to measure. Ask everything you need to ask before you leave a deposit, and do not decide on a passing feeling. Then come the fittings: the waist moves a finger’s width, the hem is measured in the shoes you will really wear.">Phần lớn cô dâu thuê váy cho ngày cưới. Một số mua hẳn, để chiếc váy ở lại với mình. Còn nếu bạn muốn chỉnh sâu thiết kế — hoặc dựng mới từ đầu — Dolinhanh may đo riêng cho bạn. Hỏi đủ những điều cần hỏi trước khi đặt cọc, và đừng quyết bằng cảm xúc nhất thời. Rồi tới những buổi chỉnh: điểm eo dịch đi một đốt ngón tay, gấu váy đo theo đúng đôi giày bạn sẽ đi thật.</p>
         </div>
         <div class="pic" style="--img:url('anh/hn-gal1.jpg')"></div>
       </div>
