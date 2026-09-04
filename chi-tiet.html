@@ -222,7 +222,7 @@
   .sub-head p{margin-top:22px}
   .bar nav a.cur{opacity:1}
   .bar nav a.cur::after{content:"";display:block;height:1px;background:currentColor;margin-top:5px}
-  .next{border-top:1px solid var(--line);margin-top:var(--air);padding-block:clamp(44px,6vw,78px);display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .next{border-top:1px solid var(--line);margin-top:var(--air);padding-block:clamp(44px,6vw,78px);display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
   .next .lb{font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe-deep)}
   .next .tt{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);text-decoration:none;display:inline-flex;align-items:center;gap:14px;transition:gap .45s ease}
   .next .tt::after{content:"\2192";font-family:var(--sans);font-size:.7em}
@@ -236,6 +236,44 @@
   .idx .no{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--taupe-deep);min-width:3ch}
   .idx .nm{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);flex:1;line-height:1.35}
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
+
+  /* ── bố cục CĂN GIỮA (theo halfpennylondon.com/bespoke) ── */
+  .mid{text-align:center}
+  .mid .h-lg,.mid .h-md,.mid p{margin-inline:auto}
+  .mid .h-lg{max-width:24ch}
+  .mid p{max-width:58ch}
+
+  .hero{align-items:center;text-align:center}
+  .hero .h-xl{margin-inline:auto}
+  .hero .inner p{margin-inline:auto}
+
+  .say{margin-inline:auto;text-align:center}
+  .stmt-note{margin-inline:auto;text-align:center;max-width:58ch}
+
+  .sub-head{text-align:center;max-width:940px;margin-inline:auto;border-bottom:0;
+    padding-bottom:0;margin-bottom:clamp(50px,7vw,96px)}
+  .sub-head .h-lg{max-width:24ch;margin-inline:auto}
+  .sub-head p{max-width:58ch;margin-inline:auto}
+
+  .pull-quote{border-left:0;padding-left:0;text-align:center;margin-inline:auto;max-width:56ch}
+  .pull-quote cite{display:block;margin-top:18px}
+  .facts{text-align:center}
+  .cap{text-align:center}
+  .sketch figcaption{text-align:center}
+
+  .invite{margin-inline:auto;text-align:center;max-width:46ch}
+  .form-w{margin-inline:auto}
+  .form-w .link{justify-self:center!important}
+  .note{margin-inline:auto;text-align:center}
+  .thanks{text-align:center}
+  .thanks .say{margin-inline:auto}
+
+  .next{justify-content:center;flex-direction:column;gap:14px;text-align:center}
+
+  .idx a{flex-direction:column;align-items:center;text-align:center;gap:8px}
+  .idx a:hover{padding-inline:0}
+  .idx .nm{flex:none}
+  .idx .de{text-align:center}
 </style>
 
 <header id="hd" class="solid">
@@ -268,8 +306,7 @@
   <!-- ══ 05 · THE DETAILS ══ -->
   <section id="chitiet">
     <div class="wrap">
-      <div class="rise" style="margin-bottom:clamp(34px,5vw,70px)">
-        <span class="eyebrow" data-en="The details">Chi tiết</span>
+      <div class="rise mid" style="margin-bottom:clamp(34px,5vw,70px)">
         <h2 class="h-lg" style="margin-top:20px" data-en="What you notice last is what took longest.">Thứ bạn nhận ra sau cùng là thứ mất nhiều thời gian nhất.</h2>
       </div>
       <div class="details rise">
