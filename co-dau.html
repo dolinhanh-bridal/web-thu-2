@@ -457,6 +457,55 @@
   .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
     letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
 
+  .hp .tx strong{font-weight:600;color:var(--ink)}
+  .cham{margin-top:6px;font-family:var(--serif);font-size:clamp(1rem,1.4vw,1.22rem);
+    line-height:1.75;color:var(--ink)}
+
+  .mid-blk strong{font-weight:600;color:var(--ink)}
+  .mid-blk .cham{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.3rem);
+    line-height:1.75;color:var(--ink)}
+
+  /* ── thẻ dịch vụ (chữ trong ảnh) ── */
+  .dv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);
+    margin-top:clamp(32px,4vw,56px)}
+  .dv figure{position:relative;margin:0;overflow:hidden}
+  .dv .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 12%/cover no-repeat}
+  .dv figure::after{content:"";position:absolute;inset:auto 0 0 0;height:62%;
+    background:linear-gradient(180deg,rgba(18,16,14,0) 0%,rgba(18,16,14,.62) 100%);pointer-events:none}
+  .dv figcaption{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+    color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+  .dv .ten{display:block;font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.25;margin-bottom:10px}
+  .dv .mo{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.6;
+    color:rgba(255,255,255,.92)}
+  @media (max-width:1000px){ .dv{grid-template-columns:1fr} }
+
+  /* ── khối tinh thần kiểu editorial ── */
+  .tt{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+    gap:clamp(28px,5vw,90px);align-items:start}
+  .tt-lon{margin-top:22px;font-family:var(--serif);font-size:clamp(1.35rem,2.3vw,2rem);
+    line-height:1.45;color:var(--ink);max-width:none;letter-spacing:.005em}
+  .tt-phai p{max-width:46ch;margin-bottom:20px}
+  .tt-phai p:last-of-type{margin-bottom:0}
+  .tt-phai em{font-family:var(--serif);font-style:italic;font-size:1.08em;letter-spacing:.01em}
+  .tt-phai a{text-decoration:underline;text-underline-offset:3px}
+  .tt-so{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,34px);
+    margin-top:clamp(30px,4vw,50px);border-top:1px solid var(--line);padding-top:24px}
+  .tt-so .k{display:block;font-family:var(--serif);font-size:clamp(1.2rem,1.8vw,1.55rem);line-height:1.2}
+  .tt-so .v{display:block;margin-top:8px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.7}
+  .quote-mid.hep{max-width:42ch}
+  @media (max-width:1000px){
+    .tt{grid-template-columns:1fr;gap:26px}
+    .tt-so{grid-template-columns:1fr;gap:16px}
+  }
+
+  .ket-phu{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;
+    font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--taupe-deep);max-width:none}
+  .ket-phu a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+  .ket-phu a:hover{color:var(--ink);border-bottom-color:currentColor}
+
   /* ── mục cô dâu ── */
   .cd-dau{margin-bottom:clamp(20px,2.6vw,34px)}
   .cd-ten{margin:12px 0 0;font-family:var(--sans);font-weight:400;

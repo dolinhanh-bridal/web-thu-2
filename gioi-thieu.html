@@ -456,6 +456,87 @@
     text-transform:uppercase;color:#fff}
   .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
     letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
+
+  .hp .tx strong{font-weight:600;color:var(--ink)}
+  .cham{margin-top:6px;font-family:var(--serif);font-size:clamp(1rem,1.4vw,1.22rem);
+    line-height:1.75;color:var(--ink)}
+
+  .mid-blk strong{font-weight:600;color:var(--ink)}
+  .mid-blk .cham{font-family:var(--serif);font-size:clamp(1.05rem,1.5vw,1.3rem);
+    line-height:1.75;color:var(--ink)}
+
+  /* ── thẻ dịch vụ (chữ trong ảnh) ── */
+  .dv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);
+    margin-top:clamp(32px,4vw,56px)}
+  .dv figure{position:relative;margin:0;overflow:hidden}
+  .dv .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 12%/cover no-repeat}
+  .dv figure::after{content:"";position:absolute;inset:auto 0 0 0;height:62%;
+    background:linear-gradient(180deg,rgba(18,16,14,0) 0%,rgba(18,16,14,.62) 100%);pointer-events:none}
+  .dv figcaption{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+    color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+  .dv .ten{display:block;font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.25;margin-bottom:10px}
+  .dv .mo{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.6;
+    color:rgba(255,255,255,.92)}
+  @media (max-width:1000px){ .dv{grid-template-columns:1fr} }
+
+  /* ── khối tinh thần kiểu editorial ── */
+  .tt{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+    gap:clamp(28px,5vw,90px);align-items:start}
+  .tt-lon{margin-top:22px;font-family:var(--serif);font-size:clamp(1.35rem,2.3vw,2rem);
+    line-height:1.45;color:var(--ink);max-width:none;letter-spacing:.005em}
+  .tt-phai p{max-width:46ch;margin-bottom:20px}
+  .tt-phai p:last-of-type{margin-bottom:0}
+  .tt-phai em{font-family:var(--serif);font-style:italic;font-size:1.08em;letter-spacing:.01em}
+  .tt-phai a{text-decoration:underline;text-underline-offset:3px}
+  .tt-so{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,34px);
+    margin-top:clamp(30px,4vw,50px);border-top:1px solid var(--line);padding-top:24px}
+  .tt-so .k{display:block;font-family:var(--serif);font-size:clamp(1.2rem,1.8vw,1.55rem);line-height:1.2}
+  .tt-so .v{display:block;margin-top:8px;font-family:var(--sans);font-size:10.5px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.7}
+  .quote-mid.hep{max-width:42ch}
+  @media (max-width:1000px){
+    .tt{grid-template-columns:1fr;gap:26px}
+    .tt-so{grid-template-columns:1fr;gap:16px}
+  }
+
+  .ket-phu{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;
+    font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--taupe-deep);max-width:none}
+  .ket-phu a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+  .ket-phu a:hover{color:var(--ink);border-bottom-color:currentColor}
+
+  /* ── mục cô dâu ── */
+  .cd-dau{margin-bottom:clamp(20px,2.6vw,34px)}
+  .cd-ten{margin:12px 0 0;font-family:var(--sans);font-weight:400;
+    font-size:clamp(1.05rem,1.6vw,1.35rem);letter-spacing:.2em;text-transform:uppercase}
+  .cd-mo{margin-top:10px;max-width:52ch;color:var(--taupe-deep);font-size:14px}
+  .cd-luoi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.1vw,14px)}
+  .cd-luoi figure{margin:0}
+  .cd-luoi .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 18%/cover no-repeat}
+  @media (max-width:1000px){ .cd-luoi{grid-template-columns:repeat(2,minmax(0,1fr))} }
+
+  /* ── ô cô dâu có lướt ảnh ── */
+  .cd-luoi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,18px)}
+  .cd-o{position:relative;margin:0;overflow:hidden;background:var(--sand)}
+  .sl-khung{display:flex;transition:transform .55s cubic-bezier(.22,.7,.28,1);touch-action:pan-y}
+  .sl{flex:0 0 100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 18%/cover no-repeat}
+  .cd-o::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(180deg,rgba(18,16,14,0) 0%,rgba(18,16,14,.66) 100%);pointer-events:none}
+  .cd-o figcaption{position:absolute;left:20px;right:20px;bottom:52px;z-index:3;color:#fff;
+    text-shadow:0 1px 14px rgba(0,0,0,.5)}
+  .cd-o .kind{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;
+    text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:7px}
+  .cd-o .nm{display:block;font-family:var(--sans);font-size:clamp(.95rem,1.4vw,1.2rem);
+    letter-spacing:.2em;text-transform:uppercase;color:#fff}
+  .cd-o .de{display:block;margin-top:8px;font-family:var(--sans);font-size:11.5px;
+    letter-spacing:.06em;color:rgba(255,255,255,.9)}
+  .sl-cham{position:absolute;left:0;right:0;bottom:20px;z-index:4;display:flex;
+    gap:8px;justify-content:center}
+  .sl-cham button{width:7px;height:7px;padding:0;border-radius:50%;border:0;
+    background:rgba(255,255,255,.45);transition:background .3s ease,transform .3s ease}
+  .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
+  @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 </style>
 
 <header id="hd" class="solid">
@@ -521,7 +602,10 @@
     <div class="wrap">
       <div class="mid-blk rise">
         <h2 class="h-cap giua" data-en="Founded in 2017">Ra đời từ năm 2017</h2>
-        <p style="margin-top:22px" data-en="Dolinhanh Bridal is part of the Nupakachi wedding ecosystem — a brand with more than fifteen years walking beside couples through photography and wedding services.">Dolinhanh Bridal là một phần của hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi</a>, thương hiệu có hơn 15 năm đồng hành cùng các cặp đôi qua nhiếp ảnh và dịch vụ cưới.</p>
+        <p style="margin-top:22px" data-en="Dolinhanh Bridal opened in 2017, out of one very personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mở cửa năm 2017, khởi đi từ một niềm tin rất riêng: say mê cái đẹp, chỉn chu trong từng chi tiết, và gắn bó với hình ảnh một cô dâu hạnh phúc.</p>
+        <p style="margin-top:18px" data-en="Through the pandemic, through a change of name and a change of hands, the spirit stayed the same: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn không đổi: chân thành, tinh tế và đầy cảm xúc.</p>
+        <p style="margin-top:18px" data-en="Today Dolinhanh Bridal is part of the wedding ecosystem of Nupakachi Photography — a house founded by photographer Đỗ Xuân Cường, with more than fifteen years walking beside couples through photography, film and wedding services, and a footprint across many countries.">Nay Dolinhanh Bridal là một phần của hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — thương hiệu do nhiếp ảnh gia Đỗ Xuân Cường sáng lập, hơn 15 năm đồng hành cùng các cặp đôi qua nhiếp ảnh, phim cưới và dịch vụ cưới, với dấu chân đã in qua nhiều quốc gia.</p>
+        <p style="margin-top:18px" data-en="From the photographs to the design of the gowns, both pursue the same thing: the bride’s real beauty, said through what is simplest and deepest. That is why a bride can leave everything for her day in one place — the dress, the photographs, the film — and be looked after by people who already know her story.">Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị nhưng sâu sắc nhất. Cũng vì vậy, một cô dâu có thể gửi trọn ngày cưới của mình ở cùng một nơi — chiếc váy, những bức ảnh, thước phim — và được chăm sóc bởi những người đã hiểu câu chuyện của nàng.</p>
         <div class="tt-so" style="max-width:640px;margin-inline:auto">
           <div><span class="k">2017</span><span class="v" data-en="The year Dolinhanh began">Năm Dolinhanh ra đời</span></div>
           <div><span class="k">15+</span><span class="v" data-en="Years of weddings, with Nupakachi">Năm làm cưới, cùng Nupakachi</span></div>
