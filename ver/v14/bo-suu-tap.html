@@ -9,11 +9,11 @@
   ══════════════════════════════════════════════════════════════
 -->
 <meta charset="utf-8">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Đặt lịch thử váy riêng tại Dolinhanh Bridal, Hà Nội và TP.HCM.">
-<title>Gửi yêu cầu — Dolinhanh Bridal</title>
+<meta name="description" content="Bộ sưu tập váy cưới Dolinhanh Bridal — thuê, mua hoặc may đo riêng.">
+<title>Bộ sưu tập — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -369,10 +369,10 @@
         <a href="index.html" data-en="Home">Trang chủ</a>
         <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
-        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
+        <a href="bo-suu-tap.html" class="cur" data-en="Collection">Bộ sưu tập</a>
         <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
-        <a href="gui-yeu-cau.html" class="cur" data-en="Enquire">Gửi yêu cầu</a>
+        <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -382,43 +382,61 @@
 </header>
 
 <main id="top">
-
   <section class="wrap sub">
     <div class="sub-head rise">
-      <span class="eyebrow" data-en="Enquire">Gửi yêu cầu</span>
-      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you.">Để lại vài dòng, Dolinhanh giữ chỗ cho buổi thử riêng.</h1>
-      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
+      <span class="eyebrow" data-en="The collection">Bộ sưu tập</span>
+      <h1 class="h-lg" data-en="Every dress here can be rented or bought.">Mọi chiếc váy ở đây đều có thể thuê hoặc mua.</h1>
+      <p data-en="Most can also be adjusted for you — a neckline, a sleeve, a silhouette.">Phần lớn còn có thể chỉnh theo bạn — cổ váy, tay áo, dáng váy.</p>
     </div>
   </section>
-  <!-- ══ 07 · ENQUIRE ══ -->
-  <section id="hen" style="padding-bottom:var(--air)">
+
+  <section id="bosuutap">
     <div class="wrap">
-      <div class="invite rise">
-        <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
-        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Dolinhanh muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
+      <div class="coll rise">
+        <figure><div class="im" style="--img:url('../../anh/look-01.jpg')"></div><figcaption data-en="Ball gown, glitter tulle · Rent · Buy">Dáng xoè, tulle nhũ · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/look-02.jpg')"></div><figcaption data-en="Corset bodice, full skirt · Rent · Buy · Custom">Thân corset, chân váy xoè · Thuê · Mua · May đo</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/look-03.jpg')"></div><figcaption data-en="Lace bodice with veil · Rent · Buy">Thân ren, kèm voan · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/look-04.jpg')"></div><figcaption data-en="Off-shoulder satin · Rent · Buy · Custom">Satin trễ vai · Thuê · Mua · May đo</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/look-05.jpg')"></div><figcaption data-en="Draped satin, front slit · Rent · Buy">Satin xếp nếp, xẻ tà · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/look-06.jpg')"></div><figcaption data-en="Gathered skirt, sweetheart neckline · Rent · Buy · Custom">Chân váy dún, cổ tim · Thuê · Mua · May đo</figcaption></figure>
       </div>
-      <form class="form-w rise" id="leadForm" novalidate>
-        <div class="row">
-          <div class="field"><label for="ten" data-en="Full name">Họ và tên</label><input id="ten" name="ten" type="text" required></div>
-          <div class="field"><label for="sdt" data-en="Phone number">Số điện thoại</label><input id="sdt" name="sdt" type="tel" inputmode="numeric" required></div>
-        </div>
-        <div class="row">
-          <div class="field"><label for="ngay" data-en="Wedding date">Ngày cưới dự kiến</label><input id="ngay" name="ngay" type="date"></div>
-          <div class="field"><label for="coso" data-en="Showroom">Cơ sở</label>
-            <select id="coso" name="coso"><option data-en="Hanoi">Hà Nội</option><option data-en="Ho Chi Minh City">TP. Hồ Chí Minh</option></select></div>
-        </div>
-        <button class="link" type="submit" style="justify-self:start;margin-top:6px" data-en="Begin the story">Bắt đầu câu chuyện</button>
-        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us.">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
-      </form>
-      <div class="thanks" id="thanks" role="status">
-        <p class="say" style="max-width:30ch" data-en="Thank you. We will be in touch within a day.">Cảm ơn bạn. Dolinhanh sẽ liên hệ trong vòng một ngày.</p>
+      <div class="mid-blk rise" style="margin-top:clamp(30px,4vw,54px)">
+        <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
       </div>
     </div>
   </section>
+
+  <!-- ══ 05 · THE DETAILS ══ -->
+  <section id="chitiet">
+    <div class="wrap">
+      <div class="rise" style="margin-bottom:clamp(34px,5vw,70px)">
+        <h2 class="h-lg" style="margin-top:20px" data-en="What you notice last is what took longest.">Thứ bạn nhận ra sau cùng là thứ mất nhiều thời gian nhất.</h2>
+      </div>
+      <div class="details rise">
+        <figure>
+          <div class="im" style="--img:url('../../anh/cl-33.jpg')"></div>
+          <figcaption><span class="t" data-en="The corset">Corset</span><span class="d" data-en="Structure that follows you, not the other way round.">Bộ khung đi theo dáng bạn, không phải ngược lại.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="im" style="--img:url('../../anh/cl-22.jpg')"></div>
+          <figcaption><span class="t" data-en="The lace">Ren</span><span class="d" data-en="Placed, not simply applied.">Được đặt, không phải chỉ dán lên.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="im" style="--img:url('../../anh/cl-30.jpg')"></div>
+          <figcaption><span class="t" data-en="The handwork">Đính kết</span><span class="d" data-en="One stone at a time, to a map drawn for this dress.">Từng viên một, theo sơ đồ vẽ riêng cho chiếc váy này.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="im" style="--img:url('../../anh/nu-hoa-vay-sau-le.jpg')"></div>
+          <figcaption><span class="t" data-en="The finish">Hoàn thiện</span><span class="d" data-en="Adjusted around your proportions until nothing pulls.">Chỉnh quanh tỉ lệ của bạn, tới khi không còn chỗ nào gợn.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <div class="wrap">
     <div class="next">
       <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="index.html" data-en="Back to home">Về trang chủ</a>
+      <a class="tt" href="cam-nang.html" data-en="The handbook">Cẩm nang</a>
     </div>
   </div>
 
