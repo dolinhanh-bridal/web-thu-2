@@ -126,6 +126,22 @@
   .hero .display{max-width:14ch}
   .hero .cta{display:flex;flex-wrap:wrap;gap:clamp(22px,4vw,54px);margin-top:clamp(26px,4vh,46px)}
 
+  .open-block{max-width:70ch}
+  .open-lead{margin-top:20px;font-family:var(--body);font-size:clamp(1.05rem,1.35vw,1.2rem);line-height:1.8;max-width:62ch;color:#2B2824}
+  .pull{margin:0;max-width:64ch}
+  .pull p{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.35;color:var(--charcoal);max-width:none;margin:0}
+  .pull em{font-style:italic}
+  .pull cite{display:block;margin-top:18px;font-style:normal;font-family:var(--sans);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-deep)}
+  .exp{display:grid;grid-template-columns:minmax(0,22ch) minmax(0,1fr);gap:clamp(20px,5vw,80px);align-items:start}
+  .exp-body{display:grid;gap:22px;max-width:62ch}
+  .exp-body p{font-size:var(--t-body);line-height:1.8;margin:0}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,28px)}
+  .duo .tall{aspect-ratio:3/4;background:var(--sand) var(--img) center/cover no-repeat}
+  .brides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.2vw,32px)}
+  .brides figure{margin:0}
+  .brides .shot{aspect-ratio:3/4;background:var(--sand) var(--img) center/cover no-repeat}
+  .brides figcaption{padding-top:12px;font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-deep);line-height:1.6}
+
   /* ═══ 02 · ba lời hứa ═══ */
   .creed{border-top:1px solid var(--line)}
   .creed-row{
@@ -349,7 +365,9 @@
   }
   @media (min-width:1241px){ .menu{display:none!important} }
   @media (max-width:1000px){
-    .statement,.jq,.direction,.split,.two,.guide-in,.lead{grid-template-columns:1fr}
+    .statement,.jq,.direction,.split,.two,.guide-in,.lead,.exp{grid-template-columns:1fr}
+    .brides{grid-template-columns:1fr 1fr}
+    .duo{grid-template-columns:1fr}
     .pair{grid-template-columns:1fr}
     .tones{grid-template-columns:1fr 1fr}
     .tiers{grid-template-columns:1fr}
@@ -365,6 +383,7 @@
     .foot{grid-template-columns:1fr}
     .tones{grid-template-columns:1fr}
     .dir-looks{grid-template-columns:1fr 1fr}
+    .brides{grid-template-columns:1fr}
     .rwhen{display:none}
     .stop{grid-template-rows:20px auto auto}
     .rail::before{top:10px}
@@ -375,19 +394,16 @@
   <div class="wrap">
     <div class="bar">
       <nav aria-label="Mục chính">
-        <a href="#creed" data-en="Philosophy">Triết lý</a>
-        <a href="#hanhtrinh" data-en="Your dress">Tìm váy của bạn</a>
-        <a href="#kienthuc" data-en="Understand your dress">Hiểu chiếc váy</a>
-        <a href="#chatlieu" data-en="Fabric &amp; colour">Chất liệu &amp; màu</a>
-        <a href="#atelier" data-en="Atelier">Xưởng may</a>
+        <a href="#mayde" data-en="Bespoke">May đo riêng</a>
+        <a href="#trainghiem" data-en="Your experience">Hành trình của bạn</a>
+        <a href="#hanhtrinh" data-en="Find your dress">Tìm hướng váy</a>
       </nav>
       <a class="mark" href="#top">Dolinhanh Bridal</a>
       <div class="right">
         <nav aria-label="Mục phụ">
-          <a href="#dressguide" data-en="Dress Guide">Dress Guide</a>
-          <a href="#lotrinh" data-en="The road">Lộ trình</a>
-          <a href="#baogia" data-en="Pricing">Báo giá</a>
+          <a href="#codau" data-en="Our brides">Cô dâu của nhà</a>
           <a href="#dieukhoan" data-en="Terms">Điều khoản</a>
+          <a href="#hen" data-en="Enquire">Gửi yêu cầu</a>
         </nav>
         <div class="lang" role="group" aria-label="Ngôn ngữ / Language">
           <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -401,17 +417,12 @@
 <div class="menu" id="menu" hidden>
   <nav aria-label="Menu điện thoại">
     <ul>
-      <li><a href="#creed"><span class="mnum">01</span><span class="mtxt" data-en="Philosophy">Triết lý</span></a></li>
-      <li><a href="#hanhtrinh"><span class="mnum">02</span><span class="mtxt" data-en="Find your dress">Tìm váy của bạn</span></a></li>
-      <li><a href="#kienthuc"><span class="mnum">03</span><span class="mtxt" data-en="Understand your dress">Hiểu chiếc váy</span></a></li>
-      <li><a href="#chatlieu"><span class="mnum">04</span><span class="mtxt" data-en="Fabric &amp; colour">Chất liệu &amp; màu</span></a></li>
-      <li><a href="#atelier"><span class="mnum">05</span><span class="mtxt" data-en="The atelier">Xưởng may</span></a></li>
-      <li><a href="#thuehaymay"><span class="mnum">06</span><span class="mtxt" data-en="Rent or make">Thuê hay may riêng</span></a></li>
-      <li><a href="#dressguide"><span class="mnum">07</span><span class="mtxt">The Bride’s Dress Guide</span></a></li>
-      <li><a href="#lotrinh"><span class="mnum">08</span><span class="mtxt" data-en="The road to the wedding">Lộ trình cưới</span></a></li>
-      <li><a href="#baogia"><span class="mnum">09</span><span class="mtxt" data-en="Pricing">Báo giá</span></a></li>
-      <li><a href="#dieukhoan"><span class="mnum">10</span><span class="mtxt" data-en="Rental terms">Điều khoản thuê</span></a></li>
-      <li><a href="#kenh"><span class="mnum">11</span><span class="mtxt" data-en="Channels">Kênh của nhà</span></a></li>
+      <li><a href="#mayde"><span class="mnum">01</span><span class="mtxt" data-en="Bespoke">May đo riêng</span></a></li>
+      <li><a href="#trainghiem"><span class="mnum">02</span><span class="mtxt" data-en="Your experience">Hành trình của bạn</span></a></li>
+      <li><a href="#hanhtrinh"><span class="mnum">03</span><span class="mtxt" data-en="Find your dress">Tìm hướng váy</span></a></li>
+      <li><a href="#hen"><span class="mnum">04</span><span class="mtxt" data-en="Make an enquiry">Gửi yêu cầu may đo</span></a></li>
+      <li><a href="#codau"><span class="mnum">05</span><span class="mtxt" data-en="Our brides">Cô dâu của nhà</span></a></li>
+      <li><a href="#dieukhoan"><span class="mnum">06</span><span class="mtxt" data-en="Rental terms">Điều khoản thuê</span></a></li>
     </ul>
   </nav>
   <div class="menu-foot">
@@ -422,82 +433,80 @@
 
 <main id="top">
 
-  <!-- ══ 01 · HERO ══ -->
   <section class="hero" id="hero" data-dark="1">
     <div class="bg" style="--img:url('anh/hn-hero.jpg')"></div>
     <div class="veil"></div>
     <div class="wrap inner">
-      <span class="label" style="color:rgba(255,255,255,.72);letter-spacing:.26em">Dolinhanh &nbsp;·&nbsp; Bridal Experience &nbsp;·&nbsp; 2026</span>
-      <h1 class="display" style="margin-top:22px;max-width:18ch">Quiet minimal luxury,<br><em>Crafted with Mother Love.</em></h1>
-      <p style="margin-top:22px;color:rgba(255,255,255,.88);max-width:44ch" data-en="A dress is chosen not only because it is beautiful — but because it belongs to the one wearing it.">Một chiếc váy được chọn không chỉ vì nó đẹp — mà vì nó hợp với người mặc.</p>
+      <span class="label" style="color:rgba(255,255,255,.75);letter-spacing:.26em" data-en="Dolinhanh Bridal · Made to measure">Dolinhanh Bridal &nbsp;·&nbsp; May đo riêng</span>
+      <h1 class="display" style="margin-top:22px;max-width:16ch">Quiet minimal luxury,<br><em>Crafted with Mother Love.</em></h1>
       <div class="cta">
-        <a class="link" href="#hanhtrinh" data-en="Tell us about your day">Kể cho nhà nghe về ngày của bạn</a>
-        <a class="link" href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener" data-en="Free ebook — &quot;The Bride’s Dress Guide&quot;">Ebook tặng nàng — &ldquo;The Bride&rsquo;s Dress Guide&rdquo;</a>
+        <a class="link" href="#trainghiem" data-en="Your experience">Hành trình của bạn</a>
+        <a class="link" href="#hen" data-en="Make an enquiry">Gửi yêu cầu may đo</a>
       </div>
     </div>
   </section>
 
-  <!-- ══ 02 · BA LỜI HỨA ══ -->
-  <section class="air" id="creed">
+  <section class="air" id="mayde">
     <div class="wrap">
-      <div class="rise" style="max-width:52ch">
-        <span class="label" data-en="01 — Understand yourself">01 — Hiểu mình</span>
-        <h2 class="head" style="margin-top:18px" data-en="We don’t just find you a dress. We help you understand the dress that belongs to you.">Nhà không chỉ tìm cho bạn một chiếc váy. Nhà giúp bạn hiểu chiếc váy nào là của mình.</h2>
-      </div>
-      <div class="creed rise" style="margin-top:clamp(36px,5vw,68px)">
-        <div class="creed-row">
-          <span class="n">01</span>
-          <span class="t">Understand you</span>
-          <p data-en="Before any gown comes off the rail, we ask about your body, your taste, your day.">Trước khi lấy bất cứ chiếc váy nào xuống, nhà hỏi về dáng người, về gu, và về ngày của bạn.</p>
-        </div>
-        <div class="creed-row">
-          <span class="n">02</span>
-          <span class="t">Design for you</span>
-          <p data-en="Nothing is taken off the shelf as it is. Every gown is advised, altered or cut for the one wearing it.">Không có chiếc nào lấy nguyên như trên giá. Váy được tư vấn, chỉnh sửa hoặc may riêng theo người mặc.</p>
-        </div>
-        <div class="creed-row">
-          <span class="n">03</span>
-          <span class="t">Make it yours</span>
-          <p data-en="A dress that only looks beautiful on the mannequin has not done its work.">Một chiếc váy chỉ đẹp trên ma-nơ-canh là chiếc váy chưa làm xong việc của nó.</p>
-        </div>
+      <div class="rise open-block">
+        <span class="label" data-en="Dolinhanh Bridal bespoke">Dolinhanh Bridal · May đo riêng</span>
+        <p class="open-lead" data-en="Our made-to-measure service creates a gown that exists once, and belongs to one bride. Every piece is cut to your own measurements and shaped around your own vision, designed and made by hand in our atelier in Hanoi and Ho Chi Minh City.">Dịch vụ may đo của nhà tạo ra một chiếc váy chỉ có một lần, và thuộc về một cô dâu. Mỗi chiếc được cắt theo số đo của riêng bạn và dựng quanh hình dung của riêng bạn, thiết kế và làm tay tại xưởng của nhà ở Hà Nội và TP. Hồ Chí Minh.</p>
       </div>
     </div>
   </section>
 
-  <!-- ══ 03 · STATEMENT + ẢNH ══ -->
-  <section class="air" style="padding-top:0">
+  <section style="padding-bottom:var(--air)">
     <div class="wrap">
-      <div class="statement rise">
-        <div class="shot" style="--img:url('anh/cl-26.jpg')"></div>
-        <div class="say">
-          <span class="label" data-en="The house">Nhà</span>
-          <p class="display" style="margin-top:18px" data-en="Born in 2017, out of one mother’s love.">Ra đời năm 2017, từ tình yêu của một người mẹ.</p>
-          <p style="margin-top:24px" data-en="Dolinhanh believes a bride’s beauty does not need to be created — it is already there. The dress only helps her see it more clearly. Handwork, fabric and silhouette are chosen to serve the one wearing them, never the other way round.">Dolinhanh tin rằng vẻ đẹp của cô dâu không cần được tạo ra từ đầu — nó đã ở đó. Chiếc váy chỉ giúp nàng nhìn thấy nó rõ hơn. Tay nghề thủ công, chất liệu và phom dáng được chọn để phục vụ người mặc, không phải ngược lại.</p>
-          <p style="margin-top:16px" data-en="Through the pandemic, a change of name and a change of hands, the spirit held: sincere, understated, full of feeling. Dolinhanh Bridal is part of Nupakachi Photography — fifteen years of weddings behind the lens.">Qua mùa dịch, qua đổi tên và chuyển nhượng, tinh thần vẫn vậy: chân thành, tinh tế, đầy cảm xúc. Dolinhanh Bridal thuộc Nupakachi Photography — mười lăm năm đứng sau ống kính đám cưới.</p>
-        </div>
-      </div>
+      <blockquote class="pull rise">
+        <p data-en="“Dolinhanh is what drives me to weave this dream of wedding dresses. I hope the house grows up alongside the little girl I am raising — so that it becomes the happiness I hand to young women.”">“Dolinhanh là nguồn động lực mãnh liệt để mình dệt nên ước mơ ‘váy cưới’. Mình mong thương hiệu này lớn lên cùng cô gái nhỏ mình đang nuôi dạy — để thành hoài bão hạnh phúc mình mang tới cho các cô gái trẻ.”</p>
+        <cite data-en="— The founder, Dolinhanh Bridal">— Người sáng lập, Dolinhanh Bridal</cite>
+      </blockquote>
     </div>
-    <div class="wrap" style="margin-top:clamp(40px,6vw,90px)">
-      <div class="band rise" style="--img:url('anh/hn-dai.jpg')"></div>
-      <div class="band-cap">
-        <span class="label">Made by hand. &nbsp;Made with patience. &nbsp;Made for her.</span>
-        <span class="label">Dolinhanh Bridal &amp; Nupakachi Photography</span>
+  </section>
+
+  <div class="wrap"><div class="band rise" style="--img:url('anh/hn-dai.jpg')"></div></div>
+
+  <section class="air" id="trainghiem">
+    <div class="wrap">
+      <div class="rise exp">
+        <span class="label" data-en="Your experience">Hành trình của bạn</span>
+        <div class="exp-body">
+          <p data-en="You are welcomed into the showroom for a private appointment, where we take the time to shape your idea of the day into something we can both see.">Bạn được đón vào showroom trong một buổi hẹn riêng, nơi nhà dành trọn thời gian để biến hình dung của bạn về ngày cưới thành một thứ cả hai cùng nhìn thấy được.</p>
+          <p data-en="Making a dress this way is a shared, unhurried process. We stay beside you at every step, learning your taste, your body and what you want that day to feel like.">Làm một chiếc váy theo cách này là chuyện của hai người, và không vội. Nhà đi cùng bạn từng bước, để hiểu gu của bạn, dáng người của bạn, và bạn muốn ngày đó có cảm giác thế nào.</p>
+          <p data-en="Because it is personal, you will come back to us more than once. That is the time to try things — to run your hands through our fabrics and our silhouettes and let something unexpected happen.">Vì đây là chuyện rất riêng, bạn sẽ quay lại nhà nhiều hơn một lần. Đó là lúc để thử — chạm tay vào kho vải và các phom váy của nhà, và để một điều bất ngờ nào đó xảy ra.</p>
+          <p data-en="Your gown first comes to life as a drawing. Only then do our artisans begin cutting, sewing and setting each stone by hand in the atelier.">Chiếc váy của bạn ra đời lần đầu trên bản vẽ. Sau đó thợ của nhà mới bắt đầu cắt, may và đính từng viên đá bằng tay tại xưởng.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ 04 · HÀNH TRÌNH 9 CÂU ══ -->
+  <section style="padding-bottom:var(--air)">
+    <div class="wrap">
+      <blockquote class="pull rise">
+        <p>Made by hand. Made with patience. <em>Made for her.</em></p>
+        <cite>Dolinhanh Bridal &amp; Nupakachi Photography</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section style="padding-bottom:var(--air)">
+    <div class="wrap">
+      <div class="duo rise">
+        <div class="shot tall" style="--img:url('anh/cl-26.jpg')"></div>
+        <div class="shot tall" style="--img:url('anh/cl-30.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="journey" id="hanhtrinh" data-dark="1">
     <div class="bar-progress" id="jprog"></div>
     <div class="wrap" style="padding-block:clamp(72px,12vh,140px)">
-
       <div id="jIntro" class="rise">
-        <span class="label" data-en="04 — Discover your dress direction">04 — Tìm ra hướng váy của bạn</span>
+        <span class="label" data-en="Before your first appointment">Trước buổi hẹn đầu tiên</span>
         <h2 class="display" style="margin-top:20px;max-width:16ch;color:var(--ivory)" data-en="Tell us about your day.">Kể cho nhà nghe về ngày của bạn.</h2>
-        <p style="margin-top:22px;max-width:48ch" data-en="Nine questions about your body, your taste and your wedding. At the end we give you a dress direction — silhouette, neckline, fabric, colour, mood — not a list of bestsellers.">Chín câu hỏi về dáng người, về gu và về đám cưới của bạn. Cuối cùng nhà đưa ra hướng váy dành riêng cho bạn — phom, cổ váy, chất liệu, sắc màu, cảm giác — chứ không phải danh sách mẫu bán chạy.</p>
+        <p style="margin-top:22px;max-width:46ch" data-en="Nine questions about your body, your taste and your wedding. At the end we give you a dress direction — silhouette, neckline, fabric, colour, mood — to bring with you to the fitting.">Chín câu hỏi về dáng người, về gu và về đám cưới của bạn. Cuối cùng nhà đưa ra hướng váy dành riêng cho bạn — phom, cổ váy, chất liệu, sắc màu, cảm giác — để mang theo tới buổi thử.</p>
         <div class="jnav"><button class="link" type="button" id="jStart" data-en="Begin — 9 questions">Bắt đầu — 9 câu hỏi</button></div>
       </div>
-
       <div id="jStage" hidden>
         <div class="jq">
           <div>
@@ -512,7 +521,6 @@
           <button class="link" type="button" id="jNext" hidden data-en="Continue">Tiếp tục</button>
         </div>
       </div>
-
       <div id="jResult" hidden>
         <div class="direction">
           <div>
@@ -524,228 +532,24 @@
             <ul class="dir-notes" id="dirNotes"></ul>
             <div class="dir-looks" id="dirLooks"></div>
             <div class="jnav">
-              <a class="link" href="#baogia" id="dirSend" data-en="Send this to a stylist">Gửi hướng váy này cho stylist</a>
-              <a class="link" href="#dressguide" data-en="Continue your dress journey">Đi tiếp hành trình</a>
+              <a class="link" href="#hen" id="dirSend" data-en="Send this with my enquiry">Gửi hướng váy này cùng yêu cầu</a>
               <button class="link" type="button" id="dirRedo" data-en="Answer again">Trả lời lại</button>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-
-  <!-- ══ KIẾN THỨC · TRƯỚC KHI THỬ VÁY ══ -->
-  <section class="air" id="kienthuc">
+  <section class="air" id="hen">
     <div class="wrap">
-      <div class="rise" style="max-width:44ch">
-        <span class="label" data-en="02 — Understand your body &amp; your dress">02 — Hiểu dáng và hiểu váy</span>
-        <h2 class="head" style="margin-top:18px" data-en="The right dress does not change your body. It understands your proportions.">Chiếc váy đúng không sửa cơ thể bạn. Nó hiểu tỉ lệ của bạn.</h2>
+      <div class="rise open-block">
+        <span class="label" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
+        <p class="open-lead" data-en="We would love to bring your idea into the atelier and make the dress you have been picturing. Leave your details below and a stylist will be in touch to arrange your first consultation.">Nhà rất mong được đưa hình dung của bạn vào xưởng và làm nên chiếc váy bạn vẫn hằng nghĩ tới. Để lại thông tin bên dưới, stylist của nhà sẽ liên hệ để hẹn buổi tư vấn đầu tiên.</p>
       </div>
-      <div class="know rise" style="margin-top:clamp(34px,5vw,64px)">
-        <div class="know-row">
-          <span class="n">01</span>
-          <span class="t" data-en="Before you try on">Trước khi thử váy</span>
-          <div>
-            <p class="say" data-en="Don’t begin a fitting with a dress. Begin by understanding yourself.">Đừng bắt đầu buổi thử váy bằng một chiếc váy. Hãy bắt đầu bằng việc hiểu mình.</p>
-            <p class="why" data-en="Most brides try the prettiest gown on the rail first, and three hours later still cannot say why every dress feels slightly wrong. A useful fitting starts elsewhere: how you want to feel, how your body is proportioned, and where the day happens.">Cô dâu đến showroom thường thử ngay chiếc đẹp nhất trên giá, rồi ba tiếng sau vẫn không biết vì sao chiếc nào cũng &quot;hơi sai&quot;. Buổi thử váy có ích bắt đầu từ chỗ khác: bạn muốn cảm thấy thế nào, cơ thể bạn cân đối ra sao, và ngày đó diễn ra ở đâu.</p>
-            
-          </div>
-        </div><div class="know-row">
-          <span class="n">02</span>
-          <span class="t" data-en="Your body">Dáng người</span>
-          <div>
-            <p class="say" data-en="Height does not decide what you can wear. Proportion does.">Chiều cao không quyết định bạn mặc được dáng nào. Tỉ lệ mới quyết định.</p>
-            <p class="why" data-en="Two brides at 1m60 can suit entirely different silhouettes, because the waist sits differently, the legs read differently, the shoulders sit wider or narrower. We look at three things: where the waist falls, how the upper body reads against the lower, and how the shoulders sit against the hips.">Hai cô dâu cùng cao 1m60 có thể hợp hai phom hoàn toàn khác nhau, vì điểm eo, độ dài chân và bề ngang vai khác nhau. Nhà đo và nhìn ba thứ: eo nằm ở đâu, thân trên dài hay ngắn so với thân dưới, và vai rộng hay hẹp so với hông.</p>
-            <details class="more"><summary data-en="In detail">Cụ thể hơn</summary><ul><li data-en="A high waist — set the seam at the true waist and the legs read far longer.">Eo cao — cạp váy đặt đúng chỗ eo thật, chân trông dài thêm cả gang tay.</li><li data-en="Shoulders wider than hips — a V or a wide off-shoulder pulls the eye inward.">Vai rộng hơn hông — cổ chữ V hoặc trễ vai bản to kéo mắt vào giữa.</li><li data-en="A long torso — avoid a dropped waist; raising the seam balances everything.">Thân trên dài — tránh cạp trễ, đưa điểm eo lên là cân ngay.</li></ul></details>
-          </div>
-        </div><div class="know-row">
-          <span class="n">03</span>
-          <span class="t" data-en="Your silhouette">Phom váy</span>
-          <div>
-            <p class="say" data-en="Don’t choose a silhouette because it is beautiful. Choose it because it belongs to you.">Đừng chọn phom vì nó đẹp. Chọn vì nó thuộc về bạn.</p>
-            <p class="why" data-en="Every silhouette creates its own optical effect, and every one of them has a case where it should be avoided. We say both sides out loud before you try anything.">Mỗi phom tạo một hiệu ứng thị giác riêng, và phom nào cũng có lúc không nên dùng. Nhà nói thẳng cả hai mặt trước khi bạn thử.</p>
-            <details class="more"><summary data-en="In detail">Cụ thể hơn</summary><ul><li data-en="Ballgown — hides the lower body, creates a small waist. Avoid it in low ceilings or when you must move a lot.">Xoè bồng — giấu phần thân dưới, tạo eo nhỏ. Tránh khi trần thấp hoặc tiệc phải đi lại nhiều.</li><li data-en="A-line — the most wearable, suits nearly any proportion. It needs the seam at the true waist.">Chữ A — dễ mặc nhất, hợp gần như mọi tỉ lệ. Cần cạp đặt đúng eo thật.</li><li data-en="Mermaid — follows the curve, demands a well-built corset. Hard to sit in for long.">Đuôi cá — tôn đường cong, đòi hỏi corset dựng khung tốt. Khó ngồi lâu.</li><li data-en="Sheath — lengthens and reads clean, right for a small party. It hides nothing at the hip.">Suông ôm — kéo dáng cao, sạch, hợp tiệc nhỏ. Không giấu được phần hông.</li></ul></details>
-          </div>
-        </div><div class="know-row">
-          <span class="n">04</span>
-          <span class="t" data-en="Your fabric">Chất liệu</span>
-          <div>
-            <p class="say" data-en="Fabric is not “premium” or “ordinary”. It is drape, structure, and how it takes light.">Chất liệu không phải là &quot;cao cấp&quot; hay &quot;bình thường&quot;. Nó là độ rủ, độ đứng và cách bắt sáng.</p>
-            <p class="why" data-en="In the same silhouette, changing the cloth changes the dress entirely. This is what we explain at the very first fitting.">Cùng một phom, đổi vải là đổi hẳn chiếc váy. Đây là điều nhà giải thích ngay ở buổi thử đầu tiên.</p>
-            <details class="more"><summary data-en="In detail">Cụ thể hơn</summary><ul><li data-en="Mikado — holds its shape and keeps a sharp fold. Photographs cleanly; right for architectural lines.">Mikado — đứng phom, giữ nếp gấp sắc. Lên ảnh sạch, hợp phom kiến trúc.</li><li data-en="Satin — drapes and follows the body, catching light in broad planes. It forgives no creases.">Satin — rủ và bám dáng, bắt sáng thành mảng lớn. Không tha thứ cho nếp nhăn.</li><li data-en="Lace — soft and deep; up close you read every motif. It softens any cut.">Ren — mềm, có chiều sâu, nhìn gần thấy từng nét hoa. Làm dịu mọi đường cắt.</li><li data-en="Tulle — light and airy, adds volume without adding visual weight.">Tulle — nhẹ và bay, tạo khối mà không thêm cân nặng thị giác.</li></ul></details>
-          </div>
-        </div><div class="know-row">
-          <span class="n">05</span>
-          <span class="t" data-en="Your colour">Sắc màu</span>
-          <div>
-            <p class="say" data-en="Not every bride looks her best in pure white.">Không phải cô dâu nào cũng đẹp nhất trong màu trắng tinh.</p>
-            <p class="why" data-en="Pure white is the hardest colour: it bounces onto the skin and shows every flush. We choose the shade from your undertone, not from a trend.">Trắng tinh là màu khó nhất: nó phản chiếu lên da và làm lộ mọi sắc ửng. Nhà chọn sắc theo tông da nền của bạn, không theo mốt.</p>
-            <details class="more"><summary data-en="In detail">Cụ thể hơn</summary><ul><li data-en="A warm undertone — champagne and nude make the skin read warm and healthy.">Da nền vàng — champagne và nude làm da nhìn ấm và khoẻ.</li><li data-en="A pink undertone — warm white or ivory keeps the clarity.">Da nền hồng — trắng ấm hoặc ivory giữ được vẻ trong trẻo.</li><li data-en="A neutral undertone — almost anything works; choose by the light in the room.">Da nền trung tính — hợp gần hết, có thể chọn theo ánh sáng tiệc.</li><li data-en="Warm venue lighting — taupe and champagne never yellow the way pure white does.">Tiệc đèn vàng — taupe và champagne không bao giờ bị ám vàng như trắng tinh.</li></ul></details>
-          </div>
-        </div><div class="know-row">
-          <span class="n">06</span>
-          <span class="t" data-en="Your fitting">Buổi chỉnh</span>
-          <div>
-            <p class="say" data-en="A dress that looks beautiful on the mannequin may not make sense on you.">Một chiếc váy đẹp trên ma-nơ-canh chưa chắc đẹp trên bạn.</p>
-            <p class="why" data-en="Most of a gown’s beauty lives in millimetres no one sees: the bust point, the waist placement, the height of the neckline, the hem measured against the shoes you will actually wear.">Phần lớn cái đẹp của một chiếc váy nằm ở những milimet không ai nhìn thấy: điểm ngực, vị trí eo, độ cao cổ váy, độ dài gấu tính theo đôi giày bạn sẽ đi thật.</p>
-            <details class="more"><summary data-en="In detail">Cụ thể hơn</summary><ul><li data-en="A boned corset — lifts and holds; it decides how the whole gown stands.">Corset dựng khung — nâng và giữ, quyết định dáng đứng của cả chiếc váy.</li><li data-en="The waist seam — a finger’s width out and the proportion changes entirely.">Điểm eo — đặt sai một đốt ngón tay là tỉ lệ đổi hẳn.</li><li data-en="The bust point — it decides whether the bodice reads neat or heavy.">Điểm ngực — quyết định thân trên nhìn gọn hay xệ.</li><li data-en="The hem — measured in the shoes you will really wear, never barefoot.">Gấu váy — đo cùng đôi giày sẽ đi thật, không đo chân trần.</li></ul></details>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 05 · CHẤT LIỆU & MÀU ══ -->
-  <section class="air" id="chatlieu">
-    <div class="wrap">
-      <div class="rise" style="max-width:46ch">
-        <span class="label" data-en="03 — Fabric &amp; colour">03 — Chất liệu &amp; màu</span>
-        <h2 class="head" style="margin-top:18px" data-en="Fabric decides the feel. Colour decides the skin.">Chất liệu quyết định cảm giác. Màu quyết định nước da.</h2>
-      </div>
-
-      <div class="pair rise" style="margin-top:clamp(36px,5vw,70px)">
-        <article>
-          <div class="shot" style="--img:url('anh/cl-33.jpg')"></div>
-          <h3 data-en="Plain">Trơn</h3>
-          <p data-en="Satin, mikado, crepe — a flat surface, a sharp line, very photogenic.">Satin, mikado, crepe — mặt vải phẳng, phom rõ, lên ảnh sang.</p>
-        </article>
-        <article>
-          <div class="shot" style="--img:url('anh/cl-24.jpg')"></div>
-          <h3 data-en="Lace">Ren</h3>
-          <p data-en="Soft, with depth; up close you read every motif.">Mềm, có chiều sâu, nhìn gần thấy từng nét hoa.</p>
-        </article>
-        <article>
-          <div class="shot" style="--img:url('anh/cl-30.jpg')"></div>
-          <h3 data-en="Beaded">Đính kết</h3>
-          <p data-en="Stones set by hand. It catches every light and reads from across the room.">Đá đính tay từng viên. Bắt sáng dưới đèn tiệc, đứng xa vẫn nổi.</p>
-        </article>
-      </div>
-
-      <div class="tones rise">
-        <div class="tone"><div class="chip" style="background:#FBF9F6"></div><h3 data-en="Warm white">Trắng ấm</h3><p data-en="Clean but never clinical. Made for indoor light.">Sạch mà không lạnh. Hợp đèn trong nhà.</p></div>
-        <div class="tone"><div class="chip" style="background:#F1E4D3"></div><h3 data-en="Champagne">Champagne</h3><p data-en="A whisper of warmth; the most forgiving under yellow light.">Chút ấm rất nhẹ, dịu nhất dưới đèn vàng.</p></div>
-        <div class="tone"><div class="chip" style="background:#E4D3C1"></div><h3 data-en="Nude">Nude</h3><p data-en="Sits close to the skin and makes it look healthier.">Ôm sát tông da, làm da nhìn hồng hào.</p></div>
-        <div class="tone"><div class="chip" style="background:#CFC6BA"></div><h3 data-en="Taupe">Taupe</h3><p data-en="Muted and restrained. Never glares in photographs.">Trầm và tiết chế, không bao giờ chói trong ảnh.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 06 · XƯỞNG MAY ══ -->
-  <section id="atelier">
-    <div class="split rise">
-      <div class="shot" style="--img:url('anh/cl-25.jpg')"></div>
-      <div class="txt">
-        <span class="label" data-en="The atelier · handmade in Vietnam">Xưởng của nhà · làm tay tại Việt Nam</span>
-        <h2 class="head" style="margin:18px 0 20px" data-en="Set by hand, stone by stone.">Đính tay, từng viên một.</h2>
-        <p data-en="Every beading map is drawn for the dress it belongs to. A calico toile is fitted before the real gown is cut, and the gown is altered until it moves as if it had always been yours.">Mỗi sơ đồ đính kết được vẽ riêng cho chiếc váy đó. Váy mộc được thử dáng trước khi cắt vải thật, và chỉnh cho tới khi mặc lên như thể vẫn luôn là của bạn.</p>
-        <div style="margin-top:26px"><a class="link" href="#thuehaymay" data-en="Rent or make your own">Thuê hay may riêng</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 07 · THUÊ HAY MAY RIÊNG ══ -->
-  <section class="air" id="thuehaymay">
-    <div class="wrap">
-      <div class="rise" style="max-width:44ch">
-        <span class="label" data-en="06 — Make it yours">06 — Biến nó thành của bạn</span>
-        <h2 class="head" style="margin-top:18px" data-en="Rented for a day, or made for a lifetime.">Thuê cho một ngày, hay may để giữ cả đời.</h2>
-      </div>
-      <div class="two rise">
-        <article>
-          <div class="shot" style="--img:url('anh/hn-gal3.jpg')"></div>
-          <h3 data-en="Rental">Cho thuê</h3>
-          <p style="margin-top:10px" data-en="Every gown in the house is available to rent, taken in at waist, bust and hem, dry-cleaned and checked stone by stone before it goes out.">Mọi mẫu của nhà đều cho thuê, chỉnh sườn – ngực – gấu theo dáng người, giặt hấp và kiểm từng viên đá trước khi giao.</p>
-          <div style="margin-top:20px"><a class="link" href="#dieukhoan" data-en="Rental terms">Điều khoản thuê</a></div>
-        </article>
-        <article>
-          <div class="shot" style="--img:url('anh/cl-26.jpg')"></div>
-          <h3 data-en="Made to measure">May đo riêng</h3>
-          <p style="margin-top:10px" data-en="Cut from your own measurements, shaped through private fittings, and yours to keep after the day.">Cắt theo số đo của riêng bạn, chỉnh qua từng buổi thử riêng, và thuộc về bạn sau ngày cưới.</p>
-          <div style="margin-top:20px"><a class="link" href="#hanhtrinh" data-en="Begin your dress journey">Bắt đầu hành trình tìm váy</a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 08 · DRESS GUIDE ══ -->
-  <section class="guide air" id="dressguide">
-    <div class="wrap">
-      <div class="guide-in rise">
-        <div class="shot" style="--img:url('anh/hn-gal5.jpg')"></div>
-        <div>
-          <span class="label" data-en="Continue your dress journey">Đi tiếp hành trình</span>
-          <h2 class="head" style="margin:18px 0 20px" data-en="Want to understand your dress better?">Muốn hiểu chiếc váy của mình kỹ hơn nữa?</h2>
-          <p class="lede" style="margin-bottom:16px">The Bride’s Dress Guide<br><span style="font-family:var(--sans);font-size:.9rem;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe-deep)" data-en="27 pages · 8 things every bride should know before her first fitting">27 trang · 8 điều nên biết trước buổi thử váy đầu tiên</span></p>
-          <p data-en="How silhouettes read on different bodies, what lace and mikado actually do to a photograph, what to bring to a fitting, and the questions worth asking any bridal house — ours included.">Phom nào ăn với dáng nào, ren và mikado thật ra làm gì với bức ảnh, đi thử váy nên mang gì, và những câu đáng hỏi bất cứ nhà váy cưới nào — kể cả nhà.</p>
-          <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:26px"><a class="link" href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener" data-en="Read the Guide">Đọc Dress Guide</a><a class="link" href="#baogia" data-en="Book a private fitting">Đặt buổi thử riêng</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 09 · LỘ TRÌNH ══ -->
-  <section class="air" id="lotrinh">
-    <div class="wrap">
-      <div class="rise" style="max-width:44ch">
-        <span class="label" data-en="The road to the wedding">Lộ trình cưới</span>
-        <h2 class="head" style="margin-top:18px" data-en="The whole road, in nine stages.">Toàn bộ lộ trình, chín chặng.</h2>
-      </div>
-      <div class="rise">
-        <div class="rail" id="rail" role="tablist" aria-label="Sơ đồ lộ trình cưới"></div>
-        <div class="sp" role="tabpanel">
-          <div class="sp-head"><span class="sp-num" id="spNum">01</span><div><h3 id="spTitle"></h3><div class="sp-when" id="spWhen"></div></div></div>
-          <ul id="spList"></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 10 · BÁO GIÁ ══ -->
-  <section class="air" id="baogia" style="background:var(--champagne)">
-    <div class="wrap">
-      <div class="rise" style="max-width:44ch">
-        <span class="label" data-en="05 — Private fitting">05 — Buổi thử riêng</span>
-        <h2 class="head" style="margin-top:18px" data-en="Leave a number. A stylist calls back within a day.">Để lại số. Stylist gọi lại trong một ngày.</h2>
-      </div>
-      <div class="tiers rise">
-        <div class="tier">
-          <div class="k" data-en="One">Một</div>
-          <h3 data-en="Rental">Thuê váy cưới</h3>
-          <ul>
-            <li data-en="A gown from the house collection">Váy trong bộ sưu tập của nhà</li>
-            <li data-en="Taken in at waist, bust and hem">Chỉnh sườn – ngực – gấu</li>
-            <li data-en="Veil and accessories included">Kèm voan và phụ kiện</li>
-          </ul>
-          <span class="fill" data-en="add price from …">điền giá từ …</span>
-        </div>
-        <div class="tier">
-          <div class="k" data-en="Two">Hai</div>
-          <h3 data-en="Made to measure">May đo riêng</h3>
-          <ul>
-            <li data-en="Cut from your own measurements">Cắt theo số đo riêng</li>
-            <li data-en="A toile fitted before the real gown">Váy mộc thử dáng trước</li>
-            <li data-en="Yours after the day">Thuộc về bạn sau ngày cưới</li>
-          </ul>
-          <span class="fill" data-en="add price from …">điền giá từ …</span>
-        </div>
-        <div class="tier">
-          <div class="k" data-en="Three">Ba</div>
-          <h3 data-en="The full bridal journey">Trọn hành trình cô dâu</h3>
-          <ul>
-            <li data-en="Wedding gown and reception dress">Váy cưới và váy tiệc</li>
-            <li data-en="Dresses for both mothers">Váy cho mẹ hai bên</li>
-            <li data-en="Photography with Nupakachi">Ảnh và phim cùng Nupakachi</li>
-          </ul>
-          <span class="fill" data-en="add price from …">điền giá từ …</span>
-        </div>
-      </div>
-
       <div class="lead rise">
         <div>
-          <h3 data-en="Tell us where to reach you.">Cho nhà biết gọi cho bạn ở đâu.</h3>
-          <p style="margin-top:14px" data-en="We send full pricing for your own date, and the Dress Guide with it. No calls out of hours, and your number stays with us.">Nhà gửi bảng giá theo đúng ngày cưới của bạn, kèm Dress Guide. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
+          <p data-en="A stylist calls back within a day, with pricing for your own date and the Dress Guide. No calls out of hours, and your number stays with us.">Stylist gọi lại trong vòng một ngày, kèm bảng giá theo đúng ngày cưới của bạn và cuốn Dress Guide. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
           <p style="margin-top:14px"><span class="fill" data-en="add this month’s offer">điền ưu đãi tháng này</span></p>
         </div>
         <div>
@@ -761,49 +565,40 @@
             </div>
             <input type="hidden" id="phom" name="phom" value="">
             <div class="picked" id="picked"></div>
-            <button class="link" type="submit" style="justify-self:start" data-en="Book a private fitting">Đặt lịch thử váy riêng</button>
+            <button class="link" type="submit" style="justify-self:start" data-en="Make an enquiry">Gửi yêu cầu may đo</button>
             <p class="consent" data-en="By sending this you agree to be contacted by Dolinhanh Bridal.">Bằng việc gửi thông tin, bạn đồng ý để Dolinhanh Bridal liên hệ tư vấn.</p>
           </form>
           <div class="thanks" id="thanks" role="status">
             <h3 data-en="We have your details.">Nhà đã nhận được thông tin của bạn.</h3>
-            <p style="margin-top:10px" data-en="A stylist will call within a day, with pricing and the Dress Guide.">Stylist sẽ gọi lại trong vòng một ngày, kèm bảng giá và Dress Guide.</p>
+            <p style="margin-top:10px" data-en="A stylist will call within a day to arrange your first consultation.">Stylist sẽ gọi lại trong vòng một ngày để hẹn buổi tư vấn đầu tiên.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ 11 · ĐIỀU KHOẢN ══ -->
-  <section class="air" id="dieukhoan">
+  <section class="air" id="codau" style="padding-top:0">
     <div class="wrap">
-      <div class="rise" style="max-width:44ch">
-        <span class="label" data-en="Rental terms">Điều khoản thuê</span>
-        <h2 class="head" style="margin-top:18px" data-en="No hidden line.">Không có dòng nào giấu.</h2>
+      <span class="label rise" data-en="Our brides">Cô dâu của nhà</span>
+      <div class="brides rise" style="margin-top:clamp(24px,3.4vw,44px)">
+        <figure><div class="shot" style="--img:url('anh/cl-25.jpg')"></div><figcaption data-en="MADE TO MEASURE · A-LINE IN FRENCH LACE, LONG VEIL">MAY ĐO RIÊNG · PHOM CHỮ A, REN PHÁP, VOAN DÀI</figcaption></figure>
+        <figure><div class="shot" style="--img:url('anh/cl-23.jpg')"></div><figcaption data-en="MADE TO MEASURE · MERMAID IN SILK, FRONT SLIT">MAY ĐO RIÊNG · PHOM ĐUÔI CÁ, LỤA, XẺ TÀ TRƯỚC</figcaption></figure>
+        <figure><div class="shot" style="--img:url('anh/cl-29.jpg')"></div><figcaption data-en="MADE TO MEASURE · SEQUINNED BODICE, FULL SKIRT">MAY ĐO RIÊNG · THÂN KIM SA, TÙNG XOÈ</figcaption></figure>
+        <figure><div class="shot" style="--img:url('anh/cl-32.jpg')"></div><figcaption data-en="MADE TO MEASURE · SHEATH IN MIKADO, OPEN BACK">MAY ĐO RIÊNG · PHOM SUÔNG ÔM, MIKADO, LƯNG KHOÉT</figcaption></figure>
+        <figure><div class="shot" style="--img:url('anh/hn-gal3.jpg')"></div><figcaption data-en="RENTAL · BALLGOWN, ALTERED TO THE BRIDE">CHO THUÊ · PHOM XOÈ BỒNG, CHỈNH THEO CÔ DÂU</figcaption></figure>
+        <figure><div class="shot" style="--img:url('anh/hn-gal5.jpg')"></div><figcaption data-en="RENTAL · SOFT A-LINE, CATHEDRAL VEIL">CHO THUÊ · CHỮ A MỀM, VOAN DÀI</figcaption></figure>
       </div>
-      <div class="terms-top rise" id="terms"></div>
+      <div style="margin-top:clamp(26px,3.4vw,44px);display:flex;flex-wrap:wrap;gap:28px">
+        <a class="link" href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener" data-en="Read the Bride’s Dress Guide">Đọc The Bride’s Dress Guide</a>
+        <a class="link" href="#dieukhoan" data-en="Rental terms">Điều khoản thuê</a>
+      </div>
     </div>
   </section>
 
-  <!-- ══ 12 · KÊNH ══ -->
-  <section class="air" id="kenh" style="padding-top:0">
+  <section class="air" id="dieukhoan" style="padding-top:0">
     <div class="wrap">
-      <div class="pair rise">
-        <article>
-          <h3>Instagram</h3>
-          <p style="margin-top:8px" data-en="Editorial feed, real brides, new collections.">Feed editorial, cô dâu thật, bộ sưu tập mới.</p>
-          <div style="margin-top:16px"><a class="link" href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener">@dolinhanh.bridal</a></div>
-        </article>
-        <article>
-          <h3>TikTok</h3>
-          <p style="margin-top:8px" data-en="Lookbooks, fittings behind the scenes, advice for brides.">Lookbook, hậu trường fitting, cẩm nang cho cô dâu.</p>
-          <div style="margin-top:16px"><a class="link" href="https://www.tiktok.com/@fitting.vay.cuoi" target="_blank" rel="noopener">@fitting.vay.cuoi</a></div>
-        </article>
-        <article>
-          <h3>Facebook</h3>
-          <p style="margin-top:8px" data-en="Full albums by collection, messages answered daily.">Album đầy đủ theo bộ sưu tập, tin nhắn trả lời mỗi ngày.</p>
-          <div style="margin-top:16px"><a class="link" href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener">Dolinhanh Bridal HCM</a></div>
-        </article>
-      </div>
+      <span class="label rise" data-en="Rental terms">Điều khoản thuê</span>
+      <div class="terms-top rise" id="terms" style="margin-top:20px"></div>
     </div>
   </section>
 </main>
@@ -1119,57 +914,6 @@ $("dirSend").addEventListener("click",()=>{
   p.classList.add("on");
 });
 
-/* ═══ lộ trình 9 chặng ═══ */
-const CHANG = [
-  {vi:"Quyết định cưới",en:"Decide to marry",whenVi:"Trước 12 tháng",whenEn:"12+ months",
-   lsVi:["Thống nhất ngân sách và ai chi phần nào, trước khi báo hai bên.","Chốt mùa cưới; tránh mùa mưa nếu định làm ngoài trời.","Mở một khoản riêng cho đám cưới."],
-   lsEn:["Agree the budget and who pays what, before telling the families.","Pick a season; avoid the rains if you want an outdoor party.","Open a separate wedding account."]},
-  {vi:"Hai nhà gặp nhau",en:"The families meet",whenVi:"9–12 tháng",whenEn:"9–12 months",
-   lsVi:["Dạm ngõ, chốt ngày ăn hỏi và ngày cưới.","Ước lượng số mâm — con số quyết định mọi khoản còn lại.","Đặt cọc địa điểm, chỗ đẹp kín trước cả năm."],
-   lsEn:["The first visit; set the engagement and wedding dates.","Estimate the tables — that number drives every other cost.","Book the venue; good ones go a year ahead."]},
-  {vi:"Chọn ekip",en:"Choose the team",whenVi:"6–9 tháng",whenEn:"6–9 months",
-   lsVi:["Chốt ekip ảnh và phim trước, lịch họ kín sớm nhất.","Thử váy lần đầu để biết hợp phom nào, chưa cần chốt.","Muốn may đo thì đây là hạn cuối để bắt đầu."],
-   lsEn:["Book photography and film first.","A first fitting, just to learn your silhouette.","Made-to-measure has to start now at the latest."]},
-  {vi:"Chốt váy và ảnh cưới",en:"Dress and photos",whenVi:"4–6 tháng",whenEn:"4–6 months",
-   lsVi:["Ký hợp đồng váy, giữ ảnh chụp hợp đồng trong máy.","Chụp pre-wedding bằng váy khác váy cưới.","Chốt thiệp và danh sách khách."],
-   lsEn:["Sign for the dress; keep a photo of the contract.","Shoot pre-wedding in a different dress.","Settle invitations and the guest list."]},
-  {vi:"Gửi thiệp",en:"Send invitations",whenVi:"2–3 tháng",whenEn:"2–3 months",
-   lsVi:["Thiệp giấy cho họ hàng, thiệp online cho bạn bè.","Thử váy lần hai khi cân nặng đã ổn — buổi chỉnh chính.","Chốt trang điểm, hoa cầm tay, xe."],
-   lsEn:["Paper for relatives, online for friends.","Second fitting once your weight settles.","Confirm make-up, bouquet and cars."]},
-  {vi:"Chạy nước rút",en:"The last month",whenVi:"1 tháng",whenEn:"1 month",
-   lsVi:["Thử váy lần cuối cùng đôi giày sẽ đi thật.","Gọi lại từng đầu mối xác nhận giờ.","Chốt danh sách khách và sơ đồ bàn."],
-   lsEn:["Final fitting in the actual shoes.","Call every supplier to confirm times.","Lock the guest list and seating."]},
-  {vi:"Tuần cuối",en:"The final week",whenVi:"1 tuần",whenEn:"1 week",
-   lsVi:["Nhận váy trước 1–2 ngày, treo nơi khô, không gấp.","Túi cấp cứu: kim chỉ, băng cá nhân, kim băng, giày dự phòng.","Ngủ đủ và uống nước."],
-   lsEn:["Collect the dress; hang it, never fold it.","Emergency kit: thread, plasters, pins, spare shoes.","Sleep, and drink water."]},
-  {vi:"Ngày của bạn",en:"Your day",whenVi:"Ngày cưới",whenEn:"The day",
-   lsVi:["Ăn sáng, dù không thấy đói.","Giao điện thoại cho một người thân giữ.","Sự cố váy thì gọi nhà, có hướng dẫn xử lý tại chỗ."],
-   lsEn:["Eat breakfast even without appetite.","Hand your phone to someone you trust.","Any trouble with the dress — call us."]},
-  {vi:"Trả váy và giữ kỷ niệm",en:"Return and keep",whenVi:"Sau cưới",whenEn:"After",
-   lsVi:["Trả váy trong 3 ngày để hoàn cọc đầy đủ.","Nhận ảnh, chọn ảnh in album khi còn nhớ rõ.","Gửi lời cảm ơn tới khách."],
-   lsEn:["Return within three days for the full deposit.","Collect the photos and choose the album.","Thank the people who came."]}
-];
-$("rail").innerHTML = CHANG.map((d,i)=>`
-  <button class="stop" type="button" role="tab" aria-selected="${i===0}">
-    <span class="rwhen" data-en="${d.whenEn}">${d.whenVi}</span>
-    <span class="rdot"></span>
-    <span class="rnum">${String(i+1).padStart(2,"0")}</span>
-    <span class="rname" data-en="${d.en}">${d.vi}</span>
-  </button>`).join("");
-let chang = 0;
-function veChang(){
-  const d = CHANG[chang], en = LANG === "en";
-  $("spNum").textContent = String(chang+1).padStart(2,"0");
-  $("spTitle").textContent = en ? d.en : d.vi;
-  $("spWhen").textContent = en ? d.whenEn : d.whenVi;
-  $("spList").innerHTML = (en ? d.lsEn : d.lsVi).map(x=>`<li>${x}</li>`).join("");
-  [...document.querySelectorAll(".stop")].forEach((b,i)=>b.setAttribute("aria-selected", i===chang));
-}
-document.querySelectorAll(".stop").forEach((b,i)=>b.addEventListener("click",()=>{
-  chang = i; veChang(); b.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
-}));
-veChang();
-
 /* ═══ điều khoản ═══ */
 const TERMS = [
   {vi:"Thời gian thuê",en:"Rental period",lsVi:["Thuê chuẩn 3 ngày, từ ngày nhận đến ngày trả.","Trả trễ: 1.000.000đ mỗi ngày."],lsEn:["Three days, pick-up to return.","Late return: 1,000,000 VND per day."]},
@@ -1247,7 +991,6 @@ function setLang(l){
   document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l==="en" ? e.dataset.en : e.dataset.vi; });
   document.querySelectorAll("[data-en-ph]").forEach(e=>{ e.placeholder = l==="en" ? e.dataset.enPh : e.dataset.viPh; });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang===l));
-  veChang();
   if(!$("jStage").hidden) veCau();
   if(!$("jResult").hidden) veKetQua();
   try{ localStorage.setItem("dla-lang", l); }catch(_){}
