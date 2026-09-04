@@ -10,8 +10,8 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dolinhanh Bridal — may đo váy cưới riêng. Chiếc váy bắt đầu từ bạn.">
-<title>Dolinhanh Bridal — May đo riêng</title>
+<meta name="description" content="Đặt lịch thử váy riêng tại Dolinhanh Bridal, Hà Nội và TP.HCM.">
+<title>Gửi yêu cầu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -238,7 +238,7 @@
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
 </style>
 
-<header id="hd">
+<header id="hd" class="solid">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
@@ -247,7 +247,7 @@
         <a href="hanh-trinh.html" data-en="The experience">Hành trình</a>
         <a href="chi-tiet.html" data-en="The details">Chi tiết</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
-        <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
+        <a href="gui-yeu-cau.html" class="cur" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -258,36 +258,44 @@
 
 <main id="top">
 
-  <!-- ══ 01 · ẢNH ══ -->
-  <section class="hero" id="hero" data-dark="1">
-    <div class="bg" id="heroBg" style="--img:url('anh/hn-hero.jpg')"></div>
-    <div class="veil"></div>
-    <div class="wrap inner">
-      <span class="eyebrow">Dolinhanh &nbsp;&nbsp; Bridal Experience &nbsp;&nbsp; 2026</span>
-      <h1 class="h-xl" style="margin-top:26px">Quiet minimal luxury,<br><em>Crafted with Mother Love.</em></h1>
-      <p style="margin-top:24px;color:rgba(255,255,255,.9);max-width:42ch" data-en="A dress is chosen not only because it is beautiful — but because it belongs to the one wearing it.">Một chiếc váy được chọn không chỉ vì nó đẹp — mà vì nó hợp với người mặc.</p>
+  <section class="wrap sub">
+    <div class="sub-head rise">
+      <span class="eyebrow" data-en="Enquire">Gửi yêu cầu</span>
+      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you.">Để lại vài dòng, nhà giữ chỗ cho buổi thử riêng.</h1>
+      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
     </div>
   </section>
-  <!-- ══ 02 · STATEMENT ══ -->
-  <section class="air">
+  <!-- ══ 07 · ENQUIRE ══ -->
+  <section id="hen" style="padding-bottom:var(--air)">
     <div class="wrap">
-      <p class="say rise" data-en="Don’t begin with a dress. Begin with the woman who will wear it.">Đừng bắt đầu bằng một chiếc váy. Hãy bắt đầu bằng người mặc nó.</p>
-      <p class="stmt-note rise" data-en="We do not look for the most beautiful gown in the room. We look for the one that is right for you — your proportions, your day, the way you want to feel walking in.">Nhà không đi tìm chiếc váy đẹp nhất trong phòng. Nhà đi tìm chiếc váy đúng với bạn nhất — đúng tỉ lệ của bạn, đúng ngày của bạn, đúng cảm giác bạn muốn mang khi bước vào.</p>
-    </div>
-  </section>
-
-  <section class="air" style="padding-top:0">
-    <div class="wrap">
-      <span class="eyebrow rise" data-en="Contents">Mục lục</span>
-      <div class="idx rise" style="margin-top:26px">
-      <a href="gioi-thieu.html"><span class="no">01</span><span class="nm" data-en="About">Giới thiệu</span><span class="de" data-en="Who we are">Nhà là ai</span></a>
-      <a href="hanh-trinh.html"><span class="no">02</span><span class="nm" data-en="The experience">Hành trình</span><span class="de" data-en="Five steps, made to measure">Năm bước may đo</span></a>
-      <a href="chi-tiet.html"><span class="no">03</span><span class="nm" data-en="The details">Chi tiết</span><span class="de" data-en="Handwork, up close">Chi tiết làm tay</span></a>
-      <a href="co-dau.html"><span class="no">04</span><span class="nm" data-en="The bride">Cô dâu</span><span class="de" data-en="Our brides">Cô dâu của nhà</span></a>
-      <a href="gui-yeu-cau.html"><span class="no">05</span><span class="nm" data-en="Enquire">Gửi yêu cầu</span><span class="de" data-en="Book a fitting">Đặt lịch thử váy</span></a>
+      <div class="invite rise">
+        <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
+        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Nhà muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
+      </div>
+      <form class="form-w rise" id="leadForm" novalidate>
+        <div class="row">
+          <div class="field"><label for="ten" data-en="Full name">Họ và tên</label><input id="ten" name="ten" type="text" required></div>
+          <div class="field"><label for="sdt" data-en="Phone number">Số điện thoại</label><input id="sdt" name="sdt" type="tel" inputmode="numeric" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="ngay" data-en="Wedding date">Ngày cưới dự kiến</label><input id="ngay" name="ngay" type="date"></div>
+          <div class="field"><label for="coso" data-en="Showroom">Cơ sở</label>
+            <select id="coso" name="coso"><option data-en="Hanoi">Hà Nội</option><option data-en="Ho Chi Minh City">TP. Hồ Chí Minh</option></select></div>
+        </div>
+        <button class="link" type="submit" style="justify-self:start;margin-top:6px" data-en="Begin the story">Bắt đầu câu chuyện</button>
+        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us.">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
+      </form>
+      <div class="thanks" id="thanks" role="status">
+        <p class="say" style="max-width:30ch" data-en="Thank you. We will be in touch within a day.">Cảm ơn bạn. Nhà sẽ liên hệ trong vòng một ngày.</p>
       </div>
     </div>
   </section>
+  <div class="wrap">
+    <div class="next">
+      <span class="lb" data-en="Next">Tiếp theo</span>
+      <a class="tt" href="index.html" data-en="Back to home">Về trang chủ</a>
+    </div>
+  </div>
 
 </main>
 
