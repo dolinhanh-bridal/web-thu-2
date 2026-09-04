@@ -10,8 +10,8 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dolinhanh Bridal — nhà may đo váy cưới riêng tại Hà Nội và TP.HCM.">
-<title>Giới thiệu — Dolinhanh Bridal</title>
+<meta name="description" content="Đặt lịch thử váy riêng tại Dolinhanh Bridal, Hà Nội và TP.HCM.">
+<title>Gửi yêu cầu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -222,7 +222,7 @@
   .sub-head p{margin-top:22px}
   .bar nav a.cur{opacity:1}
   .bar nav a.cur::after{content:"";display:block;height:1px;background:currentColor;margin-top:5px}
-  .next{border-top:1px solid var(--line);margin-top:var(--air);padding-block:clamp(44px,6vw,78px);display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .next{border-top:1px solid var(--line);margin-top:var(--air);padding-block:clamp(44px,6vw,78px);display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
   .next .lb{font-family:var(--sans);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe-deep)}
   .next .tt{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);text-decoration:none;display:inline-flex;align-items:center;gap:14px;transition:gap .45s ease}
   .next .tt::after{content:"\2192";font-family:var(--sans);font-size:.7em}
@@ -237,6 +237,43 @@
   .idx .nm{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);flex:1;line-height:1.35}
   .idx .de{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-deep);text-align:right}
 
+  /* ── bố cục CĂN GIỮA (theo halfpennylondon.com/bespoke) ── */
+  .mid{text-align:center}
+  .mid .h-lg,.mid .h-md,.mid p{margin-inline:auto}
+  .mid .h-lg{max-width:24ch}
+  .mid p{max-width:58ch}
+
+  .hero{align-items:center;text-align:center}
+  .hero .h-xl{margin-inline:auto}
+  .hero .inner p{margin-inline:auto}
+
+  .say{margin-inline:auto;text-align:center}
+  .stmt-note{margin-inline:auto;text-align:center;max-width:58ch}
+
+  .sub-head{text-align:center;max-width:940px;margin-inline:auto;border-bottom:0;
+    padding-bottom:0;margin-bottom:clamp(50px,7vw,96px)}
+  .sub-head .h-lg{max-width:24ch;margin-inline:auto}
+  .sub-head p{max-width:58ch;margin-inline:auto}
+
+  .pull-quote{border-left:0;padding-left:0;text-align:center;margin-inline:auto;max-width:56ch}
+  .pull-quote cite{display:block;margin-top:18px}
+  .facts{text-align:center}
+  .cap{text-align:center}
+  .sketch figcaption{text-align:center}
+
+  .invite{margin-inline:auto;text-align:center;max-width:46ch}
+  .form-w{margin-inline:auto}
+  .form-w .link{justify-self:center!important}
+  .note{margin-inline:auto;text-align:center}
+  .thanks{text-align:center}
+  .thanks .say{margin-inline:auto}
+
+  .next{justify-content:center;flex-direction:column;gap:14px;text-align:center}
+
+  .idx a{flex-direction:column;align-items:center;text-align:center;gap:8px}
+  .idx a:hover{padding-inline:0}
+  .idx .nm{flex:none}
+  .idx .de{text-align:center}
 </style>
 
 <header id="hd" class="solid">
@@ -244,11 +281,11 @@
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
-        <a href="gioi-thieu.html" class="cur" data-en="About">Giới thiệu</a>
+        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The experience">Hành trình</a>
         <a href="chi-tiet.html" data-en="The details">Chi tiết</a>
         <a href="co-dau.html" data-en="The bride">Cô dâu</a>
-        <a href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
+        <a href="gui-yeu-cau.html" class="cur" data-en="Enquire">Gửi yêu cầu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -261,40 +298,40 @@
 
   <section class="wrap sub">
     <div class="sub-head rise">
-      <span class="eyebrow" data-en="About">Giới thiệu</span>
-      <h1 class="h-lg" data-en="We begin with the woman, not the dress.">Nhà bắt đầu từ người mặc, không từ chiếc váy.</h1>
-      <p data-en="Dolinhanh Bridal &amp; Nupakachi Photography — two houses, Hanoi and Ho Chi Minh City.">Dolinhanh Bridal &amp; Nupakachi Photography — hai cơ sở Hà Nội và TP.HCM.</p>
+      <span class="eyebrow" data-en="Enquire">Gửi yêu cầu</span>
+      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you.">Để lại vài dòng, nhà giữ chỗ cho buổi thử riêng.</h1>
+      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
     </div>
   </section>
-  <!-- ══ GIỚI THIỆU ══ -->
-  <section id="gioithieu">
+  <!-- ══ 07 · ENQUIRE ══ -->
+  <section id="hen" style="padding-bottom:var(--air)">
     <div class="wrap">
-      <div class="about rise">
-        <div class="pic" style="--img:url('anh/cl-27.jpg')"></div>
-        <div class="txt">
-          <h2 class="h-lg" data-en="A house that began in 2017, out of one mother’s love.">Một nhà váy ra đời năm 2017, từ tình yêu của một người mẹ.</h2>
-          <p data-en="Dolinhanh Bridal was built on a personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mang đậm dấu ấn cá nhân — được tạo nên từ sự say mê với cái đẹp, sự chỉn chu trong từng chi tiết và tình yêu với hình ảnh cô dâu hạnh phúc.</p>
-          <p data-en="Through the pandemic, a change of name and a change of hands, the spirit held: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn vậy: chân thành, tinh tế và đầy cảm xúc.</p>
-          <p data-en="Today Dolinhanh is part of Nupakachi Photography — a wedding house of more than fifteen years, founded by photographer Đỗ Xuân Cường. From the photographs to the gowns, both pursue the same thing: the bride’s real beauty, said simply.">Nay Dolinhanh là một phần của Nupakachi Photography — nhà ảnh cưới hơn mười lăm năm, sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường. Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị.</p>
+      <div class="invite rise">
+        <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
+        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Nhà muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
+      </div>
+      <form class="form-w rise" id="leadForm" novalidate>
+        <div class="row">
+          <div class="field"><label for="ten" data-en="Full name">Họ và tên</label><input id="ten" name="ten" type="text" required></div>
+          <div class="field"><label for="sdt" data-en="Phone number">Số điện thoại</label><input id="sdt" name="sdt" type="tel" inputmode="numeric" required></div>
         </div>
-      </div>
-
-      <div class="pull-quote rise">
-        <p data-en="“Dolinhanh believes a bride’s beauty does not need to be created — it is already there. The dress only helps her see it more clearly.”">“Dolinhanh tin rằng vẻ đẹp của cô dâu không cần được tạo ra từ đầu — nó đã ở đó. Chiếc váy chỉ giúp nàng nhìn thấy nó rõ hơn.”</p>
-        <cite data-en="— The founder, Dolinhanh Bridal">— Người sáng lập, Dolinhanh Bridal</cite>
-      </div>
-
-      <div class="facts rise">
-        <div class="f"><span class="k">2017</span><span class="v" data-en="The year the house began">Năm nhà ra đời</span></div>
-        <div class="f"><span class="k">15+</span><span class="v" data-en="Years of weddings behind the lens, with Nupakachi">Năm đứng sau ống kính cưới, cùng Nupakachi</span></div>
-        <div class="f"><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
+        <div class="row">
+          <div class="field"><label for="ngay" data-en="Wedding date">Ngày cưới dự kiến</label><input id="ngay" name="ngay" type="date"></div>
+          <div class="field"><label for="coso" data-en="Showroom">Cơ sở</label>
+            <select id="coso" name="coso"><option data-en="Hanoi">Hà Nội</option><option data-en="Ho Chi Minh City">TP. Hồ Chí Minh</option></select></div>
+        </div>
+        <button class="link" type="submit" style="margin-top:6px" data-en="Begin the story">Bắt đầu câu chuyện</button>
+        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us.">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
+      </form>
+      <div class="thanks" id="thanks" role="status">
+        <p class="say" style="max-width:30ch" data-en="Thank you. We will be in touch within a day.">Cảm ơn bạn. Nhà sẽ liên hệ trong vòng một ngày.</p>
       </div>
     </div>
   </section>
   <div class="wrap">
     <div class="next">
       <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="hanh-trinh.html" data-en="The experience">Hành trình</a>
+      <a class="tt" href="index.html" data-en="Back to home">Về trang chủ</a>
     </div>
   </div>
 
