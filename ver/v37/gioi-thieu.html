@@ -9,11 +9,11 @@
   ══════════════════════════════════════════════════════════════
 -->
 <meta charset="utf-8">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cô dâu của Dolinhanh Bridal trong ngày cưới.">
-<title>Cô dâu — Dolinhanh Bridal</title>
+<meta name="description" content="Dolinhanh Bridal — váy cưới Hà Nội và TP.HCM: thuê, mua hoặc may đo riêng.">
+<title>Giới thiệu — Dolinhanh Bridal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -456,52 +456,19 @@
     text-transform:uppercase;color:#fff}
   .vl .de{display:block;margin-top:5px;font-family:var(--sans);font-size:10.5px;
     letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:none}
-
-  /* ── mục cô dâu ── */
-  .cd-dau{margin-bottom:clamp(20px,2.6vw,34px)}
-  .cd-ten{margin:12px 0 0;font-family:var(--sans);font-weight:400;
-    font-size:clamp(1.05rem,1.6vw,1.35rem);letter-spacing:.2em;text-transform:uppercase}
-  .cd-mo{margin-top:10px;max-width:52ch;color:var(--taupe-deep);font-size:14px}
-  .cd-luoi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.1vw,14px)}
-  .cd-luoi figure{margin:0}
-  .cd-luoi .im{width:100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 18%/cover no-repeat}
-  @media (max-width:1000px){ .cd-luoi{grid-template-columns:repeat(2,minmax(0,1fr))} }
-
-  /* ── ô cô dâu có lướt ảnh ── */
-  .cd-luoi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,18px)}
-  .cd-o{position:relative;margin:0;overflow:hidden;background:var(--sand)}
-  .sl-khung{display:flex;transition:transform .55s cubic-bezier(.22,.7,.28,1);touch-action:pan-y}
-  .sl{flex:0 0 100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 18%/cover no-repeat}
-  .cd-o::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
-    background:linear-gradient(180deg,rgba(18,16,14,0) 0%,rgba(18,16,14,.66) 100%);pointer-events:none}
-  .cd-o figcaption{position:absolute;left:20px;right:20px;bottom:52px;z-index:3;color:#fff;
-    text-shadow:0 1px 14px rgba(0,0,0,.5)}
-  .cd-o .kind{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;
-    text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:7px}
-  .cd-o .nm{display:block;font-family:var(--sans);font-size:clamp(.95rem,1.4vw,1.2rem);
-    letter-spacing:.2em;text-transform:uppercase;color:#fff}
-  .cd-o .de{display:block;margin-top:8px;font-family:var(--sans);font-size:11.5px;
-    letter-spacing:.06em;color:rgba(255,255,255,.9)}
-  .sl-cham{position:absolute;left:0;right:0;bottom:20px;z-index:4;display:flex;
-    gap:8px;justify-content:center}
-  .sl-cham button{width:7px;height:7px;padding:0;border-radius:50%;border:0;
-    background:rgba(255,255,255,.45);transition:background .3s ease,transform .3s ease}
-  .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
-  @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 </style>
 
-<script>document.addEventListener("DOMContentLoaded",()=>document.body.classList.add("bst"));</script>
 <header id="hd" class="solid">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
         <a href="index.html" data-en="Home">Trang chủ</a>
-        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
+        <a href="gioi-thieu.html" class="cur" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
         <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
         <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
-        <a href="co-dau.html" class="cur" data-en="The bride">Cô dâu</a>
+        <a href="co-dau.html" data-en="The bride">Cô dâu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -512,124 +479,42 @@
 
 <main id="top">
 
-  <section class="wrap vl-head">
-    <div class="rise">
-      <span class="eyebrow" data-en="Our brides">Cô dâu</span>
-      <h1 data-en="Real bride stories">Câu chuyện cô dâu thật</h1>
-      <p data-en="Brides of Dolinhanh on their day — some rented the dress, some bought it, some had it made to measure.">Cô dâu của Dolinhanh trong ngày của họ — có người thuê váy, có người mua hẳn, có người may đo riêng.</p>
+  <section class="wrap sub">
+    <div class="sub-head rise">
+      <span class="eyebrow" data-en="About">Giới thiệu</span>
+      <h1 class="h-lg" data-en="We begin with the woman, not the dress.">Dolinhanh bắt đầu từ người mặc, không từ chiếc váy.</h1>
+      <p data-en="Dolinhanh Bridal &amp; Nupakachi Photography — two houses, Hanoi and Ho Chi Minh City.">Dolinhanh Bridal &amp; <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — hai cơ sở Hà Nội và TP.HCM.</p>
     </div>
   </section>
-
-  <section id="codau">
+  <!-- ══ GIỚI THIỆU ══ -->
+  <section id="gioithieu">
     <div class="wrap">
-      <div class="cd-luoi">
-      <figure class="cd-o rise" data-cd="cd-chi-tran">
-        <div class="sl-khung">
-          <div class="sl" style="--img:url('anh/cd-chi-tran/01.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-chi-tran/02.jpg')"></div>
+      <div class="about rise">
+        <div class="pic" style="--img:url('../../anh/cl-27.jpg')"></div>
+        <div class="txt">
+          <h2 class="h-lg" data-en="A house that began in 2017, out of one mother’s love.">Dolinhanh ra đời năm 2017, từ tình yêu của một người mẹ.</h2>
+          <p data-en="Dolinhanh Bridal was built on a personal conviction: a love of beauty, care taken over every detail, and an attachment to the image of a happy bride.">Dolinhanh Bridal mang đậm dấu ấn cá nhân — được tạo nên từ sự say mê với cái đẹp, sự chỉn chu trong từng chi tiết và tình yêu với hình ảnh cô dâu hạnh phúc.</p>
+          <p data-en="Through the pandemic, a change of name and a change of hands, the spirit held: sincere, understated, full of feeling.">Qua mùa dịch, qua đổi tên và chuyển nhượng thương hiệu, tinh thần ban đầu vẫn vậy: chân thành, tinh tế và đầy cảm xúc.</p>
+          <p data-en="Today Dolinhanh is part of Nupakachi Photography — a wedding house of more than fifteen years, founded by photographer Đỗ Xuân Cường. From the photographs to the gowns, both pursue the same thing: the bride’s real beauty, said simply.">Nay Dolinhanh là một phần của <a href="https://nupakachi.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Nupakachi Photography</a> — thương hiệu ảnh cưới hơn mười lăm năm, sáng lập bởi nhiếp ảnh gia Đỗ Xuân Cường. Từ chất lượng hình ảnh đến thiết kế váy cưới, hai bên theo đuổi cùng một mục tiêu: tôn vinh vẻ đẹp thật của cô dâu, nói bằng những điều giản dị.</p>
         </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Chi Trần</span>
-          <span class="de" data-en="Plain satin, grand skirt — a white-flower reception">Satin trơn, tùng lớn — tiệc backdrop hoa trắng</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-nghi-vo">
-        <div class="sl-khung">
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/01.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/02.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/03.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/04.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/05.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/06.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/07.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-nghi-vo/08.jpg')"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Nghi Võ</span>
-          <span class="de" data-en="Beaded bodice, tulle cape, layered skirt">Thân đính kết, choàng voan, tùng nhiều lớp</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-wendy">
-        <div class="sl-khung">
-          <div class="sl" style="--img:url('anh/cd-wendy/01.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/02.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/03.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/04.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/05.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/06.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/07.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-wendy/08.jpg')"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Wendy Luu</span>
-          <span class="de" data-en="Organza ball gown, fabric flowers by hand">Ballgown organza, hoa vải đính tay</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-lien">
-        <div class="sl-khung">
-          <div class="sl" style="--img:url('anh/cd-lien/01.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/02.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/03.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/04.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/05.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/06.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/07.jpg')"></div>
-          <div class="sl" style="--img:url('anh/cd-lien/08.jpg')"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Liên Nguyễn</span>
-          <span class="de" data-en="Ball gown in glitter tulle, long veil">Ballgown tulle nhũ, voan dài</span>
-        </figcaption>
-      </figure>
       </div>
-      <div class="mid-blk rise" style="margin-top:clamp(26px,3vw,44px)">
-        <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
+
+      <div class="pull-quote rise">
+        <p data-en="“Dolinhanh believes a bride’s beauty does not need to be created — it is already there. The dress only helps her see it more clearly.”">“Dolinhanh tin rằng vẻ đẹp của cô dâu không cần được tạo ra từ đầu — nó đã ở đó. Chiếc váy chỉ giúp nàng nhìn thấy nó rõ hơn.”</p>
+        <cite data-en="— The founder, Dolinhanh Bridal">— Người sáng lập, Dolinhanh Bridal</cite>
+      </div>
+
+      <div class="facts rise">
+        <div class="f"><span class="k">2017</span><span class="v" data-en="The year the house began">Năm Dolinhanh ra đời</span></div>
+        <div class="f"><span class="k">15+</span><span class="v" data-en="Years of weddings behind the lens, with Nupakachi">Năm đứng sau ống kính cưới, cùng Nupakachi</span></div>
+        <div class="f"><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
       </div>
     </div>
   </section>
-
   <div class="wrap">
     <div class="next">
       <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
+      <a class="tt" href="hanh-trinh.html" data-en="The experience">Hành trình</a>
     </div>
   </div>
 
@@ -662,7 +547,7 @@
     </div>
 
     <div class="ft-duoi">
-      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <a class="ft-logo" href="index.html"><img src="../../logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
         <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
@@ -731,31 +616,4 @@ document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",
 let saved = "vi";
 try{ saved = localStorage.getItem("dla-lang") || "vi"; }catch(_){}
 setLang(saved);
-</script>
-
-<script>
-/* lướt ảnh trong từng ô cô dâu: bấm chấm, vuốt trên điện thoại, bấm nửa trái/phải trên máy tính */
-document.querySelectorAll(".cd-o").forEach(function(o){
-  var track=o.querySelector(".sl-khung"), cham=[].slice.call(o.querySelectorAll(".sl-cham button"));
-  var n=o.querySelectorAll(".sl").length, i=0;
-  function ve(k){
-    i=(k+n)%n;
-    track.style.transform="translateX("+(-i*100)+"%)";
-    cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); });
-  }
-  cham.forEach(function(b,j){ b.addEventListener("click",function(e){ e.stopPropagation(); ve(j); }); });
-  o.addEventListener("click",function(e){
-    if(e.target.closest(".sl-cham")) return;
-    var r=o.getBoundingClientRect();
-    ve(i + ((e.clientX-r.left) > r.width/2 ? 1 : -1));
-  });
-  var x0=null;
-  o.addEventListener("touchstart",function(e){ x0=e.touches[0].clientX; },{passive:true});
-  o.addEventListener("touchend",function(e){
-    if(x0===null) return;
-    var dx=e.changedTouches[0].clientX-x0; x0=null;
-    if(Math.abs(dx)>40) ve(i + (dx<0 ? 1 : -1));
-  },{passive:true});
-  ve(0);
-});
 </script>
