@@ -9,6 +9,23 @@
   ══════════════════════════════════════════════════════════════
 -->
 <meta charset="utf-8">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1358640082651240');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -206,7 +223,7 @@
     .sketch{grid-template-columns:1fr}
     .details{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
     .bar{flex-wrap:wrap;gap:14px}
-    .bar nav{order:3;width:100%;gap:18px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+    .bar nav{order:3;width:100%;flex-wrap:wrap;row-gap:9px;column-gap:18px;overflow:visible;padding-bottom:2px}
     .bar nav a{font-size:10px;letter-spacing:.2em;white-space:nowrap}
     .idx .de{display:none}
     .full{aspect-ratio:4/3}
@@ -557,6 +574,30 @@
   .duo .txt p + .link{margin-top:26px}
   .step-sub{margin:10px 0 20px}
   .duo .txt > *:last-child{margin-bottom:0}
+
+  /* ── Header điện thoại: menu 2 hàng, gọn hơn; đẩy nội dung xuống khỏi header ── */
+  @media (max-width:1000px){
+    .bar{gap:10px;padding-block:16px}
+    .sub{padding-top:160px}
+    .vl-head{padding-top:150px}
+  }
+  /* ── Nút Zalo nổi (dùng lại từ ebook Dress Guide / trang Cách đo) ── */
+  .zl-noi{
+    position:fixed;right:clamp(12px,3vw,24px);bottom:calc(16px + env(safe-area-inset-bottom));
+    z-index:120;display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;
+    padding:11px 18px 11px 11px;box-shadow:0 10px 26px rgba(36,27,25,.32);
+    font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .zl-noi:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(36,27,25,.4);opacity:1}
+  .zl-noi:active{transform:translateY(0)}
+  .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
+  .zl-icon svg{display:block}
+  @media(max-width:640px){
+    .zl-chu{display:none}
+    .zl-noi{padding:11px}
+  }
 </style>
 
 <header id="hd" class="solid">
@@ -664,6 +705,28 @@
     <p class="ft-cr" data-en="© 2026 Dolinhanh Bridal. All rights reserved.">© 2026 Dolinhanh Bridal. Đã đăng ký bản quyền.</p>
   </div>
 </footer>
+
+<a class="zl-noi" id="zl-noi" href="https://zalo.me/0359950588" target="_blank" rel="noopener" aria-label="Nhắn Zalo cho Dolinhanh Bridal">
+  <span class="zl-icon" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </span>
+  <span class="zl-chu" data-en="Chat on Zalo">Nhắn Zalo đặt lịch</span>
+</a>
+
+<!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
+<script>
+(function(){
+  var TEN = 'Web thu 2 - chi-tiet';
+  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (!t || !t.closest) return;
+    if (!t.closest(CHON)) return;
+    try{ if (typeof fbq === 'function') fbq('track', 'Contact', {content_name: TEN}); }catch(err){}
+  }, true);
+})();
+</script>
+
 
 <script>
 /* ═══ NỐI FORM: dán link Google Form dạng .../formResponse vào đây ═══ */

@@ -26,11 +26,11 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Đặt lịch thử váy riêng tại Dolinhanh Bridal, Hà Nội và TP.HCM.">
-<title>Gửi yêu cầu — Dolinhanh Bridal</title>
+<meta name="description" content="Dolinhanh Bridal — váy cưới thuê, mua, may đo riêng tại Hà Nội & TP.HCM, cùng Nupakachi Photography chụp hình và quay phim ngày cưới.">
+<title>Dolinhanh Bridal — Váy cưới &amp; chụp hình quay phim ngày cưới</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -555,6 +555,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 
+  /* ── popup đặt lịch & báo giá ── */
+  .pop-nen{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
+    padding:20px;background:rgba(20,18,16,.55);overflow-y:auto}
+  .pop-nen[hidden]{display:none}
+  .pop{position:relative;width:min(680px,100%);max-height:90vh;overflow-y:auto;
+    background:var(--paper);padding:clamp(26px,4vw,48px)}
+  .pop-dong{position:absolute;top:10px;right:14px;font-size:26px;line-height:1;color:var(--taupe-deep)}
+  .pop-form{display:grid;gap:20px;margin-top:26px}
+  .pop-xong{display:none;margin-top:26px}
+  .pop-xong.hien{display:block}
+  .pop .nut-hang{display:flex;flex-wrap:wrap;gap:12px}
+  .pop .btn[hidden]{display:none}
+
   /* ── link trong khối chữ ── */
   .txt .link,.tx .link{margin-top:26px}
   .txt .nut-hang,.tx .nut-hang{margin-top:22px}
@@ -587,12 +600,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   }
 </style>
 
-<header id="hd" class="solid">
+<header id="hd">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
-        <a href="index.html" data-en="Home">Trang chủ</a>
+        <a href="index.html" class="cur" data-en="Home">Trang chủ</a>
         <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
         <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
         <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
@@ -608,67 +621,129 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 
 <main id="top">
 
-  <section class="wrap sub">
-    <div class="sub-head rise">
-      <span class="eyebrow" data-en="Enquire">Gửi yêu cầu</span>
-      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you.">Để lại vài dòng, Dolinhanh giữ chỗ cho buổi thử riêng.</h1>
-      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
+  <!-- ══ 01 · ẢNH ══ -->
+  <section class="hero" id="hero" data-dark="1">
+    <div class="bg" id="heroBg" style="--img:url('../../anh/nc-24-hero.jpg')"></div>
+    <div class="veil"></div>
+    <div class="wrap inner">
+      <h1 class="h-xl">Quiet minimal luxury,<br><em>Crafted with Mother Love.</em></h1>
+      <p style="margin-top:24px;color:#fff;max-width:46ch" data-en="A dress is chosen not only because it is beautiful — but because it belongs to the one wearing it.">Một chiếc váy được chọn không chỉ vì nó đẹp — mà vì nó hợp với người mặc.</p>
+      <p class="hero-ba" data-en="Wedding dresses &nbsp;·&nbsp; Photography &nbsp;·&nbsp; Film">Váy cưới &nbsp;·&nbsp; Chụp hình &nbsp;·&nbsp; Quay phim</p>
+      <div class="nut">
+        <a class="btn sang" href="#bosuutap" data-en="Explore the collection">Khám phá bộ sưu tập</a>
+        <a class="link" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
+      </div>
     </div>
   </section>
-  <!-- ══ 07 · ENQUIRE ══ -->
-  <section id="hen" style="padding-bottom:var(--air)">
+
+  <!-- ══ 02 · TINH THẦN DOLINHANH ══ -->
+  <section class="air" id="tinhthan">
     <div class="wrap">
-      <div class="invite rise">
-        <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
-        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Dolinhanh muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
-      </div>
-      <form class="form-w rise" id="fmHen" novalidate>
-        <div class="row">
-          <div class="field"><label for="ten" data-en="Bride &amp; groom’s name *">Tên cô dâu &amp; chú rể *</label>
-            <input id="ten" name="ten" type="text" required placeholder="Ví dụ: Thu Hà &amp; Minh Quân"></div>
-          <div class="field"><label for="sdt" data-en="Phone number *">Số điện thoại *</label>
-            <input id="sdt" name="sdt" type="tel" inputmode="tel" required placeholder="Để Dolinhanh gọi xác nhận lịch"></div>
+      <div class="tt rise">
+        <div class="tt-trai">
+          <span class="eyebrow" data-en="The house">Tinh thần</span>
+          <p class="tt-lon" data-en="A dress for the wedding day.<br>An experience to remember.<br>A beauty that stays<br>through time.">Một chiếc váy cho ngày cưới.<br>Một trải nghiệm để nhớ.<br>Một vẻ đẹp ở lại<br>theo thời gian.</p>
         </div>
-        <div class="row">
-          <div class="field"><label for="ngayTiec" data-en="Wedding date">Ngày tổ chức tiệc</label>
-            <input id="ngayTiec" name="ngayTiec" type="date"></div>
-          <div class="field"><label for="noiTiec" data-en="Wedding venue">Địa điểm tổ chức tiệc</label>
-            <input id="noiTiec" name="noiTiec" type="text" placeholder="Trung tâm tiệc cưới / khách sạn, tỉnh thành"></div>
+        <div class="tt-phai">
+          <p data-en="Founded in 2017, Dolinhanh Bridal is the bridal label within the Nupakachi wedding ecosystem — more than fifteen years of making the day memorable for brides.">Ra đời năm 2017, Dolinhanh Bridal là thương hiệu váy cưới thuộc hệ sinh thái cưới <a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi</a> — hơn mười lăm năm tạo nên những trải nghiệm đáng nhớ cho cô dâu.</p>
+          <p data-en="A beautiful dress is not only about the design. It is the feeling of being listened to, understood and cared for, through the whole search for your dress.">Với Dolinhanh, một chiếc váy đẹp không chỉ nằm ở thiết kế. Đó là cảm giác được lắng nghe, được thấu hiểu và được chăm sóc, suốt hành trình tìm chiếc váy của mình.</p>
+          <p data-en="We pursue a <em>timeless</em> kind of beauty — designs that do not chase a passing trend, and still look right years later.">Dolinhanh theo đuổi vẻ đẹp <em>Timeless</em> — không chạy theo xu hướng nhất thời, vẫn đẹp khi được nhìn lại sau nhiều năm.</p>
+          <div class="tt-so">
+            <div><span class="k">2017</span><span class="v" data-en="The year Dolinhanh began">Năm Dolinhanh ra đời</span></div>
+            <div><span class="k">15+</span><span class="v" data-en="Years of weddings, with Nupakachi">Năm làm cưới, cùng Nupakachi</span></div>
+            <div><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; Ho Chi Minh City">Showroom · Hà Nội &amp; TP.HCM</span></div>
+          </div>
         </div>
-        <div class="row">
-          <div class="field"><label for="ngayHen" data-en="Appointment date *">Ngày đặt hẹn *</label>
-            <input id="ngayHen" name="ngayHen" type="date" required></div>
-          <div class="field"><label for="gioHen" data-en="Appointment time *">Giờ đặt hẹn *</label>
-            <input id="gioHen" name="gioHen" type="time" step="900" required></div>
-        </div>
-        <div class="field"><label for="coSo" data-en="Showroom">Showroom</label>
-          <select id="coSo" name="coSo">
-            <option value="HN - 75 Nguyễn Thị Định" data-en="Hanoi · 75 Nguyễn Thị Định">Hà Nội · 75 Nguyễn Thị Định</option>
-            <option value="HCM - 2 Tân Canh, Q. Tân Bình" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</option>
-          </select></div>
-        <label class="tick"><input type="checkbox" id="nhanGia" name="nhanGia" checked>
-          <span data-en="Send me the price list as well">Gửi cho tôi bảng giá luôn</span></label>
-        <button class="btn" type="submit" id="btnHen" style="margin-top:10px;justify-self:start" data-en="Send my request">Gửi thông tin đặt hẹn</button>
-        <p class="fm-tb" id="henTb"></p>
-        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us.">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
-      </form>
-      <div class="thanks" id="henXong" role="status">
-        <p class="say" style="max-width:34ch" data-en="Dolinhanh has received your request. We will call to confirm as soon as possible.">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận lịch trong thời gian sớm nhất.</p>
-        <p style="margin-top:16px" data-en="Send it to us on Zalo too and we will hold the slot faster — the details are already copied, you only need to paste them into the chat.">Nàng gửi thêm cho Dolinhanh qua Zalo để được giữ chỗ nhanh hơn nhé — nội dung đã được sao chép sẵn, nàng chỉ cần dán vào khung chat.</p>
-        <div class="nut-hang">
-          <a class="btn" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588">Nhắn Zalo 035 995 0588</a>
-          <a class="btn" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list">Xem bảng giá</a>
-        </div>
-      </div>
       </div>
     </div>
   </section>
-  <div class="wrap">
-    <div class="next">
-      <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="index.html" data-en="Back to home">Về trang chủ</a>
+
+  <!-- ══ lời người sáng lập ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="quote-mid hep rise">
+        <p data-en="“Dolinhanh is the fierce drive that lets me weave the dream of a wedding dress. I hope this brand lives on alongside the growing up of the little girl I am raising — truly, this is the happy ambition I want to bring to young women.”">“Dolinhanh là nguồn động lực mãnh liệt để mình dệt nên ước mơ “váy cưới”. Mình mong thương hiệu này sẽ tồn tại mãi theo sự trưởng thành của cô gái nhỏ mình đang nuôi dạy. Để thực sự, đây sẽ là hoài bão hạnh phúc mình mang tới cho các cô gái trẻ.”</p>
+        <cite data-en="Dolinhanh Bridal — a wedding dress of happiness, woven from a parent’s love">Dolinhanh Bridal — váy cưới hạnh phúc dệt từ tình yêu của mẹ cha</cite>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ══ 03 · DỊCH VỤ ══ -->
+  <section class="air" style="padding-top:0" id="dichvu">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <h2 class="h-cap giua" data-en="Our services">Dịch vụ của Dolinhanh</h2>
+        <p style="margin-top:20px" data-en="Rented for a day or made for a lifetime, every Dolinhanh dress carries the same care for fabric and detail — and the day itself is kept in photographs and film.">Dù là chiếc váy thuê cho một ngày hay chiếc váy làm riêng để giữ lại, mọi chiếc váy của Dolinhanh đều được chăm chút như nhau từ chất liệu tới chi tiết — và ngày ấy còn được giữ lại bằng hình và phim.</p>
+      </div>
+
+      <div class="dv rise">
+        <figure>
+          <div class="im" style="--img:url('../../anh/nc-26.jpg')"></div>
+          <figcaption>
+            <span class="ten" data-en="Wedding dresses">Váy cưới</span>
+            <span class="mo" data-en="A collection ready for your day — to rent, or to buy and keep. Fitted and adjusted to you before the wedding.">Bộ sưu tập sẵn sàng cho ngày của bạn — để thuê, hoặc mua hẳn giữ lại. Chỉnh vừa người trước lễ cưới.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="im" style="--img:url('../../anh/nc-30.jpg')"></div>
+          <figcaption>
+            <span class="ten" data-en="Made-to-measure">May đo riêng</span>
+            <span class="mo" data-en="Cut to your own measurements. A neckline, a sleeve, a silhouette changed — or a design drawn only for you.">Cắt theo đúng số đo của bạn. Đổi cổ váy, tay áo, dáng váy — hoặc dựng riêng một thiết kế chỉ của bạn.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="im" style="--img:url('../../anh/nu-tryon.jpg')"></div>
+          <figcaption>
+            <span class="ten" data-en="Photography &amp; film">Chụp hình &amp; quay phim</span>
+            <span class="mo" data-en="Pre-wedding and wedding-day coverage with Nupakachi Photography, more than fifteen years behind the lens.">Chụp pre-wedding và phóng sự ngày cưới cùng Nupakachi Photography, hơn mười lăm năm sau ống kính.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ 04 · TRIẾT LÝ ══ -->
+  <section class="air" style="padding-top:0">
+    <div class="wrap">
+      <div class="rise">
+        <p class="triet" data-en="Not the most expensive dress. Not the dress everyone else is choosing. The dress that is right for you.">Không phải chiếc váy đắt nhất. Không phải chiếc váy đang được nhiều người chọn nhất. Mà là chiếc váy đúng với bạn nhất.</p>
+        <p class="triet b3" data-en="Rent it · Own it · Make it yours — and let us keep the day in photographs and film">Thuê nó · Sở hữu nó · Làm nó thành của riêng bạn — và giữ lại ngày ấy bằng hình và phim</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 03 · BỘ SƯU TẬP ══ -->
+  <section class="air" id="bosuutap" style="padding-top:0">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <h2 class="h-cap giua" data-en="The Dolinhanh collection">Bộ sưu tập Dolinhanh</h2>
+        <p style="margin-top:22px" data-en="Every dress here can be rented or bought. Most can also be adjusted for you — a neckline, a sleeve, a silhouette.">Mọi chiếc váy ở đây đều có thể thuê hoặc mua. Phần lớn còn có thể chỉnh theo bạn — cổ váy, tay áo, dáng váy.</p>
+      </div>
+      <div class="coll rise">
+        <figure><div class="im" style="--img:url('../../anh/nc-23.jpg')"></div><figcaption data-en="Fitted silk with a slit, long lace gloves · Rent · Buy">Dáng ôm lụa xẻ tà, găng ren dài · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/nc-26.jpg')"></div><figcaption data-en="Satin ball gown, sweetheart neckline · Rent · Buy · Custom">Ballgown satin, cổ tim · Thuê · Mua · May đo</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/nc-27.jpg')"></div><figcaption data-en="Raised lace all over, full skirt · Rent · Buy">Ren nổi toàn thân, tùng xoè · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/nc-29.jpg')"></div><figcaption data-en="Large floral lace, off-shoulder · Rent · Buy · Custom">Ren hoa lớn, trễ vai · Thuê · Mua · May đo</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/nc-32.jpg')"></div><figcaption data-en="Draped satin with a slit, lace gloves · Rent · Buy">Satin xếp nếp, xẻ tà, găng ren · Thuê · Mua</figcaption></figure>
+        <figure><div class="im" style="--img:url('../../anh/nc-35.jpg')"></div><figcaption data-en="Beaded all over, grand skirt · Rent · Buy · Custom">Đính kết toàn thân, tùng lớn · Thuê · Mua · May đo</figcaption></figure>
+      </div>
+      <div class="mid-blk rise" style="margin-top:clamp(34px,4vw,58px)">
+        <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ 2 ảnh ngang tràn mép ══ -->
+  <section>
+    <div class="bleed rise">
+      <div class="wide2">
+        <div class="im" style="--img:url('../../anh/nc-30-wide.jpg')"></div>
+        <div class="im" style="--img:url('../../anh/nc-33-wide.jpg')"></div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
@@ -699,7 +774,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     </div>
 
     <div class="ft-duoi">
-      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <a class="ft-logo" href="index.html"><img src="../../logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
         <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
@@ -725,7 +800,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 <!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
 <script>
 (function(){
-  var TEN = 'Web thu 2 - gui-yeu-cau';
+  var TEN = 'Web thu 2 - index';
   var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
@@ -792,32 +867,81 @@ try{ saved = localStorage.getItem("dla-lang") || "vi"; }catch(_){}
 setLang(saved);
 </script>
 
+<!-- ══ POPUP ĐẶT LỊCH & NHẬN BÁO GIÁ ══ -->
+<div class="pop-nen" id="popNen" hidden>
+  <div class="pop" role="dialog" aria-modal="true" aria-label="Đặt lịch thử váy">
+    <button class="pop-dong" id="popDong" type="button" aria-label="Đóng">×</button>
+    <span class="eyebrow" data-en="Private fitting">Buổi thử riêng</span>
+    <h2 class="h-cap" style="margin-top:12px" data-en="Book your fitting">Đặt lịch thử váy riêng</h2>
+    <p style="margin-top:14px;font-size:14px" data-en="Leave your details and Dolinhanh will call to confirm. Tick the box to receive the price list as well.">Để lại vài dòng, Dolinhanh sẽ gọi xác nhận lịch. Tích ô bên dưới để nhận luôn bảng giá.</p>
+
+    <form class="pop-form" id="fmPop" novalidate>
+      <div class="row">
+        <div class="field"><label for="p-ten" data-en="Bride &amp; groom’s name *">Tên cô dâu &amp; chú rể *</label>
+          <input id="p-ten" name="ten" type="text" required placeholder="Ví dụ: Thu Hà &amp; Minh Quân"></div>
+        <div class="field"><label for="p-sdt" data-en="Phone number *">Số điện thoại *</label>
+          <input id="p-sdt" name="sdt" type="tel" inputmode="tel" required placeholder="Để Dolinhanh gọi xác nhận"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="p-ngayHen" data-en="Appointment date *">Ngày đặt hẹn *</label>
+          <input id="p-ngayHen" name="ngayHen" type="date" required></div>
+        <div class="field"><label for="p-gioHen" data-en="Appointment time *">Giờ đặt hẹn *</label>
+          <input id="p-gioHen" name="gioHen" type="time" step="900" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="p-ngayTiec" data-en="Wedding date">Ngày tổ chức tiệc</label>
+          <input id="p-ngayTiec" name="ngayTiec" type="date"></div>
+        <div class="field"><label for="p-coSo" data-en="Showroom">Showroom</label>
+          <select id="p-coSo" name="coSo">
+            <option value="HN - 75 Nguyễn Thị Định">Hà Nội · 75 Nguyễn Thị Định</option>
+            <option value="HCM - 2 Tân Canh, Q. Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</option>
+          </select></div>
+      </div>
+      <label class="tick"><input type="checkbox" id="p-nhanGia" checked>
+        <span data-en="Send me the price list as well">Gửi cho tôi bảng giá luôn</span></label>
+      <button class="btn" type="submit" id="p-btn" style="margin-top:8px" data-en="Send my request">Gửi thông tin</button>
+      <p class="fm-tb" id="p-tb"></p>
+    </form>
+
+    <div class="pop-xong" id="popXong">
+      <p class="say" style="max-width:30ch" data-en="Dolinhanh has received your request. We will call to confirm shortly.">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận trong thời gian sớm nhất.</p>
+      <div class="nut-hang" style="margin-top:22px">
+        <a class="btn" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo">Nhắn Zalo 035 995 0588</a>
+        <a class="btn" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list">Xem bảng giá</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ══ ĐẶT HẸN THỬ VÁY — gửi 3 nơi, giống trang báo giá đang chạy ══
-   1) Google Form hệ thống "DLA - Đặt hẹn thử váy" → tự lên lịch + mail cơ sở
-   2) Apps Script → email quản lý media.nupakachi.dolinhanh@gmail.com
-   3) Zalo 035 995 0588 → nội dung tự sao chép để khách dán vào chat */
+/* popup đặt lịch & nhận báo giá — gửi 3 nơi như trang báo giá đang chạy */
 (function(){
-  var fm=document.getElementById("fmHen"); if(!fm) return;
+  var nen=document.getElementById("popNen"); if(!nen) return;
+  var fm=document.getElementById("fmPop"), tb=document.getElementById("p-tb");
   var FORM_ID="1FAIpQLSeF3dEz3mocx_O5PxRjuYsOy3SktzFlXvEd-EeQ07eijImlew";
   var MAIL_URL="https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
-  var tb=document.getElementById("henTb");
   function ngayVN(v){ if(!v) return ""; var p=v.split("-"); return p[2]+"/"+p[1]+"/"+p[0]; }
+  function mo(e){ if(e){ e.preventDefault(); } nen.hidden=false; document.body.style.overflow="hidden"; }
+  function dong(){ nen.hidden=true; document.body.style.overflow=""; }
+  document.addEventListener("click", function(e){
+    var a=e.target.closest('a[href$="gui-yeu-cau.html"], a[href*="gui-yeu-cau.html#"]');
+    if(a){ mo(e); }
+  });
+  document.getElementById("popDong").addEventListener("click", dong);
+  nen.addEventListener("click", function(e){ if(e.target===nen) dong(); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && !nen.hidden) dong(); });
+
   fm.addEventListener("submit", function(ev){
     ev.preventDefault();
     var d={}; new FormData(fm).forEach(function(v,k){ d[k]=(v||"").trim(); });
     if(!d.ten || !d.sdt || !d.ngayHen || !d.gioHen){
-      tb.className="fm-tb loi";
-      tb.textContent="Nàng điền giúp Dolinhanh các ô có dấu * nhé.";
-      return;
+      tb.className="fm-tb loi"; tb.textContent="Nàng điền giúp Dolinhanh các ô có dấu * nhé."; return;
     }
-    var btn=document.getElementById("btnHen");
-    btn.disabled=true; btn.textContent="Đang gửi…";
+    var btn=document.getElementById("p-btn"); btn.disabled=true; btn.textContent="Đang gửi…";
     tb.className="fm-tb"; tb.textContent="";
-    var muonGia = !!(fm.querySelector("#nhanGia") && fm.querySelector("#nhanGia").checked);
+    var muonGia=document.getElementById("p-nhanGia").checked;
     var ghiChu="Khách tự đặt trên web Dolinhanh."
       + (d.ngayTiec ? " Ngày tổ chức tiệc: "+ngayVN(d.ngayTiec)+"." : "")
-      + (d.noiTiec  ? " Địa điểm tiệc: "+d.noiTiec+"." : "")
       + (muonGia ? " KHÁCH MUỐN NHẬN BẢNG GIÁ." : "");
     var f=new FormData();
     f.append("entry.255122862","Đặt hẹn mới");
@@ -825,42 +949,24 @@ setLang(saved);
     f.append("entry.1170467141", d.ten);
     f.append("entry.1115003557", d.sdt);
     var n=d.ngayHen.split("-");
-    f.append("entry.1882557220_year", n[0]);
-    f.append("entry.1882557220_month", n[1]);
-    f.append("entry.1882557220_day", n[2]);
+    f.append("entry.1882557220_year",n[0]); f.append("entry.1882557220_month",n[1]); f.append("entry.1882557220_day",n[2]);
     var g=d.gioHen.split(":");
-    f.append("entry.495927254_hour", g[0]);
-    f.append("entry.495927254_minute", g[1]);
+    f.append("entry.495927254_hour",g[0]); f.append("entry.495927254_minute",g[1]);
     f.append("entry.1839154254","1 tiếng (mặc định)");
     f.append("entry.1191547382","Khách thường");
     f.append("entry.283405907", ghiChu);
-    f.append("entry.828439224","Khách tự đặt (web Dolinhanh)");
+    f.append("entry.828439224","Khách tự đặt (popup web)");
     fetch("https://docs.google.com/forms/d/e/"+FORM_ID+"/formResponse",{method:"POST",mode:"no-cors",body:f}).catch(function(){});
-    var tin="KHÁCH ĐẶT LỊCH THỬ VÁY (web Dolinhanh)\n"
-      + "Cô dâu & chú rể: "+d.ten+"\n"
-      + "SĐT: "+d.sdt+"\n"
+    var tin="KHÁCH ĐẶT LỊCH THỬ VÁY (popup web)\n"
+      + "Cô dâu & chú rể: "+d.ten+"\nSĐT: "+d.sdt+"\n"
       + "Ngày tổ chức tiệc: "+(ngayVN(d.ngayTiec)||"chưa điền")+"\n"
-      + "Địa điểm tổ chức tiệc: "+(d.noiTiec||"chưa điền")+"\n"
-      + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\n"
-      + "Giờ đặt hẹn: "+d.gioHen+"\n"
-      + "Showroom: "+d.coSo+"\n"
-      + "Muốn nhận bảng giá: "+(muonGia?"CÓ":"không");
+      + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\nGiờ đặt hẹn: "+d.gioHen+"\n"
+      + "Showroom: "+d.coSo+"\nMuốn nhận bảng giá: "+(muonGia?"CÓ":"không");
     fetch(MAIL_URL+"?hoi="+encodeURIComponent(tin)+"&em="+encodeURIComponent(d.sdt),{mode:"no-cors"}).catch(function(){});
     try{ navigator.clipboard.writeText(tin); }catch(e){}
-    var nz=document.getElementById("nutZalo");
-    if(nz) nz.addEventListener("click", function(){ try{ navigator.clipboard.writeText(tin); }catch(e){} });
-    var ng=document.getElementById("nutGia");
-    if(ng && muonGia){
-      ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="
-        + (d.coSo && d.coSo.indexOf("HN")===0 ? "hn" : "hcm");
-      ng.hidden=false;
-    }
-    setTimeout(function(){
-      fm.style.display="none";
-      var ok=document.getElementById("henXong");
-      ok.classList.add("sent");
-      ok.scrollIntoView({block:"center"});
-    }, 700);
+    var ng=document.getElementById("p-gia");
+    if(muonGia){ ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="+(d.coSo.indexOf("HN")===0?"hn":"hcm"); ng.hidden=false; }
+    setTimeout(function(){ fm.style.display="none"; document.getElementById("popXong").classList.add("hien"); }, 700);
   });
 })();
 </script>
