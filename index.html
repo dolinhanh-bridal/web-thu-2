@@ -364,8 +364,18 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   @media (max-width:1000px){ .coll{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:700px){ .ba{grid-template-columns:1fr} }
 
-  .hero-ba{margin-top:26px;font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;
+  .hero-ba{margin-top:26px;max-width:none;white-space:nowrap;font-family:var(--sans);font-size:11.5px;letter-spacing:.28em;
     text-transform:uppercase;color:rgba(255,255,255,.96)}
+
+  /* ── hộp quà tặng trên ảnh bìa ── */
+  .hero-qua{display:inline-flex;align-items:center;gap:12px;margin-top:24px;padding:11px 16px;
+    border:1px solid rgba(255,255,255,.55);background:rgba(20,18,16,.26);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    color:#fff;text-decoration:none;font-family:var(--sans);font-size:12.5px;line-height:1.5;transition:background .4s ease}
+  .hero-qua:hover{background:rgba(20,18,16,.46)}
+  .hero-qua .nh{font-size:10px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;
+    padding-right:12px;border-right:1px solid rgba(255,255,255,.45)}
+  .hero-qua strong{font-weight:600}
+  .hero-qua .mt{margin-left:4px;opacity:.85}
   .foot-say{font-style:italic}
 
   /* ── khổ chữ trên điện thoại ── */
@@ -567,6 +577,14 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .pop-xong.hien{display:block}
   .pop .nut-hang{display:flex;flex-wrap:wrap;gap:12px}
   .pop .btn[hidden]{display:none}
+  .pop-qua{margin-top:14px;padding:12px 14px;background:var(--champagne);font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--ink)}
+  .pop-qua strong{font-weight:600}
+  .pop-qua-xong{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+  .pop-qua-xong p{margin-top:10px;font-size:14px;line-height:1.6}
+  .pop-qua-xong .nut-hang{margin-top:16px}
+  .pop .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
+  .pop .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
+  .pop:has(.pop-xong.hien) .pop-qua{display:none}
 
   /* ── link trong khối chữ ── */
   .txt .link,.tx .link{margin-top:26px}
@@ -615,6 +633,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .qua .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
   .qua .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
   @media (max-width:700px){ .qua{grid-template-columns:1fr;gap:40px} }
+
+  /* ── bố cục ảnh bìa trên điện thoại (V57: chị chê chưa hợp lý) ── */
+  @media (max-width:700px){
+    .hero .inner{padding-block:30px 76px}
+    .hero .h-xl + p{margin-top:16px !important;font-size:15.5px;line-height:1.55}
+    .hero-ba{margin-top:16px;font-size:10.5px;letter-spacing:.2em;white-space:nowrap}
+    .hero .nut{flex-direction:column;align-items:stretch;gap:10px;max-width:320px}
+    .hero .nut .btn{margin-top:22px;text-align:center;padding:14px 20px}
+    .hero .nut .link{margin-top:0;justify-content:center;border:1px solid rgba(255,255,255,.7);
+      padding:13px 20px 13px;font-size:11px;letter-spacing:.22em}
+    .hero-qua{display:flex;max-width:320px;margin-top:16px;padding:10px 14px;font-size:11.5px;gap:10px}
+    .hero-qua .nh{font-size:9.5px;letter-spacing:.2em;padding-right:10px}
+  }
 </style>
 <style>
 /* Ảnh bìa riêng cho điện thoại: khung dọc 1600×2400, không phóng ảnh ngang lên 2,5 lần nữa */
@@ -655,6 +686,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <a class="btn sang" href="#bosuutap" data-en="Explore the collection">Khám phá bộ sưu tập</a>
         <a class="link" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
       </div>
+      <a class="hero-qua" href="#quatang" id="heroQua">
+        <span class="nh" data-en="Gifts for the bride">Quà tặng cô dâu</span>
+        <span class="ct" data-en="Dress Guide ebook &amp; online wedding invitation — <strong>free</strong>">Ebook Dress Guide &amp; thiệp cưới online — <strong>miễn phí</strong></span>
+        <span class="mt" aria-hidden="true">↓</span>
+      </a>
     </div>
   </section>
 
@@ -946,6 +982,7 @@ setLang(saved);
     <span class="eyebrow" data-en="Private fitting">Buổi thử riêng</span>
     <h2 class="h-cap" style="margin-top:12px" data-en="Book your fitting">Đặt lịch thử váy riêng</h2>
     <p style="margin-top:14px;font-size:14px" data-en="Leave your details and Dolinhanh will call to confirm. Tick the box to receive the price list as well.">Để lại vài dòng, Dolinhanh sẽ gọi xác nhận lịch. Tích ô bên dưới để nhận luôn bảng giá.</p>
+    <p class="pop-qua" data-en="<strong>A gift when you book:</strong> The Bride’s Dress Guide ebook &amp; an online wedding invitation — free."><strong>Quà tặng khi đặt lịch:</strong> ebook The Bride’s Dress Guide &amp; thiệp cưới online — miễn phí.</p>
 
     <form class="pop-form" id="fmPop" novalidate>
       <div class="row">
@@ -980,6 +1017,14 @@ setLang(saved);
       <div class="nut-hang" style="margin-top:22px">
         <a class="btn" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo">Nhắn Zalo 035 995 0588</a>
         <a class="btn" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list">Xem bảng giá</a>
+      </div>
+      <div class="pop-qua-xong">
+        <span class="eyebrow" data-en="Gifts for the bride">Quà tặng cô dâu</span>
+        <p data-en="While you wait for our call, two gifts are already yours — free:">Trong lúc chờ Dolinhanh gọi lại, nàng nhận luôn hai món quà miễn phí:</p>
+        <div class="nut-hang">
+          <a class="btn chinh" id="p-qua-ebook" href="https://dolinhanhbridal.com/dress-guide-landing.html" target="_blank" rel="noopener" style="margin-top:0" data-en="Read the Dress Guide ebook">Đọc ebook Dress Guide</a>
+          <a class="btn" id="p-qua-thiep" href="https://script.google.com/macros/s/AKfycbwVWHJMBZFw6XX7t2Haqs9AT1UTgPmdKUHLzm69Si_h7-ylKNd7HsfcwUQeI4AL-uiLVw/exec" target="_blank" rel="noopener" style="margin-top:0" data-en="Make my online invitation">Làm thiệp cưới online</a>
+        </div>
       </div>
     </div>
   </div>

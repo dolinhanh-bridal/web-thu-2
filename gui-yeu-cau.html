@@ -585,6 +585,16 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .zl-chu{display:none}
     .zl-noi{padding:11px}
   }
+
+  /* ── quà tặng khi đặt lịch (V57) ── */
+  .pop-qua{margin-top:22px;padding:12px 14px;background:var(--champagne);font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--ink)}
+  .pop-qua strong{font-weight:600}
+  .pop-qua-xong{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+  .pop-qua-xong p{margin-top:10px;font-size:14px;line-height:1.6}
+  .pop-qua-xong .nut-hang{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
+  .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
+  *:has(> #henXong.sent) > .pop-qua{display:none}
 </style>
 
 <header id="hd" class="solid">
@@ -622,6 +632,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
         <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Dolinhanh muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
       </div>
+      <p class="pop-qua rise" style="max-width:560px" data-en="<strong>A gift when you book:</strong> The Bride’s Dress Guide ebook &amp; an online wedding invitation — free."><strong>Quà tặng khi đặt lịch:</strong> ebook The Bride’s Dress Guide &amp; thiệp cưới online — miễn phí.</p>
       <form class="form-w rise" id="fmHen" novalidate>
         <div class="row">
           <div class="field"><label for="ten" data-en="Bride &amp; groom’s name *">Tên cô dâu &amp; chú rể *</label>
@@ -658,6 +669,14 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <div class="nut-hang">
           <a class="btn" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588">Nhắn Zalo 035 995 0588</a>
           <a class="btn" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list">Xem bảng giá</a>
+        </div>
+        <div class="pop-qua-xong">
+          <span class="eyebrow" data-en="Gifts for the bride">Quà tặng cô dâu</span>
+          <p data-en="While you wait for our call, two gifts are already yours — free:">Trong lúc chờ Dolinhanh gọi lại, nàng nhận luôn hai món quà miễn phí:</p>
+          <div class="nut-hang">
+            <a class="btn chinh" id="p-qua-ebook" href="https://dolinhanhbridal.com/dress-guide-landing.html" target="_blank" rel="noopener" style="margin-top:0" data-en="Read the Dress Guide ebook">Đọc ebook Dress Guide</a>
+            <a class="btn" id="p-qua-thiep" href="https://script.google.com/macros/s/AKfycbwVWHJMBZFw6XX7t2Haqs9AT1UTgPmdKUHLzm69Si_h7-ylKNd7HsfcwUQeI4AL-uiLVw/exec" target="_blank" rel="noopener" style="margin-top:0" data-en="Make my online invitation">Làm thiệp cưới online</a>
+          </div>
         </div>
       </div>
       </div>
