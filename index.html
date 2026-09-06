@@ -123,7 +123,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   /* ── 01 hero ── */
   .hero{position:relative;height:100svh;min-height:560px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;text-shadow:0 1px 26px rgba(0,0,0,.32)}
   .hero .bg{position:absolute;inset:0;background:#2B2724 var(--img) center center/cover no-repeat;transform:scale(1.04)}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.46) 0%,rgba(18,16,14,.12) 34%,rgba(18,16,14,.68) 100%)}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.22) 0%,rgba(18,16,14,0) 26%,rgba(18,16,14,0) 52%,rgba(18,16,14,.42) 100%)}
   .hero .inner{position:relative;width:100%;padding-block:clamp(44px,8vh,92px)}
   .hero .h-xl{max-width:26ch}
   .hero .h-xl em{display:inline-block;margin-top:.12em}
@@ -324,8 +324,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   }
 
   /* ── V6: định vị Thuê · Mua · May đo ── */
-  .btn.sang{border-color:rgba(255,255,255,.75);color:#fff}
-  .btn.sang:hover{background:#fff;color:var(--ink)}
+  .btn.sang{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
+  .btn.sang:hover{background:#86594F;border-color:#86594F;color:#fff}
   .hero .nut{display:flex;gap:clamp(16px,2vw,28px);flex-wrap:wrap;align-items:center}
   .hero .nut .link{margin-top:34px;border-bottom-color:rgba(255,255,255,.6)}
 
@@ -585,12 +585,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .zl-noi{
     position:fixed;right:clamp(12px,3vw,24px);bottom:calc(16px + env(safe-area-inset-bottom));
     z-index:120;display:inline-flex;align-items:center;gap:8px;
-    background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;
-    padding:11px 18px 11px 11px;box-shadow:0 10px 26px rgba(36,27,25,.32);
+    background:#D6342C;color:#fff;text-decoration:none;border-radius:999px;
+    padding:11px 18px 11px 11px;box-shadow:0 10px 26px rgba(214,52,44,.35);
     font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;
     transition:transform .2s,box-shadow .2s;
   }
-  .zl-noi:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(36,27,25,.4);opacity:1}
+  .zl-noi:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(214,52,44,.45);opacity:1;background:#BB2A23}
   .zl-noi:active{transform:translateY(0)}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
