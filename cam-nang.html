@@ -610,6 +610,23 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .zl-chu{display:none}
     .zl-noi{padding:11px}
   }
+
+  /* ── quà tặng cô dâu (ebook + thiệp online) ── */
+  .qua{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,44px);
+    max-width:1080px;margin:clamp(32px,4vw,56px) auto 0}
+  .qua figure{margin:0}
+  .qua .im{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center top/cover no-repeat}
+  .qua figcaption{padding-top:20px}
+  .qua .qua-so{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--taupe-deep);margin-bottom:10px}
+  .qua .ten{display:block;font-family:var(--serif);font-size:clamp(1.25rem,1.9vw,1.6rem);line-height:1.25;color:var(--ink)}
+  .qua .mo{display:block;margin-top:12px;font-family:var(--serif);font-size:clamp(.98rem,1.1vw,1.06rem);line-height:1.6;color:var(--ink)}
+  .qua .ghi{display:block;margin-top:10px;font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;line-height:1.7;color:var(--taupe-deep)}
+  .qua .nut-hang{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .qua .btn{margin-top:0;padding:13px 24px}
+  .qua .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
+  .qua .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
+  @media (max-width:700px){ .qua{grid-template-columns:1fr;gap:40px} }
 </style>
 
 <header id="hd" class="solid">
@@ -801,6 +818,56 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       </div>
     </div>
   </section>
+
+
+  <!-- ══ QUÀ TẶNG CÔ DÂU ══ -->
+  <section class="air" id="quatang" style="padding-top:0">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <span class="eyebrow" style="margin-bottom:14px" data-en="Gifts for the bride · Free">Quà tặng cô dâu · Miễn phí</span>
+        <h2 class="h-cap giua" data-en="Two gifts from Dolinhanh">Hai món quà Dolinhanh gửi bạn</h2>
+        <p style="margin-top:20px" data-en="Whether or not your dress comes from Dolinhanh, these two gifts are yours — a guide to choosing the right dress, and an online wedding invitation to send your guests.">Dù chiếc váy của bạn có đến từ Dolinhanh hay không, hai món quà này vẫn là của bạn — một cuốn cẩm nang để chọn váy đúng, và một tấm thiệp cưới online để gửi khách mời.</p>
+      </div>
+
+      <div class="qua rise">
+        <figure>
+          <div class="im" style="--img:url('anh/qua-ebook.jpg')"></div>
+          <figcaption>
+            <span class="qua-so" data-en="Gift 01 · Ebook">Quà 01 · Ebook</span>
+            <span class="ten">The Bride’s Dress Guide</span>
+            <span class="mo" data-en="27 pages on the 8 things a bride should know before deciding on her wedding dress: reading your body shape, choosing a silhouette and a fabric, with a quiz to read your own taste. Read it before your first fitting.">27 trang gói gọn 8 điều cô dâu cần biết trước khi quyết định chiếc váy cưới của mình: đọc vị dáng người, chọn phom, chọn chất liệu, kèm trắc nghiệm đọc vị gu. Đọc trước khi đi thử váy lần đầu.</span>
+            <span class="nut-hang">
+              <a class="btn chinh" id="qua-ebook-doc" href="https://dolinhanhbridal.com/dress-guide-landing.html" target="_blank" rel="noopener" data-en="Read for free">Đọc miễn phí</a>
+              <a class="btn" id="qua-ebook-pdf" href="https://dolinhanhbridal.com/dress-guide.pdf" target="_blank" rel="noopener" data-en="Download PDF">Tải bản PDF</a>
+            </span>
+            <span class="ghi" data-en="Free · no sign-up needed to download">Miễn phí · tải về không cần đăng ký</span>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div class="im" style="--img:url('anh/qua-thiep.jpg')"></div>
+          <figcaption>
+            <span class="qua-so" data-en="Gift 02 · Online invitation">Quà 02 · Thiệp cưới online</span>
+            <span class="ten" data-en="An online wedding invitation — made by you in 5 minutes">Thiệp cưới online — bạn tự làm trong 5 phút</span>
+            <span class="mo" data-en="Nothing to buy. Fill in your two names, the date, the venue and one wedding photo — the invitation builds itself into a page of its own with a QR code and a countdown. Guests tap to confirm, and the list lands in your email.">Không cần mua gì. Điền tên hai bạn, ngày giờ, địa điểm và một tấm ảnh cưới — thiệp tự dựng thành trang riêng có mã QR và đếm ngược tới ngày cưới. Khách mời bấm xác nhận tham dự là danh sách về thẳng email của bạn.</span>
+            <span class="nut-hang">
+              <a class="btn chinh" id="qua-thiep-lam" href="https://script.google.com/macros/s/AKfycbwVWHJMBZFw6XX7t2Haqs9AT1UTgPmdKUHLzm69Si_h7-ylKNd7HsfcwUQeI4AL-uiLVw/exec" target="_blank" rel="noopener" data-en="Make my invitation">Làm thiệp của mình</a>
+              <a class="btn" id="qua-thiep-mau" href="https://dolinhanh-bridal.github.io/thiep-mau-dolinhanh/" target="_blank" rel="noopener" data-en="See a sample">Xem thiệp mẫu</a>
+            </span>
+            <span class="ghi" data-en="Free, no limits · a gift from Dolinhanh Bridal &amp; Nupakachi Photography">Miễn phí, không giới hạn · quà của Dolinhanh Bridal &amp; Nupakachi Photography</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <script>
+  /* Pixel cho mục quà tặng: ebook = ViewContent, thiệp = Lead (cùng nhãn 'Dress Guide' như landing) */
+  (function(){
+    function bat(id,ev){ var a=document.getElementById(id); if(!a) return;
+      a.addEventListener('click',function(){ try{ if(typeof fbq==='function') fbq('track',ev,{content_name:'Dress Guide'}); }catch(e){} }); }
+    bat('qua-ebook-doc','ViewContent'); bat('qua-ebook-pdf','ViewContent'); bat('qua-thiep-lam','Lead');
+  })();
+  </script>
 
   <section class="air" style="padding-top:0">
     <div class="wrap">
