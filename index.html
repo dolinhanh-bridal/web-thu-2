@@ -370,12 +370,13 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     text-transform:uppercase;color:rgba(255,255,255,.96)}
 
   /* ── hộp quà tặng trên ảnh bìa ── */
-  .hero-qua{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:22px;padding:12px 18px;
-    border:1px solid #9B6B5F;background:#9B6B5F;
-    color:#fff;text-decoration:none;font-family:var(--sans);font-size:12px;line-height:1.5;text-shadow:none;transition:background .4s ease}
-  .hero-qua:hover{background:#86594F;border-color:#86594F}
+  /* V76: chị bỏ khối hồng nâu, chỉ để chữ trơn */
+  .hero-qua{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:22px;padding:0;
+    border:0;background:none;
+    color:#fff;text-decoration:none;font-family:var(--sans);font-size:12px;line-height:1.5;transition:opacity .4s ease}
+  .hero-qua:hover{opacity:.8}
   .hero-qua .nh{font-size:10px;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;opacity:.92}
-  .hero-qua strong{font-weight:600}
+  .hero-qua strong{font-weight:inherit}
   .hero-qua .mt{display:none}
   .foot-say{font-style:italic}
 
@@ -405,7 +406,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   }
 
   /* ── lưới bộ sưu tập kiểu veliabridal.com/collections ── */
-  body.bst{background:var(--ivory)}
+  body.bst{background:var(--paper)}
   .vl-head{padding-top:clamp(96px,12vh,150px);padding-bottom:clamp(26px,3.4vw,44px)}
   .vl-head .eyebrow{margin-bottom:14px}
   .vl-head h1{font-family:var(--serif);font-weight:400;
@@ -644,10 +645,10 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .hero .nut{flex-direction:column;align-items:flex-start;gap:10px}
     .hero .nut .btn{margin-top:14px;text-align:center;padding:12px 18px;font-size:10.5px}
     .hero .nut .link{margin-top:20px;font-size:11px;letter-spacing:.22em}
-    /* V62: chị muốn ô quà tặng đặc hồng nâu, nút đặt lịch về kiểu viền như trước */
+    /* V76: bỏ khối hồng nâu (V62), chỉ để chữ trơn giống máy tính */
     .hero-qua{display:inline-flex;flex-direction:column;align-items:flex-start;gap:3px;max-width:none;margin-top:16px;
-      padding:10px 14px;border:0;background:#9B6B5F;font-size:11.5px;line-height:1.45}
-    .hero-qua .ct strong{white-space:nowrap;font-weight:600}
+      padding:0;border:0;background:none;font-size:11.5px;line-height:1.45}
+    .hero-qua .ct strong{white-space:nowrap;font-weight:inherit}
     .hero-qua .nh{font-size:9px;letter-spacing:.22em;padding:0;border:0;opacity:.92}
     .hero-qua .ct{opacity:1}
     .hero-qua .mt{display:none}
@@ -893,7 +894,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <div class="ft-icon">
           <a href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
           <a href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.tiktok.com/@fitting.vay.cuoi" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.4 3.5 3.6v2.6c-1.3.1-2.5-.2-3.6-.9v5.6c0 3.4-2.6 5.6-5.6 5.1-2.4-.4-4.2-2.4-4.3-4.8-.1-2.9 2.2-5.3 5.1-5.3.3 0 .5 0 .8.1v2.7c-.3-.1-.5-.1-.8-.1-1.4 0-2.5 1.2-2.4 2.6.1 1.2 1.1 2.2 2.3 2.3 1.4.1 2.6-1 2.6-2.4V3h2.4Z"/></svg></a>
+          <a href="https://www.tiktok.com/@dolinhanhbridal2019" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16.5 3c.3 2 1.5 3.4 3.5 3.6v2.6c-1.3.1-2.5-.2-3.6-.9v5.6c0 3.4-2.6 5.6-5.6 5.1-2.4-.4-4.2-2.4-4.3-4.8-.1-2.9 2.2-5.3 5.1-5.3.3 0 .5 0 .8.1v2.7c-.3-.1-.5-.1-.8-.1-1.4 0-2.5 1.2-2.4 2.6.1 1.2 1.1 2.2 2.3 2.3 1.4.1 2.6-1 2.6-2.4V3h2.4Z"/></svg></a>
         </div>
       </div>
     </div>
