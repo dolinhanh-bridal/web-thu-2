@@ -1,0 +1,321 @@
+<meta charset="utf-8">
+<link rel="icon" href="../favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Các phiên bản — Dolinhanh Bridal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400&display=swap">
+<style>
+  :root{--paper:#fff;--ivory:#FBF9F6;--taupe-deep:#847C73;--ink:#1B1917;--line:#E7E3DD;
+    --serif:"Playfair Display",Georgia,serif;--sans:"Montserrat","Be Vietnam Pro",Helvetica,Arial,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;
+    font-size:15.5px;line-height:1.85}
+  .wrap{max-width:920px;margin:0 auto;padding:clamp(48px,9vw,110px) clamp(20px,5vw,60px)}
+  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--taupe-deep);display:block}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,2.9vw,2.55rem);
+    line-height:1.26;letter-spacing:.008em;margin:20px 0 0;max-width:22ch}
+  .note{margin-top:18px;color:#3A3733;max-width:52ch}
+  .ds{margin-top:clamp(40px,6vw,70px);border-top:1px solid var(--line)}
+  .v{display:block;text-decoration:none;color:inherit;border-bottom:1px solid var(--line);
+    padding:26px 0;transition:padding-inline .5s ease,background .5s ease}
+  .v:hover{padding-inline:14px;background:var(--ivory)}
+  .v .top{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .v .no{font-size:11px;letter-spacing:.26em;color:var(--taupe-deep);min-width:4ch}
+  .v .nm{font-family:var(--serif);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.35}
+  .v .ngay{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-deep);margin-left:auto}
+  .v .mo{margin:8px 0 0 calc(4ch + 18px);color:#3A3733;font-size:14.5px}
+  .moi{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-deep);
+    border:1px solid var(--line);padding:3px 9px;border-radius:100px}
+  @media (max-width:560px){ .v .mo{margin-left:0} .v .ngay{margin-left:0;width:100%} }
+</style>
+
+<div class="wrap">
+  <span class="eyebrow">Dolinhanh Bridal &nbsp;·&nbsp; Trang thử</span>
+  <h1>Các phiên bản đã dựng</h1>
+  <p class="note">Mỗi bản giữ nguyên một hướng bố cục khác nhau, bấm vào để xem. Bản mới nhất cũng là bản đang chạy ở địa chỉ chính.</p>
+
+  <div class="ds">
+    <a class="v" href="v76/index.html">
+      <div class="top"><span class="no">V76</span><span class="nm">Nền trắng cả trang Bộ sưu tập; bìa trang chủ bỏ khối hồng nâu ở dòng "Quà tặng cô dâu", chỉ để chữ trơn; nút TikTok trỏ về kênh chính @dolinhanhbridal2019 <span class="moi">đang chạy</span></span><span class="ngay">11/09/2026</span></div>
+    </a>
+    <a class="v" href="v75/index.html">
+      <div class="top"><span class="no">V75</span><span class="nm">Bộ sưu tập: cắt lại cả 124 ảnh từ file gốc để MẪU CAO ĐỀU NHAU — mặt mẫu cùng cỡ (8,3% khung), đỉnh khung mặt cùng vị trí (5,25%)</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v74/index.html">
+      <div class="top"><span class="no">V74</span><span class="nm">Bộ sưu tập: GỠ HẲN bộ mẫu Tây nền hồng (MS 48·49·51·52·54·55) theo ý chị — còn 124 mẫu / 16 trang; nhóm Hà Nội còn 7 mẫu New Collection</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v73/index.html">
+      <div class="top"><span class="no">V73</span><span class="nm">Bộ sưu tập: 6 mẫu bỏ mặt (MS 48·49·51·52·54·55) cắt lại để mẫu cao đều với các mẫu khác — thân váy giữ đúng tỉ lệ như ảnh có mặt, nối sàn dưới gấu</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v72/index.html">
+      <div class="top"><span class="no">V72</span><span class="nm">Bộ sưu tập: bỏ mặt mẫu Tây (MS 48·49·51·52·54·55) — 12 ảnh cắt lại từ cổ xuống, giữ trọn tùng váy; MS 49 đưa ảnh full tùng lên đầu</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v71/index.html">
+      <div class="top"><span class="no">V71</span><span class="nm">Bộ lọc Cơ sở phân đúng: 13 mẫu ảnh thật (MS 23–55) ở Hà Nội, 117 mẫu bộ AI (MS 56–174) ở TP.HCM (chị Linh: "bộ mẫu xịn không phải AI là ở HN")</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v70/index.html">
+      <div class="top"><span class="no">V70</span><span class="nm">Bộ lọc Cơ sở lên web chính: cả 130 mẫu gắn TP.HCM (chị Linh: "hiện là đang ở HCM hết"), bấm Hà Nội hiện dòng "đang cập nhật"</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v69/index.html">
+      <div class="top"><span class="no">V69</span><span class="nm">Bộ sưu tập thêm bộ lọc "Cơ sở: Hà Nội / TP.HCM" (chị Linh: "phân cho chị váy ở HN và HCM") — khung đã chạy, đang chờ chị phân mẫu nào ở đâu; bản xem thử, web chính chưa lên</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v68/index.html">
+      <div class="top"><span class="no">V68</span><span class="nm">Bộ sưu tập chỉ giữ ảnh mẫu nhìn thẳng: gỡ 8 mẫu và 16 ảnh phụ mẫu quay nghiêng / cúi mặt (chị Linh: "check lại tất cả các hình là thẳng mặt mẫu") — còn 130 mẫu</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v67/index.html">
+      <div class="top"><span class="no">V67</span><span class="nm">Bộ sưu tập thêm 119 mẫu váy mới (MS 56 → MS 174), ảnh bộ AI_DLA_ADS nền be, có lọc dáng và mood; dãy số trang tự xuống dòng trên điện thoại</span><span class="ngay">09/09/2026</span></div>
+    </a>
+    <a class="v" href="v66/index.html">
+      <div class="top"><span class="no">V66</span><span class="nm">Bản tiếng Anh trang Cẩm nang: dịch nốt 28 câu trả lời hỏi–đáp (trước đó bấm EN vẫn hiện tiếng Việt)</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v65/index.html">
+      <div class="top"><span class="no">V65</span><span class="nm">Bìa: "Đặt lịch thử váy riêng" in đậm</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v64/index.html">
+      <div class="top"><span class="no">V64</span><span class="nm">Bìa điện thoại GIỐNG HỆT máy tính: ô quà gọn vừa chữ, đủ chữ "Ebook Dress Guide", Đặt lịch là dòng gạch chân (chị: "bản nào cũng phải giống nhau")</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v63/index.html">
+      <div class="top"><span class="no">V63</span><span class="nm">Ô quà tặng máy tính xếp 2 dòng: "Quà tặng cô dâu" trên, ebook &amp; thiệp dưới (chị duyệt bìa V62, chỉ đổi xuống dòng)</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v62/index.html">
+      <div class="top"><span class="no">V62</span><span class="nm">Bìa: ô quà tặng đặc hồng nâu, nút đặt lịch về kiểu viền như trước</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v61/index.html">
+      <div class="top"><span class="no">V61</span><span class="nm">Bìa: dòng quà tặng chuyển lên TRÊN nút đặt lịch, cả cụm chữ điện thoại nhỏ lại</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v60/index.html">
+      <div class="top"><span class="no">V60</span><span class="nm">Bìa: cụm chữ hạ sát đáy hơn, câu dẫn mới khớp signature ("Vẻ đẹp tối giản mà sang trọng, được chăm chút bằng tình yêu của một người mẹ."), dòng quà rút gọn trên điện thoại</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v59/index.html">
+      <div class="top"><span class="no">V59</span><span class="nm">Bỏ nút "Khám phá bộ sưu tập" trên bìa, "Đặt lịch thử váy riêng" thành nút chính hồng nâu</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v58/index.html">
+      <div class="top"><span class="no">V58</span><span class="nm">Hộp quà trên bìa điện thoại làm nhẹ lại: bỏ khung, 2 dòng chữ nhỏ có gạch dọc (chị chê khối chữ to, thiếu tinh tế)</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v57/index.html">
+      <div class="top"><span class="no">V57</span><span class="nm">Bìa điện thoại xếp lại (2 nút bằng nhau) + hộp "Quà tặng cô dâu" trên bìa; popup đặt lịch và trang Gửi yêu cầu có quà tặng trước và sau khi gửi</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v56/index.html">
+      <div class="top"><span class="no">V56</span><span class="nm">Thêm mục "Quà tặng cô dâu" (ebook Dress Guide + thiệp cưới online) ở trang chủ và Cẩm nang</span><span class="ngay">07/09/2026</span></div>
+    </a>
+    <a class="v" href="v55/index.html">
+      <div class="top"><span class="no">V55</span><span class="nm">Nút Zalo nổi bớt đỏ tươi (#BE3E37) theo ý chị</span><span class="ngay">06/09/2026</span></div>
+    </a>
+    <a class="v" href="v54/index.html">
+      <div class="top"><span class="no">V54</span><span class="nm">Sửa theo bản soi tâm lý: bớt phủ tối ảnh bìa, nút bìa đặc hồng nâu, Zalo nổi đỏ, ảnh bìa điện thoại có khoảng trống trên mặt mẫu</span><span class="ngay">06/09/2026</span></div>
+    </a>
+    <a class="v" href="v53/index.html">
+      <div class="top"><span class="no">V53</span><span class="nm">Ảnh nét gấp đôi + ảnh bìa dọc cho điện thoại + nạp ảnh chậm</span><span class="ngay">05/09/2026</span></div>
+      <p class="mo">Dựng lại toàn bộ ảnh từ file gốc: ảnh váy và cô dâu 1600×2400 (trước 1000–1066px), ảnh bìa 3200×1800 và bản dọc riêng 1600×2400 cho điện thoại (trước bị phóng 2,5 lần nên mờ). Ảnh chỉ tải khi cuộn tới nên trang không nặng hơn.</p>
+    </a>
+    <a class="v" href="v52/index.html">
+      <div class="top"><span class="no">V52</span><span class="nm">Menu điện thoại 2 hàng, Pixel + nút Zalo nổi, nới khoảng cách Bộ sưu tập</span><span class="ngay">05/09/2026</span></div>
+      <p class="mo">Trên điện thoại menu xếp 2 hàng, thấy đủ 6 mục. Gắn Meta Pixel và nút Zalo nổi cho cả 8 trang. Nút "Xem tất cả váy" cách tiêu đề phía dưới rộng hơn. Bỏ trang chi-tiet.html (không còn dùng).</p>
+    </a>
+    <a class="v" href="v51/index.html">
+      <div class="top"><span class="no">V51</span><span class="nm">Ảnh váy chuẩn khung, lướt được nhiều ảnh, có mục xem tất cả</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Mọi ảnh đại diện đều là ảnh full người, mẫu cao bằng nhau. Mẫu nào có nhiều ảnh thì hiện dãy chấm để lướt. Thêm nút xem tất cả váy.</p>
+    </a>
+    <a class="v" href="v50/index.html">
+      <div class="top"><span class="no">V50</span><span class="nm">Sửa khoảng cách link trong khối chữ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Đường dẫn cuối mỗi bước tách khỏi đoạn văn, nhãn rút gọn nên không còn kéo dài hết cột.</p>
+    </a>
+    <a class="v" href="v49/index.html">
+      <div class="top"><span class="no">V49</span><span class="nm">Bước may đo có link cách tự lấy số đo</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trong trang Hành trình, bước "Làm nó thành của bạn" giờ dẫn sang trang hướng dẫn tự lấy số đo.</p>
+    </a>
+    <a class="v" href="v48/index.html">
+      <div class="top"><span class="no">V48</span><span class="nm">Trang Cô dâu viết theo bản chị gửi</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">"Những cô dâu đã chọn Dolinhanh", mỗi cô dâu thêm dòng phong cách, kết bằng "Câu chuyện tiếp theo có thể là của bạn".</p>
+    </a>
+    <a class="v" href="v47/index.html">
+      <div class="top"><span class="no">V47</span><span class="nm">Bỏ bộ chụp Khánh Linh khỏi bộ sưu tập</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bộ sưu tập còn 21 mẫu: 13 mẫu New Collection 2025 và 8 mẫu bộ Tây.</p>
+    </a>
+    <a class="v" href="v46/index.html">
+      <div class="top"><span class="no">V46</span><span class="nm">Bộ sưu tập lên 31 mẫu</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Thêm 18 mẫu từ bộ chụp Khánh Linh và bộ mẫu Tây, chia sẵn theo Silhouette và Mood, xem theo 4 trang.</p>
+    </a>
+    <a class="v" href="v45/index.html">
+      <div class="top"><span class="no">V45</span><span class="nm">Popup đặt lịch &amp; nhận bảng giá</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bấm nút đặt lịch ở bất cứ trang nào cũng mở hộp điền ngay tại chỗ, có ô nhận bảng giá và nút Zalo sau khi gửi.</p>
+    </a>
+    <a class="v" href="v44/index.html">
+      <div class="top"><span class="no">V44</span><span class="nm">Cẩm nang thành 28 câu hỏi cô dâu hay hỏi</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Năm nhóm: chọn váy · chất liệu · buổi thử · thuê hay mua · những câu ngại hỏi. Bấm từng câu là mở câu trả lời.</p>
+    </a>
+    <a class="v" href="v43/index.html">
+      <div class="top"><span class="no">V43</span><span class="nm">Bộ sưu tập lọc theo Silhouette &amp; Mood, đổi dòng cuối</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trang Bộ sưu tập viết lại theo dàn bài mới, bộ lọc đổi thành Silhouette và Mood. Dòng cuối mọi trang giờ là "Made for your day. Designed to last."</p>
+    </a>
+    <a class="v" href="v42/index.html">
+      <div class="top"><span class="no">V42</span><span class="nm">Bỏ mục cô dâu khỏi trang Hành trình</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Cô dâu chỉ nằm ở trang Cô dâu. Trang Hành trình còn bốn bước, Timeless và lời mời đặt lịch.</p>
+    </a>
+    <a class="v" href="v41/index.html">
+      <div class="top"><span class="no">V41</span><span class="nm">Trang Hành trình kể theo trải nghiệm, bỏ phần may đo giữa trang</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Hiểu bạn → buổi thử riêng 1:1 → tìm ra chiếc váy → làm nó thành của bạn, rồi Timeless, cô dâu thật và lời mời đặt lịch. Trang Giới thiệu viết dài hơn phần Nupakachi Photography.</p>
+    </a>
+    <a class="v" href="v40/index.html">
+      <div class="top"><span class="no">V40</span><span class="nm">Trang Giới thiệu dựng theo dàn bài của chị</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Sáu phần: mở đầu → trải nghiệm → timeless → ra đời từ 2017 → ba dòng thương hiệu → mời đặt lịch.</p>
+    </a>
+    <a class="v" href="v39/index.html">
+      <div class="top"><span class="no">V39</span><span class="nm">Tiêu đề đổi sang kiểu chữ The Bride's Dress Guide</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Các tiêu đề mục và tiêu đề trang giờ dùng Playfair Display chữ thường thay cho chữ in hoa giãn ký tự.</p>
+    </a>
+    <a class="v" href="v38/index.html">
+      <div class="top"><span class="no">V38</span><span class="nm">Tám cô dâu trên trang Cô dâu</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Thêm MS Khả Ái, MS Rey Nguyen, MS Uyên T7, MS Hằng — mỗi cô dâu tám ảnh, mở đầu bằng ảnh khoe trọn váy.</p>
+    </a>
+    <a class="v" href="v37/index.html">
+      <div class="top"><span class="no">V37</span><span class="nm">Tách MS Nghi Võ ra khỏi MS Chi Trần</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bốn cô dâu: MS Chi Trần · MS Nghi Võ · MS Wendy Luu · MS Liên Nguyễn. Ảnh Liên Nguyễn trả về màu gốc, ảnh bìa từng ô đặt theo chị chọn.</p>
+    </a>
+    <a class="v" href="v36/index.html">
+      <div class="top"><span class="no">V36</span><span class="nm">My belove bride — ảnh phun váy lên đầu, sáng lại bộ Liên Nguyễn</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Đổi nhãn thành My belove bride và MS, mỗi ô mở đầu bằng ảnh khoe trọn váy, thêm hai ảnh cho MS Chi Trần, bộ MS Liên Nguyễn đẩy sáng nhẹ.</p>
+    </a>
+    <a class="v" href="v35/index.html">
+      <div class="top"><span class="no">V35</span><span class="nm">Mỗi cô dâu một ô lớn, lướt xem tám ảnh</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Giữ bố cục ô lớn có chữ trong ảnh như trước, thêm phần lướt ảnh: vuốt trên điện thoại, bấm hai bên trên máy tính, có dãy chấm ở dưới.</p>
+    </a>
+    <a class="v" href="v34/index.html">
+      <div class="top"><span class="no">V34</span><span class="nm">Trang Cô dâu có ba cô dâu thật</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">CD Chi Trần, CD Wendy Luu, CD Liên Nguyễn — mỗi cô dâu một mục riêng, tám ảnh mỗi mục.</p>
+    </a>
+    <a class="v" href="v33/index.html">
+      <div class="top"><span class="no">V33</span><span class="nm">Bỏ khối kết cuối trang chủ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trang chủ kết thúc bằng hai ảnh ngang rồi tới chân trang.</p>
+    </a>
+    <a class="v" href="v32/index.html">
+      <div class="top"><span class="no">V32</span><span class="nm">Bỏ mục Gửi yêu cầu khỏi thanh trên cùng</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Thanh nav còn sáu mục. Trang đặt lịch vẫn vào được từ nút trên ảnh bìa, cuối trang chủ và cuối các trang khác.</p>
+    </a>
+    <a class="v" href="v31/index.html">
+      <div class="top"><span class="no">V31</span><span class="nm">Gộp hai khối cuối trang chủ làm một</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trước đây cuối trang có hai khối chữ giữa liền nhau nên rối. Giờ còn một khối kết: đặt lịch thử váy, kèm ba đường dẫn nhỏ tới may đo, cách lấy số đo và cẩm nang.</p>
+    </a>
+    <a class="v" href="v30/index.html">
+      <div class="top"><span class="no">V30</span><span class="nm">Hành trình bốn bước theo đúng cách nhà làm</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Tìm hiểu gu của mình → đặt hẹn riêng 1:1 → xem catalogue mẫu váy → chuẩn bị đồ trước khi thử.</p>
+    </a>
+    <a class="v" href="v29/index.html">
+      <div class="top"><span class="no">V29</span><span class="nm">Thêm link cẩm nang và cách tự lấy số đo</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bước "Đọc vị bản thân" dẫn sang cẩm nang, phần may đo riêng dẫn sang trang hướng dẫn tự lấy số đo.</p>
+    </a>
+    <a class="v" href="v28/index.html">
+      <div class="top"><span class="no">V28</span><span class="nm">Trang chủ gọn lại: tinh thần → 3 dịch vụ → bộ sưu tập</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Khối tinh thần trình bày lại theo lối tạp chí, dịch vụ còn ba khung ảnh, bỏ mục trải nghiệm và mục cô dâu khỏi trang chủ, dòng chữ bớt thưa.</p>
+    </a>
+    <a class="v" href="v27/index.html">
+      <div class="top"><span class="no">V27</span><span class="nm">Bỏ dòng chữ nhỏ trên ảnh bìa</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Ảnh bìa giờ vào thẳng câu signature, không còn dòng "Dolinhanh Bridal Experience 2026".</p>
+    </a>
+    <a class="v" href="v26/index.html">
+      <div class="top"><span class="no">V26</span><span class="nm">Trang chủ: tinh thần → dịch vụ → trải nghiệm</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bốn dịch vụ thành bốn thẻ ảnh có chữ đè lên: thuê váy, mua váy, may đo riêng, chụp hình &amp; quay phim. Ngay sau đó là phần trải nghiệm tại Dolinhanh.</p>
+    </a>
+    <a class="v" href="v25/index.html">
+      <div class="top"><span class="no">V25</span><span class="nm">Tinh thần Dolinhanh nằm ngay khối đầu tiên</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Cuộn khỏi ảnh bìa là gặp ngay phần tinh thần, không còn đoạn dẫn ngắn rồi mới tới.</p>
+    </a>
+    <a class="v" href="v24/index.html">
+      <div class="top"><span class="no">V24</span><span class="nm">Nội dung Tinh thần Dolinhanh viết lại theo bản chị duyệt</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Hệ sinh thái cưới Nupakachi, vẻ đẹp Timeless và ba dòng kết "Một chiếc váy cho ngày cưới…".</p>
+    </a>
+    <a class="v" href="v23/index.html">
+      <div class="top"><span class="no">V23</span><span class="nm">Sửa lỗi lòi mã ở trang Giới thiệu</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trang Giới thiệu bị lòi đoạn tiếng Anh và dấu ngoặc ra ngoài, đã sửa lại.</p>
+    </a>
+    <a class="v" href="v22/index.html">
+      <div class="top"><span class="no">V22</span><span class="nm">Ảnh bìa mẫu váy ren tùng voan rời</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Ảnh bìa đổi sang mẫu chị chọn, dựng thành khung ngang giữ trọn váy và chừa chỗ trống bên trái cho chữ.</p>
+    </a>
+    <a class="v" href="v21/index.html">
+      <div class="top"><span class="no">V21</span><span class="nm">Ảnh bìa cận, thêm mảng chụp hình quay phim</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Ảnh bìa đổi sang khung cận. Nội dung nói rõ Dolinhanh làm cả váy cưới lẫn chụp hình quay phim cùng Nupakachi Photography. Thanh trên cùng đổi nền khi cuộn nên không còn chồng chữ.</p>
+    </a>
+    <a class="v" href="v20/index.html">
+      <div class="top"><span class="no">V20</span><span class="nm">Form có ô nhận bảng giá</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Khách tích ô "Gửi cho tôi bảng giá luôn" thì gửi xong hiện thêm nút mở bảng giá đúng cơ sở, và ghi chú báo về cho quản lý.</p>
+    </a>
+    <a class="v" href="v19/index.html">
+      <div class="top"><span class="no">V19</span><span class="nm">Form đặt lịch thử váy đã nối thật</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Dùng đúng form của hệ thống như trang báo giá: khách gửi là lịch tự vào Google, mail báo về quản lý, kèm nút Zalo đã sao chép sẵn nội dung.</p>
+    </a>
+    <a class="v" href="v18/index.html">
+      <div class="top"><span class="no">V18</span><span class="nm">Chữ nằm trong ảnh, có mã số váy và mã cô dâu</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bộ sưu tập ghi MS từng mẫu, trang Cô dâu ghi CD từng người — chữ trắng đặt trong ảnh như trang mẫu.</p>
+    </a>
+    <a class="v" href="v17/index.html">
+      <div class="top"><span class="no">V17</span><span class="nm">Bỏ khối chi tiết khỏi Bộ sưu tập</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trang Bộ sưu tập giờ chỉ còn tiêu đề, bộ lọc và lưới váy.</p>
+    </a>
+    <a class="v" href="v16/index.html">
+      <div class="top"><span class="no">V16</span><span class="nm">Bộ sưu tập &amp; Cô dâu dựng theo Vélia, chân trang mới</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bộ sưu tập có bộ lọc theo dáng váy (đuôi cá, chữ A, bồng xoè, mini) và chất liệu (phi trơn, ren, đính đá). Trang Cô dâu thành lưới bốn cột. Chân trang chia ba cột, có logo và mạng xã hội.</p>
+    </a>
+    <a class="v" href="v15/index.html">
+      <div class="top"><span class="no">V15</span><span class="nm">Câu chuyện Dolinhanh nằm ngay dưới ảnh bìa</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Kéo xuống là gặp ngay câu chuyện nhà và lời người sáng lập, rồi mới tới ba lựa chọn và bộ sưu tập. Trên điện thoại các khối đã về một cột.</p>
+    </a>
+    <a class="v" href="v14/index.html">
+      <div class="top"><span class="no">V14</span><span class="nm">Bốn ảnh chi tiết xếp thẳng hàng, nhỏ lại</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Khối chi tiết trong Bộ sưu tập trước đây ảnh to và so le nhau, giờ thành một hàng bốn ảnh bằng nhau.</p>
+    </a>
+    <a class="v" href="v13/index.html">
+      <div class="top"><span class="no">V13</span><span class="nm">Bỏ mục Gửi yêu cầu khỏi mục lục trang chủ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Mục lục cuối trang chủ còn 5 mục. Nút đặt lịch vẫn nằm ở ảnh bìa, bộ sưu tập và cuối trang.</p>
+    </a>
+    <a class="v" href="v12/index.html">
+      <div class="top"><span class="no">V12</span><span class="nm">Trang chủ dùng ảnh DLA New Collection 2025</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Toàn bộ ảnh trang chủ thay bằng bộ chụp mới: ảnh bìa, bộ sưu tập 6 mẫu, hai ảnh ngang và bốn ảnh cô dâu.</p>
+    </a>
+    <a class="v" href="v11/index.html">
+      <div class="top"><span class="no">V11</span><span class="nm">Chữ đậm hơn, thêm trang Bộ sưu tập &amp; Cẩm nang</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Chữ rõ hơn, bớt khoảng trắng, xưng Dolinhanh thay cho "nhà", Nupakachi bấm được ra web riêng, hành trình viết theo cẩm nang, khổ chữ chỉnh lại cho điện thoại.</p>
+    </a>
+    <a class="v" href="v10/index.html">
+      <div class="top"><span class="no">V10</span><span class="nm">Tinh thần &amp; lịch sử lên trang đầu, có logo trên thanh địa chỉ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Thêm khối "Tinh thần Dolinhanh" (ra đời 2017, thăng trầm, thuộc Nupakachi) và lời người sáng lập vào trang chủ. Logo LA đã thành biểu tượng hiện trên tab trình duyệt.</p>
+    </a>
+    <a class="v" href="v9/index.html">
+      <div class="top"><span class="no">V9</span><span class="nm">Thêm nút Trang chủ trên thanh trên cùng</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Mọi trang đều có nút "Trang chủ" để quay lại trang đầu, không phải bấm vào chữ Dolinhanh nữa.</p>
+    </a>
+    <a class="v" href="v8/index.html">
+      <div class="top"><span class="no">V8</span><span class="nm">Câu signature trở lại ảnh bìa và chân mọi trang</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">"Quiet minimal luxury, crafted with Mother Love." đứng ở ảnh bìa và lặp lại ở chân từng trang. Dòng Thuê · Mua · May đo riêng và hai nút vẫn giữ ngay dưới.</p>
+    </a>
+    <a class="v" href="v7/index.html">
+      <div class="top"><span class="no">V7</span><span class="nm">Như V6, thanh trên cùng trả về 5 mục cũ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Gỡ mục "Bộ sưu tập" đã tự thêm vào thanh trên cùng. Phần bộ sưu tập trong trang chủ vẫn giữ nguyên.</p>
+    </a>
+    <a class="v" href="v6/index.html">
+      <div class="top"><span class="no">V6</span><span class="nm">Giữ layout V5, đổi định vị: Thuê · Mua · May đo</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Trang chủ nói rõ ba lựa chọn ngay từ đầu, bộ sưu tập lên sớm, phần may đo thu lại thành một lựa chọn nâng cao.</p>
+    </a>
+    <a class="v" href="v5/index.html">
+      <div class="top"><span class="no">V5</span><span class="nm">Trang chủ dựng theo đúng mạch Halfpenny</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Đo lại trang halfpennylondon.com/bespoke rồi dựng theo đúng thứ tự: dẫn nhập giữa → trích dẫn → ảnh dọc trái + chữ phải → trích dẫn → hai ảnh ngang tràn mép → lời mời có nút → lưới bốn ảnh cô dâu kèm chú thích.</p>
+    </a>
+    <a class="v" href="v4/index.html">
+      <div class="top"><span class="no">V4</span><span class="nm">V2 + phần cuộn tiếp ở trang chủ</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Giữ nguyên V2, thêm phần cuộn tiếp bên dưới ảnh bìa: khối ảnh vuông + chữ, trích dẫn, lời mời gửi yêu cầu — theo bố cục halfpennylondon.com/bespoke.</p>
+    </a>
+    <a class="v" href="v2/index.html">
+      <div class="top"><span class="no">V2</span><span class="nm">Tách 6 trang · bố cục lệch trái</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bấm nav là nhảy sang trang riêng. Chữ tiêu đề đã thu nhỏ. Chữ căn theo lề trái như bản gốc.</p>
+    </a>
+    <a class="v" href="v3/index.html">
+      <div class="top"><span class="no">V3</span><span class="nm">Tách 6 trang · bố cục căn giữa</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Giống V2 nhưng tiêu đề, đoạn dẫn và trích dẫn nằm chính giữa, theo mẫu halfpennylondon.com/bespoke.</p>
+    </a>
+    <a class="v" href="v1/index.html">
+      <div class="top"><span class="no">V1</span><span class="nm">Một trang cuộn dài</span><span class="ngay">04/09/2026</span></div>
+      <p class="mo">Bản đầu tiên: tất cả nằm trong một trang, nav là neo cuộn xuống. Chữ tiêu đề còn to.</p>
+    </a>
+  </div>
+</div>
