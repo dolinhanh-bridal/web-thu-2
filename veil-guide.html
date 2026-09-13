@@ -17,8 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="anh/voan/hero-d.jpg" media="(min-width:721px)">
-<link rel="preload" as="image" href="anh/voan/hero-m.jpg" media="(max-width:720px)">
+<link rel="preload" as="image" href="anh/voan/hero-d.jpg">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article",
@@ -105,6 +104,14 @@ section{position:relative}
 .hero h1{margin:.34em 0 .5em;max-width:14ch;text-shadow:0 2px 30px rgba(0,0,0,.3)}
 .hero p{color:rgba(255,255,255,.88);max-width:44ch;font-size:14.5px;line-height:1.8}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(20px,3.4vh,34px)}
+@media (min-width:721px){
+  .hero{background:#211d1a}
+  .hero-bg{left:auto;right:0;width:56%;top:0;bottom:-8%}
+  .hero-bg img{object-position:center top}
+  .hero:after{background:
+    linear-gradient(90deg,#211d1a 0%,rgba(33,29,26,.9) 40%,rgba(33,29,26,0) 60%),
+    linear-gradient(180deg,rgba(20,17,15,.3) 0%,rgba(20,17,15,0) 30%,rgba(18,15,13,.55) 100%)}
+}
 .hero-mark{position:absolute;top:26px;left:var(--pad);z-index:3;color:#fff;font-family:var(--sr);
   font-size:13px;letter-spacing:.42em;text-transform:uppercase;opacity:.92}
 .lay{display:block;opacity:0;transform:translateY(22px);animation:lay 1.3s cubic-bezier(.16,.84,.44,1) forwards}
@@ -373,7 +380,6 @@ footer a:hover{color:#fff}
   .fab-g{grid-template-columns:repeat(2,1fr)}
   .exp-top,.book-g,.sil-wide{grid-template-columns:1fr}
   .sil-wide .tx{padding:clamp(24px,5vw,40px)}
-  .sil-wide .ph{aspect-ratio:16/10}
 }
 @media (max-width:720px){
   body{font-size:15px}
@@ -390,8 +396,6 @@ footer a:hover{color:#fff}
   .sec-h{flex-direction:column;align-items:flex-start;gap:12px}
   .card{flex:0 0 78vw}
   .mood-g,.sil-g,.fab-g,.steps,.test-g{grid-template-columns:1fr;gap:34px}
-  .mood-c .ph,.sil-c .ph,.test-g .ph{aspect-ratio:4/5}
-  .fab-c{aspect-ratio:16/11}
   .fab-c .s{opacity:1;transform:none}
   .test-bot{grid-template-columns:1fr;gap:22px}
   .test-bot .btn{width:100%}
@@ -430,8 +434,7 @@ footer a:hover{color:#fff}
 <header class="hero" id="hero">
   <div class="hero-bg" id="heroBg">
     <picture>
-      <source media="(max-width:720px)" srcset="anh/voan/hero-m.jpg">
-      <img src="anh/voan/hero-d.jpg" alt="Cô dâu Dolinhanh Bridal trong chiếc voan cưới dài bay nhẹ" fetchpriority="high">
+      <img src="anh/voan/hero-d.jpg" alt="Cô dâu Dolinhanh Bridal với voan ngọc trai dài" fetchpriority="high">
     </picture>
   </div>
   <a class="hero-mark" href="https://dolinhanhbridal.com/">Dolinhanh Bridal</a>
