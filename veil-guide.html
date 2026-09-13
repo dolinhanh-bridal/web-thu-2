@@ -313,6 +313,21 @@ fieldset{border:0}
 .xong h3{font-size:clamp(22px,2.6vw,34px);margin-bottom:.5em}
 .xong p{font-size:14px;color:var(--ink2);max-width:40ch;margin:0 auto 22px}
 
+/* ── 11b. CÂU KẾT ─────────────────────────────── */
+.reveal{padding:clamp(90px,15vh,190px) 0;text-align:center;background:var(--ivory);position:relative}
+.reveal:before{content:"";display:block;width:1px;height:clamp(40px,7vh,80px);background:var(--champ);
+  margin:0 auto clamp(34px,5vh,56px)}
+.reveal h2{font-size:clamp(28px,5vw,70px);text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+.reveal h2 span{display:block}
+.reveal h2 em{display:block;font-style:italic;text-transform:none;letter-spacing:.01em;color:var(--wine);margin-top:.12em}
+.reveal p{font-size:clamp(15px,1.4vw,18px);color:var(--ink2);max-width:40ch;margin:clamp(26px,4vh,40px) auto 0;line-height:1.85}
+.reveal p strong{font-family:var(--sr);font-weight:400;font-style:italic;font-size:1.18em;color:var(--ink)}
+.reveal .sign{margin-top:clamp(34px,5vh,54px);padding-top:26px;border-top:1px solid var(--line);
+  display:inline-block;max-width:none;font-family:var(--sr);font-style:italic;
+  font-size:clamp(15px,1.35vw,18px);letter-spacing:.01em;color:var(--ink)}
+.reveal .sign b{font-style:normal;font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:.82em}
+.reveal .btn{margin-top:30px}
+
 /* ── 12. CHÂN TRANG ──────────────────────────────── */
 footer{background:#171412;color:#F6F2EC;padding:clamp(56px,9vh,110px) 0 clamp(96px,12vh,120px)}
 .ft-g{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,4vw,60px);align-items:start}
@@ -382,6 +397,9 @@ footer a:hover{color:#fff}
   .test-bot .btn{width:100%}
   .row{grid-template-columns:1fr;gap:0}
   .ft-g{grid-template-columns:1fr;gap:30px}
+  .reveal .sign{line-height:1.9}
+  .reveal .sign b{display:block}
+  .reveal .sign .dash{display:none}
   .conv{min-height:82svh}
   .conv:before{background:linear-gradient(180deg,rgba(12,10,9,.42) 0%,rgba(12,10,9,.3) 40%,rgba(12,10,9,.45) 100%)}
   .conv .en{max-width:14ch}
@@ -894,6 +912,19 @@ footer a:hover{color:#fff}
           <a class="btn line" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Dolinhanh on Zalo">Nhắn Zalo cho Dolinhanh</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 11b. CÂU KẾT ══ -->
+<section class="reveal" id="cau-ket">
+  <div class="wrap">
+    <h2 class="rise"><span>Your veil doesn't define you.</span><em>It reveals you.</em></h2>
+    <p class="rise" data-d="1" data-en="A veil doesn’t make the bride.<br>It simply brings out <strong>the beauty that is already yours.</strong>">Chiếc voan không tạo nên cô dâu.<br>
+      Nó chỉ làm nổi bật <strong>vẻ đẹp vốn đã thuộc về bạn.</strong></p>
+    <div class="rise" data-d="2">
+      <p class="sign"><b>Dolinhanh Bridal</b><span class="dash"> &nbsp;—&nbsp; </span>Find the look that feels like you.</p><br>
+      <a class="btn line" href="#dat-lich" data-en="Book a fitting">Đặt lịch thử váy</a>
     </div>
   </div>
 </section>
