@@ -634,7 +634,21 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .qua .btn{margin-top:0;padding:13px 24px}
   .qua .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
   .qua .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
-  @media (max-width:700px){ .qua{grid-template-columns:1fr;gap:40px} }
+  @media (max-width:700px){ .qua{grid-template-columns:1fr;gap:40px}
+ }
+/* khối giới thiệu The Bride's Veil Guide (13/09/2026) */
+.veil-feat{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:center;max-width:1040px;margin-inline:auto}
+.veil-feat .im{width:100%;aspect-ratio:4/5;background:var(--sand) var(--img) center top/cover no-repeat}
+.veil-feat .ten{display:block;font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.2;color:var(--ink)}
+.veil-feat .mo{margin-top:14px;font-family:var(--serif);font-size:clamp(.98rem,1.1vw,1.06rem);line-height:1.62;color:var(--ink)}
+.veil-feat ul{list-style:none;margin:16px 0 0;padding:0}
+.veil-feat li{font-family:var(--sans);font-size:13px;letter-spacing:.02em;line-height:1.9;color:var(--taupe-deep)}
+.veil-feat li:before{content:"— ";color:#9B6B5F}
+.veil-feat .nut-hang{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.veil-feat .btn{margin-top:0;padding:13px 24px}
+@media (max-width:760px){.veil-feat{grid-template-columns:1fr;gap:22px}}
+.veil-feat .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
+.veil-feat .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
 </style>
 
 <header id="hd" class="solid">
@@ -662,6 +676,28 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       <span class="eyebrow" data-en="The Bride’s Dress Guide">The Bride’s Dress Guide</span>
       <h1 class="h-lg" data-en="The questions brides ask before choosing a dress.">Những câu hỏi cô dâu thường hỏi trước khi chọn váy.</h1>
       <p data-en="Not every bride knows where to start. Here Dolinhanh answers the most practical questions — from shape and fabric to fittings, renting or buying, and what to check before booking a dress.">Không phải cô dâu nào cũng biết mình nên bắt đầu từ đâu. Ở đây, Dolinhanh trả lời những câu hỏi thực tế nhất — từ chọn phom, chọn chất liệu, thử váy, thuê hay mua, đến những điều cần kiểm tra trước khi đặt váy.</p>
+    </div>
+  </section>
+
+  <!-- ══ THE BRIDE'S VEIL GUIDE ══ -->
+  <section class="air" id="voan" style="padding-top:0">
+    <div class="wrap">
+      <div class="veil-feat rise">
+        <a href="https://dolinhanhbridal.com/veil-guide.html" id="veil-feat-anh" aria-label="The Bride’s Veil Guide"><div class="im" style="--img:url('anh/voan/hero-d.jpg')"></div></a>
+        <div>
+          <span class="eyebrow" data-en="New guide · The Bride’s Veil Guide">Cẩm nang mới · The Bride’s Veil Guide</span>
+          <span class="ten" data-en="Which veil suits you?">Bạn hợp với kiểu voan nào?</span>
+          <p class="mo" data-en="A veil does more than complete the dress — it changes the way you appear on your wedding day. Find the veil that feels like you, then try it on at Dolinhanh.">Một chiếc voan không chỉ hoàn thiện chiếc váy — nó thay đổi cách bạn xuất hiện trong ngày cưới. Tìm kiểu voan hợp với mình, rồi thử trực tiếp tại Dolinhanh.</p>
+          <ul>
+            <li data-en="5 veil lengths: blusher, fingertip, waltz, chapel, cathedral">5 độ dài voan: blusher, fingertip, waltz, chapel, cathedral</li>
+            <li data-en="Choosing a veil for your dress silhouette and fabric">Chọn voan theo dáng váy và chất liệu</li>
+            <li data-en="A 4-question quiz to find your veil mood">Trắc nghiệm 4 câu tìm phong cách voan của bạn</li>
+          </ul>
+          <span class="nut-hang">
+            <a class="btn chinh" id="veil-feat-nut" href="https://dolinhanhbridal.com/veil-guide.html" data-en="Explore the Veil Guide">Xem cẩm nang voan</a>
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -869,6 +905,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     </div>
   </section>
   <script>
+  ['veil-feat-anh','veil-feat-nut'].forEach(function(id){ var a=document.getElementById(id); if(a) a.addEventListener('click',function(){ try{ if(typeof fbq==='function') fbq('track','ViewContent',{content_name:'Veil Guide'}); }catch(e){} }); });
   /* Pixel cho mục quà tặng: ebook = ViewContent, thiệp = Lead (cùng nhãn 'Dress Guide' như landing) */
   (function(){
     function bat(id,ev){ var a=document.getElementById(id); if(!a) return;
@@ -915,6 +952,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d"><a href="co-dau.html" data-en="Our brides">Cô dâu</a></p>
         <p class="ft-d"><a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi Photography</a></p>
         <p class="ft-d"><a href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener">The Bride’s Dress Guide</a></p>
+        <p class="ft-d"><a href="https://dolinhanhbridal.com/veil-guide.html">The Bride’s Veil Guide</a></p>
       </div>
     </div>
 
