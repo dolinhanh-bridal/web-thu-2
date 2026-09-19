@@ -905,6 +905,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d"><a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi Photography</a></p>
         <p class="ft-d"><a href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener">The Bride’s Dress Guide</a></p>
         <p class="ft-d"><a href="https://dolinhanhbridal.com/veil-guide.html">The Bride’s Veil Guide</a></p>
+        <p class="ft-d"><a href="https://dolinhanhbridal.com/wedding-dress-vietnam.html" hreflang="en" lang="en">Wedding dresses in Vietnam (English)</a></p>
       </div>
     </div>
 
@@ -994,11 +995,13 @@ function setLang(l){
   document.documentElement.lang = l;
   document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l === "en" ? e.dataset.en : e.dataset.vi; });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang === l));
-  try{ localStorage.setItem("dla-lang", l); }catch(_){}
 }
-document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click", ()=>setLang(b.dataset.lang)));
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click", ()=>{ setLang(b.dataset.lang); try{ localStorage.setItem("dla-lang2", b.dataset.lang); }catch(_){} }));
+/* Mặc định tiếng Việt (chị chốt 19/09/2026) — chỉ nhớ khi khách tự bấm VI/EN; link ?lang=en mở thẳng tiếng Anh */
 let saved = "vi";
-try{ saved = localStorage.getItem("dla-lang") || "vi"; }catch(_){}
+try{ saved = localStorage.getItem("dla-lang2") || "vi"; }catch(_){}
+const qLang = new URLSearchParams(location.search).get("lang");
+if(qLang === "vi" || qLang === "en") saved = qLang;
 setLang(saved);
 </script>
 
