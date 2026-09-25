@@ -26,11 +26,12 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="../../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cô dâu của Dolinhanh Bridal trong ngày cưới.">
-<title>Cô dâu — Dolinhanh Bridal</title>
+<meta name="description" content="Pre-wedding Dress Collection — váy chụp ảnh cưới của Dolinhanh Bridal, cùng hệ sinh thái cưới Nupakachi Photography. Hà Nội &amp; TP.HCM.">
+<title>Pre-wedding Dress — Dolinhanh Bridal</title>
+<link rel="canonical" href="https://dolinhanhbridal.com/pre-wedding-dress.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap">
@@ -555,6 +556,10 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   @media (max-width:1000px){ .cd-luoi{grid-template-columns:1fr} }
 
+  .bst-thue{margin-top:22px;font-family:var(--sans);font-size:11px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--ink)}
+  .vl-head h1 br{display:block}
+
   /* ── popup đặt lịch & báo giá ── */
   .pop-nen{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
     padding:20px;background:rgba(20,18,16,.55);overflow-y:auto}
@@ -576,15 +581,61 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .pop .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
   .pop:has(.pop-xong.hien) .pop-qua{display:none}
 
-  .cd-o .mood{display:block;margin-top:6px;font-family:var(--sans);font-size:10px;
-    letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78)}
-
   /* ── link trong khối chữ ── */
   .txt .link,.tx .link{margin-top:26px}
   .txt .nut-hang,.tx .nut-hang{margin-top:22px}
   .duo .txt p + .link{margin-top:26px}
   .step-sub{margin:10px 0 20px}
   .duo .txt > *:last-child{margin-bottom:0}
+
+  .vl-tatca{display:flex;justify-content:center;margin-top:clamp(18px,2.4vw,30px);margin-bottom:clamp(48px,7vw,96px)}
+  .vl-tatca .link{border-bottom:1px solid currentColor;color:var(--taupe-deep)}
+  .vl-tatca .link:hover{color:var(--ink)}
+
+  /* ── ô váy lướt được nhiều ảnh ── */
+  .vl figure{position:relative;overflow:hidden}
+  .vl .sl-khung{display:flex;transition:transform .55s cubic-bezier(.22,.7,.28,1);touch-action:pan-y}
+  .vl .sl{flex:0 0 100%;aspect-ratio:2/3;background:var(--sand) var(--img) center/cover no-repeat}
+  .vl .sl-cham{position:absolute;left:0;right:0;bottom:14px;z-index:4;display:flex;gap:7px;justify-content:center}
+  .vl .sl-cham button{width:6px;height:6px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.5)}
+  .vl .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
+  .vl figcaption{bottom:34px}
+
+  /* ── Phóng to ảnh váy: bấm ảnh → xem to cả màn hình (V79) ── */
+  .vl figure{cursor:zoom-in}
+  .pt{position:fixed;inset:0;z-index:250;display:flex;flex-direction:column;background:#12100E;
+    opacity:0;transition:opacity .3s ease;touch-action:none;color:#fff}
+  .pt[hidden]{display:none}
+  .pt.hien{opacity:1}
+  .pt button{color:#fff}
+  .pt-khung{position:relative;flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;padding:58px 76px 6px}
+  .pt-anh{display:block;max-width:100%;max-height:100%;width:auto;height:auto;cursor:zoom-in;user-select:none;
+    -webkit-user-drag:none;transition:transform .4s cubic-bezier(.22,.7,.28,1),opacity .25s ease}
+  .pt.zoom .pt-anh{transform:scale(2.2);cursor:zoom-out}
+  .pt-dem,.pt-dong,.pt-lui,.pt-toi{text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  .pt-dem{position:absolute;top:calc(22px + env(safe-area-inset-top));left:24px;z-index:3;font-family:var(--sans);
+    font-size:10.5px;letter-spacing:.2em;color:rgba(255,255,255,.6)}
+  .pt-dong{position:absolute;top:calc(8px + env(safe-area-inset-top));right:12px;z-index:3;width:46px;height:46px;
+    font-size:32px;line-height:1;font-weight:300;opacity:.85}
+  .pt-lui,.pt-toi{position:absolute;top:50%;z-index:3;width:54px;height:54px;margin-top:-27px;display:grid;
+    place-items:center;opacity:.7;transition:opacity .2s ease;filter:drop-shadow(0 1px 6px rgba(0,0,0,.45))}
+  .pt-lui{left:10px} .pt-toi{right:10px}
+  .pt-lui:hover,.pt-toi:hover,.pt-dong:hover{opacity:1}
+  .pt.zoom .pt-lui,.pt.zoom .pt-toi{opacity:0;pointer-events:none}
+  .pt-chu{flex:none;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 28px;
+    padding:14px 20px calc(20px + env(safe-area-inset-bottom));text-align:center}
+  .pt-chu .nm{color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+  .pt-chu .de{margin-left:14px;font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.72)}
+  .pt-dat{display:inline-block;background:#7A2638;color:#fff;text-decoration:none;padding:10px 18px;
+    font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:background .2s ease}
+  .pt-dat:hover{background:#611E2D;opacity:1}
+  @media (max-width:700px){
+    .pt-khung{padding:56px 0 4px}
+    .pt-lui,.pt-toi{width:44px;height:44px;margin-top:-22px}
+    .pt-lui{left:2px} .pt-toi{right:2px}
+    .pt-chu .de{display:block;margin:6px 0 0}
+  }
 
   /* ── Header điện thoại: menu 2 hàng, gọn hơn; đẩy nội dung xuống khỏi header ── */
   @media (max-width:1000px){
@@ -609,425 +660,326 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .zl-chu{display:none}
     .zl-noi{padding:11px}
   }
+
+  /* ── trang Váy đi chụp (19/09/2026) ── */
+  .vc-phai{display:flex;align-items:center;gap:clamp(16px,2.4vw,28px)}
+  .vc-ve{font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;white-space:nowrap}
+  .vc-ve:hover{opacity:.7}
+  .vc-gan{display:flex;flex-wrap:wrap;gap:14px clamp(28px,4vw,56px);margin-top:clamp(22px,2.6vw,30px)}
+  .vc-gan div{display:flex;flex-direction:column;gap:6px}
+  .vc-gan .k{font-family:var(--serif);font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1}
+  .vc-gan .v{font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep)}
+  @media (max-width:560px){ .vc-gan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px} .vc-gan .v{font-size:9px;letter-spacing:.1em;line-height:1.5} }
+  .vc-tiec{border-top:1px solid var(--line);padding-bottom:0}
+  .vc-tiec .mid-blk{margin-bottom:clamp(28px,4vw,48px)}
+  .vc-tiec .vl a{display:block;color:inherit;text-decoration:none}
+  .vc-tiec .vl a:hover .sl{opacity:.9}
+  .vc-tiec .btn{margin-top:clamp(26px,3.4vw,40px)}
+  @media (max-width:1000px){ .vl-head{padding-top:100px} }
+  @media (max-width:560px){ #hd .bar{flex-wrap:nowrap;gap:10px} .vc-phai{gap:12px} .vc-ve{font-size:9.5px;letter-spacing:.12em} .vl-head{padding-top:92px} }
 </style>
 
-<script>document.addEventListener("DOMContentLoaded",()=>document.body.classList.add("bst"));</script>
+<script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
 <header id="hd" class="solid">
   <div class="wrap">
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
-      <nav aria-label="Mục chính">
-        <a href="index.html" data-en="Home">Trang chủ</a>
-        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
-        <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
-        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
-        <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
-        <a href="co-dau.html" class="cur" data-en="The bride">Cô dâu</a>
-      </nav>
-      <div class="lang" role="group" aria-label="Ngôn ngữ">
+      <div class="vc-phai">
+        <a class="vc-ve" href="bo-suu-tap.html" data-en="Wedding Collection →">Wedding Collection →</a
+        ><div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       </div>
     </div>
   </div>
 </header>
 
 <main id="top">
-
   <section class="wrap vl-head">
     <div class="rise">
-      <span class="eyebrow" data-en="Our brides">Cô dâu</span>
-      <h1 data-en="The brides who chose Dolinhanh">Những cô dâu đã chọn Dolinhanh</h1>
-      <p data-en="There is no single kind of bride. One loves the quietest line. One wants to be truly grand. One knows exactly what she wants — and one only knows she wants to be beautiful in her own way.">Không có một hình mẫu cô dâu duy nhất. Có nàng yêu sự tối giản. Có nàng muốn thật lộng lẫy. Có nàng biết chính xác mình muốn gì — và cũng có nàng chỉ biết mình muốn đẹp theo cách của mình.</p>
-      <p style="margin-top:16px" data-en="Every bride who comes to Dolinhanh is a different story. What they share is the moment the dress goes on and it feels like her.">Mỗi cô dâu đến với Dolinhanh là một câu chuyện khác nhau. Nhưng điểm chung là khi khoác lên chiếc váy của mình, nàng cảm thấy đó là mình.</p>
-    </div>
-  </section>
-
-  <section id="codau">
-    <div class="wrap">
-      <span class="eyebrow rise" data-en="Real brides">Real brides</span>
-      <div class="cd-luoi" style="margin-top:20px">
-      <figure class="cd-o rise" data-cd="cd-minh-thu">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-minh-thu/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-minh-thu/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-minh-thu/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-minh-thu/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-minh-thu/05.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Minh Thư</span>
-          <span class="de" data-en="Beaded lace bodice · Grand satin skirt">Thân ren đính kết · Tùng satin lớn</span>
-          <span class="mood">Classic · Timeless</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-my-tien">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-my-tien/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-my-tien/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-my-tien/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-my-tien/04.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Mỹ Tiên</span>
-          <span class="de" data-en="Plain satin · Bow-tie straps · Full skirt">Satin trơn · Dây vai thắt nơ · Tùng xoè</span>
-          <span class="mood">Minimal · Timeless</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-huong-nam">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-huong-nam/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-huong-nam/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-huong-nam/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-huong-nam/04.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Hương Nam</span>
-          <span class="de" data-en="Beaded corset · Sparkling tulle ball gown">Corset đính đá · Ballgown voan kim tuyến</span>
-          <span class="mood">Glamorous · Statement</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-ngoc-diep">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-ngoc-diep/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-ngoc-diep/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Ngọc Diệp</span>
-          <span class="de" data-en="Lace square neckline · Satin A-line · Long train">Cổ vuông ren · Satin chữ A · Đuôi dài</span>
-          <span class="mood">Minimal · Elegant</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-ly-vinh">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-ly-vinh/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-ly-vinh/07.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Ly Vĩnh</span>
-          <span class="de" data-en="Crystal corset · Sparkling ball gown · Petal lace second look">Corset đính đá · Ballgown kim tuyến · Váy hai ren cánh hoa</span>
-          <span class="mood">Glamorous · Joyful</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-thuy-linh">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-thuy-linh/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-thuy-linh/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-thuy-linh/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-thuy-linh/04.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Thùy Linh</span>
-          <span class="de" data-en="Off-shoulder drape · Sparkling ball gown · Mini second look">Trễ vai xếp nếp · Ballgown kim tuyến · Váy hai mini</span>
-          <span class="mood">Romantic · Playful</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-tho-tam">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-tho-tam/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-tho-tam/07.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Thọ Tâm</span>
-          <span class="de" data-en="Beaded sheer long sleeves · Sparkling ball gown · Cathedral lace veil">Tay dài voan đính kết · Ballgown kim tuyến · Voan ren dài</span>
-          <span class="mood">Royal · Glamorous</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-chi-tran">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-chi-tran/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-chi-tran/02.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Chi Trần</span>
-          <span class="de" data-en="Plain satin · Grand skirt">Satin trơn · Tùng lớn</span>
-          <span class="mood">Classic · Elegant</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-nghi-vo">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-nghi-vo/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-nghi-vo/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Nghi Võ</span>
-          <span class="de" data-en="Beaded bodice · Tulle cape · Layered skirt">Thân đính kết · Choàng voan · Tùng nhiều lớp</span>
-          <span class="mood">Romantic · Statement</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-kha-ai">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-kha-ai/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-kha-ai/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Khả Ái</span>
-          <span class="de" data-en="Sparkling ball gown · Long veil">Ballgown lấp lánh · Voan dài</span>
-          <span class="mood">Glamorous · Timeless</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-rey">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-rey/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-rey/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Rey Nguyen</span>
-          <span class="de" data-en="Raised floral lace · Full skirt">Ren hoa nổi · Tùng xoè</span>
-          <span class="mood">Romantic · Editorial</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-uyen">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-uyen/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-uyen/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Uyên</span>
-          <span class="de" data-en="Long lace sleeves · Fine beading">Tay dài ren · Đính kết li ti</span>
-          <span class="mood">Elegant · Refined</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-hang">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-hang/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-hang/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Hằng</span>
-          <span class="de" data-en="Soft tulle · Bouffant skirt · Long veil">Tulle mềm · Tùng bồng · Voan dài</span>
-          <span class="mood">Soft · Romantic</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-wendy">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-wendy/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-wendy/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Wendy Luu</span>
-          <span class="de" data-en="Organza ball gown · Fabric flowers by hand">Ballgown organza · Hoa vải đính tay</span>
-          <span class="mood">Modern · Feminine</span>
-        </figcaption>
-      </figure>
-      <figure class="cd-o rise" data-cd="cd-lien">
-        <div class="sl-khung">
-          <div class="sl" data-img="anh/cd-lien/01.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/02.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/03.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/04.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/05.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/06.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/07.jpg"></div>
-          <div class="sl" data-img="anh/cd-lien/08.jpg"></div>
-        </div>
-        <div class="sl-cham">
-          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
-          <button type="button" aria-label="Ảnh 2"></button>
-          <button type="button" aria-label="Ảnh 3"></button>
-          <button type="button" aria-label="Ảnh 4"></button>
-          <button type="button" aria-label="Ảnh 5"></button>
-          <button type="button" aria-label="Ảnh 6"></button>
-          <button type="button" aria-label="Ảnh 7"></button>
-          <button type="button" aria-label="Ảnh 8"></button>
-        </div>
-        <figcaption>
-          <span class="kind" data-en="My belove bride">My belove bride</span>
-          <span class="nm">MS Liên Nguyễn</span>
-          <span class="de" data-en="Ball gown in glitter tulle · Long veil">Ballgown tulle nhũ · Voan dài</span>
-          <span class="mood">Classic · Dreamy</span>
-        </figcaption>
-      </figure>
+      <span class="eyebrow">Nupakachi &times; Dolinhanh</span>
+      <h1>Pre-wedding Dress Collection</h1>
+      <p data-en="Nupakachi Photography and Dolinhanh Bridal belong to the same wedding ecosystem — photos and dress, together from the start.">Nupakachi Photography và Dolinhanh Bridal cùng một hệ sinh thái cưới — ảnh cưới và váy cưới đi cùng nhau ngay từ đầu.</p>
+      <div class="vc-gan">
+        <div><span class="k">15+</span><span class="v" data-en="Years of weddings with Nupakachi">Năm làm cưới cùng Nupakachi</span></div>
+        <div><span class="k">01</span><span class="v" data-en="One contact for photos &amp; dress">Một đầu mối cho ảnh &amp; váy</span></div>
+        <div><span class="k">02</span><span class="v" data-en="Showrooms · Hanoi &amp; HCMC">Cơ sở · Hà Nội &amp; TP.HCM</span></div>
       </div>
     </div>
   </section>
 
-  <section class="air" style="padding-top:0">
+  <section id="bosuutap">
+    <div class="wrap">
+      <div class="vl-loc rise">
+        <div class="vl-nhom">
+          <span class="lb" data-en="Showroom">Cơ sở</span>
+          <button type="button" data-loai="coso" data-v="" aria-current="true" data-en="All">Tất cả</button>
+          <button type="button" data-loai="coso" data-v="hn" data-en="Hanoi">Hà Nội</button>
+          <button type="button" data-loai="coso" data-v="hcm" data-en="Ho Chi Minh City">TP.HCM</button>
+        </div>
+        <div class="vl-nhom">
+          <span class="lb" data-en="Silhouette">Dáng váy</span>
+          <button type="button" data-loai="dang" data-v="" aria-current="true" data-en="All">Tất cả</button>
+          <button type="button" data-loai="dang" data-v="a-line" data-en="A-line">A-line</button>
+          <button type="button" data-loai="dang" data-v="mermaid" data-en="Mermaid">Mermaid</button>
+          <button type="button" data-loai="dang" data-v="ballgown" data-en="Ballgown">Ballgown</button>
+          <button type="button" data-loai="dang" data-v="mini" data-en="Mini">Mini</button>
+        </div>
+      </div>
+      <div class="vl" id="vlGrid">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms247/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 247</span><span class="de" data-en="Wrap V-neck, long puff sleeves">Cổ V bắt chéo, tay bồng dài</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms246/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 246</span><span class="de" data-en="Square neck, long sleeves, mermaid">Cổ vuông, tay dài, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms245/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 245</span><span class="de" data-en="Sheer long sleeves, mermaid">Tay dài voan, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms244/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 244</span><span class="de" data-en="Square neck straps, mermaid">Cổ vuông hai dây, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms243/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 243</span><span class="de" data-en="Pleated off-shoulder, fitted">Trễ vai xếp ly, dáng ôm</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms242/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 242</span><span class="de" data-en="Off-shoulder bow mermaid">Trễ vai thắt nơ, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms241/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 241</span><span class="de" data-en="Wrapped off-shoulder, side slit">Trễ vai quấn chéo, xẻ tà</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms240/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 240</span><span class="de" data-en="Pleated off-shoulder mermaid">Trễ vai xếp ly, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms239/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 239</span><span class="de" data-en="Crossed off-shoulder mermaid">Trễ vai bắt chéo, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms238/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 238</span><span class="de" data-en="Cowl neck, clean mermaid">Cổ đổ, đuôi cá trơn</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms237/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 237</span><span class="de" data-en="Wide bardot mermaid">Đuôi cá trễ vai bản to</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms236/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 236</span><span class="de" data-en="Draped off-shoulder mermaid">Đuôi cá trễ vai xếp nếp</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms235/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 235</span><span class="de" data-en="Strapless mermaid, draped bodice">Đuôi cá quây, xếp nếp thân</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms233/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 233</span><span class="de" data-en="Strapless mermaid, tulle overskirt">Đuôi cá quây, lớp voan ngoài</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms232/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 232</span><span class="de" data-en="Lace mermaid, high slit">Đuôi cá ren, xẻ tà cao</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms231/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 231</span><span class="de" data-en="Strapless mermaid, tulle gloves">Đuôi cá cúp ngực, găng voan</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms230/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 230</span><span class="de" data-en="Square neck, short puff sleeves">Cổ vuông, tay ngắn phồng</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms229/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 229</span><span class="de" data-en="High neck, long sleeves, cape collar">Cổ cao, tay dài, cổ áo choàng</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms228/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 228</span><span class="de" data-en="Square neck, fitted long sleeves">Cổ vuông, tay dài ôm</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms227/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 227</span><span class="de" data-en="Square neck, long puff sleeves">Cổ vuông, tay bồng dài</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms223/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 223</span><span class="de" data-en="Straight-neck satin, with pockets">Cúp ngang satin, có túi</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="romantic" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms222/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 222</span><span class="de" data-en="Puff off-shoulder, tiered ruffles">Tay bồng trễ vai, chân tầng bèo</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms126/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 126</span><span class="de" data-en="Off-shoulder draped satin, fitted">Satin trễ vai rủ, dáng ôm</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms123/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 123</span><span class="de" data-en="Pleated satin mermaid">Satin xếp nếp, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms115/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 115</span><span class="de" data-en="Off-shoulder satin mermaid">Satin trễ vai, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms113/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 113</span><span class="de" data-en="Off-shoulder satin, fitted">Satin trễ vai, dáng ôm</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms83/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 83</span><span class="de" data-en="Off-shoulder beaded, sheer sleeves">Đính kết trễ vai, tay voan</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms82/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 82</span><span class="de" data-en="Long-sleeve beaded mermaid">Đính kết tay dài, đuôi cá</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms76/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 76</span><span class="de" data-en="Fitted sparkle, detachable overskirt">Dáng ôm lấp lánh, tùng rời</span></figcaption>
+        </figure>
+        <figure data-dang="ballgown" data-mood="timeless" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms63/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 63</span><span class="de" data-en="Off-shoulder satin, full skirt">Satin trễ vai, tùng xoè</span></figcaption>
+        </figure>
+        <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms59/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 59</span><span class="de" data-en="Plain satin, straight neckline">Satin trơn, cổ ngang</span></figcaption>
+        </figure>
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms58/01.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 58</span><span class="de" data-en="Off-shoulder satin, pearl details">Satin trễ vai, điểm ngọc nhỏ</span></figcaption>
+        </figure>
+      </div>
+      <p class="vl-trong" id="vlTrong" hidden data-en="These dresses are being updated.">Các mẫu váy pre-wedding đang được cập nhật.</p>
+      <div class="vl-page" id="vlPage"></div>
+      <div class="vl-tatca">
+        <button type="button" class="link" id="vlTatCa" data-en="See all dresses">Xem tất cả váy</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="air">
     <div class="wrap">
       <div class="mid-blk rise">
-        <h2 class="h-cap giua" data-en="Your story could be next">Câu chuyện tiếp theo có thể là của bạn</h2>
-        <p style="margin-top:20px" data-en="The most beautiful dress is not the one most people choose. It is the one that makes you look in the mirror and think: yes — this is me.">Chiếc váy đẹp nhất không phải chiếc váy được nhiều người chọn nhất. Mà là chiếc váy khiến bạn nhìn vào gương và nghĩ: “Đúng rồi. Đây là mình.”</p>
-        <a class="btn" href="gui-yeu-cau.html" data-en="Book a private fitting">Đặt lịch thử váy riêng</a>
+        <h2 class="h-cap giua" data-en="Found your pre-wedding dress?">Đã chọn được váy pre-wedding?</h2>
+        <p style="margin-top:20px" data-en="Come and try it on before your shoot.">Hãy đến thử váy trước ngày chụp.</p>
+        <a class="btn" href="gui-yeu-cau.html" data-ms="Váy chụp" data-en="Book a pre-wedding dress fitting">Đặt lịch thử váy pre-wedding</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="air vc-tiec">
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <span class="eyebrow" data-en="Wedding day dresses">Váy tiệc Dolinhanh</span>
+        <h2 class="h-cap giua" style="margin-top:12px" data-en="And for your wedding day">Và váy cho ngày cưới</h2>
+      </div>
+      <div class="vl">
+        <a href="bo-suu-tap.html">
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms24/01.jpg" data-lon="../../anh/vay/ms24/lon.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 24</span><span class="de" data-en="Raised lace, detachable tulle skirt">Ren nổi thân, tùng voan rời</span></figcaption>
+        </figure>
+        </a>
+        <a href="bo-suu-tap.html">
+        <figure data-dang="a-line" data-mood="romantic" data-coso="hn">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms31/01.jpg" data-lon="../../anh/vay/ms31/lon.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 31</span><span class="de" data-en="Organza, fabric flowers by hand">Organza, hoa vải đính tay</span></figcaption>
+        </figure>
+        </a>
+        <a href="bo-suu-tap.html">
+        <figure data-dang="ballgown" data-mood="timeless" data-coso="hn">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms26/01.jpg" data-lon="../../anh/vay/ms26/lon.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 26</span><span class="de" data-en="Satin, sweetheart neckline">Satin cổ tim</span></figcaption>
+        </figure>
+        </a>
+        <a href="bo-suu-tap.html">
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
+          <div class="sl-khung">
+            <div class="sl" data-img="../../anh/vay/ms28/01.jpg" data-lon="../../anh/vay/ms28/lon.jpg"></div>
+          </div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 28</span><span class="de" data-en="Mermaid in soft tulle">Đuôi cá voan mờ</span></figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="mid-blk">
+        <a class="btn" href="bo-suu-tap.html" data-en="See the wedding dress collection">Xem bộ sưu tập váy tiệc</a>
       </div>
     </div>
   </section>
@@ -1035,7 +987,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="next">
       <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="gui-yeu-cau.html" data-en="Enquire">Gửi yêu cầu</a>
+      <a class="tt" href="bo-suu-tap.html" data-en="Wedding dress collection">Bộ sưu tập váy tiệc</a>
     </div>
   </div>
 
@@ -1070,7 +1022,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     </div>
 
     <div class="ft-duoi">
-      <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
+      <a class="ft-logo" href="index.html"><img src="../../logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
         <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
@@ -1086,6 +1038,21 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   </div>
 </footer>
 
+<!-- ══ PHÓNG TO ẢNH VÁY ══ -->
+<div class="pt" id="phongTo" hidden role="dialog" aria-modal="true" aria-label="Xem ảnh váy">
+  <span class="pt-dem" id="ptDem"></span>
+  <button type="button" class="pt-dong" id="ptDong" aria-label="Đóng">×</button>
+  <div class="pt-khung" id="ptKhung">
+    <img class="pt-anh" id="ptAnh" alt="" draggable="false">
+    <button type="button" class="pt-lui" id="ptLui" aria-label="Mẫu trước"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="pt-toi" id="ptToi" aria-label="Mẫu sau"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="pt-chu">
+    <p><span class="nm" id="ptTen"></span><span class="de" id="ptMo"></span></p>
+    <a class="pt-dat" id="ptDat" href="gui-yeu-cau.html" data-en="Book a fitting for this dress">Đặt lịch thử mẫu này</a>
+  </div>
+</div>
+
 <a class="zl-noi" id="zl-noi" href="https://zalo.me/0359950588" target="_blank" rel="noopener" aria-label="Nhắn Zalo cho Dolinhanh Bridal">
   <span class="zl-icon" aria-hidden="true">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -1096,7 +1063,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 <!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
 <script>
 (function(){
-  var TEN = 'Web thu 2 - co-dau';
+  var TEN = 'Web thu 2 - pre-wedding-dress';
   var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
@@ -1166,30 +1133,143 @@ setLang(saved);
 </script>
 
 <script>
-/* lướt ảnh trong từng ô cô dâu: bấm chấm, vuốt trên điện thoại, bấm nửa trái/phải trên máy tính */
-document.querySelectorAll(".cd-o").forEach(function(o){
-  var track=o.querySelector(".sl-khung"), cham=[].slice.call(o.querySelectorAll(".sl-cham button"));
-  var n=o.querySelectorAll(".sl").length, i=0;
-  function ve(k){
-    i=(k+n)%n;
-    track.style.transform="translateX("+(-i*100)+"%)";
-    cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); });
+(function(){
+  const G=document.getElementById('vlGrid'), P=document.getElementById('vlPage'), T=document.getElementById('vlTrong');
+  if(!G||!P) return;
+  const F=[...G.children], PER=8;
+  let loc={dang:"",mood:"",coso:""}, trang=0, tatCa=false;
+  function hop(f){
+    return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood)
+      && (!loc.coso || (f.dataset.coso||"hn hcm").split(" ").includes(loc.coso));
   }
-  cham.forEach(function(b,j){ b.addEventListener("click",function(e){ e.stopPropagation(); ve(j); }); });
-  o.addEventListener("click",function(e){
-    if(e.target.closest(".sl-cham")) return;
-    var r=o.getBoundingClientRect();
-    ve(i + ((e.clientX-r.left) > r.width/2 ? 1 : -1));
+  function ve(){
+    const ds=F.filter(hop);
+    F.forEach(f=>f.style.display="none");
+    const N=tatCa ? 1 : Math.ceil(ds.length/PER);
+    if(trang>=N) trang=0;
+    (tatCa ? ds : ds.slice(trang*PER,(trang+1)*PER)).forEach(f=>f.style.display="");
+    T.hidden = ds.length>0;
+    P.innerHTML="";
+    if(N>1) for(let i=0;i<N;i++){
+      const b=document.createElement('button'); b.type='button'; b.textContent=i+1;
+      b.setAttribute('aria-current', i===trang);
+      b.onclick=()=>{ trang=i; ve(); G.scrollIntoView({block:'start'}); };
+      P.appendChild(b);
+    }
+  }
+  const nutTatCa=document.getElementById('vlTatCa');
+  if(nutTatCa) nutTatCa.addEventListener('click', ()=>{
+    tatCa=!tatCa; trang=0;
+    nutTatCa.textContent = tatCa ? "Xem theo trang" : "Xem tất cả váy";
+    nutTatCa.dataset.en  = tatCa ? "See by page" : "See all dresses";
+    ve();
   });
-  var x0=null;
-  o.addEventListener("touchstart",function(e){ x0=e.touches[0].clientX; },{passive:true});
-  o.addEventListener("touchend",function(e){
-    if(x0===null) return;
-    var dx=e.changedTouches[0].clientX-x0; x0=null;
-    if(Math.abs(dx)>40) ve(i + (dx<0 ? 1 : -1));
-  },{passive:true});
-  ve(0);
-});
+  document.querySelectorAll('.vl-nhom button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const loai=b.dataset.loai;
+      loc[loai]=b.dataset.v; trang=0;
+      document.querySelectorAll('.vl-nhom button[data-loai="'+loai+'"]')
+        .forEach(x=>x.setAttribute('aria-current', x===b));
+      ve();
+    });
+  });
+
+  /* lướt ảnh trong từng ô váy */
+  G.querySelectorAll("figure").forEach(function(o){
+    var track=o.querySelector(".sl-khung"); if(!track) return;
+    var cham=[].slice.call(o.querySelectorAll(".sl-cham button"));
+    var n=o.querySelectorAll(".sl").length; if(n<2) return;
+    var i=0;
+    function ve2(k){ i=(k+n)%n; track.style.transform="translateX("+(-i*100)+"%)";
+      cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); }); }
+    cham.forEach(function(b,j){ b.addEventListener("click",function(e){ e.stopPropagation(); ve2(j); }); });
+    var x0=null;
+    o.addEventListener("touchstart",function(e){ x0=e.touches[0].clientX; },{passive:true});
+    o.addEventListener("touchend",function(e){ if(x0===null) return;
+      var dx=e.changedTouches[0].clientX-x0; x0=null;
+      if(Math.abs(dx)>40) ve2(i + (dx<0?1:-1)); },{passive:true});
+  });
+
+  /* phóng to ảnh váy — lướt sang mẫu khác theo bộ lọc đang chọn */
+  G.querySelectorAll(".sl").forEach(function(s){ s.dataset.goc=s.getAttribute("data-img")||""; });  /* data-lon = bản nét cho ảnh phóng to (nếu có) */
+  const PT=document.getElementById("phongTo");
+  if(PT){
+    const A=document.getElementById("ptAnh"), K=document.getElementById("ptKhung"), DEM=document.getElementById("ptDem"),
+          TEN=document.getElementById("ptTen"), MO=document.getElementById("ptMo"), DAT=document.getElementById("ptDat");
+    let ds=[], k=0, dangMo=false, x0=null, y0=0, daKeo=false, ox0=50, oy0=50;
+    const kep=v=>Math.min(100,Math.max(0,v));
+    const zoom=()=>PT.classList.contains("zoom");
+    function boZoom(){ PT.classList.remove("zoom"); A.style.transformOrigin=""; }
+    function hien(j){
+      if(!ds.length) return;
+      k=(j+ds.length)%ds.length; const it=ds[k]; boZoom();
+      A.style.opacity="0"; A.onload=()=>{ A.style.opacity="1"; }; A.src=it.u; if(A.complete) A.style.opacity="1";
+      if(it.l){ const n=new Image(); n.onload=()=>{ if(dangMo && ds[k]===it){ A.onload=null; A.src=it.l; A.style.opacity="1"; } }; n.src=it.l; }
+      const nm=it.f.querySelector(".nm"), de=it.f.querySelector(".de");
+      TEN.innerHTML=nm?nm.innerHTML:""; MO.innerHTML=de?de.innerHTML:"";
+      A.alt=(nm?nm.textContent:"")+(de?" — "+de.textContent:"");
+      DAT.dataset.ms=nm?"Váy chụp "+nm.textContent:"";
+      DEM.textContent=(k+1)+" / "+ds.length;
+      [k-1,k+1].forEach(t=>{ (new Image()).src=ds[(t+ds.length)%ds.length].u; });
+    }
+    function moRa(f,i){
+      ds=[]; F.filter(hop).forEach(x=>x.querySelectorAll(".sl").forEach(s=>{ if(s.dataset.goc) ds.push({f:x,u:s.dataset.goc,l:s.dataset.lon||""}); }));
+      const s=f.querySelectorAll(".sl")[i]||f.querySelector(".sl");
+      const j=ds.findIndex(x=>x.f===f && x.u===(s&&s.dataset.goc));
+      if(j<0) return;
+      PT.hidden=false; dangMo=true; document.body.style.overflow="hidden";
+      requestAnimationFrame(()=>PT.classList.add("hien"));
+      try{ history.pushState({pt:1},""); }catch(_){}
+      hien(j);
+    }
+    function anDi(){
+      if(!dangMo) return; dangMo=false; PT.classList.remove("hien"); boZoom();
+      const pn=document.getElementById("popNen"); if(!pn||pn.hidden) document.body.style.overflow="";
+      setTimeout(()=>{ if(!dangMo) PT.hidden=true; },300);
+    }
+    function dong(){ if(history.state && history.state.pt) history.back(); else anDi(); }
+    addEventListener("popstate", anDi);
+    G.addEventListener("click", function(e){
+      if(e.target.closest(".sl-cham")) return;
+      const f=e.target.closest("figure"); if(!f) return;
+      const tr=f.querySelector(".sl-khung"), m=/(\d+)%/.exec((tr&&tr.style.transform)||"");
+      moRa(f, m ? Math.round(+m[1]/100) : 0);
+    });
+    document.getElementById("ptDong").addEventListener("click", dong);
+    document.getElementById("ptLui").addEventListener("click", e=>{ e.stopPropagation(); hien(k-1); });
+    document.getElementById("ptToi").addEventListener("click", e=>{ e.stopPropagation(); hien(k+1); });
+    DAT.addEventListener("click", dong);
+    function datGoc(x,y){ const r=K.getBoundingClientRect(); A.style.transformOrigin=kep((x-r.left)/r.width*100)+"% "+kep((y-r.top)/r.height*100)+"%"; }
+    K.addEventListener("click", function(e){
+      if(e.target===A){ if(daKeo) return; if(zoom()) boZoom(); else { datGoc(e.clientX,e.clientY); PT.classList.add("zoom"); } }
+      else if(e.target===K) dong();
+    });
+    PT.addEventListener("click", e=>{ if(e.target===PT) dong(); });
+    K.addEventListener("mousemove", e=>{ if(zoom() && !x0) datGoc(e.clientX,e.clientY); });
+    K.addEventListener("touchstart", function(e){
+      if(e.touches.length>1){ x0=null; return; }
+      x0=e.touches[0].clientX; y0=e.touches[0].clientY; daKeo=false;
+      const o=(A.style.transformOrigin||"50% 50%").split(" "); ox0=parseFloat(o[0]); oy0=parseFloat(o[1]);
+    },{passive:true});
+    K.addEventListener("touchmove", function(e){
+      if(x0===null) return;
+      const dx=e.touches[0].clientX-x0, dy=e.touches[0].clientY-y0;
+      if(Math.abs(dx)+Math.abs(dy)>10) daKeo=true;
+      if(zoom()){ const r=K.getBoundingClientRect(); A.style.transformOrigin=kep(ox0-dx/r.width*130)+"% "+kep(oy0-dy/r.height*130)+"%"; }
+    },{passive:true});
+    K.addEventListener("touchend", function(e){
+      if(x0===null) return;
+      const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+      if(!zoom() && Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)) hien(k+(dx<0?1:-1));
+      setTimeout(()=>{ daKeo=false; },400);
+    },{passive:true});
+    document.addEventListener("keydown", function(e){
+      if(!dangMo) return;
+      if(e.key==="Escape") dong(); else if(e.key==="ArrowRight") hien(k+1); else if(e.key==="ArrowLeft") hien(k-1);
+    });
+  }
+  ve();
+})();
 </script>
 
 <!-- ══ POPUP ĐẶT LỊCH & NHẬN BÁO GIÁ ══ -->
@@ -1197,8 +1277,8 @@ document.querySelectorAll(".cd-o").forEach(function(o){
   <div class="pop" role="dialog" aria-modal="true" aria-label="Đặt lịch thử váy">
     <button class="pop-dong" id="popDong" type="button" aria-label="Đóng">×</button>
     <span class="eyebrow" data-en="Private fitting">Buổi thử riêng</span>
-    <h2 class="h-cap" style="margin-top:12px" data-en="Book your fitting">Đặt lịch thử váy riêng</h2>
-    <p style="margin-top:14px;font-size:14px" data-en="Leave your details and Dolinhanh will call to confirm. Tick the box to receive the price list as well.">Để lại vài dòng, Dolinhanh sẽ gọi xác nhận lịch. Tích ô bên dưới để nhận luôn bảng giá.</p>
+    <h2 class="h-cap" style="margin-top:12px" data-en="Book a pre-wedding dress fitting">Đặt lịch thử váy pre-wedding</h2>
+    <p style="margin-top:14px;font-size:14px" data-en="Leave your details and Dolinhanh will call to confirm.">Để lại vài dòng, Dolinhanh sẽ gọi xác nhận lịch.</p>
     <p class="pop-qua" data-en="<strong>A gift when you book:</strong> The Bride’s Dress Guide ebook &amp; an online wedding invitation — free."><strong>Quà tặng khi đặt lịch:</strong> ebook The Bride’s Dress Guide &amp; thiệp cưới online — miễn phí.</p>
 
     <form class="pop-form" id="fmPop" novalidate>
@@ -1215,7 +1295,7 @@ document.querySelectorAll(".cd-o").forEach(function(o){
           <input id="p-gioHen" name="gioHen" type="time" step="900" required></div>
       </div>
       <div class="row">
-        <div class="field"><label for="p-ngayTiec" data-en="Wedding date">Ngày tổ chức tiệc</label>
+        <div class="field"><label for="p-ngayTiec" data-en="Photoshoot date">Ngày chụp</label>
           <input id="p-ngayTiec" name="ngayTiec" type="date"></div>
         <div class="field"><label for="p-coSo" data-en="Showroom">Showroom</label>
           <select id="p-coSo" name="coSo">
@@ -1223,8 +1303,6 @@ document.querySelectorAll(".cd-o").forEach(function(o){
             <option value="HCM - 2 Tân Canh, Q. Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</option>
           </select></div>
       </div>
-      <label class="tick"><input type="checkbox" id="p-nhanGia" checked>
-        <span data-en="Send me the price list as well">Gửi cho tôi bảng giá luôn</span></label>
       <button class="btn" type="submit" id="p-btn" style="margin-top:8px" data-en="Send my request">Gửi thông tin</button>
       <p class="fm-tb" id="p-tb"></p>
     </form>
@@ -1259,7 +1337,7 @@ document.querySelectorAll(".cd-o").forEach(function(o){
   function dong(){ nen.hidden=true; document.body.style.overflow=""; }
   document.addEventListener("click", function(e){
     var a=e.target.closest('a[href$="gui-yeu-cau.html"], a[href*="gui-yeu-cau.html#"]');
-    if(a){ mo(e); }
+    if(a){ nen.dataset.ms=a.dataset.ms||""; mo(e); }
   });
   document.getElementById("popDong").addEventListener("click", dong);
   nen.addEventListener("click", function(e){ if(e.target===nen) dong(); });
@@ -1273,9 +1351,10 @@ document.querySelectorAll(".cd-o").forEach(function(o){
     }
     var btn=document.getElementById("p-btn"); btn.disabled=true; btn.textContent="Đang gửi…";
     tb.className="fm-tb"; tb.textContent="";
-    var muonGia=document.getElementById("p-nhanGia").checked;
-    var ghiChu="Khách tự đặt trên web Dolinhanh."
-      + (d.ngayTiec ? " Ngày tổ chức tiệc: "+ngayVN(d.ngayTiec)+"." : "")
+    var muonGia=false;
+    var ghiChu="THỬ VÁY CHỤP — khách đặt từ trang Pre-wedding Dress."
+      + (nen.dataset.ms ? " Mẫu váy quan tâm: "+nen.dataset.ms+"." : "")
+      + (d.ngayTiec ? " Ngày chụp: "+ngayVN(d.ngayTiec)+"." : "")
       + (muonGia ? " KHÁCH MUỐN NHẬN BẢNG GIÁ." : "");
     var f=new FormData();
     f.append("entry.255122862","Đặt hẹn mới");
@@ -1291,11 +1370,12 @@ document.querySelectorAll(".cd-o").forEach(function(o){
     f.append("entry.283405907", ghiChu);
     f.append("entry.828439224","Khách tự đặt (popup web)");
     fetch("https://docs.google.com/forms/d/e/"+FORM_ID+"/formResponse",{method:"POST",mode:"no-cors",body:f}).catch(function(){});
-    var tin="KHÁCH ĐẶT LỊCH THỬ VÁY (popup web)\n"
+    var tin="KHÁCH ĐẶT LỊCH THỬ VÁY CHỤP (trang Pre-wedding Dress)\n"
       + "Cô dâu & chú rể: "+d.ten+"\nSĐT: "+d.sdt+"\n"
-      + "Ngày tổ chức tiệc: "+(ngayVN(d.ngayTiec)||"chưa điền")+"\n"
+      + "Ngày chụp: "+(ngayVN(d.ngayTiec)||"chưa điền")+"\n"
       + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\nGiờ đặt hẹn: "+d.gioHen+"\n"
-      + "Showroom: "+d.coSo+"\nMuốn nhận bảng giá: "+(muonGia?"CÓ":"không");
+      + "Showroom: "+d.coSo
+      + (nen.dataset.ms ? "\nMẫu váy quan tâm: "+nen.dataset.ms : "");
     fetch(MAIL_URL+"?hoi="+encodeURIComponent(tin)+"&em="+encodeURIComponent(d.sdt),{mode:"no-cors"}).catch(function(){});
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
