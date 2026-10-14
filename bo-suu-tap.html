@@ -637,6 +637,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .pt-chu{flex:none;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 28px;
     padding:14px 20px calc(20px + env(safe-area-inset-bottom));text-align:center}
   .pt-chu .nm{color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+  .pt-chu .pt-mua{background:#fff;color:#7A2638;margin-right:8px}
+  .pt-chu .pt-mua:hover{background:#F3ECE8;color:#611E2D}
+  .pt-mua[hidden]{display:none}
   .pt-chu .de{margin-left:14px;font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.72)}
   .pt-dat{display:inline-block;background:#7A2638;color:#fff;text-decoration:none;padding:10px 18px;
     font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:background .2s ease}
@@ -3815,6 +3818,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   </div>
   <div class="pt-chu">
     <p><span class="nm" id="ptTen"></span><span class="de" id="ptMo"></span></p>
+    <a class="pt-dat pt-mua" id="ptMua" href="https://wa.me/84359950588" target="_blank" rel="noopener" hidden data-en="Buy this gown on WhatsApp" data-zh="通过 WhatsApp 购买此款">Mua mẫu này qua WhatsApp</a>
     <a class="pt-dat" id="ptDat" href="gui-yeu-cau.html" data-en="Book a fitting for this dress" data-zh="预约试穿此款婚纱">Đặt lịch thử mẫu này</a>
   </div>
 </div>
@@ -3830,7 +3834,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 <script>
 (function(){
   var TEN = 'Web thu 2 - bo-suu-tap';
-  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  var CHON = 'a[href*="zalo.me"], a[href*="wa.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
     if (!t || !t.closest) return;
@@ -4014,6 +4018,10 @@ setLang(saved);
       TEN.innerHTML=nm?nm.innerHTML:""; MO.innerHTML=de?de.innerHTML:"";
       A.alt=(nm?nm.textContent:"")+(de?" — "+de.textContent:"");
       DAT.dataset.ms=nm?nm.textContent:"";
+      /* 14/10/2026 chị chốt "thiên về bán": khách xem tiếng Anh/Trung thấy nút mua ngay mẫu này qua WhatsApp (kèm mã váy) */
+      const MUA=document.getElementById("ptMua");
+      if(MUA){ const ms=nm?nm.textContent.trim():""; MUA.hidden=(typeof LANG==="undefined"||LANG==="vi");
+        MUA.href="https://wa.me/84359950588?text="+encodeURIComponent("Hi Dolinhanh Bridal, I'd like to buy "+ms+". Is it available?"); }
       DEM.textContent=(k+1)+" / "+ds.length;
       [k-1,k+1].forEach(t=>{ (new Image()).src=ds[(t+ds.length)%ds.length].u; });
     }
