@@ -851,7 +851,7 @@ document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",
 let saved = "vi";
 try{ saved = localStorage.getItem("dla-lang2") || "vi"; }catch(_){}
 const qLang = new URLSearchParams(location.search).get("lang");
-if(qLang === "vi" || qLang === "en") saved = qLang;
+if(qLang === "vi" || qLang === "en"){ saved = qLang; try{ localStorage.setItem("dla-lang2", qLang); }catch(_){} } /* 14/10/2026: ?lang= nhớ luôn cho các trang sau — vietnamweddinggown.com mở tiếng Anh */
 setLang(saved);
 </script>
 
