@@ -2234,8 +2234,9 @@ setLang(saved);
   }
   if(nutTatCa) nutTatCa.addEventListener('click', ()=>{
     tatCa=!tatCa; trang=0;
-    nutTatCa.textContent = tatCa ? "Xem theo trang" : "Xem tất cả váy";
-    nutTatCa.dataset.en  = tatCa ? "See by page" : "See all dresses";
+    const tc = tatCa ? {vi:"Xem theo trang", en:"See by page", zh:"分页浏览"} : {vi:"Xem tất cả váy", en:"See all dresses", zh:"查看全部婚纱"};
+    nutTatCa.dataset.vi = tc.vi; nutTatCa.dataset.en = tc.en; nutTatCa.dataset.zh = tc.zh;
+    nutTatCa.textContent = (typeof LANG !== "undefined" && tc[LANG]) || tc.vi;
     ve();
   });
   document.querySelectorAll('.vl-nhom button').forEach(b=>{

@@ -658,6 +658,14 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   /* 中文 (14/10/2026, tên miền vietnamweddinggown.com): chữ Trung không nghiêng */
   html:lang(zh) *{font-style:normal !important}
   html:lang(zh) body{line-break:strict}
+
+  /* khối cô dâu ở nước ngoài — chỉ hiện cho khách từ vietnamweddinggown.com (14/10/2026) */
+  .xa-bon{list-style:none;margin:clamp(32px,4vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+  .xa-bon li{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;align-content:start}
+  .xa-bon .ten{font-family:var(--serif);font-size:1.12rem;line-height:1.35}
+  .xa-bon .mo{font-size:14px;line-height:1.7;color:var(--taupe-deep)}
+  @media (max-width:900px){.xa-bon{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.xa-bon{grid-template-columns:1fr}}
 </style>
 <style>
 /* Ảnh bìa riêng cho điện thoại: khung dọc 1600×2400, không phóng ảnh ngang lên 2,5 lần nữa */
@@ -706,6 +714,23 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       <div class="nut">
         <a class="link" href="gui-yeu-cau.html" data-en="Book a private fitting" data-zh="预约私人试纱">Đặt lịch thử váy riêng</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ══ 01b · CÔ DÂU Ở NƯỚC NGOÀI — CHỈ hiện cho khách vào từ vietnamweddinggown.com (BA_NGU, 14/10/2026). Khách web chính không thấy. ══ -->
+  <section class="air" id="xa" hidden>
+    <div class="wrap">
+      <div class="mid-blk rise">
+        <span class="eyebrow" style="display:block;text-align:center" data-en="Brides from abroad" data-zh="海外新娘">Cô dâu ở nước ngoài</span>
+        <h2 class="h-cap giua" style="margin-top:14px" data-en="Modest, private, wherever you are" data-zh="端庄、私密，无论你身在何处">Kín đáo, riêng tư, ở đâu cũng đặt được</h2>
+      </div>
+      <ul class="xa-bon rise">
+        <li><span class="ten" data-en="Modest gowns" data-zh="端庄婚纱">Váy kín đáo</span><span class="mo" data-en="Long sleeves, high necklines — or any gown made modest for you." data-zh="长袖、高领——或将任意一款婚纱为你改得更端庄。">Tay dài, cổ cao — hoặc sửa kín bất kỳ mẫu nào.</span></li>
+        <li><span class="ten" data-en="Women-only fittings" data-zh="全女性试纱团队">Thử váy với ekip nữ</span><span class="mo" data-en="A private room, an all-female team, no photos without consent." data-zh="私人试衣间，全女性团队，未经同意绝不拍照。">Phòng riêng, nhân viên toàn nữ, không chụp ảnh khi chưa được phép.</span></li>
+        <li><span class="ten" data-en="Video-call viewing" data-zh="视频看纱">Xem váy qua video</span><span class="mo" data-en="See the gowns live on WhatsApp before you decide." data-zh="通过 WhatsApp 视频实时看纱，再做决定。">Xem váy trực tiếp qua WhatsApp trước khi chọn.</span></li>
+        <li><span class="ten" data-en="Delivered worldwide" data-zh="全球寄送">Gửi váy toàn cầu</span><span class="mo" data-en="Made to your measurements and sent by DHL or FedEx." data-zh="按你的尺寸定制，通过 DHL 或 FedEx 寄送。">May theo số đo, gửi DHL hoặc FedEx.</span></li>
+      </ul>
+      <div class="rise" style="text-align:center"><a class="btn" href="wedding-dress-vietnam.html" data-en="For brides from abroad" data-zh="海外新娘须知">Dành cho cô dâu ở nước ngoài</a></div>
     </div>
   </section>
 
@@ -988,6 +1013,7 @@ function setLang(l){
 /* 3 ngôn ngữ EN · VI · 中文 — CHỈ khách vào từ vietnamweddinggown.com (?kenh=vwg), nhớ bằng dla-3ngu (chị chốt 14/10/2026). Web chính vẫn VI / EN */
 let BA_NGU = new URLSearchParams(location.search).get("kenh") === "vwg";
 try{ if(BA_NGU) localStorage.setItem("dla-3ngu","1"); else BA_NGU = localStorage.getItem("dla-3ngu") === "1"; }catch(_){}
+if(BA_NGU){ const xa=document.getElementById("xa"); if(xa) xa.hidden=false; }
 if(BA_NGU) document.querySelectorAll(".lang").forEach(g=>{ g.innerHTML = '<button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="vi">VI</button><span>/</span><button type="button" data-lang="zh">中文</button>'; });
 document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click", ()=>{ setLang(b.dataset.lang); try{ localStorage.setItem("dla-lang2", b.dataset.lang); }catch(_){} }));
 /* Mặc định tiếng Việt (chị chốt 19/09/2026) — chỉ nhớ khi khách tự bấm VI/EN; link ?lang=en mở thẳng tiếng Anh */
