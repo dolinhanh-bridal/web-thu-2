@@ -596,6 +596,10 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .btn.chinh{border-color:#9B6B5F;background:#9B6B5F;color:#fff;font-weight:500}
   .btn.chinh:hover{background:#86594F;border-color:#86594F;color:#fff}
   *:has(> #henXong.sent) > .pop-qua{display:none}
+
+  /* 中文 (14/10/2026, tên miền vietnamweddinggown.com): chữ Trung không nghiêng */
+  html:lang(zh) *{font-style:normal !important}
+  html:lang(zh) body{line-break:strict}
 </style>
 
 <header id="hd" class="solid">
@@ -603,12 +607,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="bar">
       <a class="mark" href="index.html">Dolinhanh</a>
       <nav aria-label="Mục chính">
-        <a href="index.html" data-en="Home">Trang chủ</a>
-        <a href="gioi-thieu.html" data-en="About">Giới thiệu</a>
-        <a href="hanh-trinh.html" data-en="The journey">Hành trình</a>
-        <a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a>
-        <a href="cam-nang.html" data-en="Handbook">Cẩm nang</a>
-        <a href="co-dau.html" data-en="The bride">Cô dâu</a>
+        <a href="index.html" data-en="Home" data-zh="首页">Trang chủ</a>
+        <a href="gioi-thieu.html" data-en="About" data-zh="关于我们">Giới thiệu</a>
+        <a href="hanh-trinh.html" data-en="The journey" data-zh="服务旅程">Hành trình</a>
+        <a href="bo-suu-tap.html" data-en="Collection" data-zh="婚纱系列">Bộ sưu tập</a>
+        <a href="cam-nang.html" data-en="Handbook" data-zh="指南">Cẩm nang</a>
+        <a href="co-dau.html" data-en="The bride" data-zh="新娘">Cô dâu</a>
       </nav>
       <div class="lang" role="group" aria-label="Ngôn ngữ">
         <button type="button" data-lang="vi" aria-pressed="true">VI</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -621,62 +625,62 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 
   <section class="wrap sub">
     <div class="sub-head rise">
-      <span class="eyebrow" data-en="Enquire">Gửi yêu cầu</span>
-      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you.">Để lại vài dòng, Dolinhanh giữ chỗ cho buổi thử riêng.</h1>
-      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
+      <span class="eyebrow" data-en="Enquire" data-zh="咨询">Gửi yêu cầu</span>
+      <h1 class="h-lg" data-en="Leave us a few lines and we will keep a private fitting for you." data-zh="给我们留下几句话，我们将为您保留一场私人试纱。">Để lại vài dòng, Dolinhanh giữ chỗ cho buổi thử riêng.</h1>
+      <p data-en="Hanoi &amp; Ho Chi Minh City &nbsp;·&nbsp; 035 995 0588" data-zh="河内 &amp; 胡志明市 &nbsp;·&nbsp; 035 995 0588">Hà Nội &amp; TP.HCM &nbsp;·&nbsp; 035 995 0588</p>
     </div>
   </section>
   <!-- ══ 07 · ENQUIRE ══ -->
   <section id="hen" style="padding-bottom:var(--air)">
     <div class="wrap">
       <div class="invite rise">
-        <span class="eyebrow" data-en="Let’s make your dress">Cùng dựng chiếc váy của bạn</span>
-        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress.">Dolinhanh muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
+        <span class="eyebrow" data-en="Let’s make your dress" data-zh="一起打造您的婚纱">Cùng dựng chiếc váy của bạn</span>
+        <h2 class="h-lg" style="margin-top:20px" data-en="We would like to hear about your day before we talk about the dress." data-zh="在谈婚纱之前，我们想先听听您的婚礼。">Dolinhanh muốn nghe về ngày cưới của bạn trước khi nói về chiếc váy.</h2>
       </div>
-      <p class="pop-qua rise" style="max-width:560px" data-en="<strong>A gift when you book:</strong> The Bride’s Dress Guide ebook &amp; an online wedding invitation — free."><strong>Quà tặng khi đặt lịch:</strong> ebook The Bride’s Dress Guide &amp; thiệp cưới online — miễn phí.</p>
+      <p class="pop-qua rise" style="max-width:560px" data-en="<strong>A gift when you book:</strong> The Bride’s Dress Guide ebook &amp; an online wedding invitation — free." data-zh="<strong>预约即赠：</strong>《新娘婚纱指南》电子书 &amp; 电子婚礼请柬——免费。"><strong>Quà tặng khi đặt lịch:</strong> ebook The Bride’s Dress Guide &amp; thiệp cưới online — miễn phí.</p>
       <form class="form-w rise" id="fmHen" novalidate>
         <div class="row">
-          <div class="field"><label for="ten" data-en="Bride &amp; groom’s name *">Tên cô dâu &amp; chú rể *</label>
+          <div class="field"><label for="ten" data-en="Bride &amp; groom’s name *" data-zh="新娘 &amp; 新郎姓名 *">Tên cô dâu &amp; chú rể *</label>
             <input id="ten" name="ten" type="text" required placeholder="Ví dụ: Thu Hà &amp; Minh Quân"></div>
-          <div class="field"><label for="sdt" data-en="Phone number *">Số điện thoại *</label>
+          <div class="field"><label for="sdt" data-en="Phone number *" data-zh="电话号码 *">Số điện thoại *</label>
             <input id="sdt" name="sdt" type="tel" inputmode="tel" required placeholder="Để Dolinhanh gọi xác nhận lịch"></div>
         </div>
         <div class="row">
-          <div class="field"><label for="ngayTiec" data-en="Wedding date">Ngày tổ chức tiệc</label>
+          <div class="field"><label for="ngayTiec" data-en="Wedding date" data-zh="婚礼日期">Ngày tổ chức tiệc</label>
             <input id="ngayTiec" name="ngayTiec" type="date"></div>
-          <div class="field"><label for="noiTiec" data-en="Wedding venue">Địa điểm tổ chức tiệc</label>
+          <div class="field"><label for="noiTiec" data-en="Wedding venue" data-zh="婚礼场地">Địa điểm tổ chức tiệc</label>
             <input id="noiTiec" name="noiTiec" type="text" placeholder="Trung tâm tiệc cưới / khách sạn, tỉnh thành"></div>
         </div>
         <div class="row">
-          <div class="field"><label for="ngayHen" data-en="Appointment date *">Ngày đặt hẹn *</label>
+          <div class="field"><label for="ngayHen" data-en="Appointment date *" data-zh="预约日期 *">Ngày đặt hẹn *</label>
             <input id="ngayHen" name="ngayHen" type="date" required></div>
-          <div class="field"><label for="gioHen" data-en="Appointment time *">Giờ đặt hẹn *</label>
+          <div class="field"><label for="gioHen" data-en="Appointment time *" data-zh="预约时间 *">Giờ đặt hẹn *</label>
             <input id="gioHen" name="gioHen" type="time" step="900" required></div>
         </div>
-        <div class="field"><label for="coSo" data-en="Showroom">Showroom</label>
+        <div class="field"><label for="coSo" data-en="Showroom" data-zh="门店">Showroom</label>
           <select id="coSo" name="coSo">
-            <option value="HN - 75 Nguyễn Thị Định" data-en="Hanoi · 75 Nguyễn Thị Định">Hà Nội · 75 Nguyễn Thị Định</option>
-            <option value="HCM - 2 Tân Canh, Q. Tân Bình" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</option>
+            <option value="HN - 75 Nguyễn Thị Định" data-en="Hanoi · 75 Nguyễn Thị Định" data-zh="河内 · 75 Nguyễn Thị Định">Hà Nội · 75 Nguyễn Thị Định</option>
+            <option value="HCM - 2 Tân Canh, Q. Tân Bình" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</option>
           </select></div>
         <label class="tick"><input type="checkbox" id="nhanGia" name="nhanGia" checked>
-          <span data-en="Send me the price list as well">Gửi cho tôi bảng giá luôn</span></label>
-        <button class="btn" type="submit" id="btnHen" style="margin-top:10px;justify-self:start" data-en="Send my request">Gửi thông tin đặt hẹn</button>
+          <span data-en="Send me the price list as well" data-zh="同时把价目表发给我">Gửi cho tôi bảng giá luôn</span></label>
+        <button class="btn" type="submit" id="btnHen" style="margin-top:10px;justify-self:start" data-en="Send my request" data-zh="提交预约">Gửi thông tin đặt hẹn</button>
         <p class="fm-tb" id="henTb"></p>
-        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us.">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
+        <p class="note" data-en="A stylist replies within a day. No calls out of hours, and your number stays with us." data-zh="造型顾问将在一天内回复。非营业时间不会来电，您的号码仅由我们保管。">Stylist trả lời trong vòng một ngày. Không gọi ngoài giờ, không chia sẻ số cho bên thứ ba.</p>
       </form>
       <div class="thanks" id="henXong" role="status">
-        <p class="say" style="max-width:34ch" data-en="Dolinhanh has received your request. We will call to confirm as soon as possible.">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận lịch trong thời gian sớm nhất.</p>
-        <p style="margin-top:16px" data-en="Send it to us on Zalo too and we will hold the slot faster — the details are already copied, you only need to paste them into the chat.">Nàng gửi thêm cho Dolinhanh qua Zalo để được giữ chỗ nhanh hơn nhé — nội dung đã được sao chép sẵn, nàng chỉ cần dán vào khung chat.</p>
+        <p class="say" style="max-width:34ch" data-en="Dolinhanh has received your request. We will call to confirm as soon as possible." data-zh="Dolinhanh 已收到您的请求，我们会尽快致电与您确认。">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận lịch trong thời gian sớm nhất.</p>
+        <p style="margin-top:16px" data-en="Send it to us on Zalo too and we will hold the slot faster — the details are already copied, you only need to paste them into the chat." data-zh="也可以通过 Zalo 发给我们，我们能更快为您保留时段——信息已复制好，您只需粘贴到聊天框即可。">Nàng gửi thêm cho Dolinhanh qua Zalo để được giữ chỗ nhanh hơn nhé — nội dung đã được sao chép sẵn, nàng chỉ cần dán vào khung chat.</p>
         <div class="nut-hang">
-          <a class="btn" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588">Nhắn Zalo 035 995 0588</a>
-          <a class="btn" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list">Xem bảng giá</a>
+          <a class="btn" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588" data-zh="发送 Zalo 消息 035 995 0588">Nhắn Zalo 035 995 0588</a>
+          <a class="btn" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
         </div>
         <div class="pop-qua-xong">
-          <span class="eyebrow" data-en="Gifts for the bride">Quà tặng cô dâu</span>
-          <p data-en="While you wait for our call, two gifts are already yours — free:">Trong lúc chờ Dolinhanh gọi lại, nàng nhận luôn hai món quà miễn phí:</p>
+          <span class="eyebrow" data-en="Gifts for the bride" data-zh="献给新娘的礼物">Quà tặng cô dâu</span>
+          <p data-en="While you wait for our call, two gifts are already yours — free:" data-zh="在等待我们来电的同时，两份免费礼物已为你备好：">Trong lúc chờ Dolinhanh gọi lại, nàng nhận luôn hai món quà miễn phí:</p>
           <div class="nut-hang">
-            <a class="btn chinh" id="p-qua-ebook" href="https://dolinhanhbridal.com/dress-guide-landing.html" target="_blank" rel="noopener" style="margin-top:0" data-en="Read the Dress Guide ebook">Đọc ebook Dress Guide</a>
-            <a class="btn" id="p-qua-thiep" href="https://script.google.com/macros/s/AKfycbwVWHJMBZFw6XX7t2Haqs9AT1UTgPmdKUHLzm69Si_h7-ylKNd7HsfcwUQeI4AL-uiLVw/exec" target="_blank" rel="noopener" style="margin-top:0" data-en="Make my online invitation">Làm thiệp cưới online</a>
+            <a class="btn chinh" id="p-qua-ebook" href="https://dolinhanhbridal.com/dress-guide-landing.html" target="_blank" rel="noopener" style="margin-top:0" data-en="Read the Dress Guide ebook" data-zh="阅读婚纱指南电子书">Đọc ebook Dress Guide</a>
+            <a class="btn" id="p-qua-thiep" href="https://script.google.com/macros/s/AKfycbwVWHJMBZFw6XX7t2Haqs9AT1UTgPmdKUHLzm69Si_h7-ylKNd7HsfcwUQeI4AL-uiLVw/exec" target="_blank" rel="noopener" style="margin-top:0" data-en="Make my online invitation" data-zh="制作我的电子请柬">Làm thiệp cưới online</a>
           </div>
         </div>
       </div>
@@ -685,8 +689,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   </section>
   <div class="wrap">
     <div class="next">
-      <span class="lb" data-en="Next">Tiếp theo</span>
-      <a class="tt" href="index.html" data-en="Back to home">Về trang chủ</a>
+      <span class="lb" data-en="Next" data-zh="下一页">Tiếp theo</span>
+      <a class="tt" href="index.html" data-en="Back to home" data-zh="返回首页">Về trang chủ</a>
     </div>
   </div>
 
@@ -696,23 +700,23 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="ft-cot">
       <div class="ft-c">
-        <span class="ft-h" data-en="Contact">Liên hệ</span>
-        <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
-        <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
+        <span class="ft-h" data-en="Contact" data-zh="联系我们">Liên hệ</span>
+        <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy" data-zh="河内 · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
+        <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
         <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
         <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
       </div>
       <div class="ft-c">
-        <span class="ft-h" data-en="Support">Hỗ trợ</span>
-        <p class="ft-d"><a href="gui-yeu-cau.html" data-en="Book a fitting">Đặt lịch thử váy</a></p>
-        <p class="ft-d"><a href="hanh-trinh.html" data-en="The journey">Hành trình</a></p>
-        <p class="ft-d"><a href="cam-nang.html" data-en="The handbook">Cẩm nang</a></p>
-        <p class="ft-d"><a href="gioi-thieu.html" data-en="About">Giới thiệu</a></p>
+        <span class="ft-h" data-en="Support" data-zh="服务支持">Hỗ trợ</span>
+        <p class="ft-d"><a href="gui-yeu-cau.html" data-en="Book a fitting" data-zh="预约试纱">Đặt lịch thử váy</a></p>
+        <p class="ft-d"><a href="hanh-trinh.html" data-en="The journey" data-zh="服务旅程">Hành trình</a></p>
+        <p class="ft-d"><a href="cam-nang.html" data-en="The handbook" data-zh="指南">Cẩm nang</a></p>
+        <p class="ft-d"><a href="gioi-thieu.html" data-en="About" data-zh="关于我们">Giới thiệu</a></p>
       </div>
       <div class="ft-c">
-        <span class="ft-h" data-en="Explore">Khám phá</span>
-        <p class="ft-d"><a href="bo-suu-tap.html" data-en="Collection">Bộ sưu tập</a></p>
-        <p class="ft-d"><a href="co-dau.html" data-en="Our brides">Cô dâu</a></p>
+        <span class="ft-h" data-en="Explore" data-zh="探索">Khám phá</span>
+        <p class="ft-d"><a href="bo-suu-tap.html" data-en="Collection" data-zh="婚纱系列">Bộ sưu tập</a></p>
+        <p class="ft-d"><a href="co-dau.html" data-en="Our brides" data-zh="我们的新娘">Cô dâu</a></p>
         <p class="ft-d"><a href="https://nupakachi.com" target="_blank" rel="noopener">Nupakachi Photography</a></p>
         <p class="ft-d"><a href="https://dolinhanhbridal.com/dress-guide.html" target="_blank" rel="noopener">The Bride’s Dress Guide</a></p>
         <p class="ft-d"><a href="https://dolinhanhbridal.com/veil-guide.html">The Bride’s Veil Guide</a></p>
@@ -723,7 +727,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="ft-duoi">
       <a class="ft-logo" href="index.html"><img src="logo-dolinhanh.png" alt="Dolinhanh Bridal"></a>
       <div class="ft-mxh">
-        <span class="ft-h" data-en="Follow us">Theo dõi Dolinhanh</span>
+        <span class="ft-h" data-en="Follow us" data-zh="关注我们">Theo dõi Dolinhanh</span>
         <div class="ft-icon">
           <a href="https://www.facebook.com/Dolinhanhbridalhcm/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
           <a href="https://www.instagram.com/dolinhanh.bridal/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
@@ -732,8 +736,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <p class="foot-say" data-en="Made for your day. Designed to last.">Made for your day. Designed to last.</p>
-    <p class="ft-cr" data-en="© 2026 Dolinhanh Bridal. All rights reserved.">© 2026 Dolinhanh Bridal. Đã đăng ký bản quyền.</p>
+    <p class="foot-say" data-en="Made for your day. Designed to last." data-zh="为你的大日子而生，历久弥新。">Made for your day. Designed to last.</p>
+    <p class="ft-cr" data-en="© 2026 Dolinhanh Bridal. All rights reserved." data-zh="© 2026 Dolinhanh Bridal. 保留所有权利。">© 2026 Dolinhanh Bridal. Đã đăng ký bản quyền.</p>
   </div>
 </footer>
 
@@ -741,7 +745,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <span class="zl-icon" aria-hidden="true">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
   </span>
-  <span class="zl-chu" data-en="Chat on Zalo">Nhắn Zalo đặt lịch</span>
+  <span class="zl-chu" data-en="Chat on Zalo" data-zh="通过 Zalo 咨询">Nhắn Zalo đặt lịch</span>
 </a>
 
 <!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
@@ -803,16 +807,21 @@ document.querySelectorAll(".rise").forEach(el=>io.observe(el));
 document.querySelectorAll("[data-en]").forEach(e=>{ e.dataset.vi = e.innerHTML; });
 function setLang(l){
   LANG = l;
-  document.documentElement.lang = l;
-  document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l === "en" ? e.dataset.en : e.dataset.vi; });
+  document.documentElement.lang = l === "zh" ? "zh-CN" : l;
+  document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l === "en" ? e.dataset.en : l === "zh" ? (e.dataset.zh || e.dataset.en) : e.dataset.vi; });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang === l));
 }
+/* 3 ngôn ngữ EN · VI · 中文 — CHỈ khách vào từ vietnamweddinggown.com (?kenh=vwg), nhớ bằng dla-3ngu (chị chốt 14/10/2026). Web chính vẫn VI / EN */
+let BA_NGU = new URLSearchParams(location.search).get("kenh") === "vwg";
+try{ if(BA_NGU) localStorage.setItem("dla-3ngu","1"); else BA_NGU = localStorage.getItem("dla-3ngu") === "1"; }catch(_){}
+if(BA_NGU) document.querySelectorAll(".lang").forEach(g=>{ g.innerHTML = '<button type="button" data-lang="en">EN</button><span>/</span><button type="button" data-lang="vi">VI</button><span>/</span><button type="button" data-lang="zh">中文</button>'; });
 document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click", ()=>{ setLang(b.dataset.lang); try{ localStorage.setItem("dla-lang2", b.dataset.lang); }catch(_){} }));
 /* Mặc định tiếng Việt (chị chốt 19/09/2026) — chỉ nhớ khi khách tự bấm VI/EN; link ?lang=en mở thẳng tiếng Anh */
 let saved = "vi";
 try{ saved = localStorage.getItem("dla-lang2") || "vi"; }catch(_){}
+if(saved === "zh" && !BA_NGU) saved = "vi";
 const qLang = new URLSearchParams(location.search).get("lang");
-if(qLang === "vi" || qLang === "en"){ saved = qLang; try{ localStorage.setItem("dla-lang2", qLang); }catch(_){} } /* 14/10/2026: ?lang= nhớ luôn cho các trang sau — vietnamweddinggown.com mở tiếng Anh */
+if(qLang === "vi" || qLang === "en" || (qLang === "zh" && BA_NGU)){ saved = qLang; try{ localStorage.setItem("dla-lang2", qLang); }catch(_){} } /* 14/10/2026: ?lang= nhớ luôn cho các trang sau — vietnamweddinggown.com mở tiếng Anh */
 setLang(saved);
 </script>
 
