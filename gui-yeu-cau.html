@@ -584,6 +584,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   #wa-noi{display:none}
   html.co-gia #wa-noi{display:inline-flex}
   html.co-gia #zl-noi{display:none}
+  /* V126: .chi-viet = chỉ khách Việt xem VI (thuê, Zalo) · .chi-ngoai = chỉ khách nước ngoài html.co-gia (bán, WhatsApp) */
+  html.co-gia .chi-viet{display:none !important}
+  html:not(.co-gia) .chi-ngoai{display:none !important}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -674,10 +677,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       </form>
       <div class="thanks" id="henXong" role="status">
         <p class="say" style="max-width:34ch" data-en="Dolinhanh has received your request. We will call to confirm as soon as possible." data-zh="Dolinhanh 已收到您的请求，我们会尽快致电与您确认。">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận lịch trong thời gian sớm nhất.</p>
-        <p style="margin-top:16px" data-en="Send it to us on Zalo too and we will hold the slot faster — the details are already copied, you only need to paste them into the chat." data-zh="也可以通过 Zalo 发给我们，我们能更快为您保留时段——信息已复制好，您只需粘贴到聊天框即可。">Nàng gửi thêm cho Dolinhanh qua Zalo để được giữ chỗ nhanh hơn nhé — nội dung đã được sao chép sẵn, nàng chỉ cần dán vào khung chat.</p>
+        <p style="margin-top:16px" data-en="Send it to us on WhatsApp too and we will hold the slot faster — the message is already written, you only need to press send." data-zh="也可以通过 WhatsApp 发给我们，我们能更快为您保留时段——消息已写好，您只需点击发送即可。"><span class="chi-viet">Nàng gửi thêm cho Dolinhanh qua Zalo để được giữ chỗ nhanh hơn nhé — nội dung đã được sao chép sẵn, nàng chỉ cần dán vào khung chat.</span><span class="chi-ngoai">Nàng gửi thêm cho Dolinhanh qua WhatsApp để được giữ chỗ nhanh hơn nhé — tin nhắn đã soạn sẵn, nàng chỉ cần bấm gửi.</span></p>
         <div class="nut-hang">
-          <a class="btn" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588" data-zh="发送 Zalo 消息 035 995 0588">Nhắn Zalo 035 995 0588</a>
-          <a class="btn" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+          <a class="btn chi-viet" id="nutZalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" data-en="Message Zalo 035 995 0588" data-zh="发送 Zalo 消息 035 995 0588">Nhắn Zalo 035 995 0588</a>
+          <a class="btn chi-ngoai" id="nutWa" href="https://wa.me/84359950588" target="_blank" rel="noopener" data-en="Message us on WhatsApp" data-zh="通过 WhatsApp 联系我们">Nhắn WhatsApp</a>
+          <a class="btn chi-viet" id="nutGia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+          <a class="btn chi-ngoai" id="nutGiaNgoai" href="bo-suu-tap.html" target="_blank" rel="noopener" hidden data-en="See each gown&#39;s price" data-zh="查看每款婚纱价格">Xem giá từng mẫu váy</a>
         </div>
         <div class="pop-qua-xong">
           <span class="eyebrow" data-en="Gifts for the bride" data-zh="献给新娘的礼物">Quà tặng cô dâu</span>
@@ -708,7 +713,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy" data-zh="河内 · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
         <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
         <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
-        <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
+        <p class="ft-d"><a class="chi-viet" href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a><a class="chi-ngoai" href="https://wa.me/84359950588" target="_blank" rel="noopener">WhatsApp</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
       </div>
       <div class="ft-c">
         <span class="ft-h" data-en="Support" data-zh="服务支持">Hỗ trợ</span>
@@ -758,11 +763,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <span class="zl-chu" data-en="Chat on WhatsApp" data-zh="通过 WhatsApp 咨询">Nhắn WhatsApp</span>
 </a>
 
-<!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
+<!-- Meta Pixel: bấm Zalo / WhatsApp / gọi điện = sự kiện Contact -->
 <script>
 (function(){
   var TEN = 'Web thu 2 - gui-yeu-cau';
-  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  var CHON = 'a[href*="zalo.me"], a[href*="wa.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
     if (!t || !t.closest) return;
@@ -893,6 +898,10 @@ setLang(saved);
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var nz=document.getElementById("nutZalo");
     if(nz) nz.addEventListener("click", function(){ try{ navigator.clipboard.writeText(tin); }catch(e){} });
+    /* V126: khách nước ngoài — WhatsApp soạn sẵn tin tiếng Anh + xem giá bán USD ở Bộ sưu tập */
+    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+(d.noiTiec?"\nVenue: "+d.noiTiec:"")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
+    var nw=document.getElementById("nutWa"); if(nw) nw.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
+    var ngN=document.getElementById("nutGiaNgoai"); if(ngN && muonGia) ngN.hidden=false;
     var ng=document.getElementById("nutGia");
     if(ng && muonGia){
       ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="

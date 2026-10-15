@@ -617,6 +617,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   #wa-noi{display:none}
   html.co-gia #wa-noi{display:inline-flex}
   html.co-gia #zl-noi{display:none}
+  /* V126: .chi-viet = chỉ khách Việt xem VI (thuê, Zalo) · .chi-ngoai = chỉ khách nước ngoài html.co-gia (bán, WhatsApp) */
+  html.co-gia .chi-viet{display:none !important}
+  html:not(.co-gia) .chi-ngoai{display:none !important}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -700,7 +703,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="sub-head rise">
       <span class="eyebrow" data-en="The Bride’s Dress Guide" data-zh="新娘婚纱指南">The Bride’s Dress Guide</span>
       <h1 class="h-lg" data-en="The questions brides ask before choosing a dress." data-zh="选婚纱前，新娘们最常问的问题。">Những câu hỏi cô dâu thường hỏi trước khi chọn váy.</h1>
-      <p data-en="Not every bride knows where to start. Here Dolinhanh answers the most practical questions — from shape and fabric to fittings, renting or buying, and what to check before booking a dress." data-zh="并非每位新娘都知道该从何开始。在这里，Dolinhanh 为您解答最实用的问题——从廓形、面料到试纱，从租赁还是购买，到预订婚纱前需要确认的事项。">Không phải cô dâu nào cũng biết mình nên bắt đầu từ đâu. Ở đây, Dolinhanh trả lời những câu hỏi thực tế nhất — từ chọn phom, chọn chất liệu, thử váy, thuê hay mua, đến những điều cần kiểm tra trước khi đặt váy.</p>
+      <p data-en="Not every bride knows where to start. Here Dolinhanh answers the most practical questions — from shape and fabric to fittings, buying, and what to check before booking a dress." data-zh="并非每位新娘都知道该从何开始。在这里，Dolinhanh 为您解答最实用的问题——从廓形、面料到试纱、购买婚纱，再到预订婚纱前需要确认的事项。">Không phải cô dâu nào cũng biết mình nên bắt đầu từ đâu. Ở đây, Dolinhanh trả lời những câu hỏi thực tế nhất — từ chọn phom, chọn chất liệu, thử váy, <span class="chi-viet">thuê hay </span>mua<span class="chi-ngoai"> váy</span>, đến những điều cần kiểm tra trước khi đặt váy.</p>
     </div>
   </section>
 
@@ -887,17 +890,17 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <section class="air" style="padding-top:0">
     <div class="wrap">
       <div class="hoi-nhom rise">
-        <span class="eyebrow" data-en="Rent or buy" data-zh="租赁还是购买">Câu hỏi về thuê hay mua</span>
+        <span class="eyebrow" data-en="Buying a dress" data-zh="购买婚纱"><span class="chi-viet">Câu hỏi về thuê hay mua</span><span class="chi-ngoai">Câu hỏi về mua váy</span></span>
         <div class="hoi-ds">
-        <details class="hoi">
+        <details class="hoi chi-viet">
           <summary data-en="Rent or buy?" data-zh="租赁还是购买？">Nên thuê hay mua váy cưới?</summary>
           <p data-en="Most brides rent, because the dress is worn for a single day and the budget goes further on a beautiful cut. Buying suits a bride who wants to keep the dress, wear it again, or have a design of her own." data-zh="大多数新娘选择租赁，因为婚纱只穿一天，同样的预算可以换来更美的剪裁。购买则适合想珍藏婚纱、再次穿着，或拥有专属设计的新娘。">Phần lớn cô dâu chọn thuê, vì chiếc váy chỉ mặc một ngày và tiền dành cho phom váy đẹp hơn. Mua hợp với người muốn giữ lại chiếc váy, muốn mặc lại, hoặc cần một thiết kế riêng.</p>
         </details>
-        <details class="hoi">
+        <details class="hoi chi-viet">
           <summary data-en="When does buying make more sense?" data-zh="什么情况下购买更合适？">Khi nào mua sẽ hợp lý hơn thuê?</summary>
           <p data-en="When you want the dress to stay with you, when the design needs deeper changes, or when the wedding has several events and you want complete freedom over the timing." data-zh="当您希望婚纱永远留在身边、设计需要较大改动，或婚礼有多场仪式、希望完全自由安排时间时。">Khi bạn muốn chiếc váy ở lại với mình, khi cần chỉnh sâu thiết kế, hoặc khi ngày cưới có nhiều buổi và bạn muốn chủ động hoàn toàn về thời gian.</p>
         </details>
-        <details class="hoi">
+        <details class="hoi chi-viet">
           <summary data-en="Can a rented dress be altered?" data-zh="租赁的婚纱可以修改吗？">Thuê váy có được chỉnh sửa theo người không?</summary>
           <p data-en="Yes. A rented dress is fitted to you before the wedding — the waist, the length, how closely it sits. Changes that alter the design itself belong to our made-to-measure service." data-zh="可以。租赁的婚纱会在婚礼前按您的身形调整——腰身、长度、贴合度。若需改动设计本身，则属于我们的量身定制服务。">Có. Váy thuê được chỉnh vừa vặn theo bạn trước ngày cưới — điểm eo, chiều dài, độ ôm. Những thay đổi làm đổi hẳn thiết kế thì thuộc phần may đo riêng.</p>
         </details>
@@ -905,9 +908,13 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <summary data-en="Can a bought dress be altered later?" data-zh="购买的婚纱日后还能修改吗？">Mua váy rồi có thể chỉnh lại sau không?</summary>
           <p data-en="Yes. A dress you own can be altered for later occasions, or reworked into a different silhouette as you wish." data-zh="可以。您购买的婚纱可以为日后的场合修改，也可以按您的心意改造成不同的廓形。">Có. Váy đã mua vẫn chỉnh lại được cho các dịp sau, hoặc sửa thành phom khác theo mong muốn của bạn.</p>
         </details>
-        <details class="hoi">
+        <details class="hoi chi-viet">
           <summary data-en="How do rental and purchase prices differ?" data-zh="租赁和购买的价格有何差别？">Giá thuê và giá mua khác nhau như thế nào?</summary>
           <p data-en="It depends on the dress and on the alterations you would like. Leave us your details and Dolinhanh will send the full price list for the studio you choose." data-zh="这取决于婚纱款式以及您希望做的修改。留下您的联系方式，Dolinhanh 将发送您所选门店的完整价目表。">Giá tuỳ từng mẫu và tuỳ cách bạn muốn chỉnh. Bạn để lại thông tin, Dolinhanh gửi bảng giá đầy đủ của cơ sở bạn chọn.</p>
+        </details>
+        <details class="hoi chi-ngoai">
+          <summary data-en="How much is a dress?" data-zh="婚纱价格是多少？">Váy giá bao nhiêu?</summary>
+          <p data-en="Each gown has its own price — from US$680 to US$2,680. The price is shown under every dress in our <a href=&quot;bo-suu-tap.html&quot;>Collection</a>." data-zh="每款婚纱价格不同——从 US$680 到 US$2,680。每件婚纱的价格都标在<a href=&quot;bo-suu-tap.html&quot;>婚纱系列</a>中。">Mỗi mẫu có giá riêng, từ US$680 đến US$2,680 — giá ghi ngay dưới từng váy trong <a href="bo-suu-tap.html">Bộ sưu tập</a>.</p>
         </details>
         <details class="hoi">
           <summary data-en="How far ahead should I book the dress?" data-zh="应该提前多久预订婚纱？">Đặt váy trước bao lâu là an toàn?</summary>
@@ -1009,7 +1016,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <h2 class="h-cap giua" data-en="Still have a question?" data-zh="还有疑问？">Vẫn còn câu hỏi?</h2>
         <p style="margin-top:20px" data-en="If you have not found your answer here, bring the question to your fitting. Sometimes the answer only appears once the dress is actually on you." data-zh="如果这里没有找到答案，就带着问题来试纱吧。有时候，只有婚纱真正穿在身上，答案才会浮现。">Nếu bạn vẫn chưa tìm được câu trả lời, hãy mang câu hỏi của mình đến buổi thử váy. Đôi khi câu trả lời chỉ xuất hiện khi bạn thực sự mặc chiếc váy lên người.</p>
         <div class="nut-hang" style="justify-content:center;margin-top:30px">
-          <a class="btn" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Ask Dolinhanh" data-zh="咨询 Dolinhanh">Hỏi Dolinhanh</a>
+          <a class="btn chi-viet" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Ask Dolinhanh" data-zh="咨询 Dolinhanh">Hỏi Dolinhanh</a>
+          <a class="btn chi-ngoai" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%20have%20a%20question%20about%20a%20wedding%20dress." target="_blank" rel="noopener" style="margin-top:0" data-en="Ask Dolinhanh on WhatsApp" data-zh="通过 WhatsApp 咨询 Dolinhanh">Hỏi Dolinhanh qua WhatsApp</a>
           <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a fitting" data-zh="预约试纱">Đặt lịch thử váy</a>
         </div>
       </div>
@@ -1026,7 +1034,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy" data-zh="河内 · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
         <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
         <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
-        <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
+        <p class="ft-d"><a class="chi-viet" href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a><a class="chi-ngoai" href="https://wa.me/84359950588" target="_blank" rel="noopener">WhatsApp</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
       </div>
       <div class="ft-c">
         <span class="ft-h" data-en="Support" data-zh="服务支持">Hỗ trợ</span>
@@ -1078,11 +1086,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <span class="zl-chu" data-en="Chat on WhatsApp" data-zh="通过 WhatsApp 咨询">Nhắn WhatsApp</span>
 </a>
 
-<!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
+<!-- Meta Pixel: bấm Zalo / WhatsApp / gọi điện = sự kiện Contact -->
 <script>
 (function(){
   var TEN = 'Web thu 2 - cam-nang';
-  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  var CHON = 'a[href*="zalo.me"], a[href*="wa.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
     if (!t || !t.closest) return;
@@ -1196,8 +1204,10 @@ setLang(saved);
     <div class="pop-xong" id="popXong">
       <p class="say" style="max-width:30ch" data-en="Dolinhanh has received your request. We will call to confirm shortly." data-zh="Dolinhanh 已收到你的预约申请，我们会尽快致电与你确认。">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận trong thời gian sớm nhất.</p>
       <div class="nut-hang" style="margin-top:22px">
-        <a class="btn" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
-        <a class="btn" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-viet" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
+        <a class="btn chi-ngoai" id="p-wa" href="https://wa.me/84359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message us on WhatsApp" data-zh="通过 WhatsApp 联系我们">Nhắn WhatsApp</a>
+        <a class="btn chi-viet" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-ngoai" id="p-gia-ngoai" href="bo-suu-tap.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See each gown&#39;s price" data-zh="查看每款婚纱价格">Xem giá từng mẫu váy</a>
       </div>
       <div class="pop-qua-xong">
         <span class="eyebrow" data-en="Gifts for the bride" data-zh="献给新娘的礼物">Quà tặng cô dâu</span>
@@ -1215,6 +1225,8 @@ setLang(saved);
 /* popup đặt lịch & nhận báo giá — gửi 3 nơi như trang báo giá đang chạy */
 (function(){
   var nen=document.getElementById("popNen"); if(!nen) return;
+  /* V126: popup nằm sau khối VI/EN nên chưa được dịch, bấm VI ra "undefined" — lưu bản VI rồi dịch theo ngôn ngữ đang chọn */
+  nen.querySelectorAll("[data-en]").forEach(function(e){ if(e.dataset.vi===undefined) e.dataset.vi=e.innerHTML; if(LANG!=="vi") e.innerHTML = LANG==="en" ? e.dataset.en : (e.dataset.zh || e.dataset.en); });
   var fm=document.getElementById("fmPop"), tb=document.getElementById("p-tb");
   var FORM_ID="1FAIpQLSeF3dEz3mocx_O5PxRjuYsOy3SktzFlXvEd-EeQ07eijImlew";
   var MAIL_URL="https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
@@ -1264,6 +1276,10 @@ setLang(saved);
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
     if(muonGia){ ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="+(d.coSo.indexOf("HN")===0?"hn":"hcm"); ng.hidden=false; }
+    /* V126: khách nước ngoài — xem giá bán USD ở Bộ sưu tập + WhatsApp soạn sẵn tin tiếng Anh */
+    var ngN=document.getElementById("p-gia-ngoai"); if(ngN && muonGia) ngN.hidden=false;
+    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
+    var wa=document.getElementById("p-wa"); if(wa) wa.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
     setTimeout(function(){ fm.style.display="none"; document.getElementById("popXong").classList.add("hien"); }, 700);
   });
 })();

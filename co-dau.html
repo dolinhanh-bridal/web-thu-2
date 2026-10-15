@@ -608,6 +608,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   #wa-noi{display:none}
   html.co-gia #wa-noi{display:inline-flex}
   html.co-gia #zl-noi{display:none}
+  /* V126: .chi-viet = chỉ khách Việt xem VI (thuê, Zalo) · .chi-ngoai = chỉ khách nước ngoài html.co-gia (bán, WhatsApp) */
+  html.co-gia .chi-viet{display:none !important}
+  html:not(.co-gia) .chi-ngoai{display:none !important}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -1058,7 +1061,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy" data-zh="河内 · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
         <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
         <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
-        <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
+        <p class="ft-d"><a class="chi-viet" href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a><a class="chi-ngoai" href="https://wa.me/84359950588" target="_blank" rel="noopener">WhatsApp</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
       </div>
       <div class="ft-c">
         <span class="ft-h" data-en="Support" data-zh="服务支持">Hỗ trợ</span>
@@ -1108,11 +1111,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <span class="zl-chu" data-en="Chat on WhatsApp" data-zh="通过 WhatsApp 咨询">Nhắn WhatsApp</span>
 </a>
 
-<!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
+<!-- Meta Pixel: bấm Zalo / WhatsApp / gọi điện = sự kiện Contact -->
 <script>
 (function(){
   var TEN = 'Web thu 2 - co-dau';
-  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  var CHON = 'a[href*="zalo.me"], a[href*="wa.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
     if (!t || !t.closest) return;
@@ -1253,8 +1256,10 @@ document.querySelectorAll(".cd-o").forEach(function(o){
     <div class="pop-xong" id="popXong">
       <p class="say" style="max-width:30ch" data-en="Dolinhanh has received your request. We will call to confirm shortly." data-zh="Dolinhanh 已收到你的预约申请，我们会尽快致电与你确认。">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận trong thời gian sớm nhất.</p>
       <div class="nut-hang" style="margin-top:22px">
-        <a class="btn" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
-        <a class="btn" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-viet" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
+        <a class="btn chi-ngoai" id="p-wa" href="https://wa.me/84359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message us on WhatsApp" data-zh="通过 WhatsApp 联系我们">Nhắn WhatsApp</a>
+        <a class="btn chi-viet" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-ngoai" id="p-gia-ngoai" href="bo-suu-tap.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See each gown&#39;s price" data-zh="查看每款婚纱价格">Xem giá từng mẫu váy</a>
       </div>
       <div class="pop-qua-xong">
         <span class="eyebrow" data-en="Gifts for the bride" data-zh="献给新娘的礼物">Quà tặng cô dâu</span>
@@ -1272,6 +1277,8 @@ document.querySelectorAll(".cd-o").forEach(function(o){
 /* popup đặt lịch & nhận báo giá — gửi 3 nơi như trang báo giá đang chạy */
 (function(){
   var nen=document.getElementById("popNen"); if(!nen) return;
+  /* V126: popup nằm sau khối VI/EN nên chưa được dịch, bấm VI ra "undefined" — lưu bản VI rồi dịch theo ngôn ngữ đang chọn */
+  nen.querySelectorAll("[data-en]").forEach(function(e){ if(e.dataset.vi===undefined) e.dataset.vi=e.innerHTML; if(LANG!=="vi") e.innerHTML = LANG==="en" ? e.dataset.en : (e.dataset.zh || e.dataset.en); });
   var fm=document.getElementById("fmPop"), tb=document.getElementById("p-tb");
   var FORM_ID="1FAIpQLSeF3dEz3mocx_O5PxRjuYsOy3SktzFlXvEd-EeQ07eijImlew";
   var MAIL_URL="https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
@@ -1321,6 +1328,10 @@ document.querySelectorAll(".cd-o").forEach(function(o){
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
     if(muonGia){ ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="+(d.coSo.indexOf("HN")===0?"hn":"hcm"); ng.hidden=false; }
+    /* V126: khách nước ngoài — xem giá bán USD ở Bộ sưu tập + WhatsApp soạn sẵn tin tiếng Anh */
+    var ngN=document.getElementById("p-gia-ngoai"); if(ngN && muonGia) ngN.hidden=false;
+    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
+    var wa=document.getElementById("p-wa"); if(wa) wa.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
     setTimeout(function(){ fm.style.display="none"; document.getElementById("popXong").classList.add("hien"); }, 700);
   });
 })();

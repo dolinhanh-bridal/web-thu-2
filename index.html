@@ -617,6 +617,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   #wa-noi{display:none}
   html.co-gia #wa-noi{display:inline-flex}
   html.co-gia #zl-noi{display:none}
+  /* V126: .chi-viet = chỉ khách Việt xem VI (thuê, Zalo) · .chi-ngoai = chỉ khách nước ngoài html.co-gia (bán, WhatsApp) */
+  html.co-gia .chi-viet{display:none !important}
+  html:not(.co-gia) .chi-ngoai{display:none !important}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -776,7 +779,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="wrap">
       <div class="mid-blk rise">
         <h2 class="h-cap giua" data-en="Our services" data-zh="我们的服务">Dịch vụ của Dolinhanh</h2>
-        <p style="margin-top:20px" data-en="Rented for a day or made for a lifetime, every Dolinhanh dress carries the same care for fabric and detail — and the day itself is kept in photographs and film." data-zh="无论是租赁一日，还是定制珍藏一生，每一件 Dolinhanh 婚纱都承载着对面料与细节同样的用心——而那一天，也将被定格在照片与影像之中。">Dù là chiếc váy thuê cho một ngày hay chiếc váy làm riêng để giữ lại, mọi chiếc váy của Dolinhanh đều được chăm chút như nhau từ chất liệu tới chi tiết — và ngày ấy còn được giữ lại bằng hình và phim.</p>
+        <p style="margin-top:20px" data-en="Ready to wear or made for a lifetime, every Dolinhanh dress carries the same care for fabric and detail — and the day itself is kept in photographs and film." data-zh="无论是现成购买，还是定制珍藏一生，每一件 Dolinhanh 婚纱都承载着对面料与细节同样的用心——而那一天，也将被定格在照片与影像之中。">Dù là <span class="chi-viet">chiếc váy thuê cho một ngày</span><span class="chi-ngoai">chiếc váy mua sẵn</span> hay chiếc váy làm riêng để giữ lại, mọi chiếc váy của Dolinhanh đều được chăm chút như nhau từ chất liệu tới chi tiết — và ngày ấy còn được giữ lại bằng hình và phim.</p>
       </div>
 
       <div class="dv rise">
@@ -784,7 +787,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <div class="im" data-img="anh/nc-26.jpg"></div>
           <figcaption>
             <span class="ten" data-en="Wedding dresses" data-zh="婚纱">Váy cưới</span>
-            <span class="mo" data-en="A collection ready for your day — to rent, or to buy and keep. Fitted and adjusted to you before the wedding." data-zh="为你的大日子备好的婚纱系列——可租赁，也可购买珍藏。婚礼前为你试纱并量身调整。">Bộ sưu tập sẵn sàng cho ngày của bạn — để thuê, hoặc mua hẳn giữ lại. Chỉnh vừa người trước lễ cưới.</span>
+            <span class="mo" data-en="A collection ready for your day — to buy and keep. Fitted and adjusted to you before the wedding." data-zh="为你的大日子备好的婚纱系列——可购买珍藏。婚礼前为你试纱并量身调整。">Bộ sưu tập sẵn sàng cho ngày của bạn — <span class="chi-viet">để thuê, hoặc </span>mua hẳn giữ lại. Chỉnh vừa người trước lễ cưới.</span>
           </figcaption>
         </figure>
         <figure>
@@ -811,7 +814,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="wrap">
       <div class="rise">
         <p class="triet" data-en="Not the most expensive dress. Not the dress everyone else is choosing. The dress that is right for you." data-zh="不是最贵的那件。不是人人都选的那件。而是最适合你的那件。">Không phải chiếc váy đắt nhất. Không phải chiếc váy đang được nhiều người chọn nhất. Mà là chiếc váy đúng với bạn nhất.</p>
-        <p class="triet b3" data-en="Rent it · Own it · Make it yours — and let us keep the day in photographs and film" data-zh="租赁 · 购买 · 定制——再让我们用照片与影像珍藏这一天">Thuê nó · Sở hữu nó · Làm nó thành của riêng bạn — và giữ lại ngày ấy bằng hình và phim</p>
+        <p class="triet b3" data-en="Own it · Make it yours — and let us keep the day in photographs and film" data-zh="购买 · 定制——再让我们用照片与影像珍藏这一天"><span class="chi-viet">Thuê nó · </span>Sở hữu nó · Làm nó thành của riêng bạn — và giữ lại ngày ấy bằng hình và phim</p>
       </div>
     </div>
   </section>
@@ -821,15 +824,15 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="wrap">
       <div class="mid-blk rise">
         <h2 class="h-cap giua" data-en="The Dolinhanh collection" data-zh="Dolinhanh 婚纱系列">Bộ sưu tập Dolinhanh</h2>
-        <p style="margin-top:22px" data-en="Every dress here can be rented or bought. Most can also be adjusted for you — a neckline, a sleeve, a silhouette." data-zh="这里的每一件婚纱都可租赁或购买。大多数款式还可为你调整——领口、袖子、廓形。">Mọi chiếc váy ở đây đều có thể thuê hoặc mua. Phần lớn còn có thể chỉnh theo bạn — cổ váy, tay áo, dáng váy.</p>
+        <p style="margin-top:22px" data-en="Every dress here can be bought. Most can also be adjusted for you — a neckline, a sleeve, a silhouette." data-zh="这里的每一件婚纱都可购买。大多数款式还可为你调整——领口、袖子、廓形。">Mọi chiếc váy ở đây đều có thể <span class="chi-viet">thuê hoặc </span>mua. Phần lớn còn có thể chỉnh theo bạn — cổ váy, tay áo, dáng váy.</p>
       </div>
       <div class="coll rise">
-        <figure><div class="im" data-img="anh/nc-23.jpg"></div><figcaption data-en="Fitted silk with a slit, long lace gloves · Rent · Buy" data-zh="修身真丝开衩，蕾丝长手套 · 租赁 · 购买">Dáng ôm lụa xẻ tà, găng ren dài · Thuê · Mua</figcaption></figure>
-        <figure><div class="im" data-img="anh/nc-26.jpg"></div><figcaption data-en="Satin ball gown, sweetheart neckline · Rent · Buy · Custom" data-zh="缎面大蓬裙，甜心领 · 租赁 · 购买 · 定制">Ballgown satin, cổ tim · Thuê · Mua · May đo</figcaption></figure>
-        <figure><div class="im" data-img="anh/nc-27.jpg"></div><figcaption data-en="Raised lace all over, full skirt · Rent · Buy" data-zh="满身立体蕾丝，蓬裙 · 租赁 · 购买">Ren nổi toàn thân, tùng xoè · Thuê · Mua</figcaption></figure>
-        <figure><div class="im" data-img="anh/nc-29.jpg"></div><figcaption data-en="Large floral lace, off-shoulder · Rent · Buy · Custom" data-zh="大花蕾丝，一字肩 · 租赁 · 购买 · 定制">Ren hoa lớn, trễ vai · Thuê · Mua · May đo</figcaption></figure>
-        <figure><div class="im" data-img="anh/nc-32.jpg"></div><figcaption data-en="Draped satin with a slit, lace gloves · Rent · Buy" data-zh="垂坠缎面开衩，蕾丝手套 · 租赁 · 购买">Satin xếp nếp, xẻ tà, găng ren · Thuê · Mua</figcaption></figure>
-        <figure><div class="im" data-img="anh/nc-35.jpg"></div><figcaption data-en="Beaded all over, grand skirt · Rent · Buy · Custom" data-zh="满身钉珠，大裙摆 · 租赁 · 购买 · 定制">Đính kết toàn thân, tùng lớn · Thuê · Mua · May đo</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-23.jpg"></div><figcaption data-en="Fitted silk with a slit, long lace gloves · Buy" data-zh="修身真丝开衩，蕾丝长手套 · 购买">Dáng ôm lụa xẻ tà, găng ren dài · <span class="chi-viet">Thuê · </span>Mua</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-26.jpg"></div><figcaption data-en="Satin ball gown, sweetheart neckline · Buy · Custom" data-zh="缎面大蓬裙，甜心领 · 购买 · 定制">Ballgown satin, cổ tim · <span class="chi-viet">Thuê · </span>Mua · May đo</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-27.jpg"></div><figcaption data-en="Raised lace all over, full skirt · Buy" data-zh="满身立体蕾丝，蓬裙 · 购买">Ren nổi toàn thân, tùng xoè · <span class="chi-viet">Thuê · </span>Mua</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-29.jpg"></div><figcaption data-en="Large floral lace, off-shoulder · Buy · Custom" data-zh="大花蕾丝，一字肩 · 购买 · 定制">Ren hoa lớn, trễ vai · <span class="chi-viet">Thuê · </span>Mua · May đo</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-32.jpg"></div><figcaption data-en="Draped satin with a slit, lace gloves · Buy" data-zh="垂坠缎面开衩，蕾丝手套 · 购买">Satin xếp nếp, xẻ tà, găng ren · <span class="chi-viet">Thuê · </span>Mua</figcaption></figure>
+        <figure><div class="im" data-img="anh/nc-35.jpg"></div><figcaption data-en="Beaded all over, grand skirt · Buy · Custom" data-zh="满身钉珠，大裙摆 · 购买 · 定制">Đính kết toàn thân, tùng lớn · <span class="chi-viet">Thuê · </span>Mua · May đo</figcaption></figure>
       </div>
       <div class="mid-blk rise" style="margin-top:clamp(34px,4vw,58px)">
         <a class="btn" href="gui-yeu-cau.html" style="margin-top:0" data-en="Book a private fitting" data-zh="预约私人试纱">Đặt lịch thử váy riêng</a>
@@ -908,7 +911,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <p class="ft-d" data-en="Hanoi · 75 Nguyễn Thị Định, Cầu Giấy" data-zh="河内 · 75 Nguyễn Thị Định, Cầu Giấy">Hà Nội · 75 Nguyễn Thị Định, Cầu Giấy</p>
         <p class="ft-d" data-en="Ho Chi Minh City · 2 Tân Canh, Tân Bình" data-zh="胡志明市 · 2 Tân Canh, Tân Bình">TP.HCM · 2 Tân Canh, Tân Bình</p>
         <p class="ft-d"><a href="tel:+84359950588">035 995 0588</a></p>
-        <p class="ft-d"><a href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
+        <p class="ft-d"><a class="chi-viet" href="https://zalo.me/0359950588" target="_blank" rel="noopener">Zalo</a><a class="chi-ngoai" href="https://wa.me/84359950588" target="_blank" rel="noopener">WhatsApp</a> &nbsp;·&nbsp; <a href="https://m.me/Dolinhanhbridalhcm" target="_blank" rel="noopener">Messenger</a></p>
       </div>
       <div class="ft-c">
         <span class="ft-h" data-en="Support" data-zh="服务支持">Hỗ trợ</span>
@@ -958,11 +961,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   <span class="zl-chu" data-en="Chat on WhatsApp" data-zh="通过 WhatsApp 咨询">Nhắn WhatsApp</span>
 </a>
 
-<!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
+<!-- Meta Pixel: bấm Zalo / WhatsApp / gọi điện = sự kiện Contact -->
 <script>
 (function(){
   var TEN = 'Web thu 2 - index';
-  var CHON = 'a[href*="zalo.me"], a[href^="tel:"], a[href*="m.me/"]';
+  var CHON = 'a[href*="zalo.me"], a[href*="wa.me"], a[href^="tel:"], a[href*="m.me/"]';
   document.addEventListener('click', function(e){
     var t = e.target;
     if (!t || !t.closest) return;
@@ -1077,8 +1080,10 @@ setLang(saved);
     <div class="pop-xong" id="popXong">
       <p class="say" style="max-width:30ch" data-en="Dolinhanh has received your request. We will call to confirm shortly." data-zh="Dolinhanh 已收到你的预约申请，我们会尽快致电与你确认。">Dolinhanh đã nhận thông tin của nàng. Dolinhanh sẽ gọi lại xác nhận trong thời gian sớm nhất.</p>
       <div class="nut-hang" style="margin-top:22px">
-        <a class="btn" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
-        <a class="btn" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-viet" id="p-zalo" href="https://zalo.me/0359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message Zalo" data-zh="Zalo 留言">Nhắn Zalo 035 995 0588</a>
+        <a class="btn chi-ngoai" id="p-wa" href="https://wa.me/84359950588" target="_blank" rel="noopener" style="margin-top:0" data-en="Message us on WhatsApp" data-zh="通过 WhatsApp 联系我们">Nhắn WhatsApp</a>
+        <a class="btn chi-viet" id="p-gia" href="https://dolinhanhbridal.com/bao-gia-v2.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See the price list" data-zh="查看价目表">Xem bảng giá</a>
+        <a class="btn chi-ngoai" id="p-gia-ngoai" href="bo-suu-tap.html" target="_blank" rel="noopener" style="margin-top:0" hidden data-en="See each gown&#39;s price" data-zh="查看每款婚纱价格">Xem giá từng mẫu váy</a>
       </div>
       <div class="pop-qua-xong">
         <span class="eyebrow" data-en="Gifts for the bride" data-zh="献给新娘的礼物">Quà tặng cô dâu</span>
@@ -1096,6 +1101,8 @@ setLang(saved);
 /* popup đặt lịch & nhận báo giá — gửi 3 nơi như trang báo giá đang chạy */
 (function(){
   var nen=document.getElementById("popNen"); if(!nen) return;
+  /* V126: popup nằm sau khối VI/EN nên chưa được dịch, bấm VI ra "undefined" — lưu bản VI rồi dịch theo ngôn ngữ đang chọn */
+  nen.querySelectorAll("[data-en]").forEach(function(e){ if(e.dataset.vi===undefined) e.dataset.vi=e.innerHTML; if(LANG!=="vi") e.innerHTML = LANG==="en" ? e.dataset.en : (e.dataset.zh || e.dataset.en); });
   var fm=document.getElementById("fmPop"), tb=document.getElementById("p-tb");
   var FORM_ID="1FAIpQLSeF3dEz3mocx_O5PxRjuYsOy3SktzFlXvEd-EeQ07eijImlew";
   var MAIL_URL="https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
@@ -1145,6 +1152,10 @@ setLang(saved);
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
     if(muonGia){ ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="+(d.coSo.indexOf("HN")===0?"hn":"hcm"); ng.hidden=false; }
+    /* V126: khách nước ngoài — xem giá bán USD ở Bộ sưu tập + WhatsApp soạn sẵn tin tiếng Anh */
+    var ngN=document.getElementById("p-gia-ngoai"); if(ngN && muonGia) ngN.hidden=false;
+    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
+    var wa=document.getElementById("p-wa"); if(wa) wa.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
     setTimeout(function(){ fm.style.display="none"; document.getElementById("popXong").classList.add("hien"); }, 700);
   });
 })();
