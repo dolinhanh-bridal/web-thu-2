@@ -601,6 +601,10 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   }
   .zl-noi:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(190,62,55,.42);opacity:1;background:#A83630}
   .zl-noi:active{transform:translateY(0)}
+  /* Khách nước ngoài (html.co-gia = vietnamweddinggown.com hoặc đang xem EN/中文) nhắn WhatsApp, không Zalo (chị chốt 15/10/2026) */
+  #wa-noi{display:none}
+  html.co-gia #wa-noi{display:inline-flex}
+  html.co-gia #zl-noi{display:none}
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -786,6 +790,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   </span>
   <span class="zl-chu" data-en="Chat on Zalo" data-zh="通过 Zalo 咨询">Nhắn Zalo đặt lịch</span>
 </a>
+<a class="zl-noi" id="wa-noi" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20to%20ask%20about%20a%20wedding%20dress." target="_blank" rel="noopener" aria-label="Chat with Dolinhanh Bridal on WhatsApp">
+  <span class="zl-icon" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </span>
+  <span class="zl-chu" data-en="Chat on WhatsApp" data-zh="通过 WhatsApp 咨询">Nhắn WhatsApp</span>
+</a>
 
 <!-- Meta Pixel: bấm Zalo / gọi điện = sự kiện Contact -->
 <script>
@@ -847,6 +857,7 @@ document.querySelectorAll("[data-en]").forEach(e=>{ e.dataset.vi = e.innerHTML; 
 function setLang(l){
   LANG = l;
   document.documentElement.lang = l === "zh" ? "zh-CN" : l;
+  document.documentElement.classList.toggle("co-gia", l !== "vi" || BA_NGU);  /* khách nước ngoài: nút nổi WhatsApp thay Zalo (15/10/2026) */
   document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l === "en" ? e.dataset.en : l === "zh" ? (e.dataset.zh || e.dataset.en) : e.dataset.vi; });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang === l));
 }
