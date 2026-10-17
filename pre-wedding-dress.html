@@ -700,6 +700,24 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   /* 中文 (14/10/2026, tên miền vietnamweddinggown.com): chữ Trung không nghiêng */
   html:lang(zh) *{font-style:normal !important}
   html:lang(zh) body{line-break:strict}
+
+  /* ── Bộ lọc gọn (17/10/2026, chị: "mục này hơi lộn xộn"): nhãn cùng 1 cột → nút mọi hàng thẳng hàng;
+     điện thoại: mỗi nhóm 1 hàng, nút lướt ngang (giống máy tính), mép phải mờ dần báo còn nút ── */
+  .vl-nhom .lb,.vl-tim .lb{flex:none;width:122px;min-width:0}
+  @media (max-width:760px){
+    .vl-loc{gap:10px}
+    .vl-nhom,.vl-tim{flex-wrap:nowrap;gap:0 8px}
+    .vl-nhom{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+      margin-right:calc(-1 * var(--gutter));padding:1px var(--gutter) 1px 0;
+      -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 30px),transparent);
+      mask-image:linear-gradient(90deg,#000 calc(100% - 30px),transparent)}
+    .vl-nhom::-webkit-scrollbar{display:none}
+    .vl-nhom .lb,.vl-tim .lb{width:92px;padding-right:8px;box-sizing:border-box;font-size:9.5px;letter-spacing:.16em}
+    .vl-nhom .lb{position:sticky;left:0;z-index:1;align-self:stretch;display:flex;align-items:center;background:var(--paper)}
+    .vl-nhom button{flex:none;white-space:nowrap;padding:7px 13px;font-size:10.5px;letter-spacing:.12em}
+    .vl-tim .o{flex:1 1 auto;min-width:0}
+    .vl-tim input{width:100%;max-width:none}
+  }
 </style>
 
 <script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
