@@ -864,9 +864,11 @@ setLang(saved);
     btn.disabled=true; btn.textContent="Đang gửi…";
     tb.className="fm-tb"; tb.textContent="";
     var muonGia = !!(fm.querySelector("#nhanGia") && fm.querySelector("#nhanGia").checked);
+    var gioMs=(window.dlaGio&&dlaGio.ms())||"";  /* mẫu váy khách bỏ vào giỏ (17/10/2026) */
     var ghiChu="Khách tự đặt trên web Dolinhanh."
       + (d.ngayTiec ? " Ngày tổ chức tiệc: "+ngayVN(d.ngayTiec)+"." : "")
       + (d.noiTiec  ? " Địa điểm tiệc: "+d.noiTiec+"." : "")
+      + (gioMs ? " Mẫu váy quan tâm: "+gioMs+"." : "")
       + (muonGia ? " KHÁCH MUỐN NHẬN BẢNG GIÁ." : "");
     var f=new FormData();
     f.append("entry.255122862","Đặt hẹn mới");
@@ -893,13 +895,14 @@ setLang(saved);
       + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\n"
       + "Giờ đặt hẹn: "+d.gioHen+"\n"
       + "Showroom: "+d.coSo+"\n"
-      + "Muốn nhận bảng giá: "+(muonGia?"CÓ":"không");
+      + "Muốn nhận bảng giá: "+(muonGia?"CÓ":"không")
+      + (gioMs ? "\nMẫu váy quan tâm: "+gioMs : "");
     fetch(MAIL_URL+"?hoi="+encodeURIComponent(tin)+"&em="+encodeURIComponent(d.sdt),{mode:"no-cors"}).catch(function(){});
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var nz=document.getElementById("nutZalo");
     if(nz) nz.addEventListener("click", function(){ try{ navigator.clipboard.writeText(tin); }catch(e){} });
     /* V126: khách nước ngoài — WhatsApp soạn sẵn tin tiếng Anh + xem giá bán USD ở Bộ sưu tập */
-    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+(d.noiTiec?"\nVenue: "+d.noiTiec:"")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
+    var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+(d.noiTiec?"\nVenue: "+d.noiTiec:"")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo+(gioMs?"\nGowns: "+gioMs:"");
     var nw=document.getElementById("nutWa"); if(nw) nw.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
     var ngN=document.getElementById("nutGiaNgoai"); if(ngN && muonGia) ngN.hidden=false;
     var ng=document.getElementById("nutGia");
@@ -917,3 +920,4 @@ setLang(saved);
   });
 })();
 </script>
+<script src="gio-hang.js?v=1"></script>

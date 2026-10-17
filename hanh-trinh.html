@@ -949,7 +949,7 @@ setLang(saved);
   function dong(){ nen.hidden=true; document.body.style.overflow=""; }
   document.addEventListener("click", function(e){
     var a=e.target.closest('a[href$="gui-yeu-cau.html"], a[href*="gui-yeu-cau.html#"]');
-    if(a){ mo(e); }
+    if(a){ nen.dataset.ms=a.dataset.ms||""; mo(e); }
   });
   document.getElementById("popDong").addEventListener("click", dong);
   nen.addEventListener("click", function(e){ if(e.target===nen) dong(); });
@@ -965,6 +965,7 @@ setLang(saved);
     tb.className="fm-tb"; tb.textContent="";
     var muonGia=document.getElementById("p-nhanGia").checked;
     var ghiChu="Khách tự đặt trên web Dolinhanh."
+      + (nen.dataset.ms ? " Mẫu váy quan tâm: "+nen.dataset.ms+"." : "")
       + (d.ngayTiec ? " Ngày tổ chức tiệc: "+ngayVN(d.ngayTiec)+"." : "")
       + (muonGia ? " KHÁCH MUỐN NHẬN BẢNG GIÁ." : "");
     var f=new FormData();
@@ -985,7 +986,8 @@ setLang(saved);
       + "Cô dâu & chú rể: "+d.ten+"\nSĐT: "+d.sdt+"\n"
       + "Ngày tổ chức tiệc: "+(ngayVN(d.ngayTiec)||"chưa điền")+"\n"
       + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\nGiờ đặt hẹn: "+d.gioHen+"\n"
-      + "Showroom: "+d.coSo+"\nMuốn nhận bảng giá: "+(muonGia?"CÓ":"không");
+      + "Showroom: "+d.coSo+"\nMuốn nhận bảng giá: "+(muonGia?"CÓ":"không")
+      + (nen.dataset.ms ? "\nMẫu váy quan tâm: "+nen.dataset.ms : "");
     fetch(MAIL_URL+"?hoi="+encodeURIComponent(tin)+"&em="+encodeURIComponent(d.sdt),{mode:"no-cors"}).catch(function(){});
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
@@ -1026,3 +1028,4 @@ setLang(saved);
   kiem(); setTimeout(kiem,400); setTimeout(kiem,1500);
 })();
 </script>
+<script src="gio-hang.js?v=1"></script>
