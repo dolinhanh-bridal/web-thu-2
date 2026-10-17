@@ -1,7 +1,7 @@
 /* GIỎ HÀNG — Dolinhanh Bridal (17/10/2026: "khách chọn váy, click váy đó và cho váy đó vào giỏ hàng")
    Nạp ở cuối các trang có header .bar. Trang có lưới váy #vlGrid (Bộ sưu tập, Pre-wedding) thêm nút
    "Thêm vào giỏ" dưới mỗi thẻ váy + trong ảnh phóng to.
-   · Khách nước ngoài (html.co-gia): giỏ có giá USD + tổng → Đặt mua qua WhatsApp.
+   · Khách nước ngoài (html.co-gia): Đặt mua qua WhatsApp; giá USD + tổng CHỈ ở vietnamweddinggown.com (html.vwg) — web dolinhanh không có giá (17/10/2026).
    · Khách Việt xem VI: giỏ = các mẫu muốn thử → Đặt lịch thử (popup đặt lịch ghi sẵn mã váy).
    Giỏ lưu trong máy khách (localStorage "dla-gio"); mỗi tên miền một giỏ riêng. */
 (function(){
@@ -186,7 +186,7 @@
   }
 
   function veNgan(){
-    var n = GIO.length, nuocNgoai = ngoai();
+    var n = GIO.length, nuocNgoai = ngoai(), coGia = nuocNgoai && H.classList.contains("vwg");
     NGAN.querySelector("#ghTieuDe").innerHTML = ""; NGAN.querySelector("#ghTieuDe").append(t("gio"), el("span", "", n ? "(" + n + ")" : ""));
     var phu = NGAN.querySelector(".gh-phu"); phu.textContent = nuocNgoai ? "" : t("vietPhu"); phu.hidden = nuocNgoai || !n;
     NGAN.querySelector(".gh-dong").setAttribute("aria-label", t("dong"));
@@ -202,7 +202,7 @@
       var giua = el("div"), ten = el("a", "nm", m.ms); ten.href = anh.href;
       giua.appendChild(ten);
       var de = (m.de && (m.de[l] || m.de.en || m.de.vi)) || ""; if(de) giua.appendChild(el("span", "de", de));
-      if(nuocNgoai){ var g = usd(m.gia); if(g) tong += g; else thieuGia = true;
+      if(coGia){ var g = usd(m.gia); if(g) tong += g; else thieuGia = true;
         giua.appendChild(el("span", "gia" + (g ? "" : " lh"), g ? m.gia : t("lienHe"))); }
       var b = el("button", "gh-bo", t("bo")); b.type = "button"; b.setAttribute("aria-label", t("bo") + " " + m.ms);
       b.addEventListener("click", function(){ bo(m.ms); });
@@ -211,13 +211,13 @@
     CUOI.innerHTML = "";
     if(!n) return;
     if(nuocNgoai){
-      var dong = el("div", "gh-tong"), trai = el("span", "", t("tong")), phai = el("div");
+      if(coGia){ var dong = el("div", "gh-tong"), trai = el("span", "", t("tong")), phai = el("div");
       phai.appendChild(el("b", "", tong ? "US$" + tong.toLocaleString("en-US") : t("lienHe")));
       if(tong && thieuGia) phai.appendChild(el("small", "", t("congLienHe")));
-      dong.appendChild(trai); dong.appendChild(phai); CUOI.appendChild(dong);
+      dong.appendChild(trai); dong.appendChild(phai); CUOI.appendChild(dong); }
       var tin = "Hi Dolinhanh Bridal, I'd like to order:\n"
-        + GIO.map(function(m){ return "• " + m.ms + " — " + (usd(m.gia) ? m.gia : "price on request"); }).join("\n")
-        + (tong ? "\nTotal: US$" + tong.toLocaleString("en-US") + (thieuGia ? " + price on request" : "") : "")
+        + GIO.map(function(m){ return "• " + m.ms + (coGia ? " — " + (usd(m.gia) ? m.gia : "price on request") : ""); }).join("\n")
+        + (coGia && tong ? "\nTotal: US$" + tong.toLocaleString("en-US") + (thieuGia ? " + price on request" : "") : "")
         + "\nAre they available?";
       var mua = el("a", "gh-chinh", t("mua")); mua.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(tin);
       mua.target = "_blank"; mua.rel = "noopener";

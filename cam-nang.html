@@ -620,6 +620,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   /* V126: .chi-viet = chỉ khách Việt xem VI (thuê, Zalo) · .chi-ngoai = chỉ khách nước ngoài html.co-gia (bán, WhatsApp) */
   html.co-gia .chi-viet{display:none !important}
   html:not(.co-gia) .chi-ngoai{display:none !important}
+  html:not(.vwg) .chi-vwg{display:none !important}  /* .chi-vwg = chỉ web vietnamweddinggown.com (giá USD), 17/10/2026 */
   .zl-icon{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);flex:none}
   .zl-icon svg{display:block}
   @media(max-width:640px){
@@ -912,7 +913,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <summary data-en="How do rental and purchase prices differ?" data-zh="租赁和购买的价格有何差别？">Giá thuê và giá mua khác nhau như thế nào?</summary>
           <p data-en="It depends on the dress and on the alterations you would like. Leave us your details and Dolinhanh will send the full price list for the studio you choose." data-zh="这取决于婚纱款式以及您希望做的修改。留下您的联系方式，Dolinhanh 将发送您所选门店的完整价目表。">Giá tuỳ từng mẫu và tuỳ cách bạn muốn chỉnh. Bạn để lại thông tin, Dolinhanh gửi bảng giá đầy đủ của cơ sở bạn chọn.</p>
         </details>
-        <details class="hoi chi-ngoai">
+        <details class="hoi chi-ngoai chi-vwg">
           <summary data-en="How much is a dress?" data-zh="婚纱价格是多少？">Váy giá bao nhiêu?</summary>
           <p data-en="Each gown has its own price — from US$880 to US$2,880. The price is shown under every dress in our <a href=&quot;bo-suu-tap.html&quot;>Collection</a>." data-zh="每款婚纱价格不同——从 US$880 到 US$2,880。每件婚纱的价格都标在<a href=&quot;bo-suu-tap.html&quot;>婚纱系列</a>中。">Mỗi mẫu có giá riêng, từ US$880 đến US$2,880 — giá ghi ngay dưới từng váy trong <a href="bo-suu-tap.html">Bộ sưu tập</a>.</p>
         </details>
@@ -1146,7 +1147,7 @@ document.querySelectorAll("[data-en]").forEach(e=>{ e.dataset.vi = e.innerHTML; 
 function setLang(l){
   LANG = l;
   document.documentElement.lang = l === "zh" ? "zh-CN" : l;
-  document.documentElement.classList.toggle("co-gia", l !== "vi" || BA_NGU);  /* khách nước ngoài: nút nổi WhatsApp thay Zalo (15/10/2026) */
+  document.documentElement.classList.toggle("co-gia", l !== "vi" || BA_NGU); document.documentElement.classList.toggle("vwg", BA_NGU);  /* giá USD CHỈ ở vietnamweddinggown.com, web dolinhanh không có giá (chị chốt 17/10/2026) */  /* khách nước ngoài: nút nổi WhatsApp thay Zalo (15/10/2026) */
   document.querySelectorAll("[data-en]").forEach(e=>{ e.innerHTML = l === "en" ? e.dataset.en : l === "zh" ? (e.dataset.zh || e.dataset.en) : e.dataset.vi; });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang === l));
 }
@@ -1279,7 +1280,7 @@ setLang(saved);
     var ng=document.getElementById("p-gia");
     if(muonGia){ ng.href="https://dolinhanhbridal.com/bao-gia-v2.html?location="+(d.coSo.indexOf("HN")===0?"hn":"hcm"); ng.hidden=false; }
     /* V126: khách nước ngoài — xem giá bán USD ở Bộ sưu tập + WhatsApp soạn sẵn tin tiếng Anh */
-    var ngN=document.getElementById("p-gia-ngoai"); if(ngN && muonGia) ngN.hidden=false;
+    var ngN=document.getElementById("p-gia-ngoai"); if(ngN && muonGia && document.documentElement.classList.contains("vwg")) ngN.hidden=false;
     var waTin="Hi Dolinhanh Bridal, I have just booked a fitting on your website.\nName: "+d.ten+"\nPhone: "+d.sdt+"\nWedding date: "+(ngayVN(d.ngayTiec)||"-")+"\nFitting: "+ngayVN(d.ngayHen)+" "+d.gioHen+"\nShowroom: "+d.coSo;
     var wa=document.getElementById("p-wa"); if(wa) wa.href="https://wa.me/84359950588?text="+encodeURIComponent(waTin);
     setTimeout(function(){ fm.style.display="none"; document.getElementById("popXong").classList.add("hien"); }, 700);
