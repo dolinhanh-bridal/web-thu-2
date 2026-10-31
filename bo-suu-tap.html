@@ -718,7 +718,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   /* 31/10/2026 chị Linh "vẫn cảm giác ảnh bị nhỏ" → VWG điện thoại: lưới sát mép, bỏ mô tả dưới thẻ (có ở ảnh phóng to), chữ sát ảnh */
   @media (max-width:760px){
     html.co-gia.vwg .vl{gap:6px 4px;margin-inline:calc(-1 * var(--gutter) + 6px)}
-    html.co-gia.vwg .vl .de{display:none!important}
+    html.co-gia.vwg .vl .de{margin-top:2px!important}
     html.co-gia.vwg .vl figcaption{padding:7px 4px 10px}
     html.co-gia.vwg .vl .gia{margin-top:2px}
     html.co-gia.vwg .vl .hoi-ws{margin-top:4px}
@@ -749,6 +749,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   html.co-gia.vwg .vl .hoi-ws{color:var(--ink)!important;border-bottom-color:rgba(0,0,0,.35)!important}
   html.co-gia.vwg .vl .gh-them-the{box-shadow:none;border:1px solid rgba(0,0,0,.18)}
   html.co-gia.vwg .vl .hoi-ws{white-space:nowrap}
+  .vl .dg{display:none}
+  html.co-gia.vwg .vl figcaption>.dg{display:block;flex:1 1 100%;margin-top:4px;font-family:var(--sans);font-size:clamp(7.5px,3.2cqw,9px);
+    letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
   /* WhatsApp + giỏ cùng 1 dòng (chị 31/10 "cho tiết kiệm"): figcaption xếp hàng, WhatsApp = nút tròn viền mảnh cạnh nút giỏ */
   html.co-gia.vwg .vl figcaption{display:flex;flex-wrap:wrap;align-items:center;column-gap:6px}
   html.co-gia.vwg .vl figcaption>.kind,html.co-gia.vwg .vl figcaption>.nm,html.co-gia.vwg .vl figcaption>.de,html.co-gia.vwg .vl figcaption>.gia{flex:1 1 100%}
@@ -4076,6 +4079,12 @@ setLang(saved);
     if(kh && !kh.parentNode.classList.contains("vl-anh")){ const w=document.createElement("div"); w.className="vl-anh";
       kh.before(w); w.appendChild(kh); const ch=f.querySelector(".sl-cham"); if(ch) w.appendChild(ch); }
     const cap=f.querySelector("figcaption"), nm=f.querySelector(".nm"); if(!cap||!nm) return;
+    /* dáng váy ghép trước mô tả chất liệu/họa tiết (chị 31/10 "miêu tả chất liệu, hoạ tiết, dáng ở mỗi ảnh") */
+    const DG={"a-line":["A-line","A-line","A字型"],"mermaid":["Đuôi cá","Mermaid","鱼尾"],"ballgown":["Bồng xoè","Ball gown","大蓬裙"],"mini":["Váy ngắn","Mini","短款"]}[f.dataset.dang];
+    const de=cap.querySelector(".de");
+    if(DG && de && !cap.querySelector(".dg")){ const g=document.createElement("span"); g.className="dg";
+      g.dataset.vi=DG[0]; g.dataset.en=DG[1]; g.dataset.zh=DG[2];
+      g.textContent=g.dataset[(typeof LANG!=="undefined"&&LANG)||"vi"]||DG[1]; de.before(g); }
     const ms=nm.textContent.trim(), a=document.createElement("a");
     a.className="hoi-ws"; a.target="_blank"; a.rel="noopener";
     a.href="https://wa.me/84359950588?text="+encodeURIComponent("Hi Dolinhanh, I would like more details on dress "+ms+".");
