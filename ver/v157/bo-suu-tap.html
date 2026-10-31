@@ -715,6 +715,16 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .vl-nut-loc{display:none}
   .vl .hoi-ws{display:none}
   /* nút WhatsApp = vòng tròn nhỏ chỉ biểu tượng, cùng hàng nút giỏ (chị chê nút chữ to, 31/10) */
+  /* 31/10/2026 chị Linh "quá nhiều chữ trên hình" → web vietnamweddinggown: chữ xuống DƯỚI ảnh, bỏ dòng Dolinhanh Bridal */
+  html.co-gia.vwg .vl .vl-anh{position:relative}
+  html.co-gia.vwg .vl .im::after{display:none}
+  html.co-gia.vwg .vl figcaption{position:static;padding:12px 2px 6px;color:var(--ink);text-shadow:none}
+  html.co-gia.vwg .vl figcaption .kind{display:none}
+  html.co-gia.vwg .vl .nm{color:var(--ink)}
+  html.co-gia.vwg .vl .de{color:var(--taupe-deep);margin-top:4px}
+  html.co-gia.vwg .vl .gia{color:var(--ink);margin-top:6px}
+  html.co-gia.vwg .vl .hoi-ws{color:var(--ink)!important;border-bottom-color:rgba(0,0,0,.35)!important}
+  html.co-gia.vwg .vl .gh-them-the{box-shadow:none;border:1px solid rgba(0,0,0,.18)}
   /* "Ask on WhatsApp" = dòng chữ nhỏ trắng dưới giá, cùng kiểu chữ tên váy (chị chê nút to + icon xanh lơ lửng, 31/10) */
   html.co-gia.vwg .vl .hoi-ws{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--sans);font-size:9.5px;
     letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.92);text-decoration:none;
@@ -723,11 +733,17 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   @media (max-width:760px){ html.co-gia.vwg .vl .hoi-ws{font-size:8.5px;letter-spacing:.14em;gap:5px} }
   html:not(.co-gia) .vl-gia,html:not(.vwg) .vl-gia{display:none!important}
   @media (max-width:760px){
-    .vl-nut-loc{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 16px;
-      border:1px solid var(--ink);background:#fff;color:var(--ink);font-family:var(--sans);font-size:11px;
-      letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
-    .vl-nut-loc .vl-dem{margin-left:8px;margin-right:auto;letter-spacing:.06em}
-    .vl-nut-loc .vl-mui{font-size:17px;line-height:1;letter-spacing:0;transition:transform .2s}
+    /* hàng trên: ô tìm mã + nút Filter cùng kiểu bo tròn, chung 1 hàng (chị chê thiết kế lệch, 31/10) */
+    .vl-loc{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+    .vl-tim{order:1;flex:1 1 0;min-width:0}
+    .vl-tim .lb{display:none}
+    .vl-nut-loc{order:2;flex:none;display:inline-flex;align-items:center;gap:8px;padding:0 16px;
+      border:1px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);font-family:var(--sans);font-size:10.5px;
+      letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+    .vl-nut-loc[aria-expanded="true"]{background:var(--ink);color:#fff}
+    .vl-nut-loc .vl-dem{letter-spacing:.04em}
+    .vl-nut-loc .vl-mui{font-size:15px;line-height:1;letter-spacing:0;transition:transform .2s}
+    .vl-loc .vl-nhom{order:3;flex:1 1 100%}
     .vl-nut-loc[aria-expanded="true"] .vl-mui{transform:rotate(45deg)}
     .vl-loc:not(.mo) .vl-nhom{display:none}
   }
@@ -4010,6 +4026,9 @@ setLang(saved);
 
   /* 31/10/2026 chị Linh: dưới mỗi váy (CHỈ vietnamweddinggown) dòng hỏi thêm thông tin → WhatsApp kèm mã váy */
   G.querySelectorAll("figure").forEach(function(f){
+    const kh=f.querySelector(".sl-khung");  /* bọc ảnh + chấm vào .vl-anh để chấm nằm trong ảnh khi chữ xuống dưới (VWG) */
+    if(kh && !kh.parentNode.classList.contains("vl-anh")){ const w=document.createElement("div"); w.className="vl-anh";
+      kh.before(w); w.appendChild(kh); const ch=f.querySelector(".sl-cham"); if(ch) w.appendChild(ch); }
     const cap=f.querySelector("figcaption"), nm=f.querySelector(".nm"); if(!cap||!nm) return;
     const ms=nm.textContent.trim(), a=document.createElement("a");
     a.className="hoi-ws"; a.target="_blank"; a.rel="noopener";
