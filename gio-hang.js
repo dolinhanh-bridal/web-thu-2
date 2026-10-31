@@ -96,6 +96,7 @@
     ".gh-mon .anh{display:block;width:68px;aspect-ratio:2/3;background:#F3EFEA center 12%/cover no-repeat}",
     ".gh-mon .nm{display:block;font-family:var(--sans,Helvetica,Arial,sans-serif);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink,#1B1917);text-decoration:none}",
     ".gh-mon .de{display:block;margin-top:6px;font-family:var(--sans,Helvetica,Arial,sans-serif);font-size:12.5px;line-height:1.5;color:var(--taupe-deep,#6E665C)}",
+    ".gia,.gh-tong b,.gh-mon .gia{font-variant-numeric:lining-nums tabular-nums;font-feature-settings:\"lnum\" 1,\"tnum\" 1}",
     ".gh-mon .gia{display:block;margin-top:8px;font-family:var(--serif,Georgia,serif);font-size:16px;letter-spacing:.02em}",
     ".gh-mon .gia.lh{font-family:var(--sans,Helvetica,Arial,sans-serif);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-deep,#6E665C)}",
     ".gh-bo{padding:2px 0;border:0;border-bottom:1px solid currentColor;background:none;font-family:var(--sans,Helvetica,Arial,sans-serif);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-deep,#6E665C);cursor:pointer}",
