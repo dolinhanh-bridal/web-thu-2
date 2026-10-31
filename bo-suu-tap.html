@@ -711,6 +711,21 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .vl-tim .o{flex:1 1 auto;min-width:0}
     .vl-tim input{width:100%;max-width:none}
   }
+  /* 31/10/2026 chị Linh: điện thoại gom bộ lọc vào nút "Bộ lọc"; lọc giá chỉ web vietnamweddinggown (có giá) */
+  .vl-nut-loc{display:none}
+  .vl .hoi-ws{display:none}
+  html.co-gia.vwg .vl .hoi-ws{display:block;margin-top:8px;font-family:var(--sans);font-size:10.5px;letter-spacing:.06em;
+    line-height:1.5;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  html:not(.co-gia) .vl-gia,html:not(.vwg) .vl-gia{display:none!important}
+  @media (max-width:760px){
+    .vl-nut-loc{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 16px;
+      border:1px solid var(--ink);background:#fff;color:var(--ink);font-family:var(--sans);font-size:11px;
+      letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+    .vl-nut-loc .vl-dem{margin-left:8px;margin-right:auto;letter-spacing:.06em}
+    .vl-nut-loc .vl-mui{font-size:17px;line-height:1;letter-spacing:0;transition:transform .2s}
+    .vl-nut-loc[aria-expanded="true"] .vl-mui{transform:rotate(45deg)}
+    .vl-loc:not(.mo) .vl-nhom{display:none}
+  }
 </style>
 
 <script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
@@ -746,7 +761,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
 
   <section id="bosuutap">
     <div class="wrap">
-      <div class="vl-loc rise">
+      <div class="vl-loc rise" id="vlLoc">
+        <button type="button" class="vl-nut-loc" id="vlNutLoc" aria-expanded="false"><span data-en="Filter" data-zh="筛选">Bộ lọc</span><span class="vl-dem" id="vlDem"></span><span class="vl-mui" aria-hidden="true">+</span></button>
         <div class="vl-tim">
           <label class="lb" for="vlTim" data-en="Dress code" data-zh="婚纱编号">Mã váy</label>
           <span class="o"><input id="vlTim" type="search" inputmode="numeric" autocomplete="off" placeholder="Nhập mã, ví dụ 23" data-ph-en="Enter code, e.g. 23" data-ph-zh="输入编号，如 23"><button type="button" class="xoa" id="vlTimXoa" aria-label="Xoá" hidden>×</button></span>
@@ -777,6 +793,14 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <button type="button" data-loai="coso" data-v="" aria-current="true" data-en="All" data-zh="全部">Tất cả</button>
           <button type="button" data-loai="coso" data-v="hn" data-en="Hanoi" data-zh="河内">Hà Nội</button>
           <button type="button" data-loai="coso" data-v="hcm" data-en="Ho Chi Minh City" data-zh="胡志明市">TP.HCM</button>
+        </div>
+        <div class="vl-nhom vl-gia">
+          <span class="lb" data-en="Price" data-zh="价格">Giá</span>
+          <button type="button" data-loai="gia" data-v="" aria-current="true" data-en="All" data-zh="全部">Tất cả</button>
+          <button type="button" data-loai="gia" data-v="1" data-en="Under US$1,000" data-zh="1,000美元以下">Dưới US$1,000</button>
+          <button type="button" data-loai="gia" data-v="2" data-en="US$1,000–1,300" data-zh="1,000–1,300美元">US$1,000–1,300</button>
+          <button type="button" data-loai="gia" data-v="3" data-en="US$1,400–1,700" data-zh="1,400–1,700美元">US$1,400–1,700</button>
+          <button type="button" data-loai="gia" data-v="4" data-en="US$1,800+" data-zh="1,800美元以上">US$1,800+</button>
         </div>
       </div>
       <div class="vl" id="vlGrid">
@@ -3893,7 +3917,7 @@ setLang(saved);
   const G=document.getElementById('vlGrid'), P=document.getElementById('vlPage'), T=document.getElementById('vlTrong');
   if(!G||!P) return;
   const F=[...G.children], PER=8;
-  let loc={dang:"",mood:"",coso:"",kin:""}, trang=0, tatCa=false, tim="";
+  let loc={dang:"",mood:"",coso:"",kin:"",gia:""}, trang=0, tatCa=false, tim="";
   /* tìm theo mã: số trên thẻ + số của ảnh lướt gộp vào thẻ (vd MS 32 nằm trong thẻ MS 23) */
   const K=document.getElementById('vlKhongThay'), O=document.getElementById('vlTim'), X=document.getElementById('vlTimXoa');
   F.forEach(f=>{
@@ -3911,7 +3935,17 @@ setLang(saved);
   function hop(f){
     return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood)
       && (!loc.coso || (f.dataset.coso||"hn hcm").split(" ").includes(loc.coso))
-      && (!loc.kin || f.dataset.kin===loc.kin);
+      && (!loc.kin || f.dataset.kin===loc.kin)
+      && (!loc.gia || bacGia(f)===loc.gia);
+  }
+  function bacGia(f){ /* 1 <1000 · 2 1000–1399 · 3 1400–1799 · 4 ≥1800 (US$) */
+    if(f._bac===undefined){ const g=+(((f.querySelector('.gia')||{}).textContent||"").replace(/[^\d]/g,""));
+      f._bac = !g ? "" : g<1000 ? "1" : g<1400 ? "2" : g<1800 ? "3" : "4"; }
+    return f._bac;
+  }
+  function demLoc(){ /* số bộ lọc đang chọn, hiện cạnh nút "Bộ lọc" */
+    const n=Object.values(loc).filter(Boolean).length, d=document.getElementById('vlDem');
+    if(d) d.textContent = n ? "("+n+")" : "";
   }
   function ve(){
     const dangTim=/\d/.test(tim);
@@ -3956,12 +3990,32 @@ setLang(saved);
       loc[loai]=b.dataset.v; trang=0;
       document.querySelectorAll('.vl-nhom button[data-loai="'+loai+'"]')
         .forEach(x=>x.setAttribute('aria-current', x===b));
-      ve();
+      ve(); demLoc();
     });
+  });
+
+  const nutLoc=document.getElementById('vlNutLoc');
+  if(nutLoc) nutLoc.addEventListener('click',()=>{
+    const mo=document.getElementById('vlLoc').classList.toggle('mo');
+    nutLoc.setAttribute('aria-expanded', mo);
   });
 
   /* link gửi khách: bo-suu-tap.html?modest=1 → mở sẵn lọc váy kín đáo, tay dài · cổ cao (14/10/2026) */
   if(new URLSearchParams(location.search).get('modest')){ const bk=document.querySelector('.vl-nhom button[data-loai="kin"][data-v="1"]'); if(bk) bk.click(); }
+
+  /* 31/10/2026 chị Linh: dưới mỗi váy (CHỈ vietnamweddinggown) dòng hỏi thêm thông tin → WhatsApp kèm mã váy */
+  G.querySelectorAll("figure").forEach(function(f){
+    const cap=f.querySelector("figcaption"), nm=f.querySelector(".nm"); if(!cap||!nm) return;
+    const ms=nm.textContent.trim(), a=document.createElement("a");
+    a.className="hoi-ws"; a.target="_blank"; a.rel="noopener";
+    a.href="https://wa.me/84359950588?text="+encodeURIComponent("Hi Dolinhanh, I would like more details on dress "+ms+".");
+    a.dataset.vi="Hỏi thêm về váy này qua WhatsApp →";
+    a.dataset.en="Ask about this dress on WhatsApp →";
+    a.dataset.zh="通过 WhatsApp 咨询这件婚纱 →";
+    a.textContent=a.dataset[(typeof LANG!=="undefined"&&LANG)||"en"]||a.dataset.en;
+    a.addEventListener("click",e=>e.stopPropagation());
+    cap.appendChild(a);
+  });
 
   /* lướt ảnh trong từng ô váy */
   G.querySelectorAll("figure").forEach(function(o){
