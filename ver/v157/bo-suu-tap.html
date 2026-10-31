@@ -415,6 +415,10 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .vl-page button{width:34px;height:34px;font-family:var(--sans);font-size:12px;
     color:var(--taupe-deep);border:1px solid transparent;border-radius:50%}
   .vl-page button[aria-current="true"]{color:var(--ink);border-color:var(--line);background:#fff}
+  .vl-page{align-items:center;flex-wrap:nowrap}
+  .vl-page .vl-mui{font-size:18px;line-height:1}
+  .vl-page button:disabled{opacity:.25;cursor:default}
+  .vl-cham3{width:20px;text-align:center;color:var(--taupe-deep);font-size:12px}
   @media (max-width:1000px){ .vl{grid-template-columns:repeat(2,minmax(0,1fr))} }
 
   .vl-loc{display:grid;gap:12px;padding-bottom:clamp(14px,2vw,22px);
@@ -4012,12 +4016,18 @@ setLang(saved);
       const j=[...f.querySelectorAll('.sl')].findIndex(s=>+(((s.dataset.img||"").match(/\/ms(\d+)\//i)||[])[1])===q);
       if(j>0 && f._ve2) f._ve2(j);
     });
+    /* trang gọn (chị 31/10 "sao nhiều số thế"): ‹ 1 … 4 5 6 … 61 › */
     P.innerHTML="";
-    if(N>1) for(let i=0;i<N;i++){
-      const b=document.createElement('button'); b.type='button'; b.textContent=i+1;
-      b.setAttribute('aria-current', i===trang);
-      b.onclick=()=>{ trang=i; ve(); G.scrollIntoView({block:'start'}); };
-      P.appendChild(b);
+    if(N>1){
+      const nut=(nhan,i,cls)=>{ const b=document.createElement('button'); b.type='button'; b.textContent=nhan;
+        if(cls) b.className=cls; if(i===trang && !cls) b.setAttribute('aria-current','true');
+        if(i<0||i>=N) b.disabled=true; else b.onclick=()=>{ trang=i; ve(); G.scrollIntoView({block:'start'}); };
+        P.appendChild(b); };
+      const cham=()=>{ const s=document.createElement('span'); s.className='vl-cham3'; s.textContent='…'; P.appendChild(s); };
+      nut('‹',trang-1,'vl-mui');
+      const ds=[...new Set([0,trang-1,trang,trang+1,N-1])].filter(i=>i>=0&&i<N).sort((a,b)=>a-b);
+      ds.forEach((i,k)=>{ if(k && i-ds[k-1]>1) cham(); nut(i+1,i); });
+      nut('›',trang+1,'vl-mui');
     }
   }
   const nutTatCa=document.getElementById('vlTatCa');
