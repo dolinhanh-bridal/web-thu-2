@@ -715,12 +715,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .vl-nut-loc{display:none}
   .vl .hoi-ws{display:none}
   /* nút WhatsApp = vòng tròn nhỏ chỉ biểu tượng, cùng hàng nút giỏ (chị chê nút chữ to, 31/10) */
-  .vl figure{position:relative}
-  html.co-gia.vwg .vl .hoi-ws{display:flex;align-items:center;justify-content:center;position:absolute;top:10px;right:10px;z-index:5;
-    width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.94);
-    box-shadow:0 2px 10px rgba(0,0,0,.14);font-size:0;text-decoration:none}
-  html.co-gia.vwg .vl .hoi-ws svg{width:18px;height:18px}
-  @media (max-width:760px){ html.co-gia.vwg .vl .hoi-ws{width:28px;height:28px;top:8px;right:8px} html.co-gia.vwg .vl .hoi-ws svg{width:15px;height:15px} }
+  /* "Ask on WhatsApp" = dòng chữ nhỏ trắng dưới giá, cùng kiểu chữ tên váy (chị chê nút to + icon xanh lơ lửng, 31/10) */
+  html.co-gia.vwg .vl .hoi-ws{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-family:var(--sans);font-size:9.5px;
+    letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.92);text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:2px}
+  html.co-gia.vwg .vl .hoi-ws svg{width:11px;height:11px;fill:currentColor}
+  @media (max-width:760px){ html.co-gia.vwg .vl .hoi-ws{font-size:8.5px;letter-spacing:.14em;gap:5px} }
   html:not(.co-gia) .vl-gia,html:not(.vwg) .vl-gia{display:none!important}
   @media (max-width:760px){
     .vl-nut-loc{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 16px;
@@ -4014,10 +4014,11 @@ setLang(saved);
     const ms=nm.textContent.trim(), a=document.createElement("a");
     a.className="hoi-ws"; a.target="_blank"; a.rel="noopener";
     a.href="https://wa.me/84359950588?text="+encodeURIComponent("Hi Dolinhanh, I would like more details on dress "+ms+".");
-    const ic='<svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>';
-    a.innerHTML=ic; a.title="Ask on WhatsApp"; a.setAttribute("aria-label","Ask about "+ms+" on WhatsApp");
+    const ic='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>';
+    a.dataset.vi=ic+"Hỏi qua WhatsApp"; a.dataset.en=ic+"Ask on WhatsApp"; a.dataset.zh=ic+"WhatsApp 咨询";
+    a.innerHTML=a.dataset[(typeof LANG!=="undefined"&&LANG)||"en"]||a.dataset.en;
     a.addEventListener("click",e=>e.stopPropagation());
-    f.appendChild(a);  /* góc trên phải ảnh */
+    const gia=cap.querySelector(".gia"); if(gia) gia.after(a); else cap.appendChild(a);  /* ngay dưới giá */
   });
 
   /* lướt ảnh trong từng ô váy */
