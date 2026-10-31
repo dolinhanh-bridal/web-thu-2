@@ -749,6 +749,13 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   html.co-gia.vwg .vl .hoi-ws{color:var(--ink)!important;border-bottom-color:rgba(0,0,0,.35)!important}
   html.co-gia.vwg .vl .gh-them-the{box-shadow:none;border:1px solid rgba(0,0,0,.18)}
   html.co-gia.vwg .vl .hoi-ws{white-space:nowrap}
+  /* WhatsApp + giỏ cùng 1 dòng (chị 31/10 "cho tiết kiệm"): figcaption xếp hàng, WhatsApp = nút tròn viền mảnh cạnh nút giỏ */
+  html.co-gia.vwg .vl figcaption{display:flex;flex-wrap:wrap;align-items:center;column-gap:6px}
+  html.co-gia.vwg .vl figcaption>.kind,html.co-gia.vwg .vl figcaption>.nm,html.co-gia.vwg .vl figcaption>.de,html.co-gia.vwg .vl figcaption>.gia{flex:1 1 100%}
+  html.co-gia.vwg .vl figcaption .gh-them-the{order:5;margin-top:8px}
+  html.co-gia.vwg .vl figcaption .hoi-ws{order:6;margin-top:8px!important;width:clamp(24px,11cqw,30px);height:clamp(24px,11cqw,30px);
+    justify-content:center;padding:0!important;border:1px solid rgba(0,0,0,.18)!important;border-radius:50%;font-size:0!important;gap:0!important}
+  html.co-gia.vwg .vl figcaption .hoi-ws svg{width:55%!important;height:55%!important}
   /* chữ dưới ảnh co theo BỀ NGANG THẺ (cqw), ảnh là chính (chị 31/10: "thu nhỏ thì chữ to, ảnh bé") */
   html.co-gia.vwg .vl figure{container-type:inline-size}
   html.co-gia.vwg .vl figcaption{padding-top:clamp(8px,4cqw,12px)}
