@@ -711,6 +711,16 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .vl-tim .o{flex:1 1 auto;min-width:0}
     .vl-tim input{width:100%;max-width:none}
   }
+  /* 31/10/2026 chị Linh: ảnh phóng to trên điện thoại — "ảnh nhỏ mà chữ to, quan trọng là hình ảnh" → chữ + nút gọn 1 khối nhỏ dưới, ảnh chiếm phần lớn */
+  @media (max-width:760px){
+    .pt .pt-khung{padding:50px 0 0}
+    .pt .pt-chu{gap:6px;padding:8px 10px calc(10px + env(safe-area-inset-bottom))}
+    .pt .pt-chu p{width:100%;margin:0 0 2px;line-height:1.5}
+    .pt .pt-chu .nm{font-size:10px;letter-spacing:.18em}
+    .pt .pt-chu .de{display:inline;margin:0 0 0 8px;font-size:9.5px}
+    html.co-gia.vwg .pt .pt-chu .pt-gia{display:inline;margin:0 0 0 8px;font-size:13px}
+    .pt .pt-chu .pt-dat{flex:1 1 0;min-width:0;margin:0;padding:8px 6px;font-size:8.5px;letter-spacing:.1em;line-height:1.35;text-align:center}
+  }
   /* 31/10/2026 chị Linh: điện thoại gom bộ lọc vào nút "Bộ lọc"; lọc giá chỉ web vietnamweddinggown (có giá) */
   .vl-nut-loc{display:none}
   .vl .hoi-ws{display:none}
@@ -3847,8 +3857,8 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   </div>
   <div class="pt-chu">
     <p><span class="nm" id="ptTen"></span><span class="de" id="ptMo"></span><span class="pt-gia" id="ptGia"></span></p>
-    <a class="pt-dat pt-mua" id="ptMua" href="https://wa.me/84359950588" target="_blank" rel="noopener" hidden data-en="Buy this gown on WhatsApp" data-zh="通过 WhatsApp 购买此款">Mua mẫu này qua WhatsApp</a>
-    <a class="pt-dat" id="ptDat" href="gui-yeu-cau.html" data-en="Book a fitting for this dress" data-zh="预约试穿此款婚纱">Đặt lịch thử mẫu này</a>
+    <a class="pt-dat pt-mua" id="ptMua" href="https://wa.me/84359950588" target="_blank" rel="noopener" hidden data-en="Buy on WhatsApp" data-zh="WhatsApp 购买">Mua qua WhatsApp</a>
+    <a class="pt-dat" id="ptDat" href="gui-yeu-cau.html" data-en="Book a fitting" data-zh="预约试穿">Đặt lịch thử mẫu này</a>
   </div>
 </div>
 
