@@ -711,6 +711,14 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     .vl-tim .o{flex:1 1 auto;min-width:0}
     .vl-tim input{width:100%;max-width:none}
   }
+  /* 31/10/2026 chị Linh "vẫn cảm giác ảnh bị nhỏ" → VWG điện thoại: lưới sát mép, bỏ mô tả dưới thẻ (có ở ảnh phóng to), chữ sát ảnh */
+  @media (max-width:760px){
+    html.co-gia.vwg .vl{gap:6px 4px;margin-inline:calc(-1 * var(--gutter) + 6px)}
+    html.co-gia.vwg .vl .de{display:none!important}
+    html.co-gia.vwg .vl figcaption{padding:7px 4px 10px}
+    html.co-gia.vwg .vl .gia{margin-top:2px}
+    html.co-gia.vwg .vl .hoi-ws{margin-top:4px}
+  }
   /* 31/10/2026 chị Linh: ảnh phóng to trên điện thoại — "ảnh nhỏ mà chữ to, quan trọng là hình ảnh" → chữ + nút gọn 1 khối nhỏ dưới, ảnh chiếm phần lớn */
   @media (max-width:760px){
     .pt .pt-khung{padding:50px 0 0}
