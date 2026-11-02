@@ -60,7 +60,8 @@
     ".u5-nut.vien{margin-top:8px;background:none;color:#7A2638}",
     ".u5-nut.vien:hover{background:#7A2638;color:#fff}",
     ".u5-ma{display:block;margin:4px 0 8px;padding:9px 10px;border:1px dashed var(--u5-ruou);text-align:center;font-size:1rem;font-weight:600;letter-spacing:.14em;color:var(--u5-ruou)}",
-    ".u5-han{margin:0 0 2px;font-size:.8rem;font-weight:500;text-align:center}",
+    ".u5-han{margin:0 0 2px;font-size:.8rem;font-weight:600;text-align:center;color:#C8102E}",
+    ".u5-tin b{font-weight:600;color:#C8102E}",
     ".u5-tin{margin:8px 0 8px;padding:9px 11px;background:var(--champagne,#F5EFE7);font-size:.76rem;line-height:1.45;white-space:pre-line;-webkit-user-select:text;user-select:text}",
     ".u5-chep{margin:0 0 10px;font-family:" + SERIF + ";font-style:italic;font-size:.84rem;line-height:1.3;text-align:center;color:var(--u5-nau)}",
     ".u5-chep.ok{font-family:inherit;font-style:normal;font-size:.76rem;font-weight:500;color:var(--u5-ruou)}",
@@ -123,7 +124,8 @@
     fm.hidden = true; xong.hidden = false;
     the.querySelector(".u5-ma").textContent = MA;
     the.querySelector(".u5-han").textContent = "Áp dụng tới " + ngayVN(HET);
-    the.querySelector(".u5-tin").textContent = tinKhach();
+    var t = tinKhach(), cuoi = t.lastIndexOf("\n"), oTin = the.querySelector(".u5-tin"), han = document.createElement("b");
+    oTin.textContent = t.slice(0, cuoi + 1); han.textContent = t.slice(cuoi + 1); oTin.appendChild(han);
   }
   function capNhatNhan(){ nhan.textContent = MA ? "Mã -500K · đến " + ngayVN(HET).slice(0, 5) : "Nhận -500K"; }
   function mo(){ if(!laViet()) return; nhan.hidden = true; the.hidden = false; requestAnimationFrame(function(){ the.classList.add("hien"); }); }
