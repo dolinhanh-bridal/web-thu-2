@@ -1150,6 +1150,7 @@ setLang(saved);
       + "Ngày đặt hẹn: "+ngayVN(d.ngayHen)+"\nGiờ đặt hẹn: "+d.gioHen+"\n"
       + "Showroom: "+d.coSo+"\nMuốn nhận bảng giá: "+(muonGia?"CÓ":"không")
       + (nen.dataset.ms ? "\nMẫu váy quan tâm: "+nen.dataset.ms : "");
+    /* Zalo 04/11/2026: chỉ khách web DLA — báo về Zalo chị + tự mở Zalo shop */ if(/^(www\.)?dolinhanhbridal\.com$/.test(location.hostname)){try{var zb=new URLSearchParams();zb.append("loai","hen");zb.append("tin",tin);fetch("/dla-zalo-7k2q/bao.php",{method:"POST",body:zb}).catch(function(){});if((document.documentElement.lang||"vi").toLowerCase().indexOf("vi")===0){try{navigator.clipboard.writeText(tin)}catch(e){}window.open("https://zalo.me/0359950588","_blank");}}catch(e){}}
     fetch(MAIL_URL+"?hoi="+encodeURIComponent(tin)+"&em="+encodeURIComponent(d.sdt),{mode:"no-cors"}).catch(function(){});
     try{ navigator.clipboard.writeText(tin); }catch(e){}
     var ng=document.getElementById("p-gia");
@@ -1191,4 +1192,4 @@ setLang(saved);
 })();
 </script>
 <script src="gio-hang.js?v=2"></script>
-<script src="uu-dai-500.js?v=3"></script>
+<script src="uu-dai-500.js?v=4"></script>

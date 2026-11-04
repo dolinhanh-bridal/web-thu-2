@@ -6,7 +6,8 @@
    - Chỉ hiện khi đang xem tiếng Việt. Không phủ đen, trang vẫn cuộn được.
      Máy tính: hiện sau 7 giây / cuộn 500px. Điện thoại: sau 10 giây / cuộn nửa màn hình.
    - Đóng → nhãn nhỏ trên nút Zalo nổi, bấm mở lại. Hết 7 ngày thì không hiện nữa.
-   - Mã do máy khách tự tạo (không có server): nhân viên đối mã + hạn với mail. Khách đổi máy/trình duyệt nhận được mã mới.
+   - 04/11/2026 (chị Linh): MỖI KHÁCH 1 MÃ. Mã tính theo số điện thoại; dla-zalo-7k2q/bao.php giữ mã + hạn đầu tiên theo SĐT và email,
+     quay lại hay đổi máy vẫn ra đúng mã đó, hạn không tính lại. Mã mới báo về Zalo chị + 1 mail; khách tự nhảy sang Zalo shop, tin đã chép sẵn.
    - dung-web-vwg.py chép file này sang web riêng nhưng dòng kiểm tên miền dưới đây chặn, không hiện ở đó.
    - Xem lại từ đầu: thêm ?uudai=0 vào link. */
 (function(){
@@ -25,10 +26,12 @@
   var MA = lay(K_MA) || "", HET = +lay(K_HET) || 0;
   if(MA && Date.now() >= HET) return;
 
-  function taoMa(){
-    var BC = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = null, m = "DLA500-";
-    try{ r = crypto.getRandomValues(new Uint8Array(4)); }catch(_){}
-    for(var i = 0; i < 4; i++) m += BC[(r ? r[i] : Math.random() * 256) & 31];
+  /* Cùng số điện thoại luôn ra cùng mã (khớp zl_maTheoSdt trong dla-zalo-7k2q/chung.php) */
+  function maTheoSdt(so){
+    var BC = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", h = 2166136261, m = "DLA500-", i;
+    for(i = 0; i < so.length; i++){ h ^= so.charCodeAt(i); h = Math.imul(h, 16777619); }
+    h = h >>> 0;
+    for(i = 0; i < 4; i++) m += BC[(h >>> (5 * i)) & 31];
     return m;
   }
   function ngayVN(t){ var d = new Date(t); return ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + "/" + d.getFullYear(); }
@@ -155,21 +158,41 @@
       return;
     }
     loi.hidden = true;
-    MA = taoMa(); HET = Date.now() + HAN;
+    var so0 = so.indexOf("84") === 0 ? "0" + so.slice(2) : so;
+    MA = maTheoSdt(so0); HET = Date.now() + HAN;
     dat(K_MA, MA); dat(K_HET, String(HET)); dat(K_SDT, sdt); dat(K_TEN, ten); dat(K_EM, em);
-    var tin = "MÃ 500K · " + MA + " · " + ten + " · SĐT " + sdt + "\n"
-      + "Email: " + em + "\n"
-      + "Hiệu lực đến: " + ngayVN(HET) + "\n"
-      + "Trang đang xem: " + location.pathname;
-    fetch(MAIL_URL + "?hoi=" + encodeURIComponent(tin) + "&em=" + encodeURIComponent(em), { mode:"no-cors" }).catch(function(){});
+    function guiMail(){
+      var tin = "MÃ 500K · " + MA + " · " + ten + " · SĐT " + sdt + "\n"
+        + "Email: " + em + "\n"
+        + "Hiệu lực đến: " + ngayVN(HET) + "\n"
+        + "Trang đang xem: " + location.pathname;
+      fetch(MAIL_URL + "?hoi=" + encodeURIComponent(tin) + "&em=" + encodeURIComponent(em), { mode:"no-cors" }).catch(function(){});
+    }
+    var bd = new URLSearchParams();
+    bd.append("loai", "ma500"); bd.append("ten", ten); bd.append("sdt", sdt); bd.append("em", em); bd.append("trang", location.pathname);
+    fetch("/dla-zalo-7k2q/bao.php", { method:"POST", body:bd }).then(function(r){ return r.json(); }).then(function(o){
+      if(!o || !o.ma){ guiMail(); return; }
+      MA = o.ma; HET = +o.het; dat(K_MA, MA); dat(K_HET, String(HET)); veXong();
+      if(Date.now() >= HET){
+        the.querySelector(".u5-han").textContent = "Mã này đã hết hạn ngày " + ngayVN(HET);
+        the.querySelector(".u5-tin").hidden = true; chep.hidden = true; the.querySelector(".u5-zalo").hidden = true;
+      }
+      if(o.moi) guiMail();
+    }).catch(guiMail);
     try{ if(window.fbq) fbq("trackCustom", "Offer500Code"); }catch(_){}
     veXong();
+    /* Tự nhảy sang Zalo ngay trong cú bấm: để sau khi chờ mạng thì iPhone chặn */
+    chepVaBao();
+    try{ window.open(ZALO, "_blank"); }catch(_){}
   });
 
-  the.querySelector(".u5-zalo").addEventListener("click", function(){
+  function chepVaBao(){
     var ok = chepTin(tinKhach());
     chep.classList.toggle("ok", ok);
     chep.textContent = ok ? "Đã chép tin · sang Zalo nhấn giữ ô chat → Dán → Gửi" : "Nàng chép tin trên rồi dán vào Zalo giúp nhé";
+  }
+  the.querySelector(".u5-zalo").addEventListener("click", function(){
+    chepVaBao();
     try{ if(window.fbq) fbq("trackCustom", "Offer500SendCode"); }catch(_){}
   });
 
