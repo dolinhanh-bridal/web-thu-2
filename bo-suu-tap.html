@@ -620,6 +620,16 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .vl .sl-cham button{width:6px;height:6px;padding:0;border-radius:50%;border:0;background:rgba(255,255,255,.5)}
   .vl .sl-cham button[aria-current="true"]{background:#fff;transform:scale(1.25)}
   .vl figcaption{bottom:34px}
+  /* clip váy phía sau ảnh mẫu (05/11/2026) */
+  .vl .sl.sl-clip{position:relative;overflow:hidden;background-position:50% 22%}
+  .sl-clip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;pointer-events:none}
+  .clip-dau{position:absolute;top:10px;right:10px;z-index:4;width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;
+    border-color:transparent transparent transparent rgba(255,255,255,.95);filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));pointer-events:none;transition:opacity .3s ease}
+  figure.dang-clip .clip-dau{opacity:0}
+  .vl .sl-cham button.cham-clip{width:0;height:0;border-radius:0;background:none;border-style:solid;border-width:4px 0 4px 7px;
+    border-color:transparent transparent transparent rgba(255,255,255,.6)}
+  .vl .sl-cham button.cham-clip[aria-current="true"]{background:none;border-left-color:#fff}
+  .pt-clip{display:block;max-width:100%;max-height:100%;width:auto;height:auto}
 
   /* ── Phóng to ảnh váy: bấm ảnh → xem to cả màn hình (V79) ── */
   .vl figure{cursor:zoom-in}
@@ -920,6 +930,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms56/01.jpg?v=3"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms56/clip.jpg" data-clip="anh/vay/ms56/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 56</span><span class="de" data-en="Fitted silk, sheer lace skirt" data-zh="修身真丝，透视蕾丝裙摆">Dáng ôm lụa, chân ren xuyên thấu</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -974,6 +989,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms65/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms65/clip.jpg" data-clip="anh/vay/ms65/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 65</span><span class="de" data-en="All-over lace, full skirt" data-zh="满身蕾丝，蓬裙">Ren toàn thân, tùng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -992,6 +1012,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms68/01.jpg?v=0611"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms68/clip.jpg" data-clip="anh/vay/ms68/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 68</span><span class="de" data-en="3D florals, full tulle skirt" data-zh="立体花朵，蓬松薄纱裙摆">Hoa nổi 3D, tùng voan xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -1028,12 +1053,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-kin="1" data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms74/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms74/clip.jpg" data-clip="anh/vay/ms74/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 74</span><span class="de" data-en="Long-sleeve lace, sweetheart, full skirt" data-zh="长袖蕾丝，甜心领，蓬裙">Ren tay dài cổ tim, tùng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms75/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms75/clip.jpg" data-clip="anh/vay/ms75/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 75</span><span class="de" data-en="Asymmetric draped tulle" data-zh="不对称垂坠薄纱">Voan rủ bất đối xứng</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -1046,6 +1081,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms77/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms77/clip.jpg" data-clip="anh/vay/ms77/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 77</span><span class="de" data-en="Off-shoulder beaded lace mermaid" data-zh="一字肩钉珠蕾丝鱼尾婚纱">Ren đính kết trễ vai, đuôi cá</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -1058,6 +1098,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-kin="1" data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms79/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms79/clip.jpg" data-clip="anh/vay/ms79/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 79</span><span class="de" data-en="Strapless beaded corset, tulle mermaid" data-zh="抹胸钉珠束腰，薄纱鱼尾">Corset đính kết cúp ngực, đuôi cá voan</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -1082,6 +1127,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms83/01.jpg?v=3"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms83/clip.jpg" data-clip="anh/vay/ms83/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 83</span><span class="de" data-en="Off-shoulder beaded, sheer sleeves" data-zh="一字肩钉珠，透视袖">Đính kết trễ vai, tay voan</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -1154,6 +1204,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms95/01.jpg?v=0511"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms95/clip.jpg" data-clip="anh/vay/ms95/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 95</span><span class="de" data-en="Off-shoulder lace, detachable tulle" data-zh="一字肩蕾丝，可拆卸薄纱">Ren trễ vai, tùng voan rời</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -1166,12 +1221,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms98/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms98/clip.jpg" data-clip="anh/vay/ms98/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 98</span><span class="de" data-en="Petal-layered ballgown" data-zh="花瓣层叠大蓬裙">Tùng xếp cánh hoa</span><span class="gia">US$2,880</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms99/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms99/clip.jpg" data-clip="anh/vay/ms99/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 99</span><span class="de" data-en="Off-shoulder beaded lace, fitted" data-zh="一字肩钉珠蕾丝，修身">Ren đính kết trễ vai, dáng ôm</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -1184,6 +1249,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms102/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms102/clip.jpg" data-clip="anh/vay/ms102/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 102</span><span class="de" data-en="Floral lace straps, full skirt" data-zh="花朵蕾丝肩带，蓬松裙摆">Ren hoa hai dây, tùng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -1202,6 +1272,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms105/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms105/clip.jpg" data-clip="anh/vay/ms105/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 105</span><span class="de" data-en="One-shoulder draped tulle, sparkle skirt" data-zh="单肩垂坠薄纱，闪亮裙摆">Voan vắt 1 vai, tùng lấp lánh</span><span class="gia">US$1,680</span></figcaption>
         </figure>
@@ -1214,6 +1289,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms107/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms107/clip.jpg" data-clip="anh/vay/ms107/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 107</span><span class="de" data-en="Off-shoulder lace, tulle skirt" data-zh="一字肩蕾丝，薄纱裙摆">Ren hoa trễ vai, tùng voan</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -1226,6 +1306,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms109/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms109/clip.jpg" data-clip="anh/vay/ms109/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 109</span><span class="de" data-en="Off-shoulder long-sleeve lace mermaid" data-zh="一字肩长袖蕾丝鱼尾婚纱">Ren tay dài trễ vai, đuôi cá</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -1244,6 +1329,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms112/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms112/clip.jpg" data-clip="anh/vay/ms112/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 112</span><span class="de" data-en="Off-shoulder satin corset, slit" data-zh="一字肩缎面鱼骨胸衣，开衩">Corset satin trễ vai, xẻ tà</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -1345,6 +1435,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms129/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms129/clip.jpg" data-clip="anh/vay/ms129/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 129</span><span class="de" data-en="Draped satin, soft fitted" data-zh="垂坠缎面，微修身">Satin rủ, dáng ôm mềm</span><span class="gia">US$880</span></figcaption>
         </figure>
@@ -1513,6 +1608,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms160/01.jpg" data-lon="anh/vay/ms160/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms160/clip.jpg" data-clip="anh/vay/ms160/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 160</span><span class="de" data-en="Corset, blush ombré tulle" data-zh="鱼骨胸衣，裸粉渐变薄纱">Corset, tùng voan loang hồng</span><span class="gia">US$1,680</span></figcaption>
         </figure>
@@ -1687,6 +1787,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms192/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms192/clip.jpg" data-clip="anh/vay/ms192/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 192</span><span class="de" data-en="Clean bodice, wide skirt" data-zh="简约上身，宽大裙摆">Thân trơn, tùng rộng</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -1717,6 +1822,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms197/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms197/clip.jpg" data-clip="anh/vay/ms197/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 197</span><span class="de" data-en="Off-shoulder, full skirt" data-zh="一字肩，蓬松裙摆">Trễ vai, tùng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -1753,6 +1863,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms203/01.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms203/clip.jpg" data-clip="anh/vay/ms203/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 203</span><span class="de" data-en="Lace corset, volume skirt" data-zh="蕾丝鱼骨胸衣，丰盈裙摆">Corset ren, tùng bồng</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -2107,6 +2222,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn" data-ma-cu="320">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms270/01.jpg?v=3" data-lon="anh/vay/ms270/lon.jpg?v=3"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms270/clip.jpg" data-clip="anh/vay/ms270/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 270</span><span class="de" data-en="Ruched mikado strapless" data-zh="褶皱米卡多缎抹胸婚纱">Mikado quây, nhún vén</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2125,6 +2245,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms273/01.jpg" data-lon="anh/vay/ms273/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms273/clip.jpg" data-clip="anh/vay/ms273/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 273</span><span class="de" data-en="Fitted, beaded lace" data-zh="修身，钉珠蕾丝">Dáng ôm, ren đính kết</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -2143,6 +2268,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms278/01.jpg" data-lon="anh/vay/ms278/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms278/clip.jpg" data-clip="anh/vay/ms278/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 278</span><span class="de" data-en="Fitted, heavily beaded lace" data-zh="修身，重工钉珠蕾丝">Dáng ôm, ren đính kết dày</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -2161,12 +2291,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms282/01.jpg" data-lon="anh/vay/ms282/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms282/clip.jpg" data-clip="anh/vay/ms282/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 282</span><span class="de" data-en="Ball gown, soft lace" data-zh="大蓬裙，柔美蕾丝">Dáng xoè, ren mềm</span><span class="gia">US$1,280</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms283/01.jpg" data-lon="anh/vay/ms283/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms283/clip.jpg" data-clip="anh/vay/ms283/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 283</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2209,6 +2349,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms293/01.jpg" data-lon="anh/vay/ms293/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms293/clip.jpg" data-clip="anh/vay/ms293/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 293</span><span class="de" data-en="Fitted, beaded lace" data-zh="修身，钉珠蕾丝">Dáng ôm, ren đính kết</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -2227,12 +2372,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms296/01.jpg" data-lon="anh/vay/ms296/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms296/clip.jpg" data-clip="anh/vay/ms296/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 296</span><span class="de" data-en="Ball gown, plain silk" data-zh="大蓬裙，素色真丝">Dáng xoè, lụa trơn</span><span class="gia">US$1,280</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms297/01.jpg" data-lon="anh/vay/ms297/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms297/clip.jpg" data-clip="anh/vay/ms297/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 297</span><span class="de" data-en="Fitted, soft lace" data-zh="修身，柔美蕾丝">Dáng ôm, ren mềm</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2245,6 +2400,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms299/01.jpg" data-lon="anh/vay/ms299/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms299/clip.jpg" data-clip="anh/vay/ms299/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 299</span><span class="de" data-en="Ball gown, plain silk" data-zh="大蓬裙，素色真丝">Dáng xoè, lụa trơn</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -2335,6 +2495,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="timeless" data-coso="hn" data-ma-cu="333">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms317/01.jpg" data-lon="anh/vay/ms317/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms317/clip.jpg" data-clip="anh/vay/ms317/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 317</span><span class="de" data-en="Strapless crepe column with slit and overskirt" data-zh="抹胸绉缎直身裙，开衩配外裙">Cúp ngang trơn, xẻ tà, đuôi rời</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2353,12 +2518,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms321/01.jpg?v=3" data-lon="anh/vay/ms321/lon.jpg?v=3"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms321/clip.jpg" data-clip="anh/vay/ms321/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 321</span><span class="de" data-en="Ball gown, beaded lace" data-zh="大蓬裙，钉珠蕾丝">Dáng xoè, ren đính kết</span><span class="gia">US$1,480</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms322/01.jpg" data-lon="anh/vay/ms322/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms322/clip.jpg" data-clip="anh/vay/ms322/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 322</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2383,12 +2558,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms327/01.jpg" data-lon="anh/vay/ms327/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms327/clip.jpg" data-clip="anh/vay/ms327/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 327</span><span class="de" data-en="Ball gown, beaded lace" data-zh="大蓬裙，钉珠蕾丝">Dáng xoè, ren đính kết</span><span class="gia">US$1,680</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms328/01.jpg" data-lon="anh/vay/ms328/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms328/clip.jpg" data-clip="anh/vay/ms328/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 328</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2407,6 +2592,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms332/01.jpg" data-lon="anh/vay/ms332/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms332/clip.jpg" data-clip="anh/vay/ms332/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 332</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2419,6 +2609,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="romantic" data-coso="hn" data-ma-cu="304">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms335/01.jpg" data-lon="anh/vay/ms335/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms335/clip.jpg" data-clip="anh/vay/ms335/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 335</span><span class="de" data-en="A-line, beaded lace" data-zh="A字型，钉珠蕾丝">Dáng chữ A, ren đính kết</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -2431,6 +2626,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms337/01.jpg" data-lon="anh/vay/ms337/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms337/clip.jpg" data-clip="anh/vay/ms337/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 337</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
         </figure>
@@ -2461,6 +2661,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms346/01.jpg" data-lon="anh/vay/ms346/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms346/clip.jpg" data-clip="anh/vay/ms346/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 346</span><span class="de" data-en="Long-sleeve lace bodice ballgown, tulle skirt" data-zh="长袖蕾丝上身，薄纱大蓬裙">Tay dài ren, cổ cao, chân váy voan xoè</span><span class="gia">US$1,280</span></figcaption>
         </figure>
@@ -2473,6 +2678,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="editorial" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms348/01.jpg" data-lon="anh/vay/ms348/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms348/clip.jpg" data-clip="anh/vay/ms348/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 348</span><span class="de" data-en="A-line, draped silk" data-zh="A字型垂坠真丝婚纱">Dáng chữ A, lụa xếp nếp</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2485,12 +2695,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms350/01.jpg" data-lon="anh/vay/ms350/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms350/clip.jpg" data-clip="anh/vay/ms350/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 350</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn" data-ma-cu="285">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms352/01.jpg" data-lon="anh/vay/ms352/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms352/clip.jpg" data-clip="anh/vay/ms352/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 352</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2521,6 +2741,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms357/01.jpg" data-lon="anh/vay/ms357/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms357/clip.jpg" data-clip="anh/vay/ms357/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 357</span><span class="de" data-en="A-line, silk with lace sleeves" data-zh="A字型真丝蕾丝袖婚纱">Dáng chữ A, lụa trơn tay ren</span><span class="gia">US$880</span></figcaption>
         </figure>
@@ -2533,12 +2758,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn" data-ma-cu="338">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms359/01.jpg" data-lon="anh/vay/ms359/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms359/clip.jpg" data-clip="anh/vay/ms359/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 359</span><span class="de" data-en="Ball gown, plain silk" data-zh="大蓬裙，素色真丝">Dáng xoè, lụa trơn</span><span class="gia">US$1,280</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms360/01.jpg" data-lon="anh/vay/ms360/lon.jpg"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms360/clip.jpg" data-clip="anh/vay/ms360/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 360</span><span class="de" data-en="A-line, layered organza" data-zh="A字型多层欧根纱婚纱">Dáng chữ A, voan tầng</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -2659,6 +2894,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms563/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms563/clip.jpg" data-clip="anh/vay/ms563/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 563</span><span class="de" data-en="Plain satin sweetheart ballgown" data-zh="素缎心形领大蓬裙">Cúp tim lụa trơn, bồng xoè</span><span class="gia">US$1,680</span></figcaption>
         </figure>
@@ -2671,12 +2911,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms565/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms565/clip.jpg" data-clip="anh/vay/ms565/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 565</span><span class="de" data-en="Rose lace sweetheart ballgown" data-zh="玫瑰蕾丝心形领大蓬裙">Cúp hồng ren lá, bồng xoè</span><span class="gia">US$1,480</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms566/01.jpg?v=1" data-lon="anh/vay/ms566/lon.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms566/clip.jpg" data-clip="anh/vay/ms566/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 566</span><span class="de" data-en="Tulle off-shoulder lace ballgown" data-zh="薄纱一字肩蕾丝大蓬裙">Trễ vai voan, ren lá, bồng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -2839,6 +3089,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms395/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms395/clip.jpg" data-clip="anh/vay/ms395/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 395</span><span class="de" data-en="Cowl-neck slip mermaid" data-zh="荡领吊带鱼尾婚纱">Hai dây cổ đổ, đuôi cá</span><span class="gia">US$880</span></figcaption>
         </figure>
@@ -3355,6 +3610,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms481/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms481/clip.jpg" data-clip="anh/vay/ms481/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 481</span><span class="de" data-en="Folded off-shoulder crepe mermaid" data-zh="折叠一字肩绉缎鱼尾">Trễ vai vắt chéo, đuôi cá trơn</span><span class="gia">US$880</span></figcaption>
         </figure>
@@ -3511,6 +3771,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms508/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms508/clip.jpg" data-clip="anh/vay/ms508/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 508</span><span class="de" data-en="Off-shoulder satin peplum ballgown" data-zh="一字肩缎面荷叶腰大蓬裙">Trễ vai phi, peplum, đính ren</span><span class="gia">US$1,880</span></figcaption>
         </figure>
@@ -3715,6 +3980,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms544/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms544/clip.jpg" data-clip="anh/vay/ms544/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 544</span><span class="de" data-en="Scroll lace strapless sequin A-line" data-zh="卷草蕾丝抹胸亮片A字型婚纱">Cúp ngực ren cuộn, chữ A đính sequin</span><span class="gia">US$1,680</span></figcaption>
         </figure>
@@ -3775,12 +4045,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <figure data-dang="a-line" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms555/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms555/clip.jpg" data-clip="anh/vay/ms555/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 555</span><span class="de" data-en="Folded off-shoulder embroidered mikado A-line" data-zh="翻折一字肩刺绣米卡多缎A字型婚纱">Trễ vai gấp lớp, thêu lá</span><span class="gia">US$1,080</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms556/01.jpg?v=1"></div>
+            <div class="sl sl-clip" data-img="anh/vay/ms556/clip.jpg" data-clip="anh/vay/ms556/clip.mp4"></div>
+          </div>
+          <div class="sl-cham">
+            <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+            <button type="button" class="cham-clip" aria-label="Clip"></button>
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 556</span><span class="de" data-en="Draped off-shoulder pearl-trim mikado A-line" data-zh="垂褶一字肩珍珠饰边米卡多缎A字型婚纱">Trễ vai xếp chéo, viền ngọc</span><span class="gia">US$1,080</span></figcaption>
         </figure>
@@ -4104,16 +4384,35 @@ setLang(saved);
     const gia=cap.querySelector(".gia"); if(gia) gia.after(a); else cap.appendChild(a);  /* ngay dưới giá */
   });
 
+  /* clip váy phía sau ảnh mẫu (05/11/2026): vuốt sang, hoặc rê chuột trên máy tính, là chạy; tắt tiếng, lặp; clip chỉ tải khi tới lượt */
+  function clipPhat(v){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
+  var clipQuan=("IntersectionObserver" in window)?new IntersectionObserver(function(es){ es.forEach(function(e){
+    var v=e.target.querySelector(".sl-clip video"); if(!v) return;
+    if(!e.isIntersecting) v.pause(); else if(e.target.classList.contains("dang-clip")) clipPhat(v); }); }):null;
+  function clipChay(o,s){
+    o.querySelectorAll(".sl-clip video").forEach(function(v){ v.pause(); });
+    var c=s&&s.dataset.clip; o.classList.toggle("dang-clip",!!c); if(!c) return;
+    var v=s.querySelector("video");
+    if(!v){ v=document.createElement("video"); v.muted=true; v.defaultMuted=true; v.loop=true; v.playsInline=true; v.preload="auto";
+      v.setAttribute("muted",""); v.setAttribute("playsinline",""); v.setAttribute("webkit-playsinline",""); v.setAttribute("disablepictureinpicture","");
+      v.src=c; s.appendChild(v); }
+    clipPhat(v);
+  }
   /* lướt ảnh trong từng ô váy */
   G.querySelectorAll("figure").forEach(function(o){
     var track=o.querySelector(".sl-khung"); if(!track) return;
     var cham=[].slice.call(o.querySelectorAll(".sl-cham button"));
-    var n=o.querySelectorAll(".sl").length; if(n<2) return;
+    var ss=o.querySelectorAll(".sl"), n=ss.length; if(n<2) return;
     var i=0;
     function ve2(k){ i=(k+n)%n; track.style.transform="translateX("+(-i*100)+"%)";
-      cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); }); }
+      cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); }); clipChay(o,ss[i]); }
     o._ve2=ve2;
     cham.forEach(function(b,j){ b.addEventListener("click",function(e){ e.stopPropagation(); ve2(j); }); });
+    var iClip=[].findIndex.call(ss,function(s){ return s.dataset.clip; });
+    if(iClip>=0){ var dau=document.createElement("span"); dau.className="clip-dau"; dau.setAttribute("aria-hidden","true"); o.appendChild(dau);
+      if(clipQuan) clipQuan.observe(o);
+      if(window.matchMedia&&matchMedia("(hover:hover) and (pointer:fine)").matches){
+        o.addEventListener("mouseenter",function(){ ve2(iClip); }); o.addEventListener("mouseleave",function(){ ve2(0); }); } }
     var x0=null;
     o.addEventListener("touchstart",function(e){ x0=e.touches[0].clientX; },{passive:true});
     o.addEventListener("touchend",function(e){ if(x0===null) return;
@@ -4129,11 +4428,15 @@ setLang(saved);
           TEN=document.getElementById("ptTen"), MO=document.getElementById("ptMo"), DAT=document.getElementById("ptDat");
     let ds=[], k=0, dangMo=false, x0=null, y0=0, daKeo=false, ox0=50, oy0=50;
     const kep=v=>Math.min(100,Math.max(0,v));
+    const PV=document.createElement("video"); PV.className="pt-clip"; PV.muted=true; PV.loop=true; PV.playsInline=true; PV.controls=false;
+    PV.setAttribute("muted",""); PV.setAttribute("playsinline",""); PV.setAttribute("webkit-playsinline",""); PV.style.display="none"; K.appendChild(PV);
+    function clipDung(){ if(PV.getAttribute("src")){ PV.pause(); PV.removeAttribute("src"); PV.load(); } PV.style.display="none"; A.style.display=""; }
     const zoom=()=>PT.classList.contains("zoom");
     function boZoom(){ PT.classList.remove("zoom"); A.style.transformOrigin=""; }
     function hien(j){
       if(!ds.length) return;
       k=(j+ds.length)%ds.length; const it=ds[k]; boZoom();
+      if(it.v){ A.style.display="none"; PV.style.display="block"; PV.poster=it.u; PV.src=it.v; const pp=PV.play(); if(pp&&pp.catch) pp.catch(()=>{}); } else clipDung();
       A.style.opacity="0"; A.onload=()=>{ A.style.opacity="1"; }; A.src=it.u; if(A.complete) A.style.opacity="1";
       if(it.l){ const n=new Image(); n.onload=()=>{ if(dangMo && ds[k]===it){ A.onload=null; A.src=it.l; A.style.opacity="1"; } }; n.src=it.l; }
       const nm=it.f.querySelector(".nm"), de=it.f.querySelector(".de");
@@ -4151,7 +4454,7 @@ setLang(saved);
       [k-1,k+1].forEach(t=>{ (new Image()).src=ds[(t+ds.length)%ds.length].u; });
     }
     function moRa(f,i){
-      ds=[]; (/\d/.test(tim) ? timDs() : F.filter(hop)).forEach(x=>x.querySelectorAll(".sl").forEach(s=>{ if(s.dataset.goc) ds.push({f:x,u:s.dataset.goc,l:s.dataset.lon||""}); }));
+      ds=[]; (/\d/.test(tim) ? timDs() : F.filter(hop)).forEach(x=>x.querySelectorAll(".sl").forEach(s=>{ if(s.dataset.goc) ds.push({f:x,u:s.dataset.goc,l:s.dataset.lon||"",v:s.dataset.clip||""}); }));
       const s=f.querySelectorAll(".sl")[i]||f.querySelector(".sl");
       const j=ds.findIndex(x=>x.f===f && x.u===(s&&s.dataset.goc));
       if(j<0) return;
@@ -4161,7 +4464,7 @@ setLang(saved);
       hien(j);
     }
     function anDi(){
-      if(!dangMo) return; dangMo=false; PT.classList.remove("hien"); boZoom();
+      if(!dangMo) return; dangMo=false; PT.classList.remove("hien"); boZoom(); clipDung();
       const pn=document.getElementById("popNen"); if(!pn||pn.hidden) document.body.style.overflow="";
       setTimeout(()=>{ if(!dangMo) PT.hidden=true; },300);
     }
