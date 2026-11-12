@@ -541,6 +541,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .cd-o{position:relative;margin:0;overflow:hidden;background:var(--sand)}
   .sl-khung{display:flex;transition:transform .55s cubic-bezier(.22,.7,.28,1);touch-action:pan-y}
   .sl{flex:0 0 100%;aspect-ratio:3/4;background:var(--sand) var(--img) center 18%/cover no-repeat}
+  .sl-clip{background:#000;display:flex;align-items:center}
+  .cd-o.dang-clip figcaption{opacity:0;pointer-events:none;transition:opacity .3s}
+  .sl-clip video{display:block;width:100%;height:auto;max-height:100%}
   .cd-o::after{content:"";position:absolute;inset:auto 0 0 0;height:52%;
     background:linear-gradient(180deg,rgba(18,16,14,0) 0%,rgba(18,16,14,.66) 100%);pointer-events:none}
   .cd-o figcaption{position:absolute;left:20px;right:20px;bottom:52px;z-index:3;color:#fff;
@@ -681,6 +684,34 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="wrap">
       <span class="eyebrow rise" data-en="Real brides" data-zh="真实新娘">Real brides</span>
       <div class="cd-luoi" style="margin-top:20px">
+      <figure class="cd-o rise" data-cd="cd-khuc-lynh">
+        <div class="sl-khung">
+          <div class="sl" data-img="anh/cd-khuc-lynh/01.jpg?v=1211"></div>
+          <div class="sl sl-clip"><video controls playsinline preload="none" poster="anh/cd-khuc-lynh/song-ca.jpg?v=1211" width="1280" height="720"><source src="anh/cd-khuc-lynh/song-ca.mp4?v=1211" type="video/mp4"></video></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/02.jpg?v=1211"></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/03.jpg?v=1211"></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/04.jpg?v=1211"></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/05.jpg?v=1211"></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/06.jpg?v=1211"></div>
+          <div class="sl" data-img="anh/cd-khuc-lynh/07.jpg?v=1211"></div>
+        </div>
+        <div class="sl-cham">
+          <button type="button" aria-label="Ảnh 1" aria-current="true"></button>
+          <button type="button" aria-label="Clip"></button>
+          <button type="button" aria-label="Ảnh 2"></button>
+          <button type="button" aria-label="Ảnh 3"></button>
+          <button type="button" aria-label="Ảnh 4"></button>
+          <button type="button" aria-label="Ảnh 5"></button>
+          <button type="button" aria-label="Ảnh 6"></button>
+          <button type="button" aria-label="Ảnh 7"></button>
+        </div>
+        <figcaption>
+          <span class="kind" data-en="My belove bride" data-zh="我挚爱的新娘">My belove bride</span>
+          <span class="nm" data-en="MS Khuc Lynh" data-zh="MS Khuc Lynh">MS Khúc Lynh</span>
+          <span class="de" data-en="Mikado off-shoulder · Draped ballgown · Duet under the moon" data-zh="Mikado 露肩 · 褶皱大蓬裙 · 月下对唱">Mikado trễ vai xếp nếp · Tùng bồng · Song ca dưới trăng</span>
+          <span class="mood">Romantic · Timeless</span>
+        </figcaption>
+      </figure>
       <figure class="cd-o rise" data-cd="cd-marry">
         <div class="sl-khung">
           <div class="sl" data-img="anh/cd-marry/01.jpg?v=logo1"></div>
@@ -1391,16 +1422,18 @@ document.querySelectorAll(".cd-o").forEach(function(o){
   function ve(k){
     i=(k+n)%n;
     track.style.transform="translateX("+(-i*100)+"%)";
+    [].forEach.call(o.querySelectorAll("video"),function(v){ if(!v.paused) v.pause(); });
+    var sls=o.querySelectorAll(".sl"); o.classList.toggle("dang-clip", !!(sls[i] && sls[i].classList.contains("sl-clip")));
     cham.forEach(function(b,j){ b.setAttribute("aria-current", j===i); });
   }
   cham.forEach(function(b,j){ b.addEventListener("click",function(e){ e.stopPropagation(); ve(j); }); });
   o.addEventListener("click",function(e){
-    if(e.target.closest(".sl-cham")) return;
+    if(e.target.closest(".sl-cham") || e.target.closest("video")) return;
     var r=o.getBoundingClientRect();
     ve(i + ((e.clientX-r.left) > r.width/2 ? 1 : -1));
   });
   var x0=null;
-  o.addEventListener("touchstart",function(e){ x0=e.touches[0].clientX; },{passive:true});
+  o.addEventListener("touchstart",function(e){ x0=e.target.closest("video")? null : e.touches[0].clientX; },{passive:true});
   o.addEventListener("touchend",function(e){
     if(x0===null) return;
     var dx=e.changedTouches[0].clientX-x0; x0=null;
