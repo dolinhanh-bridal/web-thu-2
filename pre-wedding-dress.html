@@ -441,6 +441,21 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .vl-tim .xoa{position:absolute;right:8px;width:22px;height:22px;border:0;background:transparent;
     color:var(--taupe-deep);font-size:16px;line-height:1;cursor:pointer}
   .vl-tim .xoa[hidden]{display:none}
+
+  /* 12/11/2026 tìm kiếm thông minh: gợi ý bấm nhanh + dòng số kết quả */
+  .vl-tim input{width:min(340px,62vw)}
+  .vl-goiy{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 100%;margin-left:132px}
+  .vl-goiy button{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;padding:6px 12px;border:1px solid rgba(0,0,0,.2);
+    border-radius:100px;background:transparent;color:var(--taupe-deep);cursor:pointer;white-space:nowrap}
+  .vl-goiy button:hover{color:var(--ink);border-color:var(--ink)}
+  .vl-kq{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-deep);margin:4px 0 0}
+  .vl-kq[hidden]{display:none}
+  @media (max-width:760px){
+    .vl-loc .vl-tim{flex-wrap:wrap}
+    .vl-goiy{flex:none;width:100%;margin-left:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+    .vl-goiy::-webkit-scrollbar{display:none}
+    .vl-goiy button{flex:none}
+  }
   .vl-trong{max-width:56ch;margin:clamp(30px,4vw,52px) auto;text-align:center;color:var(--taupe-deep)}
   .vl-trong[hidden]{display:none}
   .vl figcaption .kind{display:block;font-family:var(--sans);font-size:9.5px;
@@ -764,8 +779,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     <div class="wrap">
       <div class="vl-loc rise">
         <div class="vl-tim">
-          <label class="lb" for="vlTim" data-en="Dress code" data-zh="婚纱编号">Mã váy</label>
-          <span class="o"><input id="vlTim" type="search" inputmode="numeric" autocomplete="off" placeholder="Nhập mã, ví dụ 248" data-ph-en="Enter code, e.g. 248" data-ph-zh="输入编号，如 248"><button type="button" class="xoa" id="vlTimXoa" aria-label="Xoá" hidden>×</button></span>
+          <label class="lb" for="vlTim" data-en="Search" data-zh="搜索">Tìm váy</label>
+          <span class="o"><input id="vlTim" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Mã váy hoặc kiểu: mini, ren, đuôi cá…" data-ph-en="Code or style: mini dress, lace, mermaid…" data-ph-zh="编号或款式：短款、蕾丝、鱼尾…"><button type="button" class="xoa" id="vlTimXoa" aria-label="Xoá" hidden>×</button></span>
+          <div class="vl-goiy" id="vlGoiY"><button type="button" data-q="mini" data-en="Mini dress" data-zh="短款">Váy ngắn · Mini</button><button type="button" data-q="lace" data-en="Lace" data-zh="蕾丝">Ren</button><button type="button" data-q="mermaid" data-en="Mermaid" data-zh="鱼尾">Đuôi cá</button><button type="button" data-q="a-line" data-en="A-line" data-zh="A字型">Chữ A</button><button type="button" data-q="ball gown" data-en="Ball gown" data-zh="大蓬裙">Bồng xoè</button><button type="button" data-q="off-shoulder" data-en="Off-shoulder" data-zh="露肩">Trễ vai</button><button type="button" data-q="corset" data-en="Corset" data-zh="紧身胸衣">Corset</button><button type="button" data-q="beaded" data-en="Beaded" data-zh="钉珠">Đính đá</button><button type="button" data-q="long sleeves" data-en="Long sleeves" data-zh="长袖">Tay dài</button><button type="button" data-q="slit" data-en="Slit" data-zh="开衩">Xẻ tà</button></div>
         </div>
         <div class="vl-nhom">
           <span class="lb" data-en="Showroom" data-zh="门店">Cơ sở</span>
@@ -782,6 +798,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <button type="button" data-loai="dang" data-v="mini" data-en="Mini" data-zh="短款">Mini</button>
         </div>
       </div>
+      <p class="vl-kq" id="vlKQ" hidden aria-live="polite"></p>
       <div class="vl" id="vlGrid">
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -1991,7 +2008,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 58</span><span class="de" data-en="Off-shoulder satin, pearl details" data-zh="一字肩缎面，珍珠点缀">Satin trễ vai, điểm ngọc nhỏ</span></figcaption>
         </figure>
       </div>
-      <p class="vl-trong" id="vlKhongThay" hidden data-en="We could not find this code. Message Dolinhanh and we will check the showroom for you." data-zh="暂未找到该编号。请联系 Dolinhanh，我们为您在店内查询。">Chưa tìm thấy mã này. Bạn nhắn Dolinhanh, Dolinhanh sẽ kiểm tra giúp bạn tại showroom.</p>
+      <p class="vl-trong" id="vlKhongThay" hidden data-en="We could not find a match. Try another word (mini dress, lace, mermaid, off-shoulder…) or a dress code, or message Dolinhanh and we will check the showroom for you." data-zh="暂未找到。请换个关键词（短款、蕾丝、鱼尾、露肩…）或输入编号，或联系 Dolinhanh，我们为您在店内查询。">Chưa tìm thấy. Bạn thử từ khác (mini, ren, đuôi cá, trễ vai…) hoặc gõ mã váy, hoặc nhắn Dolinhanh, Dolinhanh sẽ tìm giúp bạn tại showroom.</p>
       <p class="vl-trong" id="vlTrong" hidden data-en="These dresses are being updated." data-zh="这部分婚纱正在更新中。">Các mẫu váy pre-wedding đang được cập nhật.</p>
       <div class="vl-page" id="vlPage"></div>
       <div class="vl-tatca">
@@ -2241,17 +2258,88 @@ setLang(saved);
     f.querySelectorAll('.sl').forEach(s=>{ const m=(s.dataset.img||"").match(/\/ms(\d+)\//i); if(m) so.add(+m[1]); });
     f._so=[...so];
   });
+  /* ── 12/11/2026 tìm thông minh: gõ mã → như cũ; gõ chữ → tìm theo kiểu/dáng/chất liệu/mood/cơ sở (VI · EN · 中文, bỏ dấu) ── */
+  const NORM=s=>String(s||"").toLowerCase().replace(/đ/g,"d").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9一-鿿]+/g," ").trim();
+  const NHOM=[ /* mỗi nhóm = các cách gọi cùng 1 thứ */
+    ["mini","mini dress","vay ngan","short dress","cocktail","tea length","短款","短裙"],
+    ["mermaid","duoi ca","fishtail","fish tail","trumpet","鱼尾"],
+    ["a line","aline","chu a","a字","a字型"],
+    ["ballgown","ball gown","bong xoe","xoe","bong","tung bong","princess","cong chua","大蓬裙","蓬蓬"],
+    ["lace","ren","蕾丝"],
+    ["off shoulder","off the shoulder","tre vai","露肩","一字肩"],
+    ["strapless","cup nguc","bustier","抹胸"],
+    ["strap","straps","hai day","spaghetti","吊带"],
+    ["corset","co set","紧身胸衣","胸衣"],
+    ["beaded","bead","beading","crystal","rhinestone","sparkle","glitter","dinh da","dinh ket","pha le","kim tuyen","钉珠","水晶","亮片"],
+    ["tulle","voan","net","纱"],
+    ["silk","satin","lua","真丝","缎面","缎"],
+    ["long sleeve","long sleeves","tay dai","长袖"],
+    ["high neck","co cao","高领"],
+    ["slit","xe ta","开衩"],
+    ["train","duoi dai","拖尾"],
+    ["embroidery","embroidered","theu","刺绣"],
+    ["floral","flower","flowers","3d","hoa","花"],
+    ["plain","tron","素色"],
+    ["open back","backless","ho lung","lung ho","露背"],
+    ["v neck","co v","v领"],
+    ["puff sleeve","puff","tay phong","泡泡袖"],
+    ["modest","kin dao","kin","保守","端庄"],
+    ["minimal","toi gian","极简"],
+    ["romantic","lang man","浪漫"],
+    ["editorial","thoi trang cao cap","时装感"],
+    ["timeless","co dien","经典永恒","经典"],
+    ["ha noi","hanoi","hn","河内"],
+    ["ho chi minh","hcm","sai gon","saigon","tphcm","tp hcm","胡志明市"],
+  ];
+  const BO=new Set(["dress","dresses","gown","gowns","wedding","bridal","vay","cuoi","dam","mau","婚纱","的","the","a","an","for","of","and","va","cho","kieu","loai"]);
+  const MAP=new Map(); NHOM.forEach((g,i)=>g.forEach(p=>MAP.set(p,i)));
+  const mayHay=f=>{
+    if(f._hay) return f._hay;
+    const de=f.querySelector('.de'), dg=f.querySelector('.dg'), nm=f.querySelector('.nm');
+    const T=[nm&&nm.textContent, de&&(de.dataset.vi||de.textContent), de&&de.dataset.en, de&&de.dataset.zh,
+             dg&&dg.dataset.vi, dg&&dg.dataset.en, dg&&dg.dataset.zh, f.dataset.dang, f.dataset.mood, f.dataset.coso, f.dataset.kin];
+    const dang={"a-line":"a line chu a","mermaid":"mermaid duoi ca","ballgown":"ballgown ball gown bong xoe","mini":"mini mini dress vay ngan"}[f.dataset.dang]||"";
+    const kin=f.dataset.kin==="1" ? "modest kin dao tay dai long sleeve co cao high neck" : "";
+    const coso=(f.dataset.coso||"hn hcm").replace("hn","ha noi hanoi").replace("hcm","ho chi minh hcm sai gon");
+    f._hay=" "+NORM(T.join(" ")+" "+dang+" "+kin+" "+coso)+" ";
+    return f._hay;
+  };
+  const co=(hay,t)=>{ /* từ ngắn: khớp nguyên từ (mini ≠ minimal); từ ≥5 chữ: khớp đầu từ; chữ Hán: khớp chuỗi */
+    if(/[一-鿿]/.test(t)) return hay.includes(t);
+    return t.length>=5 ? hay.includes(" "+t) : hay.includes(" "+t+" ");
+  };
+  function phanTich(q){ /* → danh sách "điều kiện": mỗi điều kiện là mảng cách gọi, vật phải khớp ÍT NHẤT 1 */
+    let tok=NORM(q).split(" ").filter(Boolean), out=[];
+    for(let i=0;i<tok.length;){
+      let ok=false;
+      for(let n=Math.min(3,tok.length-i);n>=1&&!ok;n--){
+        const ph=tok.slice(i,i+n).join(" ");
+        if(MAP.has(ph)){ out.push(NHOM[MAP.get(ph)]); i+=n; ok=true; }
+      }
+      if(!ok){ out.push([tok[i]]); i++; }
+    }
+    const giu=out.filter(c=>!(c.length===1&&BO.has(c[0])));
+    return (giu.length?giu:out).filter(c=>c[0]&&(c[0].length>1||/[一-鿿]/.test(c[0])));
+  }
+  const laMa=q=>/^(ms\s*)?\d+$/i.test(q.trim());
   function timDs(){
-    const q=(tim.match(/\d+/)||[""])[0]; if(!q) return F;
-    const dung=F.filter(f=>f._so.includes(+q));
-    return dung.length ? dung : F.filter(f=>f._so.some(n=>String(n).startsWith(q)));
+    if(laMa(tim)){
+      const q=(tim.match(/\d+/)||[""])[0]; if(!q) return F;
+      const dung=F.filter(f=>f._so.includes(+q));
+      return dung.length ? dung : F.filter(f=>f._so.some(n=>String(n).startsWith(q)));
+    }
+    const dk=phanTich(tim); if(!dk.length) return F;
+    const diem=f=>{ const h=mayHay(f); return dk.map(c=>c.some(t=>co(h,t))?1:0); };
+    const tatca=F.filter(f=>hop(f)&&diem(f).every(Boolean));
+    if(tatca.length||dk.length<2) return tatca;
+    return F.filter(f=>hop(f)&&diem(f).some(Boolean)).sort((a,b)=>diem(b).reduce((x,y)=>x+y,0)-diem(a).reduce((x,y)=>x+y,0)); /* gõ nhiều từ mà không váy nào đủ → gợi ý váy khớp một phần */
   }
   function hop(f){
     return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood)
       && (!loc.coso || (f.dataset.coso||"hn hcm").split(" ").includes(loc.coso));
   }
   function ve(){
-    const dangTim=/\d/.test(tim);
+    const dangTim=tim.trim().length>0;
     const ds=dangTim ? timDs() : F.filter(hop);
     F.forEach(f=>f.style.display="none");
     const N=(tatCa||dangTim) ? 1 : Math.ceil(ds.length/PER);
@@ -2260,7 +2348,10 @@ setLang(saved);
     T.hidden = ds.length>0 || dangTim;
     if(K) K.hidden = ds.length>0 || !dangTim;
     if(nutTatCa) nutTatCa.style.display = dangTim ? "none" : "";
-    if(dangTim) ds.forEach(f=>{ /* gõ mã ảnh lướt (vd 32) → lướt thẳng tới ảnh đó */
+    const KQ=document.getElementById('vlKQ');
+    if(KQ){ KQ.hidden=!dangTim||!ds.length; const n=ds.length, L=(typeof LANG!=="undefined"&&LANG)||"vi";
+      KQ.textContent = L==="en" ? n+(n===1?" dress":" dresses") : L==="zh" ? n+" 款婚纱" : n+" mẫu váy"; }
+    if(dangTim && laMa(tim)) ds.forEach(f=>{ /* gõ mã ảnh lướt (vd 32) → lướt thẳng tới ảnh đó */
       const q=+(tim.match(/\d+/)[0]);
       const j=[...f.querySelectorAll('.sl')].findIndex(s=>+(((s.dataset.img||"").match(/\/ms(\d+)\//i)||[])[1])===q);
       if(j>0 && f._ve2) f._ve2(j);
@@ -2280,6 +2371,8 @@ setLang(saved);
     const qMs=new URLSearchParams(location.search).get('ms'); /* link gửi khách: pre-wedding-dress.html?ms=248 */
     if(qMs){ O.value=qMs; tim=qMs; X.hidden=false; }
   }
+  document.querySelectorAll('#vlGoiY button').forEach(b=>b.addEventListener('click',()=>{
+    if(!O) return; O.value=b.dataset.q; tim=O.value; X.hidden=false; trang=0; ve(); O.focus({preventScroll:true}); }));
   if(nutTatCa) nutTatCa.addEventListener('click', ()=>{
     tatCa=!tatCa; trang=0;
     const tc = tatCa ? {vi:"Xem theo trang", en:"See by page", zh:"分页浏览"} : {vi:"Xem tất cả váy", en:"See all dresses", zh:"查看全部婚纱"};
