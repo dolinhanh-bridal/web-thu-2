@@ -17,7 +17,8 @@
           thuPhu:"Hoặc đặt lịch thử tại showroom",
           vietPhu:"Những mẫu nàng muốn thử", datThu:"Đặt lịch thử {n} mẫu này", datThu1:"Đặt lịch thử mẫu này",
           vietNote:"Dolinhanh chuẩn bị sẵn các mẫu này cho buổi thử của nàng.",
-          zalo:"Hoặc nhắn Zalo cho Dolinhanh", daChep:"Đã chép danh sách mẫu — dán vào Zalo nhé", dong:"Đóng" },
+          zalo:"Hoặc nhắn Zalo cho Dolinhanh", daChep:"Đã chép danh sách mẫu — dán vào Zalo nhé", dong:"Đóng",
+          hn:"Hà Nội", hcm:"TP.HCM", ca2:"Có ở cả 2 cơ sở", datThuTai:"Đặt lịch thử {n} mẫu tại {cs}", datThu1Tai:"Đặt lịch thử mẫu này tại {cs}" },
     en: { gio:"Your cart", them:"Add to cart", daCo:"In your cart", daCoThe:"In cart", xemGio:"View cart",
           daThem:"{ms} added to your cart", trong:"Your cart is empty", trongPhu:"Tap a gown you love → Add to cart.",
           bst:"Browse the collection", bo:"Remove", tong:"Total", lienHe:"Price on request", congLienHe:"+ price on request",
@@ -25,7 +26,8 @@
           thuPhu:"Or book a fitting at our showroom",
           vietPhu:"The gowns you want to try", datThu:"Book a fitting for these {n} gowns", datThu1:"Book a fitting for this gown",
           vietNote:"Dolinhanh will have these gowns ready for your fitting.",
-          zalo:"Or message Dolinhanh on Zalo", daChep:"Gown list copied — paste it into Zalo", dong:"Close" },
+          zalo:"Or message Dolinhanh on Zalo", daChep:"Gown list copied — paste it into Zalo", dong:"Close",
+          hn:"Hanoi", hcm:"Ho Chi Minh City", ca2:"Available at both showrooms", datThuTai:"Book a fitting for {n} gowns in {cs}", datThu1Tai:"Book a fitting for this gown in {cs}" },
     zh: { gio:"购物车", them:"加入购物车", daCo:"已在购物车", daCoThe:"已加入", xemGio:"查看购物车",
           daThem:"{ms} 已加入购物车", trong:"购物车是空的", trongPhu:"点击喜欢的婚纱 → 加入购物车。",
           bst:"浏览婚纱系列", bo:"移除", tong:"合计", lienHe:"价格请咨询", congLienHe:"+ 价格请咨询款",
@@ -33,7 +35,8 @@
           thuPhu:"或预约到店试穿",
           vietPhu:"你想试穿的婚纱", datThu:"预约试穿这 {n} 款", datThu1:"预约试穿此款",
           vietNote:"Dolinhanh 会为你的试纱提前备好这些婚纱。",
-          zalo:"或通过 Zalo 联系 Dolinhanh", daChep:"已复制婚纱清单——粘贴到 Zalo 即可", dong:"关闭" }
+          zalo:"或通过 Zalo 联系 Dolinhanh", daChep:"已复制婚纱清单——粘贴到 Zalo 即可", dong:"关闭",
+          hn:"河内", hcm:"胡志明市", ca2:"两家门店均有", datThuTai:"预约在{cs}试穿这 {n} 款", datThu1Tai:"预约在{cs}试穿此款" }
   };
   function ng(){ var l = (typeof LANG !== "undefined" && LANG) || (H.lang || "vi").slice(0,2); return CHU[l] ? l : "en"; }
   function t(k, v){ var s = CHU[ng()][k] || CHU.en[k]; for(var x in v) s = s.replace("{"+x+"}", v[x]); return s; }
@@ -47,6 +50,10 @@
   function coTrong(ms){ return GIO.some(function(x){ return x.ms === ms; }); }
   function usd(s){ var m = /US\$\s?([\d,]+)/.exec(s || ""); return m ? +m[1].replace(/,/g, "") : 0; }
   function dsMs(){ return GIO.map(function(x){ return x.ms; }).join(", "); }
+  /* cơ sở của 1 mẫu: "hn" / "hcm" / "" (cả 2 hoặc chưa ghi) */
+  function cs(m){ var c = (m.coso || "").split(" ").filter(Boolean); return c.length === 1 ? c[0] : ""; }
+  function nhom(){ var o = { hn:[], hcm:[], ca2:[] }; GIO.forEach(function(m){ (o[cs(m)] || o.ca2).push(m); }); return o; }
+  function dsCua(a){ return a.map(function(x){ return x.ms; }).join(", "); }
 
   /* ── đọc thông tin 1 thẻ váy ── */
   var THE = {};  /* "MS 23" → <figure> */
@@ -59,7 +66,7 @@
     if(s){ anh = s.dataset.goc || s.getAttribute("data-img") || ""; if(!anh){ var m = /url\(['"]?([^'")]+)/.exec(s.style.getPropertyValue("--img") || ""); if(m) anh = m[1]; } }
     try{ if(anh) anh = new URL(anh, location.href).href; }catch(_){}
     var g = f.querySelector(".gia");
-    return { ms:msCua(f), anh:anh, gia:(g && !g.dataset.en) ? g.textContent.trim() : "", de:chuCua(f.querySelector(".de")) };
+    return { ms:msCua(f), coso:(f.dataset.coso||"").trim(), anh:anh, gia:(g && !g.dataset.en) ? g.textContent.trim() : "", de:chuCua(f.querySelector(".de")) };
   }
 
   function them(f){
@@ -91,6 +98,8 @@
     ".gh-phu[hidden]{display:none}",
     ".gh-dong{flex:none;width:40px;height:40px;margin:-8px -12px 0 0;padding:0;border:0;background:none;color:inherit;font-size:28px;line-height:1;cursor:pointer}",
     ".gh-ds{flex:1 1 auto;overflow-y:auto;margin:0;padding:4px 24px;list-style:none;-webkit-overflow-scrolling:touch}",
+    ".gh-cs{margin:0;padding:18px 0 4px;font-family:var(--sans,Helvetica,Arial,sans-serif);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#7A2638;border-bottom:1px solid var(--line,#E7E3DD)}",
+    ".gh-cs:first-child{padding-top:10px}",
     ".gh-mon{display:grid;grid-template-columns:68px 1fr auto;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line,#E7E3DD)}",
     ".gh-mon:last-child{border-bottom:0}",
     ".gh-mon .anh{display:block;width:68px;aspect-ratio:2/3;background:#F3EFEA center 12%/cover no-repeat}",
@@ -175,8 +184,8 @@
   addEventListener("popstate", function(){ if(boQuaPop){ boQuaPop = false; var s = sauDong; sauDong = null; if(s) setTimeout(s, 60); return; } if(moRa){ dayLS = false; an(); } });
   addEventListener("keydown", function(e){ if(moRa && e.key === "Escape"){ e.stopImmediatePropagation(); dongNgan(); } }, true);
 
-  function linkDatLich(cls, chu){
-    var a = el("a", cls, chu); a.href = "gui-yeu-cau.html"; a.dataset.ms = dsMs();
+  function linkDatLich(cls, chu, ds, coso){
+    var a = el("a", cls, chu); a.href = "gui-yeu-cau.html"; a.dataset.ms = ds != null ? ds : dsMs(); if(coso) a.dataset.coso = coso;
     a.addEventListener("click", function(e){
       var f = !document.getElementById("popNen") && document.getElementById("fmHen");  /* trang Gửi yêu cầu: form nằm ngay trên trang */
       if(f){ e.preventDefault(); dongNgan(function(){ var hd = document.getElementById("hd"), cao = hd ? hd.getBoundingClientRect().height : 0;
@@ -196,7 +205,11 @@
     TRONG.querySelector("a").textContent = t("bst");
     DS.innerHTML = "";
     var tong = 0, thieuGia = false, l = ng();
-    GIO.forEach(function(m){
+    var NH = nhom(), coChia = !nuocNgoai && (NH.hn.length || NH.hcm.length);  /* chia HN/HCM chỉ cho khách Việt (đặt lịch thử); khách nước ngoài giữ như cũ */
+    var xep = coChia ? (NH.hn).concat(NH.hcm, NH.ca2) : GIO, truoc = null;
+    xep.forEach(function(m){
+      var g = cs(m) || "ca2";
+      if(coChia && g !== truoc){ truoc = g; var h = el("li", "gh-cs", t(g) + " (" + NH[g].length + ")"); DS.appendChild(h); }
       var li = el("li", "gh-mon"), so = (m.ms.match(/\d+/) || [""])[0];
       var anh = el("a", "anh"); anh.href = "bo-suu-tap.html?ms=" + so; anh.setAttribute("aria-label", m.ms);
       if(m.anh) anh.style.backgroundImage = "url('" + m.anh.replace(/'/g, "%27") + "')";
@@ -227,7 +240,12 @@
       CUOI.appendChild(el("p", "gh-note", t("muaNote")));
       CUOI.appendChild(linkDatLich("gh-phu-nut", t("thuPhu")));
     } else {
-      CUOI.appendChild(linkDatLich("gh-chinh", n > 1 ? t("datThu", { n:n }) : t("datThu1")));
+      var coNhom = NH.hn.length || NH.hcm.length;
+      if(coNhom){
+        [["hn", NH.hn], ["hcm", NH.hcm]].forEach(function(x){ var a = x[1]; if(!a.length) return;
+          CUOI.appendChild(linkDatLich("gh-chinh", a.length > 1 ? t("datThuTai", { n:a.length, cs:t(x[0]) }) : t("datThu1Tai", { cs:t(x[0]) }), dsCua(a), x[0])); });
+        if(NH.ca2.length) CUOI.appendChild(linkDatLich("gh-phu-nut", n > 1 && NH.ca2.length > 1 ? t("datThu", { n:NH.ca2.length }) : t("datThu1"), dsCua(NH.ca2)));
+      } else CUOI.appendChild(linkDatLich("gh-chinh", n > 1 ? t("datThu", { n:n }) : t("datThu1")));
       CUOI.appendChild(el("p", "gh-note", t("vietNote")));
       var z = el("a", "gh-phu-nut", t("zalo")); z.href = ZALO; z.target = "_blank"; z.rel = "noopener";
       z.addEventListener("click", function(){
@@ -267,6 +285,11 @@
   }
 
   /* Đặt lịch bằng nút thường (không kèm mã) khi giỏ đã có váy → ghi luôn các mẫu trong giỏ vào lịch hẹn */
+  document.addEventListener("click", function(e){
+    var a0 = e.target.closest && e.target.closest('a[data-coso]');
+    if(a0){ var sl = document.getElementById("p-coSo") || document.getElementById("coSo");
+      if(sl){ for(var i = 0; i < sl.options.length; i++){ if(sl.options[i].value.toLowerCase().indexOf(a0.dataset.coso) === 0){ sl.selectedIndex = i; break; } } } }
+  }, true);
   document.addEventListener("click", function(e){
     var a = e.target.closest && e.target.closest('a[href$="gui-yeu-cau.html"], a[href*="gui-yeu-cau.html#"]');
     if(!a || a.closest(".gh-ngan")) return;
